@@ -1,0 +1,862 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+
+//card css
+
+// DWP card
+
+$govuk-font-family: Helvetica, Arial, sans-serif;
+
+
+.dwp-card {
+  margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #d8dde0;
+  position: relative;
+  width: 100%;
+}
+
+.dwp-card__content {
+  padding: 24px;
+  position: relative;
+}
+
+.dwp-card--clickable {
+  border-bottom-width: 4px;
+}
+
+.dwp-card--clickable:hover {
+  border-color: #aeb7bd;
+}
+
+.dwp-card--clickable:hover, .dwp-card--clickable:active {
+  cursor: pointer;
+}
+
+@media (min-width: 40.0625em) {
+  .dwp-card {
+    margin-bottom: 48px;
+}
+  .dwp-card__content {
+    padding: 32px;
+}
+}
+.dwp-cal-table{
+  font-family:arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:16px;
+  font-size:1rem;
+  line-height:1.25;
+  color:#0b0c0c;
+  width:100%;
+  margin-bottom:20px;
+  border-spacing:0;
+  border-collapse:collapse
+}
+@media print{
+  .govuk-table,.dwp-cal-table{
+      font-family:sans-serif
+  }
+}
+@media(min-width: 40.0625em){
+  .govuk-table,.dwp-cal-table{
+      font-size:19px;
+      font-size:1.1875rem;
+      line-height:1.3157894737
+  }
+}
+@media print{
+  .govuk-table,.dwp-cal-table{
+      font-size:14pt;
+      line-height:1.15
+  }
+}
+@media print{
+  .govuk-table,.dwp-cal-table{
+      color:#000
+  }
+}
+@media(min-width: 40.0625em){
+  .govuk-table,.dwp-cal-table{
+      margin-bottom:30px
+  }
+}
+.govuk-table__header,.dwp-cal-table th{
+  font-weight:700
+}
+.govuk-table__header,.dwp-cal-table th,.govuk-table__cell{
+  padding:10px 20px 10px 0;
+  border-bottom:1px solid #b1b4b6;
+  text-align:left;
+  vertical-align:top
+}
+.govuk-table__cell--numeric{
+  font-family:arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-feature-settings:"tnum" 1;
+  font-feature-settings:"tnum" 1;
+  font-weight:400
+}
+@media print{
+  .govuk-table__cell--numeric{
+      font-family:sans-serif
+  }
+}
+@supports(font-variant-numeric: tabular-nums){
+  .govuk-table__cell--numeric{
+      -webkit-font-feature-settings:normal;
+      font-feature-settings:normal;
+      font-variant-numeric:tabular-nums
+  }
+}
+.govuk-table__header--numeric,.govuk-table__cell--numeric{
+  text-align:right
+}
+.govuk-table__header:last-child,.dwp-cal-table th:last-child,.govuk-table__cell:last-child,.dwp-cal-table td:last-child{
+  padding-right:0
+}
+.govuk-table__caption{
+  font-weight:700;
+  display:table-caption;
+  text-align:left
+}
+
+
+.dwp-cal-table td time,.dwp-cal-table th div{
+  min-height:2em;
+  height:2em
+}
+.dwp-cal-table td div{
+  background-color:rgba(243,242,241,.2666666667)
+}
+.dwp-cal-table td time{
+  background:#f3f2f1;
+  color:inherit;
+  cursor:pointer
+}
+.dwp-cal-table time:hover{
+  background:#fd0;
+  color:inherit
+}
+
+input[type=radio]:checked+label time{
+  background:#1d70b8;
+  color:#fff;
+  font-weight:bold
+}
+
+.dwp-cal-table input[type=radio] {
+  display: none;
+}
+
+.dwp-cal-table input[type="radio" i] {
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 0px 5px;
+  padding: initial;
+  border: initial;
+}
+
+.dwp-cal-table time, .dwp-cal-table th div {
+  text-align: center;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.dwp-cal-table {
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+.dwp-cal-table th {
+  font-family: arial,sans-serif;
+  color: #fff;
+  background-color: #505a5f;
+  padding-right: 0;
+  text-align: center;
+  //position: sticky;
+  top: 0;
+  width: 14%;
+}
+
+.dwp-cal-table td div {
+  background-color: rgba(243,242,241,.2666666667);
+}
+
+.dwp-cal-table td div, .dwp-cal-table td time, .dwp-cal-table th div {
+  min-height: 2em;
+  height: 2em;
+}
+
+.dwp-cal-table time {
+  display: block;
+}
+
+.dwp-flex--space-between {
+  justify-content: space-between;
+}
+
+.dwp-flex {
+  display: flex;
+}
+
+
+
+ 
+.key-details-bar {
+  background-color: #1d70b8;
+}
+
+.key-details-bar .key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px 30px 20px 20px;
+  position: relative;
+  font-family: "Arial";
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details {
+    padding: 20px 15px;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details * {
+  color: #fff;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__top-block::after,
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    border: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd,
+.key-details-bar .key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd,
+  .key-details-bar .key-details-bar__key-details dt {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd {
+  margin-right: 20px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd {
+    margin-bottom: 20px;
+  }
+  .key-details-bar .key-details-bar__key-details dd:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-size: 24px;
+    line-height: 1.04167;
+    float: left;
+    margin: 0 5px 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+    font-size: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #1d70b8;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+  }
+}
+
+#global-header .header-wrapper{
+max-width:1160px !important;}
+
+
+.dwp-header {
+    border-bottom: 0px;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.dwp-header {
+    font-family: "Helvetica, Arial, sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    line-height: 1.1428571429;
+    border-bottom: 0px;
+    color: #ffffff;
+    background: #0b0c0c;
+    padding-top:10px;
+}
+
+
+
+
+.govuk-width-container {
+    max-width: 1100px;
+  }
+  
+    .govuk-header {
+      border-bottom: 10px solid #000000;
+    }
+  
+    .govuk-header__container {
+      border-bottom: 0px;
+    }
+  
+    
+    .moj-pagination__item {
+      font-family: Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 1.25;
+      display: inline-block;
+  }
+
+
+
+    .moj-pagination__link {
+      font-family: Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-decoration: underline;
+      text-decoration-thickness: max(1px, 0.0625rem);
+      text-underline-offset: 0.1em;
+      display: block;
+      padding: 5px;
+      text-align: center;
+      text-decoration: none;
+      min-width: 25px;
+  }
+
+  .moj-pagination__item--prev .moj-pagination__link:before {
+    border-width: 3px 0 0 3px;
+    margin-right: 5px;
+}
+.moj-pagination__item--prev .moj-pagination__link:before, .moj-pagination__item--next .moj-pagination__link:after {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-style: solid;
+    color: #0b0c0c;
+    background: transparent;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    content: "";
+}
+
+
+
+.moj-pagination__item--next .moj-pagination__link:after {
+  border-width: 0 3px 3px 0;
+  margin-right: 5px;
+}
+
+
+// new links forever
+a:visited, .govuk-link:visited {
+  color: #1d70b8;
+}
+
+
+.hidden-radio-post{
+  display: none;
+}
+
+
+.govuk-grid-column-one-third {
+  border-top: 2px solid #1d70b8;
+  margin-top: 80px;
+  padding-top: 10px;
+}
+
+
+// side nav for agent profiles
+
+
+.app-pane__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: row;
+  position: relative;
+  min-height: 0;
+  overflow: inherit;
+}
+
+
+.app-subnav__section-item--current {
+  border-left: 3px solid #1d70b8;
+}
+.app-subnav__section-item--current {
+  border-left: 3px solid #1d70b8;
+  background-color: #f3f2f1;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+
+.app-subnav {
+  margin-bottom: 100px;
+  padding: 6px 15px 0 0;
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14286;
+  position: sticky;
+  top: 0;
+}
+
+
+.app-subnav__section-item {
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.app-pane__subnav {
+  width: 20%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.app-subnav__section {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.app-subnav {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.app-subnav {
+  margin-bottom: 100px;
+  padding: 6px 15px 0 0;
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14286;
+  position: sticky;
+  top: 0;
+}
+
+
+.moj-side-navigation__title {
+  font-size: 1.1875rem;
+  line-height: 1.31579;
+  font-family: Helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 19px;
+  color: #505a5f;
+  font-weight: normal;
+  margin: 0;
+  padding-left: 14px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+
+.overview {
+  -webkit-box-flex: 1;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 73%;
+  padding-left: 10px;
+}
+
+.overview {
+  -webkit-box-flex: 1;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 73%;
+  margin-left: 15px;
+}
+
+
+.app-subnav__section-item--current {
+  border-left: 3px solid #1d70b8;
+  border-left: 3px solid #1d70b8;
+  background-color: #f3f2f1;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-weight: 700;
+}
+.app-subnav__section-item {
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+// header nav at top
+
+.moj-primary-navigation {
+  background-color: #f3f2f1;
+}
+
+.moj-primary-navigation__container {
+  max-width: 1220px;
+  font-size: 0;
+  text-align: justify;
+}
+
+.moj-primary-navigation__nav {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  
+}
+
+.moj-primary-navigation__list {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ text-decoration: none;
+}
+
+.moj-primary-navigation__item {
+  font-size: 19px;
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 16px;
+  padding-bottom: 10px;
+  text-decoration: none!important;
+
+}
+
+
+.moj-primary-navigation__item a:link {
+  text-decoration: none;
+ 
+}
+
+.moj-primary-navigation__item a:hover {
+  color: #6699cc;
+ 
+}
+
+
+// availability diary view styling
+.date-picker__inner {
+  width: 100%;
+}
+
+
+.diary__date-picker-container {
+  flex-basis: auto;
+  margin-bottom: 0;
+  min-width: 320px;
+  padding-right: 30px;
+  width: auto;
+}
+
+.diary__date-navigation-container {
+  line-height: 63px;
+  font-size: 19px;
+}
+
+.diary__link {
+  font-weight: 700;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.date-picker__team-view-instance, .date-picker__week-view-instance {
+  display: inline-block;
+}
+
+.date-picker {
+  position: relative;
+  text-align: center;
+}
+
+.appt-times-pagination__next, .appt-times-pagination__prev, .date-picker__button, .diary__link {
+  font-weight: 700;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+
+.date-picker__non-toggle {
+  position: relative;
+  top: 0;
+}
+
+.date-picker__container {
+  background: #dee0e2;
+  display: block;
+  left: 0;
+  padding: 5px;
+  position: absolute;
+  width: 265px;
+  z-index: 6;
+}
+
+.date-picker__table {
+  border-top: 3px solid #0b0c0c;
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+    border-spacing: 0;
+    
+  
+}
+
+.date-picker__cell {
+  
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #bfc1c3;
+    color: #0b0c0c;
+    font-family: nta, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 0.5em 0.25em 0.5em 0.25em;
+   
+    text-transform: none;
+}
+
+.date-picker__cell:hover {
+  background: #dee0e2
+}
+
+
+.date-picker__table-row {
+  background: #fff;
+  
+  
+}
+
+.date-picker__inactive-date {
+  color: #6f777b;
+}
+
+.date-picker__title {
+  float: left;
+  margin: 5px 0;
+  width: 70%;
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+}
+.date-picker__selectable-date .date-picker__link, .date-picker__selectable-date .date-picker__link:focus, .date-picker__selectable-date .date-picker__link:hover {
+  background: none;
+  border: 0;
+  color: #0b0c0c;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  text-decoration: none;
+  width: 100%;
+  line-height: 1.25;
+}
+
+
+.date-picker__selectable-date .date-picker__link:focus {
+  background: #ffbf47;
+  color: #0b0c0c;
+  outline: 3px solid #0b0c0c;
+  outline-offset: 0;
+}
+
+.date-picker__date-selected {
+  background: #005ea5;
+}
+
+.date-picker__date-selected .date-picker__link {
+  color: #fff;
+}
+
+.date-picker__date-selected:hover .date-picker__link {
+  color: #0b0c0c;
+}
+
+
+// diary day viewer
+
+.diary__calendar-container {
+  background: repeating-linear-gradient(180deg, #6f777b, #6f777b 1px, #fff 0, #fff 36px, #bfc1c3 37px, #bfc1c3 0, #fff 0, #fff 72px, #bfc1c3 73px, #bfc1c3 0, #fff 0, #fff 108px);
+  border-bottom: 1px solid #6f777b;
+  width: 100%;
+}
+
+.diary__time-columns {
+  flex: 1;
+  flex-basis: auto;
+  max-width: 100px;
+}
+
+.diary__hour-container {
+  border-right: 1px solid #6f777b;
+  height: 216px;
+  text-align: center;
+}
+
+.diary__hour-label {
+  align-items: center;
+  color: #6f777b;
+  height: 36px;
+  justify-content: center;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  line-height: 2.4;
+}
+
+.diary__appointment-container.large {
+  min-height: 433px;
+}
+
+.diary__appointment-container.halfhour {
+  min-height: 109px;
+}
+
+.diary__appointment-container {
+  border: 1px solid #5694ca;
+  background-color: #bfd6eb;
+  position: absolute;
+  z-index: 999;
+  padding: 9px 5px 5px 5px;
+  width: 38%;
+  box-sizing: border-box;
+  min-height: 35px;
+  color: #0b0c0c;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: 99px;
+}
+
+.diary__appointment-container:hover {
+  background-color: #90b9dc;
+  transition: background-color 0.2s ease;
+}
+
+
+.diary__appointment-benefit-type {
+  float: right;
+}
+
+
+.cal-square-placeholder {
+  width: 37px;
+  background-color: #dee0e2;
+  height: 37px;
+  //position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  border: 2px solid #000;
+  box-shadow: 0 2px 0 #929191;
+  
+  
+}
+
+
+.link-button-hack {
+    color: #1d70b8;
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
+    padding-bottom: 7px;
+}

@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+    <a href="../index" class="govuk-back-link" style="margin-top:-20px;">Back</a>
+
+       
+
+      <h1 class="govuk-heading-l">
+       V1
+      </h1>
+
+      <ul class="govuk-list govuk-list--bullet"> 
+        <li>
+          <a href="main-menu">Health Assessment Service main menu</a>
+           </li>
+           <li>Booking journey: <a href="no-hcps-appointment">
+             When no HCPs are available 
+           </a></li>
+           <li>Error: <a href="post-code-error">
+            Postcode not covered
+          </a></li>
+      </ul>
+
+
+      <p class="govuk-body-l">Jump to section</p>
+      <ul class="govuk-list">
+        <li>
+          <a href="pip-ta/claimant-detail">Part 1. Book a PIP appointment</a> <br>
+          Book an appointment journey from a PIP  referral
+         
+        </li>
+
+
+        <ul class="govuk-list govuk-list--bullet"> 
+          <li>
+            Or  <a href="/v1/wca-cn/claimant-detail">book a WCA appointment</a>
+             </li>
+        </ul>
+
+
+        <br>
+        <li>
+          <a href="availability-management/manage-select">    Part 2. Manage availability </a><br>
+         
+          <ul class="govuk-list govuk-list--bullet">
+            <li> Filter booked appointments</li>
+            <li>HCPs skills, assigned appointments and availability</li>
+           
+          </ul> 
+        </li>
+      
+      </ul>
+
+    </div>
+  </div>
+
+
+        </main>
+      </div>
+
+
+      {% endblock %}
+

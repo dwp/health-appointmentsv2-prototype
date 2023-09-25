@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta charset="utf-8">
+    <title>
+  Manage assessment bookings
+  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/govuk/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+      <link rel="apple-touch-icon" sizes="180x180" href="/govuk/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/govuk/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/govuk/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/govuk/assets/images/govuk-apple-touch-icon.png">
+
+
+
+  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+
+
+
+
+
+    <meta property="og:image" content="/govuk/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+
+
+
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo" style="width: 50%">
+      <a href="/index" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype-text">
+            Health Assessment Service
+          </span>
+      </a>
+    </div>
+    <!-- <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link-service-name">
+        Service name
+      </a>
+    </div> -->
+  </div>
+</header>
+
+
+
+
+<div class="govuk-width-container ">
+
+<!-- <a href="start" class="govuk-back-link">Back</a> -->
+<a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+          
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="book-assessment" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                View a caseload or status
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              View referrals in a caseload or by status.
+            </div>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Caseload
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <div class="govuk-radios--small">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status" name="status2" type="radio" value="list-1">
+                      <label class="govuk-label govuk-radios__label" for="status">
+                        Jared Mosely-Redman (74)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-2" name="status2" type="radio" value="list-2">
+                      <label class="govuk-label govuk-radios__label" for="status-2">
+                        Zoe Hall (62)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-3" name="status2" type="radio" value="list-3">
+                      <label class="govuk-label govuk-radios__label" for="status-3">
+                        Akhtar Ahmed (62)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Status
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <div class="govuk-radios--small">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-1" name="status" type="radio" value="assigned">
+                      <label class="govuk-label govuk-radios__label" for="status-1">
+                        Assigned (50)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-2" name="status" type="radio" value="awaiting-questionnaire-wca">
+                      <label class="govuk-label govuk-radios__label" for="status-2">
+                        Awaiting questionnaire (120)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-3" name="status" type="radio" value="questionnaire-reminder-issued">
+                      <label class="govuk-label govuk-radios__label" for="status-3">
+                        Questionnaire reminder sent (65)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-4" name="status" type="radio" value="questionnaire-received">
+                      <label class="govuk-label govuk-radios__label" for="status-4">
+                        Questionnaire not returned (25)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-5" name="status" type="radio" value="questionnaire-not-received-mh">
+                      <label class="govuk-label govuk-radios__label" for="status-5">
+                        HCP review (7)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-6" name="status" type="radio" value="ftrq-action-needed">
+                      <label class="govuk-label govuk-radios__label" for="status-6">
+                        Request medical evidence (4)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-7" name="status" type="radio" value="awaiting-evidence">
+                      <label class="govuk-label govuk-radios__label" for="status-7">
+                        Awaiting medical evidence (76)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-9" name="status" type="radio" value="evidence-not-received">
+                      <label class="govuk-label govuk-radios__label" for="status-9">
+                        Medical evidence not received (22)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-8" name="status" type="radio" value="evidence-received">
+                      <label class="govuk-label govuk-radios__label" for="status-8">
+                        Medical evidence received (36)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-16" name="status" type="radio" value="book-assessment">
+                      <label class="govuk-label govuk-radios__label" for="status-16">
+                        Book assessment (22)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-17" name="status" type="radio" value="book-pbr">
+                      <label class="govuk-label govuk-radios__label" for="status-17">
+                        Assessment booked (31)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-19" name="status" type="radio" value="pbr-booked">
+                      <label class="govuk-label govuk-radios__label" for="status-19">
+                        PIP paper based review (29)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-19" name="status" type="radio" value="pbr-booked">
+                      <label class="govuk-label govuk-radios__label" for="status-19">
+                        WCA paper based review (19)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-20" name="status" type="radio" value="fta-action-needed">
+                      <label class="govuk-label govuk-radios__label" for="status-20">
+                        Failed to attend (19)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-22" name="status" type="radio" value="report-ready">
+                      <label class="govuk-label govuk-radios__label" for="status-22">
+                        Report ready (15)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-23" name="status" type="radio" value="bau-decision-needed">
+                      <label class="govuk-label govuk-radios__label" for="status-23">
+                        HCP audit (37)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-24" name="status" type="radio" value="wca-completed">
+                      <label class="govuk-label govuk-radios__label" for="status-24">
+                        PIPCS descriptors updated (67)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+    </div>
+  </div>
+
+
+
+</main>
+</div>
+
+
+
+    <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+          <h2 class="govuk-visually-hidden">Support links</h2>
+
+            <ul class="govuk-footer__inline-list">
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
+                    GOV.UK Prototype Kit v9.10.1
+                  </a>
+                </li>
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/prototype-admin/clear-data">
+                    Clear data
+                  </a>
+                </li>
+
+            </ul>
+
+
+
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+    <!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+
+
+  <script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
+
+
+<script src="/public/javascripts/application.js"></script>
+
+
+  <script src="/public/javascripts/auto-store-data.js"></script>
+
+
+
+
+  <!-- GOV.UK Prototype Kit v9.10.1 -->
+
+  </body>
+</html>

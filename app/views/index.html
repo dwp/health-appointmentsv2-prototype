@@ -1,0 +1,125 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+  {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+  <span class="govuk-caption-xl">Team Royal Blue</span>
+        <h1 class="govuk-heading-l">Appointments and availability</h1>
+        
+
+         <table class="govuk-table">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Version</th>
+                <th scope="col" class="govuk-table__header">Date added</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Change log</th>
+                <th scope="col" class="govuk-table__header">Link</th>
+              </tr>
+            </thead>
+
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v1</th>
+                <td class="govuk-table__cell">July 2023</td>
+                <td class="govuk-table__cell">
+               
+                
+               
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>  Tidy up of header, footer and key detail format / includes throughout pages. </li>
+                    
+                 
+                  <li>  Design and content review of appointment booking journey from referral  </li>
+                  <li>  Design proposal for 'Mange appointments and availability' section  </li>
+                
+               
+                </ul>
+             
+
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                     Additional info
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+               
+               
+               
+                    
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>    <a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/133310022608/Content+-+Appointments+Royal+Blue" target="_blank">
+                Confluence iteration notes
+                      </a>
+                    </li>
+                      <li> <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1688391162210/650ce3c4fe03ed3a05fdbe9aac27e5db138f977b?sender=ud4a19292836eae9ff0f49718" target="_blank"> Mural design board</a></li>
+                   
+                    </ul>
+                  
+                  </div>
+                </details>
+
+                </td>
+
+             
+               
+  <td class="govuk-table__cell"><a href="v1/">View</a></td> 
+              </tr>
+
+
+
+
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0</th>
+                <td class="govuk-table__cell">End of Q1 <br>(June 2023)</td>
+                <td class="govuk-table__cell">
+
+                  <h3 class="govuk-heading-s">Book, view and cancel appointments</h3>
+                <p class="govuk-body">Last version inherited from Parrot</p>
+
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                     Additional resources
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+               
+               
+               
+                    <p class="govuk-body">Previous Parrot links:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>    <a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132782063771/TP+-+UCD" target="_blank">
+                Confluence UCD space
+                      </a>
+                    </li>
+                      <li> <a href="https://has-assessments-prototype.herokuapp.com/" target="_blank"> Parrot prototype</a></li>
+                   
+                    </ul>
+                  
+                  </div>
+                </details>
+
+
+                </td>
+                <td class="govuk-table__cell"><a href="parrot/index">End of Q1</a></td>
+              </tr>
+
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    {% endblock %}
+
