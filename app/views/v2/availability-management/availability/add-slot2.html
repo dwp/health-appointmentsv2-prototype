@@ -1,0 +1,255 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Add HCP to Handsworth - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+
+      <form class="form" action="select-hcps" method="post">
+       
+        
+
+            <h1 class="govuk-heading-l">
+              Create availability slot
+            </h1>
+
+
+        <br>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="custom-title">
+           Availability slot title (optional)
+          </label>
+          <div id="custom-title-hint" class="govuk-hint">
+           Must be less than 20 characters
+          </div>
+          <input class="govuk-input govuk-input--width-20" id="custom-title" name="customTitle" type="text" aria-describedby="custom-title-hint">
+        
+        </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+               Date
+              </h2>
+            </legend>
+            <div id="date-hint" class="govuk-hint">
+              For example, 15 3 2023
+            </div>
+
+
+<div class="date-wrapper"> 
+            <div class="date-start"> 
+            <div class="govuk-date-input" id="start-date">
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <label class="govuk-label" for="address-line-1">
+                  Start date
+                </label>
+              </legend>
+
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-date-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-day" name="start-date-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-date-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month" name="start-date-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-date-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year" name="start-date-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+
+              <div class="cal-square-placeholder"><img src="/public/images/cal-icon.png" style="width:30px;height:30px;padding-top:3px; padding-left: 3px;"></div>
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+          <div class="date-end"> 
+            <div class="govuk-date-input" id="start-date">
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <label class="govuk-label" for="address-line-1">
+                  End date
+                </label>
+              </legend>
+
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-date-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-day" name="start-date-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-date-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month" name="start-date-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-date-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year" name="start-date-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+
+
+              <div class="cal-square-placeholder"><img src="/public/images/cal-icon.png" style="width:30px;height:30px;padding-top:3px; padding-left: 3px;"></div>
+
+
+
+              
+            </div>
+          </div>
+        </div>
+
+
+          </fieldset>
+        </div>
+
+
+
+
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="start-date-hint">
+          
+
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+              Available time
+              </h2>
+            </legend>
+           
+            <div id="time-hint" class="govuk-hint">
+              For example, 12:30pm
+            </div>
+
+
+            <div class="time-wrapper"> 
+              <div class="time-start">
+             
+            <label class="govuk-label">
+              Start time
+            </label>
+
+
+            <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off">   
+            
+            
+            
+          </div>
+        
+       
+          
+
+          <div class="time-end"> 
+            <label class="govuk-label">
+              End time
+            </label>
+            <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off">
+           </div>
+          </div>
+          </fieldset>
+        </div>
+
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="start-date-hint">
+          
+
+        
+
+
+            <div class="time-wrapper"> 
+              <div class="time-start">
+             
+            <label class="govuk-label">
+              Start time
+            </label>
+
+
+            <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint"  autocomplete="off">   
+            
+            
+            
+          </div>
+        
+       
+          
+
+          <div class="time-end"> 
+            <label class="govuk-label">
+              End time
+            </label>
+            <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint" autocomplete="off">
+           </div>
+          </div>
+          </fieldset>
+        </div>
+
+
+        <p style="margin-bottom:50px;"><a href="add-slot2" >Add another available time</a></p>
+
+ 
+      
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+    </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
