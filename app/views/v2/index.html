@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+    <a href="../index" class="govuk-back-link" style="margin-top:-20px;">Back</a>
+
+       
+
+      <h1 class="govuk-heading-l">
+       V2: In progress
+      </h1>
+
+      <ul class="govuk-list govuk-list--bullet"> 
+        <li>
+          <a href="main-menu">Health Assessment Service main menu</a>
+           </li>
+          
+      </ul>
+
+
+      <p class="govuk-body-l">Jump to section</p>
+      <ul class="govuk-list">
+       
+
+
+        <li>
+          <a href="availability-management/manage-select">    Manage HCP availability </a><br>
+         
+
+          <p class="govuk-body"> Set availability for HCPs in set location by either the following: </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="/v2/availability-management/agents/agent-profiles"> Set HCP availability within location</a></li>
+  <li><a href="/v2/availability-management/agents/amy-gill-availability"> HCP sets own availability</a></li>
+ 
+</ul>
+
+
+        
+        </li>
+      
+      </ul>
+
+    </div>
+  </div>
+
+
+        </main>
+      </div>
+
+
+      {% endblock %}
+

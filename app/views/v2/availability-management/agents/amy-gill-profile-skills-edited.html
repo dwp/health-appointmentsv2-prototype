@@ -1,0 +1,172 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+HCP details - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-full">
+   
+
+    <div class="govuk-width-container ">
+        
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+        
+    <div class="app-pane__body">
+
+      <div class="app-pane__subnav">
+        <a href="agent-profiles" class="govuk-back-link">Back</a>
+
+      
+
+              <ul class="app-subnav__section">
+    
+          
+    
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="amy-gill-profile">HCP details<i class="chevron"></i> </a>
+</li>
+<li class="app-subnav__section-item">
+<a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="amy-gill-appointments">Appointments<i class="chevron2"></i> </a>
+</li>
+ <!-- -
+<li class="app-subnav__section-item">
+  <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="amy-gill-availability">Availability<i class="chevron2"></i> </a>
+  </li> -->
+
+        </ul></nav>
+      </div>
+   
+
+    <div class="govuk-grid-row  overview">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters" style="width:65%;">
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      aria-labelledby="govuk-notification-banner-title"
+      data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+      </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        Amy Gill's details have been edited
+      </h3>
+      </div>
+      </div>
+      
+
+   <h1 class="govuk-heading-l">
+    Amy Gill's details
+    </h1>
+    
+    
+      <div class="govuk-form-group">
+    
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+    
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Amy Gill
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+              Location
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+              Handsworth, Birmingham
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+              WCA skills 
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+              None 
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+              PIP skills
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+              PIP F2F, PIP TA
+            </dd>
+          </div>
+        </dl>
+      </div>
+              
+              
+              
+              
+           
+            
+          
+        
+      </div>
+
+      <div class="govuk-grid-column-one-third" style="margin-top: -0px;">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          What you can do next   {{ data[‘hcp’] }} 
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list">
+            <li>
+              <a href="update-profile">Edit HCP details</a>
+            </li>
+
+            {% if  (data['hcp'] == 'Amy Gill') or (data['hcp2'] == 'Amy Gill') or (data['hcp3'] == 'Amy Gill') or (data['hcp4'] == 'Amy Gill') %}
+ 
+            <li>
+              <a href="amy-gill-reassign-appointments">Remove this HCP</a>
+         
+             
+            </li>
+
+            {% else %}
+
+            <a href="remove-agent">Remove this HCP</a>
+             
+            <li>
+            
+            </li>
+            {% endif %}    
+
+          </ul>    
+        
+      </ul></div>
+
+      
+    
+    
+    </div>
+
+
+    </div>
+
+</div>
+
+      </div></main>
+    
+
+
+{% endblock %}
+

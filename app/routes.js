@@ -229,3 +229,39 @@ router.post('/status-check', function (req, res) {
   }
 
 })
+
+
+
+//v2
+router.post('/manage-what2', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var manage = req.session.data['manage']
+
+  // Check whether the variable matches a condition
+  if (manage == "appointments"){
+    // Send user to what language page
+    res.redirect('/v2/availability-management/appointments/appointments')
+  } else {
+    // Send user to next page
+    res.redirect('/v2/availability-management/location')
+  }
+
+})
+
+router.post('/status-check', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var status = req.session.data['status']
+
+  // Check whether the variable matches a condition
+  if (status == "assessment-booked"){
+    // Send user to what language page
+    res.redirect('/v2/pip-ta/update-status-assessment-booked')
+  } else {
+    // Send user to next page
+    res.redirect('/v2/pip-ta/update-status-confirmation')
+  }
+
+})
+

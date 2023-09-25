@@ -1,0 +1,128 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Check HCP details - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing " id="main-content" role="main">
+
+
+<h1 class="govuk-heading-xl">
+Check HCP details
+</h1>
+
+  
+ 
+
+
+<form class="form"  method="post" action="agent-profiles-success-add">
+<div class="govuk-form-group">
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+  <!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['HCP-name'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      WCA skills
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      {% if  data['WCA-skills'] %}
+      {{ data['WCA-skills'] }}
+     {% else %}
+      None
+     {% endif %}
+     
+    
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      PIP skills
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      {% if  data['PIP-skills'] %}
+      {{ data['PIP-skills'] }}
+     {% else %}
+      None
+     {% endif %}
+     
+    
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row" style="border-bottom: none;">
+    <dt class="govuk-summary-list__key" style="border-bottom: none;">
+
+    </dt>
+    <dd class="govuk-summary-list__value" style="text-align: right; border-bottom: none;">
+
+      <li class="govuk-summary-list__actions-list-item">
+        <a class="govuk-link" href="add-HCP">
+          Change</a>
+      </li>
+
+      
+
+    </dd>
+
+
+  </div>
+
+</dl>
+
+
+<div class="hidden-radio-post"> 
+  <div class="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="add-hcp-added" name="add-hcp" type="radio" value="agent-added" {{ checked('add-hcp', 'added') }} checked>
+
+      <label class="govuk-label govuk-radios__label" for="add-hcp-added">
+        Hidden radio = Add HCP
+      </label>
+    </div>
+  </div>
+</div> 
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">Confirm and add HCP</button>
+
+</div>
+
+</form>
+
+
+</div>
+
+
+</main>
+</div>
+
+
+{% endblock %}

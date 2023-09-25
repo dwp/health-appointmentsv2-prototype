@@ -1,0 +1,245 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+
+      <form class="form" action="booked-time-confirm" method="post">
+       
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" >
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+       Add to schedule
+      </h1>
+    </legend>
+
+    <h2 class="govuk-heading-m">Select type</h2>
+   
+    <div class="govuk-radios" data-module="govuk-radios">
+
+       
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="booked" name="booked" type="radio" value="PBR" >
+        <label class="govuk-label govuk-radios__label" for="booked">
+       Paper based review
+        </label>
+      </div>
+     
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="booked-2" name="booked" type="radio" value="Annual leave" >
+        <label class="govuk-label govuk-radios__label" for="booked-2">
+          Annual leave
+        </label>
+      </div>
+    
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="booked-3" name="booked" type="radio" value="Other" data-aria-controls="conditional-booked-3">
+        <label class="govuk-label govuk-radios__label" for="booked-3">
+       Other
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-booked-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-detail">
+            Please specify
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="other-detail" name="other-detail">
+
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+         
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Date
+      </h1>
+    </legend>
+   
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 15 3 2023 to 20 3 2023
+    </div>
+    <div class="govuk-date-input" id="date-from">
+
+      <!-- Date from-->
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-from-date">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-from-date" name="date-from-date" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-from-month" name="date-from-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item" style="margin-right:10px;">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-from-year" name="date-from-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+
+      <div class="cal-square-placeholder"><img src="/public/images/cal-icon.png" style="width:30px;height:30px;padding-top:3px; padding-left: 3px;"></div>
+
+
+
+
+
+  <span class="govuk-body govuk-!-font-weight-regular" style="padding-left:20px; padding-right:22px;"> to </span>  
+
+
+      <!--Date to-->
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-to-date">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-to-date" name="date-to-date" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-to-month" name="date-to-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item" style="margin-right:10px;"> 
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-to-year" name="date-to-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="cal-square-placeholder"><img src="/public/images/cal-icon.png" style="width:30px;height:30px;padding-top:3px; padding-left: 3px;"></div>
+
+
+
+
+    </div>
+  </fieldset>
+</div>
+
+
+<!-- 
+  <div class="govuk-form-group">
+
+    
+  
+    <input class="govuk-input govuk-!-width-one-quarter" id="one-quarter" name="date-from" type="text" placeholder="DD/MM/YYYY">
+
+   <span class="govuk-body govuk-!-font-weight-regular" style="padding-left:20px; padding-right:20px;"> to </span> 
+
+
+    <input class="govuk-input govuk-!-width-one-quarter" id="one-quarter" name="date-to" type="text" placeholder="DD/MM/YYYY">
+  </div> -->
+
+<h2 class="govuk-heading-m">Time</h2>
+ 
+<div class="govuk-form-group">
+
+  <div id="date-from-hint" class="govuk-hint">
+    For example, 9:30am or 2:55pm
+  </div>
+
+
+
+
+  <label class="govuk-label" for="time-from">
+    Hour <span style="padding-left: 22px;"> Minute</span> <span style="padding-left: 11px;"> am or pm</span>
+
+   <span style="padding-left: 64px;"> Hour </span><span style="padding-left: 21px;"> Minute</span> <span style="padding-left: 10px;"> am or pm</span>
+
+
+  </label>
+
+  
+  
+
+  <!-- <span class="govuk-body govuk-!-font-weight-regular"> From </span> --> 
+  <input class="govuk-input govuk-input--width-2"  name="time-from-hour" type="text"> 
+
+ <span class="govuk-body govuk-!-font-weight-regular" style="padding-left:0px; padding-right:0px;"> : </span> 
+
+ <input class="govuk-input govuk-input--width-2"  name="time-from-minute" type="text">
+
+ 
+  <select class="govuk-select" id="time-from-meridiem" name="time-from-meridiem" style="min-width: 80px; margin-left: 15px;">
+    <option value=" "></option>
+    <option value="am" >am</option>
+    <option value="pm">pm</option>
+  </select>
+
+
+  <span class="govuk-body govuk-!-font-weight-regular" style="padding-left:20px; padding-right:20px;"> to </span>  
+
+
+  
+  
+  <input class="govuk-input govuk-input--width-2"  name="time-to-hour" type="text"> 
+
+ <span class="govuk-body govuk-!-font-weight-regular" style="padding-left:0px; padding-right:0px;"> : </span> 
+
+ <input class="govuk-input govuk-input--width-2"  name="time-to-minute" type="text">
+
+ 
+  <select class="govuk-select" id="time-to-meridiem" name="time-to-meridiem" style="min-width: 80px; margin-left: 15px;">
+    <option value=" "></option>
+    <option value="am" >am</option>
+    <option value="pm">pm</option>
+  </select>
+
+
+
+
+</div>
+
+      
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+    </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

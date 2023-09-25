@@ -1,0 +1,198 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="../" class="govuk-back-link">Back</a>
+
+
+    <h1 class="govuk-heading-m" style="padding-top:20px;">Personal details  </h1>
+       
+
+      </h1>
+      
+      <dl class="govuk-summary-list" id="personal-details">
+    
+      
+        <div class="govuk-summary-list__row preferred-name">
+          <dt class="govuk-summary-list__key">
+            Preferred name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            None
+          </dd>
+          
+        </div>
+      
+    
+      
+        <div class="govuk-summary-list__row phone-number">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            01772 000008
+          </dd>
+          
+        </div>
+      
+    
+      
+        <div class="govuk-summary-list__row postcode">
+          <dt class="govuk-summary-list__key">
+            Postcode
+          </dt>
+          <dd class="govuk-summary-list__value">
+            N4 1AB
+          </dd>
+          
+        </div>
+      
+    
+  </dl>
+
+  <h2 class="govuk-heading-m">Referral details</h2>
+
+
+  <dl class="govuk-summary-list" id="referral-details">
+    
+      
+    <div class="govuk-summary-list__row referral-date">
+      <dt class="govuk-summary-list__key">
+        Referral date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        8 July 2023
+      </dd>
+      
+    </div>
+  
+
+  
+    <div class="govuk-summary-list__row srti">
+      <dt class="govuk-summary-list__key">
+        End of life
+      </dt>
+      <dd class="govuk-summary-list__value">
+       No
+      </dd>
+      
+    </div>
+  
+
+  
+    <div class="govuk-summary-list__row benefit-type">
+      <dt class="govuk-summary-list__key">
+        Benefit type
+      </dt>
+      <dd class="govuk-summary-list__value">
+       UC
+      </dd>
+      
+    </div>
+  
+
+  
+    <div class="govuk-summary-list__row referral-type">
+      <dt class="govuk-summary-list__key">
+        Referral type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        New referral
+      </dd>
+      
+    </div>
+  
+
+  
+    <div class="govuk-summary-list__row site-name">
+      <dt class="govuk-summary-list__key">
+        Assessment centre
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Tresco House, London
+      </dd>
+      
+    </div>
+  
+
+  
+    <div class="govuk-summary-list__row caseload-name">
+      <dt class="govuk-summary-list__key">
+        Caseload
+      </dt>
+      <dd class="govuk-summary-list__value">
+        New Caseload
+      </dd>
+      
+    </div>
+  
+
+</dl>
+
+
+    
+
+    
+    </div>
+
+    <div class="govuk-grid-column-one-third"  style="margin-top: 80px;">
+
+      <h3 class="govuk-heading-m">What you can do next</h3>
+      <ul class="govuk-list">
+         
+
+      <li class="govuk-!-margin-bottom-2"><a href=" ">   Update status </a></li> 
+
+
+
+
+
+      {% if  (data['apptbooked']   == 'yes') or (data['apptbooked']   == 'cancelled') %}
+
+      <li class="govuk-!-margin-bottom-2"><a href="current-assessments">Book or view appointments </a></li> 
+
+      {% else %} 
+      <li class="govuk-!-margin-bottom-2"><a href="assessment-channel">Book or view appointments </a></li> 
+
+      {% endif %} 
+
+
+   
+     
+      <li class="govuk-!-margin-bottom-2"><a href="">View timeline </a></li> 
+      <li class="govuk-!-margin-bottom-2"><a href=" ">Add entry to timeline </a></li> 
+      <li class="govuk-!-margin-bottom-2"><a href=" ">View claimant documents </a></li> 
+      <li class="govuk-!-margin-bottom-2"><a href=" ">Move to another caseload </a></li> 
+          </ul>
+       
+      
+    </div>
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -3,7 +3,7 @@
 
 
 {% block pageTitle %}
-Edit HCP details - GOV.UK prototype
+Add HCP to Handsworth - GOV.UK prototype
 {% endblock %}
 
 {% block header %}
@@ -23,23 +23,23 @@ Edit HCP details - GOV.UK prototype
    
 
 
-      <form class="form" action="amy-gill-profile-skills-edited" method="post">
+      <form class="form" action="add-HCP-check-your-answers" method="post">
        
         
 
             <h1 class="govuk-heading-l">
-             Edit HCP details 
+              Add HCP to Handsworth, Birmingham
             </h1>
 
 
         <br>
         <div class="govuk-form-group">
         <label class="govuk-fieldset__legend--s govuk-!-font-weight-bold" for="HCP-name">
-         Name
+          Name
         </label>
         <p class="govuk-hint"></p>
 
-        <input class="govuk-input govuk-!-width-two-thirds" id="HCP-name" name="HCP-name" type="text" value="Amy Gill"></div>
+        <input class="govuk-input govuk-!-width-two-thirds" id="HCP-name" name="HCP-name" type="text" value=""></div>
 
       
         
@@ -108,13 +108,11 @@ Edit HCP details - GOV.UK prototype
               items: [
                 {
                   value: "PIP TA",
-                  text: "Telephone assessment (PIP TA)",
-                  checked: true
+                  text: "Telephone assessment (PIP TA)"
                 },
                 {
                   value: "PIP F2F",
-                  text: "Face to face (PIP F2F)",
-                  checked: true
+                  text: "Face to face (PIP F2F)"
                 }
               ]
             }) }}
@@ -127,7 +125,7 @@ Edit HCP details - GOV.UK prototype
       
 
 
-        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
     </form>
 
     </div>

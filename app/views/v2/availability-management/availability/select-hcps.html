@@ -1,0 +1,145 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Add member to Handsworth - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+
+      <form class="form" action="check-your-answers" method="post">
+       
+        
+
+            <h1 class="govuk-heading-l">
+              Handsworth HCPs available for slot
+            </h1>
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="All members in Handsworth" name="select-all" id="select-all">
+                    <label class="govuk-label govuk-checkboxes__label" for="member">
+                      Select all HCPs in this location
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-2" name="member" type="checkbox" value="Amy Gill">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-2">
+                      Amy Gill
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-3" name="member" type="checkbox" value="Benjamin marshall">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-3">
+                      Benjamin marshall
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-4" name="member" type="checkbox" value="Bernhard Fischer">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-4">
+                      Bernhard Fischer
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-4" name="member" type="checkbox" value="Danny Travasso">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-5">
+                      Danny Travasso
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-4" name="member" type="checkbox" value="Emma Bradley">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-6">
+                      Emma Bradley
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-4" name="member" type="checkbox" value="Jane Smith">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-7">
+                      Jane Smith
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-4" name="member" type="checkbox" value="Joe Bloggs">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-8">
+                      Joe Bloggs
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-4" name="member" type="checkbox" value="Julie Smalls">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-9">
+                      Julie Smalls
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="member-4" name="member" type="checkbox" value="Zßoe Webb">
+                    <label class="govuk-label govuk-checkboxes__label" for="member-10">
+                      Zoe Webb
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+
+<script> 
+
+$('#select-all').click(function(event) {   
+  if(this.checked) {
+      // Iterate each checkbox
+      $(':checkbox').each(function() {
+          this.checked = true;                        
+      });
+  } else {
+      $(':checkbox').each(function() {
+          this.checked = false;                       
+      });
+      
+  }
+}); 
+
+
+
+</script>
+    
+    </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
