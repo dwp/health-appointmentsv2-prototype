@@ -1,1 +1,1 @@
-This is a prototype repo owned and operated by Team Parrot.
+This is a prototype repo for HAS availability owned and operated by Team Royal Blue.
