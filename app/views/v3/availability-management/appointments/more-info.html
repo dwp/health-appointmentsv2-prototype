@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Additional information - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+    <form class="form" action="view-assessment01" method="post">
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="hcp-more-detail">
+      Additional information
+    </label>
+  </h1>
+  <div id="more-detail" class="govuk-label govuk-label--s">
+    Add any useful information to support the appointment
+  </div>
+  <textarea class="govuk-textarea" id="hcp-more-detail" name="hcp-more-detail" rows="5" aria-describedby="hcp-more-detail-hint"></textarea>
+
+</div>
+
+
+<br>
+<br>
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  <a class="govuk-link" href="view-assessment01">Cancel</a>
+</div>
+
+
+        </div>
+
+      </fieldset>
+    </div>
+
+</div>
+
+        </main>
+      </div>
+
+
+
+
+      {% endblock %}
