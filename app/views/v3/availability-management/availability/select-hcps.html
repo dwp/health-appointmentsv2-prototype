@@ -26,6 +26,7 @@ Add member to Handsworth - GOV.UK prototype
       <form class="form" action="check-your-answers" method="post">
        
         
+        
 
             <h1 class="govuk-heading-l">
              Which agents are available?
@@ -34,17 +35,8 @@ Add member to Handsworth - GOV.UK prototype
               Select all that apply
             </div>
 
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="All members in Handsworth" name="select-all" id="select-all">
-                    <label class="govuk-label govuk-checkboxes__label" for="member">
-                      All agents in Handsworth
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
+          
+                 <!--  <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="member-2" name="member" type="checkbox" value="Amy Gill">
                     <label class="govuk-label govuk-checkboxes__label" for="member-2">
                       Amy Gill
@@ -105,9 +97,279 @@ Add member to Handsworth - GOV.UK prototype
                     </label>
                   </div>
                 </div>
-              </fieldset>
-            </div>
+              </fieldset> -->
 
+              <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                   
+                   
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" type="checkbox" value="All members in Handsworth" name="select-all" id="select-all">
+                            <label class="govuk-label govuk-checkboxes__label" for="member">
+                              
+                            </label>
+                          </div>
+
+
+
+
+                    <th class="govuk-table__header" scope="col" id="select-all">
+                      
+                     
+                    
+                    
+                    </th>
+                    <th class="govuk-table__header" scope="col">Name</th>
+                    <th class="govuk-table__header" scope="col" >Email</th>
+                    <th class="govuk-table__header" scope="col" style="width:30%;">Skills</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row govuk-table__row--selected">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                        <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                        <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                 
+                        </label>
+                      </div>
+                    </td>
+
+                   
+                      <td class="govuk-table__cell"><a href="amy-gill-profile">Amy Gill</a></td>
+                      <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
+                      <td class="govuk-table__cell">
+                        <ul class="govuk-list govuk-list--bullet">
+                        <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                       
+                      </ul>
+                    </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Benjamin Marshall</a></td>
+                      <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
+                       <td class="govuk-table__cell">
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+                      </td>
+          
+          
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Bernhard Fischer</a></td>
+                      <td class="govuk-table__cell"> bernhardfischer@domain.gov.uk </td>
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                         
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+                      </td>
+                      
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Danny Travasso</a></td>
+                      <td class="govuk-table__cell">dannytravasso@domain.gov.uk </td>
+                       <td class="govuk-table__cell">  
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                        
+                        </td>
+                     
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" " >Emma Bradley</a></td>
+                      <td class="govuk-table__cell"> emmabradley@domain.gov.uk </td>
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+          
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Frieda Döring</a></td>
+                      <td class="govuk-table__cell"> freidadoring@domain.gov.uk </td>
+                      <td class="govuk-table__cell">  
+                    
+                      <ul class="govuk-list govuk-list--bullet">
+                      
+                       <li>WCA CN</li>
+                        <li>WCA F2F</li>
+                        <li>WCA TA</li>
+                       </ul>
+          
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Gabriel Mello</a></td>
+                      <td class="govuk-table__cell"> gabrielmello@domain.gov.uk </td>
+                      <td class="govuk-table__cell">
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                       
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+                        </td>
+          
+          
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Jane Smith</a></td>
+                      <td class="govuk-table__cell"> janesmith@domain.gov.uk </td>
+                       <td class="govuk-table__cell">
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Joe Bloggs</a></td>
+                      <td class="govuk-table__cell"> joebloggs@domain.gov.uk </td>
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+          
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                          <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                   
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell"><a href=" ">Julie Smails</a></td>
+                      <td class="govuk-table__cell">juliesmails@domain.gov.uk </td>
+                       <td class="govuk-table__cell">
+          
+          
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                      </td> 
+                    </tr>
+
+                 
+                  
+                </tbody>
+              </table>
+           
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
     </form>
