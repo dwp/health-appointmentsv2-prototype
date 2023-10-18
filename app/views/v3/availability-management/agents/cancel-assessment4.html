@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Cancel appointment - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/internal-header.html" %}
+
+
+
+
+  <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+    <dl class="key-details-bar__key-details">
+      <div class="key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dt class="key-details-bar__name">{{ data['appt'] }}</dt>
+  
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dt class="key-details-bar__nino">JQ 00 11 44 B</dt>
+  
+        <dt class="govuk-visually-hidden">Claim status:</dt>
+        <dd class="key-details-bar__status">ASSESSMENT BOOKED</dd>
+      </div>
+  
+      <div class="key-details-bar__bottom-block">
+        <dt>Date of birth:</dt>
+        <dd>13 April 1979</dd>
+  
+        <dt>Postcode:</dt>
+        <dd>N1 1XX</dd>
+  
+       
+  
+      </div>
+    </dl>
+  </section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="amy-gill-appointments-cancelled" method="post">
+
+      <h1 class="govuk-heading-l">Are you sure you want to cancel {{ data['appt'] }} 's appointment? 
+      </h1>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Yes, cancel appointment
+        </button>
+
+    <div class="hidden-radio-post"> 
+        {% if  data['appt']   == 'Noelle Carmel' %}   
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hcp2-5" name="hcp2" type="radio" value="Raka Banerjee" checked>
+          <label class="govuk-label govuk-radios__label" for="hcp2-5">
+          Use HCP radio list to appear cancelled for Noelle Carmel
+          </label>
+        </div>
+  
+
+        {% elif data['appt']   == 'Lucy Steel' %} 
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="hcp3-5" name="hcp3" type="radio" value="Raka Banerjee" checked>
+      <label class="govuk-label govuk-radios__label" for="hcp3-5">
+      Use HCP radio list to appear cancelled for Lucy Steel
+      </label>
+    </div>
+    {% else %} 
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="hcp4-5" name="hcp4" type="radio" value="Raka Banerjee" checked>
+    <label class="govuk-label govuk-radios__label" for="hcp4-5">
+    Use HCP radio list to appear cancelled
+    </label>
+  </div>
+  {% endif %}
+ </div> 
+
+
+        <a class="govuk-link" href="view-assessment04">Return to appointment details</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+
