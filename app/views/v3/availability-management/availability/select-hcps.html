@@ -16,8 +16,73 @@ Select agents - GOV.UK prototype
 {% block content %}
 
 <div class="govuk-grid-row" style="margin-top: -40px;">
+
+
+  <div class="govuk-grid-column-one-quarter" style="margin-top: 0px;">
+
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5" style="padding-top:20px;">
+      Filters
+    </h2>
+    <div id="filter-hint" class="govuk-hint govuk-!-Marchgin-bottom-4">
+      Select one or more filters to apply to the list.
+    </div>
+    <div class="table-filter">
+<form id="filters">
+
+
+ 
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+  
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+   Availability location
+  </legend>
+  
+
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+     
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
+      <label class="govuk-label govuk-checkboxes__label" for="handsworth">
+        Birmingham, Handsworth 
+      </label>
+    </div>
+            
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
+      <label class="govuk-label govuk-checkboxes__label" for="tresco">
+        London, Tresco House 
+      </label>
+    </div>
+
+  </div>
+  
+  </fieldset>
+  
+</div>
+
+
+  
+  </fieldset>
+  
+</div>
+
+
+
+
+<button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
+
+</form>
+
+
+
+</div>
+
+
   <div class="govuk-grid-column-three-quarters">
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
    
@@ -28,7 +93,7 @@ Select agents - GOV.UK prototype
         
         
 
-            <h1 class="govuk-heading-l">
+            <h1 class="govuk-heading-l" style="padding-top:10px;">
              Which agents are available?
             </h1>
             <div class="govuk-hint">
@@ -401,6 +466,11 @@ $('#select-all').click(function(event) {
 </script>
     
     </div>
+
+
+</div>
+
+
     </div>
 
   </main>
