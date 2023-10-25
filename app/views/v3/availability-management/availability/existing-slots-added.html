@@ -50,7 +50,9 @@ Availability - GOV.UK prototype
 
 
    <h1 class="govuk-heading-l">
-    Manage availability
+    Manage availability 
+    
+  
     </h1>
 
    
@@ -71,17 +73,19 @@ Availability - GOV.UK prototype
       </dt>
       <dd class="govuk-summary-list__value">
         <ul class="govuk-list govuk-list--bullet">
-          <li>	Benjamin Marshall</li>
-        <li>Bernhard Fischer</li>
-         <li>	Joe Bloggs</li>
-          <li>	Zedd Smith</li>
-         </ul>
-  
+       {% for feature in data['agent-name'] %}  <li>{{ feature }}</li>
+       
+      {% else %} </ul>
+        No availability set
+      {% endfor %}
+
+
+      
       </dd>
 
       <dd class="govuk-summary-list__value" style="width:10%;"> 
         <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="add-slot">
+          <a class="govuk-link" href="select-hcps">
             Change</a>
         </li>
        </dd>
@@ -99,7 +103,7 @@ Availability - GOV.UK prototype
 
       <dd class="govuk-summary-list__value">
         <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="add-slot">
+          <a class="govuk-link" href="select-hcps">
             Change</a>
         </li>
        </dd>
@@ -136,7 +140,7 @@ Availability - GOV.UK prototype
 
     <dd class="govuk-summary-list__value" style="width:10%;">
       <li class="govuk-summary-list__actions-list-item">
-        <a class="govuk-link" href="add-slot">
+        <a class="govuk-link" href="select-hcps">
           Change</a>
       </li>
      </dd>
@@ -154,7 +158,7 @@ Availability - GOV.UK prototype
 
     <dd class="govuk-summary-list__value">
       <li class="govuk-summary-list__actions-list-item">
-        <a class="govuk-link" href="add-slot">
+        <a class="govuk-link" href="select-hcps">
           Change</a>
       </li>
      </dd>
@@ -189,7 +193,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -207,7 +211,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -243,7 +247,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -261,7 +265,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -297,7 +301,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -315,7 +319,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -351,7 +355,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -369,7 +373,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -405,7 +409,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -423,7 +427,7 @@ Availability - GOV.UK prototype
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="add-slot">
+       <a class="govuk-link" href="select-hcps">
          Change</a>
      </li>
     </dd>
@@ -536,7 +540,7 @@ Availability - GOV.UK prototype
          </div>
        </div>
  
-    <!--  <div style="padding-top: 19em;"> <p> <a href="add-slot">Schedule availability</a></p> </div> -->
+    <!--  <div style="padding-top: 19em;"> <p> <a href="select-hcps">Schedule availability</a></p> </div> -->
      
     
  
