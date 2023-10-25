@@ -38,11 +38,11 @@ Create availability - GOV.UK prototype
               <div class="date-wrapper"> 
                 <div class="date-start"> 
                   <div class="govuk-date-input" id="start-date">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <!--   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                       <label class="govuk-label" for="address-line-1">
                         Start date
                       </label>
-                    </legend>
+                    </legend> -->
 
                     <div class="govuk-date-input__item">
                       <div class="govuk-form-group">
@@ -78,7 +78,7 @@ Create availability - GOV.UK prototype
                   </div>
                 </div>
 
-                <div class="date-end"> 
+              <!--   <div class="date-end"> 
                   <div class="govuk-date-input" id="end-date">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                       <label class="govuk-label" for="address-line-1">
@@ -118,7 +118,7 @@ Create availability - GOV.UK prototype
 
                     <div class="cal-square-placeholder"><img src="/public/images/cal-icon.png" style="width:30px;height:30px;padding-top:3px; padding-left: 3px;"></div>
                   </div>
-                </div>
+                </div>-->
               </div>
             </fieldset>
           </div>
@@ -185,7 +185,7 @@ Create availability - GOV.UK prototype
           <a class="moj-pagination__link " href=" "> </a>
         </li>
 
-        <div class="month date-picker__title">September 2023</div>
+        <div class="month date-picker__title">November 2023</div>
 
         <li class="moj-pagination__item  moj-pagination__item--next" style="float: right">
           <a class="moj-pagination__link" href=" "><span class="govuk-visually-hidden"> Next month</span></a>
@@ -307,7 +307,7 @@ Create availability - GOV.UK prototype
         const year = document.getElementById(visible + "-year");
 
         day.value = event.target.innerText;
-        month.value = '9';
+        month.value = '11';
         year.value = '2023';
 
         const datePicker = document.getElementById("date-picker");
