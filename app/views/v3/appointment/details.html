@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()"  class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+  
+    <h1 class="govuk-heading-l">
+      Appointment details
+  
+      </h1>
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+
+        <form class="form" action="/v3/appointment/times-available" method="post">
+
+      
+    
+
+
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+          Select appointment type
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="typee" name="type" type="radio" value="PIP">
+            <label class="govuk-label govuk-radios__label" for="type">
+          PIP
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="type-2" name="type" type="radio" value="Other">
+            <label class="govuk-label govuk-radios__label" for="type-2">
+             Other
+            </label>
+          </div>
+         
+         
+      
+        </div>
+
+
+
+<br>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+          Select appointment channel
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="channel" name="channel" type="radio" value="Face to face">
+            <label class="govuk-label govuk-radios__label" for="type">
+         Face to face
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="channel-2" name="channel" type="radio" value="Telephone">
+            <label class="govuk-label govuk-radios__label" for="channel-2">
+            Telephone
+            </label>
+          </div>
+         
+         
+      
+        </div>
+
+
+      </fieldset>
+    </div>
+
+  
+
+
+
+
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+
+  </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

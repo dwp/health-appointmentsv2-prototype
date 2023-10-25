@@ -23,16 +23,48 @@ Availability - GOV.UK prototype
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds"  >
       
-          <a href="../manage-select" class="govuk-back-link">Back</a>
+          <a href="../../../" class="govuk-back-link">Back</a>
+
+   <h1 class="govuk-heading-l" style="padding-top:10px;">
+
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+  <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+  Success     
+
+  </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+ 
+  
+    {% if  data['slot2']  != 'booked' %}
+    <h3 class="govuk-notification-banner__heading">
+    Availability scheduled
+  </h3>
+  <p class="govuk-body">You can now book appointments within the scheduled date range.</p>
+    {% endif %}
+
+    {% if  data['slot2']  == 'booked' %}
+    <h3 class="govuk-notification-banner__heading">
+   Availability scheduled
+    </h3>
+    <p class="govuk-body">You can now book appointments within the scheduled date ranges.</p>
+    {% endif %}
+    
+
+  </div>
+  </div>
 
 
    <h1 class="govuk-heading-l">
-    Manage availability
+    Appointment availability
     </h1>
 
    
-    <h1 class="govuk-heading-m" style="margin-bottom:-30px;">  
-      Mon 5 Nov 2023
+    <h1 class="govuk-heading-m">
+      Mon 5 Nov 2023 to Sun 11 Nov 2023
        </h1>
 
 
@@ -41,380 +73,158 @@ Availability - GOV.UK prototype
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
   <!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
  
+
   <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
-      Morning (9am to 12pm)
+       Date
       </dt>
       <dd class="govuk-summary-list__value">
-       No availability set
+        Mon 5 Nov 2023 
       </dd>
-
-      <dd class="govuk-summary-list__value" style="width:10%;">
-        <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="select-hcps">
-            Change</a>
-        </li>
-       </dd>
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-     Afternoon (1pm to 5pm)
+      Duration
       </dt>
       <dd class="govuk-summary-list__value" style="border-bottom:0px;">
        
      
-       No availability set 
+        Morning (9am to 12pm)
+       
       
       </dd>
-
-      <dd class="govuk-summary-list__value" style="width:10%;">
-        <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="select-hcps">
-            Change</a>
-        </li>
-       </dd>
     </div>
-   
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+        Available agents
+      </dt>
+      <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>	Benjamin Marshall</li>
+        <li>Bernhard Fischer</li>
+         <li>	Joe Bloggs</li>
+          <li>	Zedd Smith</li>
+         </ul>
+  
+       
+      
+      </dd>
+    </div>
   
    
-   
+    <div class="govuk-summary-list__row" style="border-bottom: none;"> 
+      <dt class="govuk-summary-list__key" style="border: none;">
+  
+      </dt>
+      <dd class="govuk-summary-list__value" style="text-align: right; border: none;">
+  
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="add-slot">
+            Change</a>
+        </li>
+  
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="remove-slot">
+            Remove
+            </a>
+        </li>
+  
+        </dd>
+  
+    </div>
   
   </dl>
 
 
 
+<!-- if another slot added -->
+{% if  data['slot2']  == 'booked' %}
 
 
-  <h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-   Tues 6 Nov 2023
-     </h1>
 
-
-<div class="govuk-form-group">
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-<!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
 
 <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-    Morning (9am to 12pm) 
+     Date
     </dt>
     <dd class="govuk-summary-list__value">
-     No availability set
+      Mon 5 Nov 2023 
     </dd>
-
-    <dd class="govuk-summary-list__value" style="width:10%;">
-      <li class="govuk-summary-list__actions-list-item">
-        <a class="govuk-link" href="select-hcps">
-          Change</a>
-      </li>
-     </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-   Afternoon (1pm to 5pm)
+    Duration
     </dt>
     <dd class="govuk-summary-list__value" style="border-bottom:0px;">
      
    
-     No availability set 
+      Afternoon (1pm to 5pm)
+     
     
     </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      Assigned
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>	Benjamin Marshall</li>
+     
+        <li>	Zedd Smith</li>
+       </ul>
 
-    <dd class="govuk-summary-list__value">
+     
+    
+    </dd>
+  </div>
+
+ 
+  <div class="govuk-summary-list__row" style="border-bottom: none;"> 
+    <dt class="govuk-summary-list__key" style="border: none;">
+
+    </dt>
+    <dd class="govuk-summary-list__value" style="text-align: right; border: none;">
+
       <li class="govuk-summary-list__actions-list-item">
-        <a class="govuk-link" href="select-hcps">
+        <a class="govuk-link" href="add-slot">
           Change</a>
       </li>
-     </dd>
+
+      <li class="govuk-summary-list__actions-list-item">
+        <a class="govuk-link" href="remove-slot">
+          Remove
+          </a>
+      </li>
+
+      </dd>
+
   </div>
- 
-
- 
- 
 
 </dl>
 
+{% endif %}
 
 
-<h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
- Wed 7 Nov 2023
-    </h1>
+</div>
 
+</dl> 
 
-<div class="govuk-form-group">
 
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-<!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
 
-<dl class="govuk-summary-list">
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key">
-   Morning (9am to 12pm)
-   </dt>
-   <dd class="govuk-summary-list__value">
-    No availability set
-   </dd>
 
-   <dd class="govuk-summary-list__value" style="width:10%;">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-  Afternoon (1pm to 5pm)
-   </dt>
-   <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-    
-  
-    No availability set 
-   
-   </dd>
 
-   <dd class="govuk-summary-list__value">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
-
-
-
-
-
-</dl>
-
-
-
-
-<h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Thur 8 Nov 2023
-    </h1>
-
-
-<div class="govuk-form-group">
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-<!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
-
-<dl class="govuk-summary-list">
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key">
-   Morning (9am to 12pm)
-   </dt>
-   <dd class="govuk-summary-list__value">
-    No availability set
-   </dd>
-
-   <dd class="govuk-summary-list__value" style="width:10%;">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-  Afternoon (1pm to 5pm)
-   </dt>
-   <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-    
-  
-    No availability set 
-   
-   </dd>
-
-   <dd class="govuk-summary-list__value">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
-
-
-
-
-
-</dl>
-
-
-
-
-<h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Fri 9 Nov 2023
-    </h1>
-
-
-<div class="govuk-form-group">
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-<!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
-
-<dl class="govuk-summary-list">
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key">
-   Morning (9am to 12pm)
-   </dt>
-   <dd class="govuk-summary-list__value">
-    No availability set
-   </dd>
-
-   <dd class="govuk-summary-list__value" style="width:10%;">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-  Afternoon (1pm to 5pm)
-   </dt>
-   <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-    
-  
-    No availability set 
-   
-   </dd>
-
-   <dd class="govuk-summary-list__value">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
-
-
-
-
-
-</dl>
-
-
-
-
-<h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Sat 10 Nov 2023
-    </h1>
-
-
-<div class="govuk-form-group">
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-<!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
-
-<dl class="govuk-summary-list">
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key">
-   Morning (9am to 12pm)
-   </dt>
-   <dd class="govuk-summary-list__value">
-    No availability set
-   </dd>
-
-   <dd class="govuk-summary-list__value" style="width:10%;">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-  Afternoon (1pm to 5pm)
-   </dt>
-   <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-    
-  
-    No availability set 
-   
-   </dd>
-
-   <dd class="govuk-summary-list__value">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
-
-
-
-
-
-</dl>
-
-
-
-
-<h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Sun 11 Nov 2023
-    </h1>
-
-
-<div class="govuk-form-group">
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-<!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
-
-<dl class="govuk-summary-list">
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key">
-   Morning (9am to 12pm)
-   </dt>
-   <dd class="govuk-summary-list__value">
-    No availability set
-   </dd>
-
-   <dd class="govuk-summary-list__value" style="width:10%;">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
- <div class="govuk-summary-list__row">
-   <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-  Afternoon (1pm to 5pm)
-   </dt>
-   <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-    
-  
-    No availability set 
-   
-   </dd>
-
-   <dd class="govuk-summary-list__value">
-     <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
-         Change</a>
-     </li>
-    </dd>
- </div>
-
-
-
-
-
-</dl>
-</div></div></div></div></div>
-
-</div></div></h1></div>
+            
+          </div>
         
 
    
-<div class="govuk-grid-column-one-third" style="margin-top: 30px; border: none;"> 
-  <h2 class="govuk-heading-m" id="subsection-title">
-     Week commencing <br>Mon 5 Nov 2023
-     </h2> 
+<div class="govuk-grid-column-one-third" style="margin-top: 0px; border: none;"> 
+  <!--  <h2 class="govuk-heading-m" id="subsection-title">
+     Wed 7 August 2023
+     </h2> -->
     
  
  
@@ -507,7 +317,7 @@ Availability - GOV.UK prototype
          </div>
        </div>
  
-    <!--  <div style="padding-top: 19em;"> <p> <a href="select-hcps">Schedule availability</a></p> </div> -->
+      <div style="padding-top: 19em;"> <p> <a href="add-slot">Schedule availability</a></p> </div>
      
     
  
