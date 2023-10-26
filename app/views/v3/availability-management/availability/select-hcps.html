@@ -37,26 +37,73 @@ Select agents - GOV.UK prototype
 
   <fieldset class="govuk-fieldset">
   
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
-   Location
-  </legend>
-  
+ 
 
   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+
+<!-- 
+  {{ govukCheckboxes({
+  idPrefix: "benefitType",
+  name: "benefit-type",
+  classes: "govuk-checkboxes--small",
+  fieldset: {
+  legend: {
+  text: "Skills",
+  isPageHeading: false,
+  classes: "govuk-fieldset__legend--s"
+  }
+  },
+  items: [
+  {
+  id: "esa",
+  value: "esa",
+  text: "Employment Support Allowance (13)"
+  },
+  {
+  id: "pip",
+  value: "pip",
+  text: "Personal Independence Payment (25)"
+  },
+  {
+  id: "uc",
+  value: "uc",
+  text: "Universal Credit (22)"
+  }
+  ]
+  }) }} -->
+
+  {{ govukCheckboxes({
+  idPrefix: "assessmentCentre",
+  name: "assessment-centre",
+  classes: "govuk-checkboxes--small",
+  fieldset: {
+  legend: {
+  text: "Location",
+  isPageHeading: false,
+  classes: "govuk-fieldset__legend--s"
+  }
+  },
+  items: [
+  {
+  id: "handsworth",
+  value: "handsworth",
+  text: "Birmingham, Handsworth"
+  },
+
+  {
+  id: "tresco",
+  value: "tresco",
+  text: "London, Tresco House"
+  }
+  ]
+  }) }}
+
+
      
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
-      <label class="govuk-label govuk-checkboxes__label" for="handsworth">
-        Birmingham, Handsworth 
-      </label>
-    </div>
-            
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
-      <label class="govuk-label govuk-checkboxes__label" for="tresco">
-        London, Tresco House 
-      </label>
-    </div>
+   
 
   </div>
   
@@ -88,6 +135,7 @@ Select agents - GOV.UK prototype
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
    
 
+    
 
       <form action="existing-slots-added" method="post" class="form" >  
        
@@ -104,83 +152,86 @@ Select agents - GOV.UK prototype
             </div>
 
             
-
-
-              <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row" >
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row" >
                    
                    
 
                         
-                        <div class="govuk-checkboxes govuk-checkboxes--small">
-                          <div class="govuk-checkboxes__item" >
-                            <input class="govuk-checkboxes__input" type="checkbox" value="All members in Handsworth" name="select-all" id="select-all">
-                            <label class="govuk-label govuk-checkboxes__label" for="member"> </label>
-                        
-
-
-
-
-                
-                            <th class="govuk-table__header" scope="col" id="select-all">
-                      
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item" >
+                      <input class="govuk-checkboxes__input" type="checkbox" value="All members in Handsworth" name="select-all" id="select-all">
+                      <label class="govuk-label govuk-checkboxes__label" for="member"> </label>
                   
-                    
-                    </th> </div>
-                    <th scope="col" class="govuk-table__header" style="width: 30%;">Name</th>
-                    <th scope="col" class="govuk-table__header" style="width: 10%;">Email</th>
-                    <th scope="col" class="govuk-table__header" style="width: 20%;">Location</th>
-                    <th scope="col" class="govuk-table__header" style="width: 30%;">Skills</th>
-                  </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row govuk-table__row--selected">
-                    <td class="govuk-table__cell">
-                      <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                        <input type="checkbox" class="govuk-checkboxes__input" id="agent-1" name="agent-name" type="checkbox" value="Amy Gill"  {{ checked("agent-name", "Amy Gill") }}>
-                        <label class="govuk-label govuk-checkboxes__label" for="agent-1">
-                 
-                        </label>
-                      </div>
-                    </td>
 
-                   
-                      <td class="govuk-table__cell">Amy Gill</td>
-                      <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                      <td class="govuk-table__cell">
-                        <ul class="govuk-list govuk-list--bullet">
-                        <li>PIP F2F</li>
-                        <li>PIP TA</li>
-                       
-                      </ul>
-                    </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-2" name="agent-name" type="checkbox" value="Benjamin Marshall" {{ checked("agent-name", "Benjamin Marshall") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-2">
-                   
-                          </label>
-                        </div>
-                      </td>
-                      <td class="govuk-table__cell">Benjamin Marshall</td>
-                      <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                       <td class="govuk-table__cell">
-                        
-                        <ul class="govuk-list govuk-list--bullet">
-                          <li>WCA CN</li>
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
-                         </ul>
-                      </td>
+
+
+
           
-          
-                    </tr>
-                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="col" id="select-all">
+                
+            
+              
+              </th> </div>
+              <th scope="col" class="govuk-table__header" style="width: 30%;">Name</th>
+              <th scope="col" class="govuk-table__header" style="width: 10%;">Email</th>
+              <th scope="col" class="govuk-table__header" style="width: 20%;">Location</th>
+              <th scope="col" class="govuk-table__header" style="width: 30%;">Skills</th>
+            </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row handsworth">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="agent-1" name="agent-name" type="checkbox" value="Amy Gill"  {{ checked("agent-name", "Amy Gill") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="agent-1">
+               
+                      </label>
+                    </div>
+                  </td>
+
+                 
+                    <td class="govuk-table__cell">Amy Gill</td>
+                    <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
+                    <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                    <td class="govuk-table__cell">
+                      <ul class="govuk-list govuk-list--bullet">
+                      <li>PIP F2F</li>
+                      <li>PIP TA</li>
+                     
+                    </ul>
+                  </td>
+                  </tr>
+
+
+
+                <tr class="govuk-table__row tresco">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="agent-2" name="agent-name" type="checkbox" value="Benjamin Marshall" {{ checked("agent-name", "Benjamin Marshall") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="agent-2">
+               
+                      </label>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">Benjamin Marshall</td>
+                  <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
+                  <td class="govuk-table__cell"> London, Tresco House </td>
+                   <td class="govuk-table__cell">
+                    
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>WCA CN</li>
+                      <li>WCA F2F</li>
+                      <li>WCA TA</li>
+                     </ul>
+                  </td>
+      
+      
+                </tr>
+
+                    <tr class="govuk-table__row tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-3"  name="agent-name" type="checkbox" value="Bernhard Fischer" {{ checked("agent-name", "Bernhard Fischer") }}>
@@ -205,7 +256,7 @@ Select agents - GOV.UK prototype
                       </td>
                       
                     </tr>
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-4" name="agent-name" type="checkbox" value="Danny Travasso" {{ checked("agent-name", "Danny Travasso") }}>
@@ -230,7 +281,7 @@ Select agents - GOV.UK prototype
                         </td>
                      
                     </tr>
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-5" name="agent-name" type="checkbox" value="Emma Bradley" {{ checked("agent-name", "Emma Bradley") }}>
@@ -256,7 +307,7 @@ Select agents - GOV.UK prototype
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-6" name="agent-name" type="checkbox" value="Frieda Döring" {{ checked("agent-name", "Frieda Döring") }}>
@@ -279,7 +330,7 @@ Select agents - GOV.UK prototype
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-7" name="agent-name" type="checkbox" value="Gabriel Mello" {{ checked("agent-name", "Gabriel Mello") }}>
@@ -303,7 +354,7 @@ Select agents - GOV.UK prototype
           
           
                     </tr>
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-8" name="agent-name" type="checkbox" value="Jane Smith" {{ checked("agent-name", "Jane Smith") }}>
@@ -327,7 +378,7 @@ Select agents - GOV.UK prototype
           
                         </td>
                     </tr>
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-9" name="agent-name" type="checkbox" value="Joe Bloggs" {{ checked("agent-name", "Joe Bloggs") }}>
@@ -352,7 +403,7 @@ Select agents - GOV.UK prototype
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-10" name="agent-name" type="checkbox" value="Julie Smails" {{ checked("agent-name", "Julie Smails") }}>
@@ -380,7 +431,7 @@ Select agents - GOV.UK prototype
                     </tr>
 
 
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-11" name="agent-name" type="checkbox" value="Zoe Webb" {{ checked("agent-name", "Zoe Webb") }}>
@@ -407,7 +458,7 @@ Select agents - GOV.UK prototype
                       </td> 
                     </tr>
 
-                    <tr class="govuk-table__row">
+                    <tr class="govuk-table__row tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-12" name="agent-name" type="checkbox" value="Zedd Smith" {{ checked("agent-name", "Zedd Smith") }}>
@@ -467,6 +518,99 @@ $('#select-all').click(function(event) {
 }); 
 
 
+
+
+  function hideAllWithClass(classname) {
+    document.querySelectorAll("." + classname).forEach((element) => {
+      element.style.visibility = 'collapse';
+    });
+  }
+
+  function showAllWithClass(classname) {
+    document.querySelectorAll("." + classname).forEach((element) => {
+      element.style.visibility = 'visible';
+    });
+  }
+
+  document.querySelector("#filters").addEventListener("submit", function (e) {
+
+    e.preventDefault();    //stop form from submitting
+
+    // showAllWithClass("esa");
+    // showAllWithClass("pip");
+    // showAllWithClass("uc");
+    showAllWithClass("tresco");
+    showAllWithClass("handsworth");
+    let benefitTypes = [];
+    let sites = [];
+
+    
+
+    // if (document.getElementById('pip').checked == true || document.getElementById('esa').checked == true || document.getElementById('uc').checked == true) {
+    //   if (document.getElementById('pip').checked == false) {
+    //     hideAllWithClass("pip");
+    //   } else {
+    //     benefitTypes.push("Personal Independence Payment");
+    //   }
+
+    //   if (document.getElementById('esa').checked == false) {
+    //     hideAllWithClass("esa");
+    //   } else {
+    //     benefitTypes.push("Employment Support Allowance");
+    //   }
+
+    //   if (document.getElementById('uc').checked == false) {
+    //     hideAllWithClass("uc");
+    //   } else {
+    //     benefitTypes.push("Universal Credit");
+    //   }
+    // }
+
+    if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true) {
+      if (document.getElementById('handsworth').checked == false) {
+        hideAllWithClass("handsworth");
+      } else {
+        sites.push("Handsworth");
+      }
+
+      if (document.getElementById('tresco').checked == false) {
+        hideAllWithClass("tresco");
+      } else {
+        sites.push('Tresco');
+      }
+    }
+
+    var count = 0;
+    var elemnts = document
+      .querySelectorAll('.govuk-table tr').forEach((element) => {
+        if (element.style.visibility === 'visible') {
+          count += 1;
+        }
+      })
+
+    // if (count < 20) {
+    //   document.getElementById('pagination').style.visibility = 'collapse';
+    // } else {
+    //   document.getElementById('pagination').style.visibility = 'visible';
+    // }
+
+    // document.getElementById('paginationTotal').innerText = count;
+
+    // var eol = document.getElementById('srel').checked ? " end of life" : "";
+    // var benefitTypeString = benefitTypes.join(", ");
+    // var sitesString = sites.join(", ");
+    // var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
+    // var ifSites = sites.length > 0 ? ' at ' : '';
+
+    //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth
+    // var text = count + " report ready " + eol + " referrals " + ifBenefitType + benefitTypeString + ifSites + sitesString;
+    var text = count + " referrals";
+
+    document.getElementById('filter-playback').innerText = text;
+
+    // document.getElementById('srelCount').innertext = document.querySelectorAll('.govuk-table tr.srel').length;
+
+  });
 
 </script>
     

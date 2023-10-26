@@ -3,7 +3,7 @@
 
 
 {% block pageTitle %}
-Prototype page title
+Select agents - GOV.UK prototype
 {% endblock %}
 
 {% block header %}
@@ -11,340 +11,520 @@ Prototype page title
 
 {% include "includes/internal-header.html" %}
 
+{% endblock %}
 
-<!-- <main>
-  <header class="moj-primary-navigation">
-  <div class="govuk-width-container ">
-    <div class="moj-primary-navigation">
+{% block content %}
 
-      <div class="moj-primary-navigation__container">
-    
+<div class="govuk-grid-row" style="margin-top: -40px;">
 
-    
-          <nav class="moj-primary-navigation" aria-label="Primary navigation">
-    
-            <ul class="moj-primary-navigation__list">
-              <li class="moj-primary-navigation__item" style="border-bottom: 5px solid #1d70b8;"> 
-                <a  href=" ">HCPs</a>
-                </li>
-    
-              <li class="moj-primary-navigation__item">
-               
-               
-                
-                <a class="moj-primary-navigation__link" href=" ">Rooms</a>
-                 
 
-              </li>
-    
+  <div class="govuk-grid-column-one-quarter" style="margin-top: 0px;">
 
-            </ul>
-    
-          </nav>
-    
-       
-      </div>
-    
+  <a href="../manage-select" class="govuk-back-link">Back</a>
+    <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5" style="padding-top:20px;">
+      Filters
+    </h2>
+    <div id="filter-hint" class="govuk-hint govuk-!-Marchgin-bottom-4">
+      Select one or more filters to apply to the list.
     </div>
-    
-
-      
-  </div>
-  </header>
-  </main> -->
-
-  {% endblock %}
-
-  {% block content %}
+    <div class="table-filter">
+<form id="filters">
 
 
-  <div class="govuk-grid-row" style="margin-top: -40px;">
+ 
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+  
+ 
+
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 
-    <div class="govuk-grid-column-one-quarter" style="margin-top: 0px;">
-  
-    <a href="../manage-select" class="govuk-back-link">Back</a>
-      <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5" style="padding-top:20px;">
-        Filters
-      </h2>
-      <div id="filter-hint" class="govuk-hint govuk-!-Marchgin-bottom-4">
-        Select one or more filters to apply to the list.
-      </div>
-      <div class="table-filter">
-  <form id="filters">
-  
-  
-   
-  
-  <div class="govuk-form-group">
-  
-    <fieldset class="govuk-fieldset">
-    
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
-   Location
-    </legend>
-    
-  
-    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-       
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
-        <label class="govuk-label govuk-checkboxes__label" for="handsworth">
-          Birmingham, Handsworth (5)
-        </label>
-      </div>
-              
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
-        <label class="govuk-label govuk-checkboxes__label" for="tresco">
-          London, Tresco House (7)
-        </label>
-      </div>
-  
-    </div>
-    
-    </fieldset>
-    
-  </div>
-  
-  
-    
-    </fieldset>
-    
-  </div>
-  
-  
-  
-  
-  <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
-  
-  </form>
-  
-  
-  
-  </div>
+<!-- 
+  {{ govukCheckboxes({
+  idPrefix: "benefitType",
+  name: "benefit-type",
+  classes: "govuk-checkboxes--small",
+  fieldset: {
+  legend: {
+  text: "Skills",
+  isPageHeading: false,
+  classes: "govuk-fieldset__legend--s"
+  }
+  },
+  items: [
+  {
+  id: "esa",
+  value: "esa",
+  text: "Employment Support Allowance (13)"
+  },
+  {
+  id: "pip",
+  value: "pip",
+  text: "Personal Independence Payment (25)"
+  },
+  {
+  id: "uc",
+  value: "uc",
+  text: "Universal Credit (22)"
+  }
+  ]
+  }) }} -->
+
+  {{ govukCheckboxes({
+  idPrefix: "assessmentCentre",
+  name: "assessment-centre",
+  classes: "govuk-checkboxes--small",
+  fieldset: {
+  legend: {
+  text: "Location",
+  isPageHeading: false,
+  classes: "govuk-fieldset__legend--s"
+  }
+  },
+  items: [
+  {
+  id: "handsworth",
+  value: "handsworth",
+  text: "Birmingham, Handsworth (5)"
+  },
+
+  {
+  id: "tresco",
+  value: "tresco",
+  text: "London, Tresco House (7)"
+  }
+  ]
+  }) }}
 
 
-  <div class="govuk-grid-column-three-quarters" style="padding-top:80px;">  
-    
-
-  
-      
-      <h1 class="govuk-heading-l">
-       HCP locations and skills
-        <p class="govuk-hint"></p>
-      </h1>
-
-   <!--   <div class="govuk-form-group lbh-form-group lbh-search-box">
-   
-        <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-          &nbsp; Find a HCP
-        </label>
-        <input
-          class="govuk-input lbh-input govuk-input--width-20"
-          id="search"
-          name="search"
-          type="search"
-          placeholder=""
-      >
-        <button class="govuk-button moj-search__button " data-module="govuk-button">
-          Search
-        </button>
-      </div>
-    -->
      
+   
+
+  </div>
+  
+  </fieldset>
+  
+</div>
 
 
-        <table class="govuk-table">
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" style="width: 30%;">Name</th>
-          <th scope="col" class="govuk-table__header" style="width: 10%;">Email</th>
-          <th scope="col" class="govuk-table__header" style="width: 20%;">Location</th>
-          <th scope="col" class="govuk-table__header" style="width: 30%;">Skills</th>
-          
-        </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="amy-gill-profile">Amy Gill</a></td>
-            <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
-            <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list govuk-list--bullet">
-              <li>PIP F2F</li>
-              <li>PIP TA</li>
-             
-            </ul>
-          </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Benjamin Marshall</a></td>
-            <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
-            <td class="govuk-table__cell"> London, Tresco House </td>
-             <td class="govuk-table__cell">
-              
-              <ul class="govuk-list govuk-list--bullet">
-                <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
-            </td>
+  
+  </fieldset>
+  
+</div>
 
 
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Bernhard Fischer</a></td>
-            <td class="govuk-table__cell"> bernhardfischer@domain.gov.uk </td>
-            <td class="govuk-table__cell"> London, Tresco House </td>
-             <td class="govuk-table__cell">
-
-              <ul class="govuk-list govuk-list--bullet">
-               
-               <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
 
 
-            </td>
+
+<button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
+
+</form>
+
+
+
+</div>
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+    
+
+      <form action="existing-slots-added" method="post" class="form" >  
+       
+        
+        
+
+            <h1 class="govuk-heading-l" style="padding-top:10px;">
+              HCP locations and skills
             
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Danny Travasso</a></td>
-            <td class="govuk-table__cell">dannytravasso@domain.gov.uk </td>
-            <td class="govuk-table__cell"> London, Tresco House </td>
-             <td class="govuk-table__cell">  
-              <ul class="govuk-list govuk-list--bullet">
-                <li>PIP F2F</li>
-              <li>PIP TA</li>
-               <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
-
-              
-              </td>
            
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" " >Emma Bradley</a></td>
-            <td class="govuk-table__cell"> emmabradley@domain.gov.uk </td>
-            <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-             <td class="govuk-table__cell">
+            </h1>
+         
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>PIP F2F</li>
-              <li>PIP TA</li>
-               <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
-
-
-
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Frieda Döring</a></td>
-            <td class="govuk-table__cell"> freidadoring@domain.gov.uk </td>
-            <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-            <td class="govuk-table__cell">  
-          
-            <ul class="govuk-list govuk-list--bullet">
             
-             <li>WCA CN</li>
-              <li>WCA F2F</li>
-              <li>WCA TA</li>
-             </ul>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row" >
+                   
+                   
 
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Gabriel Mello</a></td>
-            <td class="govuk-table__cell"> gabrielmello@domain.gov.uk </td>
-            <td class="govuk-table__cell"> London, Tresco House</td>
-            <td class="govuk-table__cell">
+              <th scope="col" class="govuk-table__header" style="width: 30%;">Name</th>
+              <th scope="col" class="govuk-table__header" style="width: 10%;">Email</th>
+              <th scope="col" class="govuk-table__header" style="width: 20%;">Location</th>
+              <th scope="col" class="govuk-table__header" style="width: 30%;">Skills</th>
+            </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row handsworth">
               
-              <ul class="govuk-list govuk-list--bullet">
-             
-               <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
-              </td>
-
-
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Jane Smith</a></td>
-            <td class="govuk-table__cell"> janesmith@domain.gov.uk </td>
-            <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-             <td class="govuk-table__cell">
-              
-              <ul class="govuk-list govuk-list--bullet">
-                <li>PIP F2F</li>
-              <li>PIP TA</li>
-               <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
-
-              </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Joe Bloggs</a></td>
-            <td class="govuk-table__cell"> joebloggs@domain.gov.uk </td>
-            <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-             <td class="govuk-table__cell">
-
-
-              <ul class="govuk-list govuk-list--bullet">
-                
-               <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
+                 
+                    <td class="govuk-table__cell"><a href="amy-gill-profile"> Amy Gill</a></td>
+                    <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
+                    <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                    <td class="govuk-table__cell">
+                      <ul class="govuk-list govuk-list--bullet">
+                      <li>PIP F2F</li>
+                      <li>PIP TA</li>
+                     
+                    </ul>
+                  </td>
+                  </tr>
 
 
 
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href=" ">Julie Smails</a></td>
-            <td class="govuk-table__cell">juliesmails@domain.gov.uk </td>
-            <td class="govuk-table__cell"> London, Tresco House </td>
-             <td class="govuk-table__cell">
+                <tr class="govuk-table__row tresco">
+                 
+                  <td class="govuk-table__cell"><a href="">Benjamin Marshall </a></td>
+                  <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
+                  <td class="govuk-table__cell"> London, Tresco House </td>
+                   <td class="govuk-table__cell">
+                    
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>WCA CN</li>
+                      <li>WCA F2F</li>
+                      <li>WCA TA</li>
+                     </ul>
+                  </td>
+      
+      
+                </tr>
+
+                    <tr class="govuk-table__row tresco">
+                   
+                      <td class="govuk-table__cell"><a href="">Bernhard Fischer</a></td>
+                      <td class="govuk-table__cell"> bernhardfischer@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                         
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+                      </td>
+                      
+                    </tr>
+                    <tr class="govuk-table__row tresco">
+                 
+                      <td class="govuk-table__cell"><a href=""> Danny Travasso</a></td>
+                      <td class="govuk-table__cell">dannytravasso@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                       <td class="govuk-table__cell">  
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                        
+                        </td>
+                     
+                    </tr>
+                    <tr class="govuk-table__row handsworth">
+                   
+                      <td class="govuk-table__cell"><a href="">Emma Bradley</a></td>
+                      <td class="govuk-table__cell"> emmabradley@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+          
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row handsworth">
+                    
+                      <td class="govuk-table__cell"><a href="">Frieda Döring</a></td>
+                      <td class="govuk-table__cell"> freidadoring@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                      <td class="govuk-table__cell">  
+                    
+                      <ul class="govuk-list govuk-list--bullet">
+                      
+                       <li>WCA CN</li>
+                        <li>WCA F2F</li>
+                        <li>WCA TA</li>
+                       </ul>
+          
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row tresco">
+                    
+                      <td class="govuk-table__cell"><a href="">Gabriel Mello</a></td>
+                      <td class="govuk-table__cell"> gabrielmello@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell">
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                       
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+                        </td>
+          
+          
+                    </tr>
+                    <tr class="govuk-table__row handsworth">
+                   
+                      <td class="govuk-table__cell"><a href="">Jane Smith</a></td>
+                      <td class="govuk-table__cell"> janesmith@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                       <td class="govuk-table__cell">
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row handsworth">
+                      
+                      <td class="govuk-table__cell"><a href="">Joe Bloggs</a></td>
+                      <td class="govuk-table__cell"> joebloggs@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+          
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row tresco">
+                   
+                      <td class="govuk-table__cell"><a href="">Julie Smails</a></td>
+                      <td class="govuk-table__cell">juliesmails@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                       <td class="govuk-table__cell">
+          
+          
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                      </td> 
+                    </tr>
+
+
+                    <tr class="govuk-table__row tresco">
+                   
+                      <td class="govuk-table__cell"><a href="">Zoe Webb </a></td>
+                      <td class="govuk-table__cell">zoewebbs@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                       <td class="govuk-table__cell">
+          
+          
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                      </td> 
+                    </tr>
+
+                    <tr class="govuk-table__row tresco">
+                  
+                      <td class="govuk-table__cell"><a href="">Zedd Smith</a></td>
+                      <td class="govuk-table__cell">zeddsmith@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                       <td class="govuk-table__cell">
+          
+          
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                      </td> 
+                    </tr>
 
 
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>PIP F2F</li>
-              <li>PIP TA</li>
-               <li>WCA CN</li>
-                <li>WCA F2F</li>
-                <li>WCA TA</li>
-               </ul>
+                 
+                  
+                </tbody>
+              </table>
+           
 
-            </td> 
-          </tr>
-        </tbody>
-        </table>
-        
+     
+    </form>
 
-        
-        <nav class="moj-pagination" >
-          <ul class="moj-pagination__list" style="padding-left: 0px;"> 
-            <li class="moj-pagination__item moj-pagination__item--active" aria-label="Page 1 of 2" aria-current="page">1</li> 
-            <li class="moj-pagination__item"><a class="moj-pagination__link" href=" " aria-label="Page 2 of 2">2</a></li>      
-            <li class="moj-pagination__item  moj-pagination__item--next">
-              <a class="moj-pagination__link" href=" ">Next<span class="govuk-visually-hidden"> page</span></a>
-            </li>
-          </ul>
-          <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>12</b> HCPs</p>
-        </nav>
 
-           </div>
+    <nav class="moj-pagination" >
+      <ul class="moj-pagination__list" style="padding-left: 0px;"> 
+        <li class="moj-pagination__item moj-pagination__item--active" aria-label="Page 1 of 2" aria-current="page">1</li> 
+        <li class="moj-pagination__item"><a class="moj-pagination__link" href=" " aria-label="Page 2 of 2">2</a></li>      
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href=" ">Next<span class="govuk-visually-hidden"> page</span></a>
+        </li>
+      </ul>
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>12</b> HCPs</p>
+    </nav>
+
+       </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+
+<script> 
+
+
+
+
+
+  function hideAllWithClass(classname) {
+    document.querySelectorAll("." + classname).forEach((element) => {
+      element.style.visibility = 'collapse';
+    });
+  }
+
+  function showAllWithClass(classname) {
+    document.querySelectorAll("." + classname).forEach((element) => {
+      element.style.visibility = 'visible';
+    });
+  }
+
+  document.querySelector("#filters").addEventListener("submit", function (e) {
+
+    e.preventDefault();    //stop form from submitting
+
+    // showAllWithClass("esa");
+    // showAllWithClass("pip");
+    // showAllWithClass("uc");
+    showAllWithClass("tresco");
+    showAllWithClass("handsworth");
+    let benefitTypes = [];
+    let sites = [];
+
+    
+
+    // if (document.getElementById('pip').checked == true || document.getElementById('esa').checked == true || document.getElementById('uc').checked == true) {
+    //   if (document.getElementById('pip').checked == false) {
+    //     hideAllWithClass("pip");
+    //   } else {
+    //     benefitTypes.push("Personal Independence Payment");
+    //   }
+
+    //   if (document.getElementById('esa').checked == false) {
+    //     hideAllWithClass("esa");
+    //   } else {
+    //     benefitTypes.push("Employment Support Allowance");
+    //   }
+
+    //   if (document.getElementById('uc').checked == false) {
+    //     hideAllWithClass("uc");
+    //   } else {
+    //     benefitTypes.push("Universal Credit");
+    //   }
+    // }
+
+    if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true) {
+      if (document.getElementById('handsworth').checked == false) {
+        hideAllWithClass("handsworth");
+      } else {
+        sites.push("Handsworth");
+      }
+
+      if (document.getElementById('tresco').checked == false) {
+        hideAllWithClass("tresco");
+      } else {
+        sites.push('Tresco');
+      }
+    }
+
+    var count = 0;
+    var elemnts = document
+      .querySelectorAll('.govuk-table tr').forEach((element) => {
+        if (element.style.visibility === 'visible') {
+          count += 1;
+        }
+      })
+
+    if (count < 10) {
+      document.getElementById('pagination').style.visibility = 'collapse';
+    } else {
+      document.getElementById('pagination').style.visibility = 'visible';
+    }
+
+    document.getElementById('paginationTotal').innerText = count;
+
+    // var eol = document.getElementById('srel').checked ? " end of life" : "";
+    // var benefitTypeString = benefitTypes.join(", ");
+    // var sitesString = sites.join(", ");
+    // var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
+    // var ifSites = sites.length > 0 ? ' at ' : '';
+
+    //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth
+    // var text = count + " report ready " + eol + " referrals " + ifBenefitType + benefitTypeString + ifSites + sitesString;
+    var text = count + " referrals";
+
+    document.getElementById('filter-playback').innerText = text;
+
+    // document.getElementById('srelCount').innertext = document.querySelectorAll('.govuk-table tr.srel').length;
+
+  });
+
+</script>
+    
+    </div>
+
+
+</div>
+
+
+    </div>
+
+  </main>
+</div>
+
+
 
 
      <!--  <div class="govuk-grid-column-one-third"  style="margin-top: 100px;">
