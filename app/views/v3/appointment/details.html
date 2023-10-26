@@ -19,7 +19,7 @@ Prototype page title
 <div class="govuk-grid-row" style="margin-top: -40px;">
   <div class="govuk-grid-column-two-thirds">
 
-    <a href="javascript:history.back()"  class="govuk-back-link">Back</a>
+    <a href="claimant-detail"  class="govuk-back-link">Back</a>
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
   
     <h1 class="govuk-heading-l">
@@ -51,10 +51,18 @@ Prototype page title
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="type-2" name="type" type="radio" value="Other">
+            <input class="govuk-radios__input" id="type-2" name="type" type="radio" value="Other" data-aria-controls="conditional-type-2">
             <label class="govuk-label govuk-radios__label" for="type-2">
              Other
             </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-type-2">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-text">
+               Enter appointment type
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+            </div>
           </div>
          
          
@@ -83,6 +91,41 @@ Prototype page title
             </label>
           </div>
          
+
+
+<br>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+          Select appointment location
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="location" name="location" type="radio" value="Handsworth">
+            <label class="govuk-label govuk-radios__label" for="location">
+         Handworth, Birmingham
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="location-2" name="location" type="radio" value="Other" data-aria-controls="conditional-location-2">
+            <label class="govuk-label govuk-radios__label" for="location-2">
+             Other
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-location-2">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-text">
+               Enter name of location
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="location-text" name="location">
+            </div>
+          </div>
+         
+         
+      
+        </div>
+
+
          
       
         </div>
@@ -95,11 +138,12 @@ Prototype page title
 
 
 
-
-    <button class="govuk-button" data-module="govuk-button">
-      Continue
-    </button>
-
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+      <a class="govuk-link" href="claimant-detail">Cancel</a>
+    </div>
 
   </div>
 

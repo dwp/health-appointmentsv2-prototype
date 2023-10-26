@@ -24,34 +24,75 @@ Prototype page title
   
  
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    <h3 class="govuk-heading-l">
+     Check appointment details
+  </h3>
 
-      {{ govukRadios({
-        idPrefix: "which-location",
-        name: "which-location",
-        fieldset: {
-          legend: {
-            text: "Which location do you want to manage?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-        items: [
-          {
-            value: "Birmingham, Handsworth",
-            text: "Birmingham, Handsworth"
-          },
-          {
-            value: "London, Tresco House",
-            text: "London, Tresco House"
-          }
-        ]
-      }) }}
 
-      <br><br>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Appointment centre
+      </dt>
+      <dd class="govuk-summary-list__value">
+      Newcastle Front Office
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       <!--  <a class="govuk-link govuk-link--no-visited-state" href="details">
+          Change
+        </a> -->
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+       Appointment type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['type'] }} 
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link govuk-link--no-visited-state" href="details">
+          Change
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+       Channel
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['channel'] }} 
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link govuk-link--no-visited-state" href="details">
+          Change
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+       Date and time
+      </dt>
+      <dd class="govuk-summary-list__value">
+        10 November 2023 at 1:00pm
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link govuk-link--no-visited-state" href="times-available">
+        Change
+        </a>
+      </dd>
+    </div>
+
+
+
+  </dl>
+
 
       
-      <a href="manage-select"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
+      <a href="done-page"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
     </div>
   </div>
 
