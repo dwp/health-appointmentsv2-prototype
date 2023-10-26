@@ -73,7 +73,7 @@ Availability - GOV.UK prototype
       </dt>
       <dd class="govuk-summary-list__value">
         <ul class="govuk-list govuk-list--bullet">
-       {% for feature in data['agent-name'] %}  <li>{{ feature }}</li>
+       {% for feature in data['agent-mon-am-name'] %}  <li>{{ feature }}</li>
        
       {% else %} </ul>
         No availability set
@@ -85,7 +85,7 @@ Availability - GOV.UK prototype
 
       <dd class="govuk-summary-list__value" style="width:10%;"> 
         <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="select-hcps">
+          <a class="govuk-link" href="week/select-hcps-mon-am">
             Change</a>
         </li>
        </dd>
@@ -97,13 +97,17 @@ Availability - GOV.UK prototype
       <dd class="govuk-summary-list__value" style="border-bottom:0px;">
        
      
-       No availability set 
-      
+        {% for feature in data['agent-mon-pm-name'] %}  <li>{{ feature }}</li>
+       
+      {% else %} </ul>
+        No availability set
+      {% endfor %}
+
       </dd>
 
       <dd class="govuk-summary-list__value">
         <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="select-hcps">
+          <a class="govuk-link" href="week/select-hcps-mon-pm">
             Change</a>
         </li>
        </dd>
@@ -135,12 +139,17 @@ Availability - GOV.UK prototype
     Morning (9am to 12pm)
     </dt>
     <dd class="govuk-summary-list__value">
-     No availability set
+      {% for feature in data['agent-tue-am-name'] %}  <li>{{ feature }}</li>
+       
+      {% else %} </ul>
+        No availability set
+      {% endfor %}
+
     </dd>
 
     <dd class="govuk-summary-list__value" style="width:10%;">
       <li class="govuk-summary-list__actions-list-item">
-        <a class="govuk-link" href="select-hcps">
+        <a class="govuk-link" href="week/select-hcps-tue-am">
           Change</a>
       </li>
      </dd>
@@ -151,14 +160,18 @@ Availability - GOV.UK prototype
     </dt>
     <dd class="govuk-summary-list__value" style="border-bottom:0px;">
      
-   
-     No availability set 
+      {% for feature in data['agent-tue-pm-name'] %}  <li>{{ feature }}</li>
+       
+      {% else %} </ul>
+        No availability set
+      {% endfor %}
+
     
     </dd>
 
     <dd class="govuk-summary-list__value">
       <li class="govuk-summary-list__actions-list-item">
-        <a class="govuk-link" href="select-hcps">
+        <a class="govuk-link" href="week/select-hcps-tue-pm">
           Change</a>
       </li>
      </dd>
@@ -188,12 +201,17 @@ Availability - GOV.UK prototype
    Morning (9am to 12pm)
    </dt>
    <dd class="govuk-summary-list__value">
-    No availability set
+    {% for feature in data['agent-wed-am-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    </dd>
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-wed-am">
          Change</a>
      </li>
     </dd>
@@ -205,13 +223,18 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
     
   
-    No availability set 
+    {% for feature in data['agent-wed-pm-name'] %}  <li>{{ feature }}</li>
+       
+      {% else %} </ul>
+        No availability set
+      {% endfor %}
+
    
    </dd>
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-wed-pm">
          Change</a>
      </li>
     </dd>
@@ -242,12 +265,17 @@ Availability - GOV.UK prototype
    Morning (9am to 12pm)
    </dt>
    <dd class="govuk-summary-list__value">
-    No availability set
+    {% for feature in data['agent-thu-am-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    </dd>
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-thu-am">
          Change</a>
      </li>
     </dd>
@@ -259,13 +287,18 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
     
   
-    No availability set 
+    {% for feature in data['agent-thu-pm-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    
    </dd>
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-thu-pm">
          Change</a>
      </li>
     </dd>
@@ -296,12 +329,17 @@ Availability - GOV.UK prototype
    Morning (9am to 12pm)
    </dt>
    <dd class="govuk-summary-list__value">
-    No availability set
+    {% for feature in data['agent-fri-am-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    </dd>
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-fri-am">
          Change</a>
      </li>
     </dd>
@@ -313,13 +351,18 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
     
   
-    No availability set 
+    {% for feature in data['agent-fri-pm-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    
    </dd>
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-fri-pm">
          Change</a>
      </li>
     </dd>
@@ -350,12 +393,17 @@ Availability - GOV.UK prototype
    Morning (9am to 12pm)
    </dt>
    <dd class="govuk-summary-list__value">
-    No availability set
+    {% for feature in data['agent-sat-am-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    </dd>
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-sat-am">
          Change</a>
      </li>
     </dd>
@@ -367,13 +415,18 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
     
   
-    No availability set 
+    {% for feature in data['agent-sat-pm-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    
    </dd>
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-sat-pm">
          Change</a>
      </li>
     </dd>
@@ -404,12 +457,17 @@ Availability - GOV.UK prototype
    Morning (9am to 12pm)
    </dt>
    <dd class="govuk-summary-list__value">
-    No availability set
+    {% for feature in data['agent-sun-am-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    </dd>
 
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-sun-am">
          Change</a>
      </li>
     </dd>
@@ -421,13 +479,18 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
     
   
-    No availability set 
+    {% for feature in data['agent-sun-pm-name'] %}  <li>{{ feature }}</li>
+       
+    {% else %} </ul>
+      No availability set
+    {% endfor %}
+
    
    </dd>
 
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
-       <a class="govuk-link" href="select-hcps">
+       <a class="govuk-link" href="week/select-hcps-sun-pm">
          Change</a>
      </li>
     </dd>
