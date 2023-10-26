@@ -89,7 +89,7 @@ Select agents - GOV.UK prototype
    
 
 
-      <form class="form" action="existing-slots-added" method="post">
+      <form action="existing-slots-added" method="post" class="form" >  
        
         
         
@@ -113,7 +113,7 @@ Select agents - GOV.UK prototype
                    
 
                         
-                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes govuk-checkboxes--small">
                           <div class="govuk-checkboxes__item" >
                             <input class="govuk-checkboxes__input" type="checkbox" value="All members in Handsworth" name="select-all" id="select-all">
                             <label class="govuk-label govuk-checkboxes__label" for="member"> </label>
@@ -138,7 +138,7 @@ Select agents - GOV.UK prototype
                   <tr class="govuk-table__row govuk-table__row--selected">
                     <td class="govuk-table__cell">
                       <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                        <input type="checkbox" class="govuk-checkboxes__input" id="agent-1" name="agent-name" type="checkbox" value="Amy Gill" >
+                        <input type="checkbox" class="govuk-checkboxes__input" id="agent-1" name="agent-name" type="checkbox" value="Amy Gill"  {{ checked("agent-name", "Amy Gill") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="agent-1">
                  
                         </label>
@@ -160,7 +160,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-2" name="agent-name" type="checkbox" value="Benjamin Marshall" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-2" name="agent-name" type="checkbox" value="Benjamin Marshall" {{ checked("agent-name", "Benjamin Marshall") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-2">
                    
                           </label>
@@ -183,7 +183,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-3"  name="agent-name" type="checkbox" value="Bernhard Fischer" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-3"  name="agent-name" type="checkbox" value="Bernhard Fischer" {{ checked("agent-name", "Bernhard Fischer") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-3">
                    
                           </label>
@@ -208,7 +208,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-4" name="agent-name" type="checkbox" value="Benjamin Danny Travasso" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-4" name="agent-name" type="checkbox" value="Danny Travasso" {{ checked("agent-name", "Danny Travasso") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-4">
                    
                           </label>
@@ -233,7 +233,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-5" name="agent-name" type="checkbox" value="Emma Bradley" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-5" name="agent-name" type="checkbox" value="Emma Bradley" {{ checked("agent-name", "Emma Bradley") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-5">
                    
                           </label>
@@ -259,7 +259,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-6" name="agent-name" type="checkbox" value="Frieda Döring" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-6" name="agent-name" type="checkbox" value="Frieda Döring" {{ checked("agent-name", "Frieda Döring") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-6">
                    
                           </label>
@@ -282,7 +282,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-7" name="agent-name" type="checkbox" value="Gabriel Mello" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-7" name="agent-name" type="checkbox" value="Gabriel Mello" {{ checked("agent-name", "Gabriel Mello") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-7">
                    
                           </label>
@@ -306,7 +306,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-8" name="agent-name" type="checkbox" value="Jane Smith" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-8" name="agent-name" type="checkbox" value="Jane Smith" {{ checked("agent-name", "Jane Smith") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-8">
                    
                           </label>
@@ -330,7 +330,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-9" name="agent-name" type="checkbox" value="Joe Bloggs" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-9" name="agent-name" type="checkbox" value="Joe Bloggs" {{ checked("agent-name", "Joe Bloggs") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-9">
                    
                           </label>
@@ -355,7 +355,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-10" name="agent-name" type="checkbox" value="Julie Smails" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-10" name="agent-name" type="checkbox" value="Julie Smails" {{ checked("agent-name", "Julie Smails") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-10">
                    
                           </label>
@@ -383,7 +383,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-11" name="agent-name" type="checkbox" value="Zoe Webb" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-11" name="agent-name" type="checkbox" value="Zoe Webb" {{ checked("agent-name", "Zoe Webb") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-11">
                    
                           </label>
@@ -410,7 +410,7 @@ Select agents - GOV.UK prototype
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-12" name="agent-name" type="checkbox" value="Zedd Smith" >
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-12" name="agent-name" type="checkbox" value="Zedd Smith" {{ checked("agent-name", "Zedd Smith") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="agent-12">
                    
                           </label>
