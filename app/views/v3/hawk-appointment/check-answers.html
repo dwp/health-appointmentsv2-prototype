@@ -32,7 +32,7 @@ Prototype page title
   <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
-        Appointment centre
+        Appointment location
       </dt>
       <dd class="govuk-summary-list__value">
       Newcastle Front Office
@@ -77,7 +77,7 @@ Prototype page title
        Date and time
       </dt>
       <dd class="govuk-summary-list__value">
-        10 November 2023 at 1:00pm
+        Monday 10 November 2023 at 1:00pm
       </dd>
       <dd class="govuk-summary-list__actions">
         <a class="govuk-link govuk-link--no-visited-state" href="times-available">
@@ -90,9 +90,18 @@ Prototype page title
 
   </dl>
 
+  <form class="form" action="done-page" method="post">
 
       
-      <a href="done-page"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Book appointment
+      </button>
+      <a class="govuk-link" href="claimant-detail">Cancel</a>
+    </div>
+</form>
+      
+   
     </div>
   </div>
 
