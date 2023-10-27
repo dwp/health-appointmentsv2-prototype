@@ -39,9 +39,9 @@ Availability - GOV.UK prototype
           
            
             <h3 class="govuk-notification-banner__heading">
-            Availability scheduled
+            Appointment availability added
           </h3>
-          <p class="govuk-body">You can now book appointments within the scheduled date range.</p>
+          <p class="govuk-body">You can now book appointments with the chosen HCPs.</p>
            
             
         
@@ -50,14 +50,14 @@ Availability - GOV.UK prototype
 
 
    <h1 class="govuk-heading-l">
-    Manage availability 
+    Appointment availability 
     
   
     </h1>
 
    
     <h1 class="govuk-heading-m" style="margin-bottom:-30px;">  
-      Mon 5 Nov 2023
+      Monday 5 November 2023
        </h1>
 
 
@@ -76,7 +76,7 @@ Availability - GOV.UK prototype
        {% for feature in data['agent-mon-am-name'] %}  <li>{{ feature }}</li>
        
       {% else %} </ul>
-        No availability set
+        No availability added
       {% endfor %}
 
 
@@ -86,7 +86,8 @@ Availability - GOV.UK prototype
       <dd class="govuk-summary-list__value" style="width:10%;"> 
         <li class="govuk-summary-list__actions-list-item">
           <a class="govuk-link" href="week/select-hcps-mon-am">
-            Change</a>
+            {% if data['agent-mon-am-name']  %} Change 
+            {% else %}Add   {% endif %}</a>
         </li>
        </dd>
     </div>
@@ -100,7 +101,7 @@ Availability - GOV.UK prototype
         {% for feature in data['agent-mon-pm-name'] %}  <li>{{ feature }}</li>
        
       {% else %} </ul>
-        No availability set
+        No availability added
       {% endfor %}
 
       </dd>
@@ -108,7 +109,8 @@ Availability - GOV.UK prototype
       <dd class="govuk-summary-list__value">
         <li class="govuk-summary-list__actions-list-item">
           <a class="govuk-link" href="week/select-hcps-mon-pm">
-            Change</a>
+            {% if data['agent-mon-pm-name']  %} Change 
+            {% else %}Add   {% endif %}</a>
         </li>
        </dd>
     </div>
@@ -124,7 +126,7 @@ Availability - GOV.UK prototype
 
 
   <h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-   Tues 6 Nov 2023
+   Tuesday 6 November 2023
      </h1>
 
 
@@ -142,7 +144,7 @@ Availability - GOV.UK prototype
       {% for feature in data['agent-tue-am-name'] %}  <li>{{ feature }}</li>
        
       {% else %} </ul>
-        No availability set
+        No availability added
       {% endfor %}
 
     </dd>
@@ -150,7 +152,8 @@ Availability - GOV.UK prototype
     <dd class="govuk-summary-list__value" style="width:10%;">
       <li class="govuk-summary-list__actions-list-item">
         <a class="govuk-link" href="week/select-hcps-tue-am">
-          Change</a>
+          {% if data['agent-tue-am-name']  %} Change 
+          {% else %}Add   {% endif %}</a>
       </li>
      </dd>
   </div>
@@ -163,7 +166,7 @@ Availability - GOV.UK prototype
       {% for feature in data['agent-tue-pm-name'] %}  <li>{{ feature }}</li>
        
       {% else %} </ul>
-        No availability set
+        No availability added
       {% endfor %}
 
     
@@ -172,7 +175,8 @@ Availability - GOV.UK prototype
     <dd class="govuk-summary-list__value">
       <li class="govuk-summary-list__actions-list-item">
         <a class="govuk-link" href="week/select-hcps-tue-pm">
-          Change</a>
+          {% if data['agent-tue-pm-name']  %} Change 
+          {% else %}Add   {% endif %}</a>
       </li>
      </dd>
   </div>
@@ -186,7 +190,7 @@ Availability - GOV.UK prototype
 
 
 <h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
- Wed 7 Nov 2023
+ Wednesday 7 November 2023
     </h1>
 
 
@@ -204,7 +208,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-wed-am-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    </dd>
@@ -212,7 +216,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-wed-am">
-         Change</a>
+        {% if data['agent-wed-am-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -226,7 +231,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-wed-pm-name'] %}  <li>{{ feature }}</li>
        
       {% else %} </ul>
-        No availability set
+        No availability added
       {% endfor %}
 
    
@@ -235,7 +240,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-wed-pm">
-         Change</a>
+        {% if data['agent-wed-pm-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -250,7 +256,7 @@ Availability - GOV.UK prototype
 
 
 <h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Thur 8 Nov 2023
+  Thursday 8 November 2023
     </h1>
 
 
@@ -268,7 +274,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-thu-am-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    </dd>
@@ -276,7 +282,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-thu-am">
-         Change</a>
+        {% if data['agent-thu-am-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -290,7 +297,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-thu-pm-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    
@@ -299,7 +306,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-thu-pm">
-         Change</a>
+        {% if data['agent-thu-pm-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -314,7 +322,7 @@ Availability - GOV.UK prototype
 
 
 <h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Fri 9 Nov 2023
+  Friday 9 November 2023
     </h1>
 
 
@@ -332,7 +340,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-fri-am-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    </dd>
@@ -340,7 +348,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-fri-am">
-         Change</a>
+        {% if data['agent-fri-am-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -354,7 +363,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-fri-pm-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    
@@ -363,7 +372,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-fri-pm">
-         Change</a>
+        {% if data['agent-fri-pm-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -378,7 +388,7 @@ Availability - GOV.UK prototype
 
 
 <h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Sat 10 Nov 2023
+  Saturday 10 November 2023
     </h1>
 
 
@@ -396,7 +406,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-sat-am-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    </dd>
@@ -404,7 +414,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-sat-am">
-         Change</a>
+        {% if data['agent-sat-am-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -418,7 +429,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-sat-pm-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    
@@ -427,7 +438,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-sat-pm">
-         Change</a>
+        {% if data['agent-sat-pm-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -442,7 +454,7 @@ Availability - GOV.UK prototype
 
 
 <h1 class="govuk-heading-m" style="margin-bottom:-30px; padding-top:20px;">
-  Sun 11 Nov 2023
+  Sunday 11 November 2023
     </h1>
 
 
@@ -460,7 +472,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-sun-am-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    </dd>
@@ -468,7 +480,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value" style="width:10%;">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-sun-am">
-         Change</a>
+        {% if data['agent-sun-am-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -482,7 +495,7 @@ Availability - GOV.UK prototype
     {% for feature in data['agent-sun-pm-name'] %}  <li>{{ feature }}</li>
        
     {% else %} </ul>
-      No availability set
+      No availability added
     {% endfor %}
 
    
@@ -491,7 +504,8 @@ Availability - GOV.UK prototype
    <dd class="govuk-summary-list__value">
      <li class="govuk-summary-list__actions-list-item">
        <a class="govuk-link" href="week/select-hcps-sun-pm">
-         Change</a>
+        {% if data['agent-sun-pm-name']  %} Change 
+        {% else %}Add   {% endif %}</a>
      </li>
     </dd>
  </div>
@@ -509,7 +523,7 @@ Availability - GOV.UK prototype
    
 <div class="govuk-grid-column-one-third" style="margin-top: 30px; border: none;"> 
   <h2 class="govuk-heading-m" id="subsection-title">
-     Week commencing <br>Mon 5 Nov 2023
+     Week starting <br> 5 November 2023
      </h2> 
     
  
