@@ -3,38 +3,13 @@
 
 
 {% block pageTitle %}
-Appointment details - GOV.UK prototype
+Prototype page title
 {% endblock %}
 
 {% block header %}
 
-  {% include "includes/internal-header.html" %}
+  {% include "includes/blue-banner-assessment-booked.html" %}
 
-  <section class="key-details-bar" role="contentinfo" aria-label="Key details">
-    <dl class="key-details-bar__key-details">
-      <div class="key-details-bar__top-block">
-        <dt class="govuk-visually-hidden">Name:</dt>
-        <dt class="key-details-bar__name">Alex Smith</dt>
-  
-        <dt class="govuk-visually-hidden">National Insurance number:</dt>
-        <dt class="key-details-bar__nino">KW 00 32 56 C</dt>
-  
-        <dt class="govuk-visually-hidden">Claim status:</dt>
-        <dd class="key-details-bar__status">ASSESSMENT BOOKED</dd>
-      </div>
-  
-      <div class="key-details-bar__bottom-block">
-        <dt>Date of birth:</dt>
-        <dd>11 July 1991</dd>
-  
-        <dt>Postcode:</dt>
-        <dd>N5 4XX</dd>
-  
-       
-  
-      </div>
-    </dl>
-  </section>
 
 {% endblock %}
 
@@ -46,46 +21,26 @@ Appointment details - GOV.UK prototype
     
     
    
-  
-    <a href="appointments" class="govuk-back-link">Back</a>
-
-
-
+   
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
     
     <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
      
-      
-      {% if  data['hcp99'] %}
-      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
-  aria-labelledby="govuk-notification-banner-title"
-  data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      Success
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <h3 class="govuk-notification-banner__heading">
-      {{ data['hcp99'] }} has been assigned to the appointment
-    </h3>
-  <!-- additional content if needed--> 
-  <!--  <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> -->
-  </div>
-</div>
 
-{% endif %} 
+    
+
       
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Appointment details 
+             Appointment details    
             </h1>
           </legend>
 
-         
-         
+      
+    
       
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             
@@ -120,7 +75,7 @@ Appointment details - GOV.UK prototype
           
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Assessment centre
+                  Location
                 </dt>
                 <dd class="govuk-summary-list__value">
                   Handsworth, Birmingham
@@ -135,7 +90,7 @@ Appointment details - GOV.UK prototype
         
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Benefit
+                Appointment type
                 </dt>
                 <dd class="govuk-summary-list__value">
                   PIP
@@ -151,12 +106,11 @@ Appointment details - GOV.UK prototype
   
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Appointment type
+                 Appointment channel
                 </dt>
                 <dd class="govuk-summary-list__value">
                 
-                Telephone
-                  
+                Face to face
                  
         
                  
@@ -165,8 +119,8 @@ Appointment details - GOV.UK prototype
                   
                 </dd>
                 <dd class="govuk-summary-list__actions">
-          <!--   <a class="govuk-link" href=" ">
-                    Change<span class="govuk-visually-hidden"> the type of appointment</span>
+          <!--  <a class="govuk-link" href="assessment-channel">
+                    Change<span class="govuk-visually-hidden"> the appointment type</span>
                   </a>  -->
                 </dd>
               </div>
@@ -177,13 +131,13 @@ Appointment details - GOV.UK prototype
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                	Thu 8 August 2023, 11am
+                 Wed 7 September 2023 at 9am
                 </dd>
                 <dd class="govuk-summary-list__actions">
-             <!--  <a class="govuk-link" href=" ">
+             <!--  <a class="govuk-link" href="app-date-time">
                     Change<span class="govuk-visually-hidden">appointment date and time</span>
-                  </a> -->
-                 
+                  </a>
+                -->
                 </dd>
               </div>
         
@@ -199,14 +153,11 @@ Appointment details - GOV.UK prototype
                 <dd class="govuk-summary-list__value">
                  
                 
-                  {% if  data['hcp99'] %}
-                  {{ data['hcp99'] }}
-                 {% else %}
-                 Unassigned
-                 {% endif %} 
+              
+                 Amy Gill
                 
-               
                 
+              
                
                 
                  
@@ -216,34 +167,15 @@ Appointment details - GOV.UK prototype
               
   
                 <dd class="govuk-summary-list__actions">
-  <a class="govuk-link" href="choose-hcp-unassigned">
-                    Change<span class="govuk-visually-hidden"> hcp</span>
-                  </a>
-                
-                </dd>
-              </div>
-  
-              
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Additional infomation
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  
-  
-                
-                 
-                 None
-                 
-  
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                     <a class="govuk-link" href=" ">
+  <a class="govuk-link" href="appt-details-change-hcp">
                     Change<span class="govuk-visually-hidden"> any additional information</span>
                   </a>
-               
+                
                 </dd>
               </div>
+  
+              
+            
               
             </dl>
 
@@ -252,29 +184,22 @@ Appointment details - GOV.UK prototype
 
          
 
-            <form class="form" action=" " method="post">
 
-
-              <div class="govuk-button-group">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  Cancel appointment
-                </button>
-
-  <div class="hidden-radio-post"> 
-      <div class="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="appt-lucy" name="appt" type="radio" value="Lucy Steel" {{ checked('appt', 'Lucy Steel') }} checked>
-
-          <label class="govuk-label govuk-radios__label" for="appt-lucy">
-            Hidden radio = pass this to next page. Replace name.
-          </label>
-        </div>
-      </div>
-      
-</div> 
-
-</form>
+    {% if  data['manage']   == 'availability' %}
+    
   
+
+
+    <a href="../agents/cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel appointment
+    </a>
+
+    {% else %} 
+
+    <a href="cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel appointment
+    </a>
+    {% endif %}
 
 
           

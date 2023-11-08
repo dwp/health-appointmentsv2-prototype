@@ -21,23 +21,13 @@ Prototype page title
     
     
    
-    {% if  data['manage']   == 'availability' %}
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-    {% elseif  data['manage']   == 'appointments' %}
-    <a href="appointments" class="govuk-back-link">Back  </a>
-
-
-    {% else %} 
-
-    <a href="/v2/pip-ta/current-assessments" class="govuk-back-link">Back</a>
-    {% endif %}
-
+   
+    <a href="appointments" class="govuk-back-link">Back</a>
 
     
     <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
      
-      {% if  (data['hcp'] != 'Amy Gill') %}
+
       <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
   aria-labelledby="govuk-notification-banner-title"
   data-module="govuk-notification-banner">
@@ -48,14 +38,14 @@ Prototype page title
   </div>
   <div class="govuk-notification-banner__content">
     <h3 class="govuk-notification-banner__heading">
-      {{ data['hcp'] }} has been assigned to the appointment
+     Another HCP has been assigned to the appointment
     </h3>
   <!-- additional content if needed--> 
   <!--  <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> -->
   </div>
 </div>
 
-{% endif %} 
+
       
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -101,7 +91,7 @@ Prototype page title
           
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Assessment centre
+                  Location
                 </dt>
                 <dd class="govuk-summary-list__value">
                   Handsworth, Birmingham
@@ -116,7 +106,7 @@ Prototype page title
         
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Benefit
+                Appointment type
                 </dt>
                 <dd class="govuk-summary-list__value">
                   PIP
@@ -132,16 +122,11 @@ Prototype page title
   
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                 Appointment type
+                 Appointment channel
                 </dt>
                 <dd class="govuk-summary-list__value">
                 
-                  {% if  data['hcp-assessment-channel'] %}
-                  {{ data['hcp-assessment-channel'] }}
-                 {% else %}
-              Face to face
-                 {% endif %}
-                  
+                Face to face
                  
         
                  
@@ -162,7 +147,7 @@ Prototype page title
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                 Wed 7 September 2023, 9am
+                 Wed 7 September 2023 at 9am
                 </dd>
                 <dd class="govuk-summary-list__actions">
              <!--  <a class="govuk-link" href="app-date-time">
@@ -184,12 +169,7 @@ Prototype page title
                 <dd class="govuk-summary-list__value">
                  
                 
-               
-                  {% if  data['hcp'] %}
-                  {{ data['hcp'] }}
-                 {% else %}
-                 Amy Gill
-                 {% endif %} 
+                  Benjamin Marshall
                 
               
                
@@ -201,7 +181,7 @@ Prototype page title
               
   
                 <dd class="govuk-summary-list__actions">
-  <a class="govuk-link" href="choose-hcp">
+  <a class="govuk-link" href="">
                     Change<span class="govuk-visually-hidden"> any additional information</span>
                   </a>
                 
@@ -209,28 +189,7 @@ Prototype page title
               </div>
   
               
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Additional infomation
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  
-  
-                
-                  {% if  data['more-detail'] %}
-                  {{ data['hcp-more-detail'] }}
-                 {% else %}
-                 None
-                 {% endif %}
-  
-                </dd>
-               <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href=" ">
-                    Change<span class="govuk-visually-hidden"> any additional information</span>
-                  </a> 
-                  
-                </dd>
-              </div>
+            
               
             </dl>
 
@@ -240,21 +199,13 @@ Prototype page title
          
 
 
-    {% if  data['manage']   == 'availability' %}
-    
+ 
   
-
-
-    <a href="../agents/cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Cancel appointment
-    </a>
-
-    {% else %} 
 
     <a href="cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Cancel appointment
     </a>
-    {% endif %}
+
 
 
           
