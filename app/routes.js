@@ -284,3 +284,23 @@ router.post('/manage-what3', function (req, res) {
 
 })
 
+
+
+
+//v4
+router.post('/manage-what4', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var manage = req.session.data['manage']
+
+  // Check whether the variable matches a condition
+  if (manage == "agents"){
+    // Send user to what language page
+    res.redirect('/v4/availability-management/agents/agent-profiles')
+  } else {
+    // Send user to next page
+    res.redirect('/v4/availability-management/availability/existing-slots')
+  }
+
+})
+
