@@ -170,10 +170,10 @@ Prototype page title
             </thead>
             <tbody class="govuk-table__body">
              
-              {% for feature in data['agent-mon-am-name'] %}
+              {% for agents in data['agent-mon-am-name'] %}
           
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">  {{ feature }}       </td>
+                <td class="govuk-table__cell">  {{ agents }}       </td>
 
 
                 <td class="govuk-table__cell"> {{ data['amy-time-start'] }} to  {{ data['amy-time-end'] }}</td>   
