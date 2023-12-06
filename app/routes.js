@@ -299,7 +299,7 @@ router.post('/manage-what4', function (req, res) {
     res.redirect('/v4/availability-management/agents/agent-profiles')
   } else {
     // Send user to next page
-    res.redirect('/v4/availability-management/availability/existing-slots')
+    res.redirect('/v4/availability-management/availability/availability-view')
   }
 
 })
