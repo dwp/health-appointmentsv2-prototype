@@ -130,10 +130,10 @@ Prototype page title
       <!-- Day one-->
         <div class="govuk-tabs__panel" id="monday" role="tabpanel" aria-labelledby="tab_monday">
           <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
 
+            <!-- mon morning-->
+          <div class="govuk-grid-column-one-half">
 
-  
 
     <div class="govuk-form-group" style="margin-bottom:-10px;">
       <fieldset class="govuk-fieldset">
@@ -149,7 +149,7 @@ Prototype page title
 
 
 
-    
+    <!-- Change / add link -->
             <dd class="govuk-summary-list__value" style="width:10%;"> 
               <li class="govuk-summary-list__actions-list-item">
                 <a class="govuk-link" href="day/mon-am">
@@ -161,13 +161,13 @@ Prototype page title
           </div>
 
           
-      
+      <!-- Monday morning -->
           {% if data['agent-mon-am-name']  %}
           
           <table class="govuk-table">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"> <span style="color: #005ea5;"> HCPs </span> <img src="/public/images/table-arrow.png"> </th>
+                <th scope="col" class="govuk-table__header"> <span style="color: #005ea5;"> HCPs▼ </span>  </th>
                 <th scope="col" class="govuk-table__header"> <span style="color: #005ea5;">Available ▼  </span></th>
               </tr>
             </thead>
@@ -397,41 +397,275 @@ Prototype page title
 
   </fieldset>
   
-  </div>
+            </div>
 
-  <div class="govuk-grid-column-one-half">
-  <div class="govuk-form-group" style="margin-bottom:-10px;">
-  <fieldset class="govuk-fieldset">
-    <dl class="govuk-summary-list">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h1 class="govuk-fieldset__heading">
-        Monday afternoon 
-      </h1>
-    </legend>
-    
-
-    </dd>
-
-        <dd class="govuk-summary-list__value" style="width:10%;"> 
-          <li class="govuk-summary-list__actions-list-item">
-            <a class="govuk-link" href="day/mon-apm">
-            Add
-              </a>
-          </li>
-        </dd>
-      </div>
-    
-           
-      <p> No availability added  </p>
-    
-
-      
-    
-    </dl>
+             <!-- mon afternoon-->
+            <div class="govuk-grid-column-one-half">
 
 
-
-  </div>
+              <div class="govuk-form-group" style="margin-bottom:-10px;">
+                <fieldset class="govuk-fieldset">
+                  <dl class="govuk-summary-list">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h1 class="govuk-fieldset__heading">
+                      Monday afternoon
+                    </h1>
+                  </legend>
+                  
+              
+                  </dd>
+          
+          
+          
+              <!-- Change / add link -->
+                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                        <li class="govuk-summary-list__actions-list-item">
+                          <a class="govuk-link" href="day/mon-am">
+                            {% if data['agent-mon-pm-name']  %} Change 
+                            {% else %}Add   {% endif %}
+                            </a>
+                        </li>
+                      </dd>
+                    </div>
+          
+                    
+       
+                    {% if data['agent-mon-pm-name']  %}
+                    
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header"> <span style="color: #005ea5;"> HCPs▼ </span>  </th>
+                          <th scope="col" class="govuk-table__header"> <span style="color: #005ea5;">Available ▼  </span></th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+          
+                        {% if  data['agent-mon-am-name'].includes('Amy Gill') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Amy Gill    </td>
+          
+          
+                          <td class="govuk-table__cell"> 09:00 to  11:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Benjamin Marshall') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Benjamin Marshall   </td>
+          
+          
+                          <td class="govuk-table__cell"> 08:30 to  11:30</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Bernhard Fischer') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Bernhard Fischer  </td>
+          
+          
+                          <td class="govuk-table__cell"> 10:00 to  11:30</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Danny Zuko') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Danny Zuko </td>
+          
+          
+                          <td class="govuk-table__cell"> 08:45 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Emma Bradley') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  	Emma Bradley</td>
+          
+          
+                          <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Frieda Döring') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Frieda Döring</td>
+          
+          
+                          <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Gabriel Mello') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Gabriel Mello</td>
+          
+          
+                          <td class="govuk-table__cell"> 09:30 to  11:45</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Jane Smith') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Jane Smith</td>
+          
+          
+                          <td class="govuk-table__cell"> 08:00 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Joe Bloggs') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Joe Bloggs</td>
+          
+          
+                          <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Julie Smails') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Julie Smails</td>
+          
+          
+                          <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Monica Anyanwu') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Monica Anyanwu</td>
+          
+          
+                          <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+                        {% if  data['agent-mon-am-name'].includes('Raka Banerjee') %} 
+          
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  Raka Banerjee</td>
+          
+          
+                          <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                         
+                         
+                             
+                        </tr>
+          
+                        {% endif %}
+          
+          
+          
+                       
+                        
+                      <!--   {% for agents in data['agent-mon-am-name'] %}
+          
+                        
+                    
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">  {{ agents }}       </td>
+          
+          
+                          <td class="govuk-table__cell"> {{ data['amy-time-start'] }} to  {{ data['amy-time-end'] }}</td>   
+                         
+                         
+                           This didn;t work but came kinda close?
+          
+                    {% for feature2 in data['time-start'] %}
+                    <td class="govuk-table__cell"> {{ feature2 }}    
+                      {% endfor %}  to    {% for feature3 in data['time-end'] %}    {{ feature3 }}   {% endfor %}  </td>   
+          
+                         
+                        </tr>
+                        
+                     
+                 
+                     
+                    {% endfor %} -->
+          
+          
+                  
+                  </table>
+          
+                  {% else %}
+                  <p> No availability added  </p>
+          
+          
+                  {% endif %}
+                  
+                  
+                 
+                </tbody> 
+          
+          
+                
+          
+                </dd>
+          
+                 
+              
+              
+              </dl>
+          
+          
+            </fieldset>
+            
+                      </div>
   </div>
 
         </div>
