@@ -1,16 +1,7 @@
 {% extends "layouts/main.html" %}
 
-
-
 {% block pageTitle %}
-Edit HCP details - GOV.UK prototype
-{% endblock %}
-
-{% block header %}
-
-
-{% include "includes/internal-header.html" %}
-
+Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -45,27 +36,21 @@ Edit HCP details - GOV.UK prototype
                 text: "Select all that apply."
               },
               items: [
-                {
-                  value: "WCA TA",
-                  text: "WCA telephone assessment (WCA TA)"
-                },
-                {
-                  value: "WCA F2F",
-                  text: "WCA face to face (WCA F2F)"
-                },
-                {
-                  value: "WCA CN",
-                  text: "WCA complex neuro (WCA CN)"
-                },
+               
+                
                 {
                   value: "PIP TA",
-                  text: "PIP telephone assessment (PIP TA)",
+                  text: "Identity",
                   checked: true
                 },
                 {
                   value: "PIP F2F",
-                  text: "PIP face to face (PIP F2F)",
+                  text: "Decision",
                   checked: true
+                },
+                {
+                  value: "WCA TA",
+                  text: "Specialist"
                 }
               ]
             }) }}

@@ -1,16 +1,7 @@
 {% extends "layouts/main.html" %}
 
-
-
 {% block pageTitle %}
-Prototype page title
-{% endblock %}
-
-{% block header %}
-
-
-{% include "includes/internal-header.html" %}
-
+Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -41,7 +32,7 @@ Prototype page title
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="manage" name="manage" type="radio" value="agents">
             <label class="govuk-label govuk-radios__label" for="manage">
-              HCP profiles
+              Officer profiles
             </label>
           </div>
           <div class="govuk-radios__item">
