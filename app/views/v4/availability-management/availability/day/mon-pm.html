@@ -1,16 +1,7 @@
 {% extends "layouts/main.html" %}
 
-
-
 {% block pageTitle %}
-Select agents - GOV.UK prototype
-{% endblock %}
-
-{% block header %}
-
-
-{% include "includes/internal-header.html" %}
-
+Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -94,13 +85,13 @@ Select agents - GOV.UK prototype
   {
   id: "handsworth",
   value: "handsworth",
-  text: "Birmingham, Handsworth"
+  text: "Leeds (5)"
   },
 
   {
   id: "tresco",
   value: "tresco",
-  text: "London, Tresco House"
+  text: "Newcastle (7)"
   }
   ]
   }) }}
@@ -199,11 +190,11 @@ Select agents - GOV.UK prototype
                  
                     <td class="govuk-table__cell">Amy Gill</td>
                     <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
-                    <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                    <td class="govuk-table__cell"> Leeds </td>
                     <td class="govuk-table__cell">
                       <ul class="govuk-list govuk-list--bullet">
-                      <li>PIP F2F</li>
-                      <li>PIP TA</li>
+                      <li>Identity</li>
+                      <li>Decision</li>
                      
                     </ul>
                   </td>
@@ -222,13 +213,13 @@ Select agents - GOV.UK prototype
                   </td>
                   <td class="govuk-table__cell">Benjamin Marshall</td>
                   <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
-                  <td class="govuk-table__cell"> London, Tresco House </td>
+                  <td class="govuk-table__cell"> Newcastle </td>
                    <td class="govuk-table__cell">
                     
                     <ul class="govuk-list govuk-list--bullet">
                       
-                      <li>WCA F2F</li>
-                      <li>WCA TA</li>
+                      <li>Identity</li>
+                     
                      </ul>
                   </td>
       
@@ -246,15 +237,15 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Bernhard Fischer</td>
                       <td class="govuk-table__cell"> bernhardfischer@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Newcastle </td>
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
                         
-                          <li>PIP F2F</li>
-                          <li>PIP TA</li>
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
+                          <li>Identity</li>
+                          <li>Decision</li>
+                          <li>Specialist</li>
+                          
                          </ul>
           
           
@@ -272,14 +263,14 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Danny Zuko</td>
                       <td class="govuk-table__cell">dannyzuko@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Newcastle </td>
                        <td class="govuk-table__cell">  
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
-                        <li>PIP TA</li>
-                         <li>WCA CN</li>
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
+                          <li>Identity</li>
+                        <li>Decision</li>
+                         
+                          <li>Specialist</li>
+                          
                          </ul>
           
                         
@@ -297,15 +288,15 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Emma Bradley</td>
                       <td class="govuk-table__cell"> emmabradley@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                      <td class="govuk-table__cell"> Leeds </td>
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
-                        <li>PIP TA</li>
+                          <li>Identity</li>
+                        <li>Decision</li>
                         
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
+                          <li>Specialist</li>
+                         
                          </ul>
           
           
@@ -323,14 +314,14 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Frieda Döring</td>
                       <td class="govuk-table__cell"> freidadoring@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                      <td class="govuk-table__cell"> Leeds </td>
                       <td class="govuk-table__cell">  
                     
                       <ul class="govuk-list govuk-list--bullet">
                       
                       
-                        <li>WCA F2F</li>
-                        <li>WCA TA</li>
+                        <li>Identity</li>
+                       
                        </ul>
           
                       </td>
@@ -346,14 +337,14 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Gabriel Mello</td>
                       <td class="govuk-table__cell"> gabrielmello@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Newcastle </td>
                       <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
                        
                       
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
+                          <li>Identity</li>
+                          
                          </ul>
                         </td>
           
@@ -370,15 +361,15 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Jane Smith</td>
                       <td class="govuk-table__cell"> janesmith@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                      <td class="govuk-table__cell"> Leeds </td>
                        <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
-                        <li>PIP TA</li>
+                          <li>Identity</li>
+                        <li>Decision</li>
                         
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
+                          <li>Specialist</li>
+                          
                          </ul>
           
                         </td>
@@ -394,14 +385,14 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Joe Bloggs</td>
                       <td class="govuk-table__cell"> joebloggs@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                      <td class="govuk-table__cell"> Leeds </td>
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
                           
-                         <li>WCA CN</li>
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
+                     
+                          <li>Identity</li>
+                          
                          </ul>
           
           
@@ -419,14 +410,14 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Julie Smails</td>
                       <td class="govuk-table__cell">juliesmails@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Newcastle </td>
                        <td class="govuk-table__cell">
           
           
           
                         <ul class="govuk-list govuk-list--bullet">
                          
-                        <li>PIP TA</li>
+                        <li>Identity</li>
                         
                         
                          </ul>
@@ -446,7 +437,7 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Monica Anyanwu </td>
                       <td class="govuk-table__cell">monicaanyanwu@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Newcastle </td>
                        <td class="govuk-table__cell">
           
           
@@ -454,7 +445,7 @@ Select agents - GOV.UK prototype
                         <ul class="govuk-list govuk-list--bullet">
                         
                          
-                          <li>WCA TA</li>
+                          <li>Identity</li>
                          </ul>
           
                       </td> 
@@ -471,17 +462,17 @@ Select agents - GOV.UK prototype
                       </td>
                       <td class="govuk-table__cell">Raka Banerjee</td>
                       <td class="govuk-table__cell">rakabanerjee@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Newcastle </td>
                        <td class="govuk-table__cell">
           
           
           
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
-                        <li>PIP TA</li>
+                          <li>Identity</li>
+                        <li>Decision</li>
                         
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
+                          <li>Specialist</li>
+                        
                          </ul>
           
                       </td> 
