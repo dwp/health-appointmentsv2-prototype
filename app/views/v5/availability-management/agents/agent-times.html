@@ -1,0 +1,705 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+
+
+   <a href="amy-gill-profile" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-column-full-width">
+
+    
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+    
+
+      <form action="amy-gill-profile" method="post" class="form" >  
+       
+        
+     
+
+            <h1 class="govuk-heading-l">
+            
+Edit Amy's available hours
+            
+           
+            </h1>
+            <div class="govuk-hint">
+             For example, 12:00 for midday.
+            </div>
+
+            
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row" >
+                   
+                   
+
+                        
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                 
+              <th scope="col" class="govuk-table__header" style="width: 9%;">Day</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Morning start</th>
+              <th scope="col" class="govuk-table__header" style="width: 15%;">Morning stop</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Afternoon start</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Afternoon stop</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Working location</th>
+            </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+
+              
+
+               
+
+<!-- Monday-->
+                <tr class="govuk-table__row handsworth">
+                 
+                    <td class="govuk-table__cell">Monday</td>  
+          
+                  <td class="govuk-table__cell">
+                  
+                    <div class="time-wrapper"> 
+                      <div class="time-start">
+                     
+                    <label class="govuk-label">
+                      Start time
+                    </label>
+        
+                    <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="08:45">   
+                    
+                  </div>
+                  </div>
+
+                </td>
+
+                <td class="govuk-table__cell">
+                  <div class="time-wrapper"> 
+                <div class="time-end2"> 
+                  <label class="govuk-label">
+                    End time
+                  </label>
+                  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="11:45">
+                 </div>
+                </div>
+                </td>
+
+
+                <td class="govuk-table__cell">
+                  
+                  <div class="time-wrapper"> 
+                    <div class="time-start">
+                   
+                  <label class="govuk-label">
+                    Start time
+                  </label>
+      
+                  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:45">   
+                  
+                </div>
+                </div>
+
+              </td>
+
+              <td class="govuk-table__cell">
+                <div class="time-wrapper"> 
+              <div class="time-end2"> 
+                <label class="govuk-label">
+                  End time
+                </label>
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="4:30">
+               </div>
+              </div>
+              </td>
+
+
+              <td class="govuk-table__cell">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Birmingham, Handsworth
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                       Working remotely
+                        </label>
+                      </div>
+                    
+                    </div>
+                  </fieldset>
+                </div>
+
+
+                  </tr>
+                  
+<!--TUESDAY-->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Tuesday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:30">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="5:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+        Birmingham, Handsworth
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+     Working remotely
+      </label>
+    </div>
+  
+  </div>
+</fieldset>
+</div>
+
+
+</tr>
+
+<!--WEDNESDAY -->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Wednesday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:30">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="5:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+        Birmingham, Handsworth
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+     Working remotely
+      </label>
+    </div>
+  
+  </div>
+</fieldset>
+</div>
+
+
+</tr>
+
+
+<!-- THURSDAY--> 
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Thursday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:30">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="5:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" >
+      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+        Birmingham, Handsworth
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal" checked>
+      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+     Working remotely
+      </label>
+    </div>
+  
+  </div>
+</fieldset>
+</div>
+
+
+</tr>
+
+<!-- FRIDAY-->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Friday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="08:30">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="11:30">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:00">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="3:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" >
+      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+       Handsworth
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal" checked>
+      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+     Working remotely
+      </label>
+    </div>
+  
+  </div>
+  
+  </div>
+</fieldset>
+</div>
+
+
+</tr>
+
+<!-- SATURDAY-->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Saturday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" >
+      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+       Handsworth
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal" >
+      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+     Working remotely
+      </label>
+    </div>
+  
+  </div>
+  
+  </div>
+</fieldset>
+</div>
+
+
+</tr>
+
+<!-- SUNDAY-->
+
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Sunday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" >
+      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+       Handsworth
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal" >
+      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+     Working remotely
+      </label>
+    </div>
+  
+  </div>
+  
+  </div>
+</fieldset>
+</div>
+
+
+</tr>
+
+                 
+                  
+                </tbody>
+              </table>
+           
+             
+ 
+
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+    </div>
+
+
+</div>
+
+
+    </div>
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}

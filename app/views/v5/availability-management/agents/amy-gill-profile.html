@@ -1,0 +1,234 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -70px;">
+  <div class="govuk-grid-column-full">
+   
+
+    <div class="govuk-width-container ">
+        
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+        
+        <a href="agent-profiles" class="govuk-back-link">Back</a>
+
+        <!--    <div class="app-pane__body">
+
+     
+     
+
+
+              <ul class="app-subnav__section">
+    
+          
+    
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Agent details <i class="chevron"></i> </a>
+</li>
+
+ 
+<li class="app-subnav__section-item">
+  <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="amy-gill-availability">Availability<i class="chevron2"></i> </a>
+  </li> 
+
+        </ul></nav>
+      </div> -->
+   
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds" >
+
+   <h1 class="govuk-heading-l">
+    Amy Gill
+    </h1>
+    
+    
+      <div class="govuk-form-group">
+    
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+    
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Amy Gill
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Email
+            </dt>
+            <dd class="govuk-summary-list__value">
+              amygill@domain.gov.uk
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+              Home location 
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+              Birmingham, Handsworth
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+             Available location
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+              Birmingham, Handsworth
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+             Skills 
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>PIP F2F </li>
+                <li>  PIP TA</li> 
+               <li>   WCA CN</li> 
+               <li>    WCA F2F</li> 
+                 <li> WCA TA</li> 
+                
+              </ul>
+
+
+            
+             
+            </dd>
+          </div>
+
+
+
+          
+        
+        </dl>
+
+<br>
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Available hours</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Day</th>
+              <th scope="col" class="govuk-table__header">Morning availability</th>
+              <th scope="col" class="govuk-table__header">Afternoon availability</th>
+              <th scope="col" class="govuk-table__header">Working location</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Monday</th>
+              <td class="govuk-table__cell">8:45 - 11:45 </td>
+              <td class="govuk-table__cell">12:45 - 4:30 </td>
+              <td class="govuk-table__cell">Birmingham, Handsworth </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Tuesday</th>
+              <td class="govuk-table__cell">9:00 - 12:00 </td>
+              <td class="govuk-table__cell">12:30 - 5:00 </td>
+              <td class="govuk-table__cell">Birmingham, Handsworth </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Wednesday</th>
+              <td class="govuk-table__cell">9:00 - 12:00 </td>
+              <td class="govuk-table__cell">12:30 - 5:00 </td>
+              <td class="govuk-table__cell">Birmingham, Handsworth </td>
+            </tr>
+
+
+            <th scope="row" class="govuk-table__header">Thursday</th>
+            <td class="govuk-table__cell">9:00 - 12:00 </td>
+            <td class="govuk-table__cell">12:30 - 5:00 </td>
+            <td class="govuk-table__cell">Remote </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Friday</th>
+            <td class="govuk-table__cell">8:30 - 11:30 </td>
+            <td class="govuk-table__cell">12:00 - 3:00 </td>
+            <td class="govuk-table__cell">Remote</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Saturday</th>
+            <td class="govuk-table__cell">Not available</td>
+            <td class="govuk-table__cell">Not available</td>
+            <td class="govuk-table__cell">Not available</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Saturday</th>
+            <td class="govuk-table__cell">Not available</td>
+            <td class="govuk-table__cell">Not available</td>
+            <td class="govuk-table__cell">Not available</td>
+          </tr>
+
+
+           
+          </tbody>
+        </table>
+      </div>
+              
+              
+              
+              
+           
+            
+          
+        
+      </div>
+
+      <div class="govuk-grid-column-one-third" style="margin-top: -0px;">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          What you can do next   
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list">
+            <li>
+              <a href="agent-location">Edit available location</a>
+            </li>
+
+            <li>
+              <a href="agent-skills">Edit skills</a>
+            </li>
+
+
+            <li>
+              <a href="agent-times">Edit available hours</a>
+            </li>
+
+           
+ 
+         
+           
+   
+
+          </ul>    
+        
+      </ul></div>
+
+      
+    
+    
+    </div>
+
+
+    </div>
+
+</div>
+
+      </div></main>
+    
+
+
+{% endblock %}
+
