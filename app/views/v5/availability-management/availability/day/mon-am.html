@@ -97,6 +97,51 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   }) }}
 
 
+  {{ govukCheckboxes({
+    idPrefix: "assessmentSkills",
+    name: "assessment-skills",
+    classes: "govuk-checkboxes--small",
+    fieldset: {
+    legend: {
+    text: "Skills",
+    isPageHeading: false,
+    classes: "govuk-fieldset__legend--s"
+    }
+    },
+    items: [
+    {
+    id: "PIPF2F",
+    value: "PIPF2F",
+    text: "PIP F2F"
+    },
+  
+    {
+    id: "PIPTA",
+    value: "PIPTA",
+    text: "PIP TA"
+    },
+  
+    {
+    id: "WCACN",
+    value: "WCACN",
+    text: "WCA CN"
+    },
+  
+    {
+    id: "WCAF2F",
+    value: "WCAF2F",
+    text: "WCA F2F"
+    },
+  
+    {
+    id: "WCATA",
+    value: "WCATA",
+    text: "WCA TA"
+    }
+    ]
+    }) }}
+
+
      
    
 
@@ -135,7 +180,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       <form action="../time/times-mon-am" method="post" class="form" >  
        
         
-        <span class="govuk-caption-l">Monday 15 January 2024</span>
+        <span class="govuk-caption-l">Monday 11 March 2024</span>
 
             <h1 class="govuk-heading-l" style="padding-top:10px;">
              Who is available in the morning? 
@@ -169,10 +214,12 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
               
               </th> </div>
-              <th scope="col" class="govuk-table__header" style="width: 30%;">Name</th>
-              <th scope="col" class="govuk-table__header" style="width: 10%;">Email</th>
-              <th scope="col" class="govuk-table__header" style="width: 20%;">Office location</th> 
+              <th scope="col" class="govuk-table__header" style="width: 10%;">Name</th>
+              <th scope="col" class="govuk-table__header" style="width: 20%;">Email</th>
+              <th scope="col" class="govuk-table__header" style="width: 10%;">Office location</th> 
+              <th scope="col" class="govuk-table__header" style="width: 15%;">Working location</th> 
               <th scope="col" class="govuk-table__header" style="width: 30%;">Skills</th>
+              
             </tr>
               </thead>
               <tbody class="govuk-table__body">
@@ -190,6 +237,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                  
                     <td class="govuk-table__cell">Amy Gill</td>
                     <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
+                    <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                     <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                     <td class="govuk-table__cell">
                       <ul class="govuk-list govuk-list--bullet">
@@ -215,8 +263,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     </div>
                   </td>
                   <td class="govuk-table__cell">Benjamin Marshall</td>
-                  <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
+                  <td class="govuk-table__cell"> benjaminmarshall@<br>domain.gov.uk </td>
                   <td class="govuk-table__cell"> London, Tresco House </td>
+                  <td class="govuk-table__cell"> Remote </td>
                    <td class="govuk-table__cell">
                     
                     <ul class="govuk-list govuk-list--bullet">
@@ -238,7 +287,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Bernhard Fischer</td>
-                      <td class="govuk-table__cell"> bernhardfischer@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> bernhardfischer@<br>domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
                       <td class="govuk-table__cell"> London, Tresco House </td>
                        <td class="govuk-table__cell">
           
@@ -264,7 +314,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Danny Zuko</td>
-                      <td class="govuk-table__cell">dannyzuko@domain.gov.uk </td>
+                      <td class="govuk-table__cell">dannyzuko@<br>domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
                       <td class="govuk-table__cell"> London, Tresco House </td>
                        <td class="govuk-table__cell">  
                         <ul class="govuk-list govuk-list--bullet">
@@ -289,7 +340,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Emma Bradley</td>
-                      <td class="govuk-table__cell"> emmabradley@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> emmabradley@<br>domain.gov.uk </td>
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                       <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                        <td class="govuk-table__cell">
           
@@ -315,14 +367,15 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Frieda Döring</td>
-                      <td class="govuk-table__cell"> freidadoring@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> freidadoring@<br>domain.gov.uk </td>
                       <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                      <td class="govuk-table__cell"> Remote</td>
                       <td class="govuk-table__cell">  
                     
                       <ul class="govuk-list govuk-list--bullet">
                       
                       
-                        <li>WCA F2F</li>
+                     
                         <li>WCA TA</li>
                        </ul>
           
@@ -338,7 +391,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Gabriel Mello</td>
-                      <td class="govuk-table__cell"> gabrielmello@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> gabrielmello@<br>domain.gov.uk </td>
+                      <td class="govuk-table__cell"> London, Tresco House </td>
                       <td class="govuk-table__cell"> London, Tresco House </td>
                       <td class="govuk-table__cell">
                         
@@ -362,15 +416,16 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Jane Smith</td>
-                      <td class="govuk-table__cell"> janesmith@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> janesmith@<br>domain.gov.uk </td>
                       <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                      <td class="govuk-table__cell"> Remote </td>
                        <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
+                 
                         <li>PIP TA</li>
                         
-                          <li>WCA F2F</li>
+                     
                           <li>WCA TA</li>
                          </ul>
           
@@ -386,7 +441,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Joe Bloggs</td>
-                      <td class="govuk-table__cell"> joebloggs@domain.gov.uk </td>
+                      <td class="govuk-table__cell"> joebloggs@<br>domain.gov.uk </td>
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                       <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                        <td class="govuk-table__cell">
           
@@ -411,8 +467,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Julie Smails</td>
-                      <td class="govuk-table__cell">juliesmails@domain.gov.uk </td>
+                      <td class="govuk-table__cell">juliesmails@<br>domain.gov.uk </td>
                       <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Remote </td>
                        <td class="govuk-table__cell">
           
           
@@ -438,8 +495,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Monica Anyanwu </td>
-                      <td class="govuk-table__cell">monicaanyanwu@domain.gov.uk </td>
+                      <td class="govuk-table__cell">monicaanyanwu@<br>domain.gov.uk </td>
                       <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Remote </td>
                        <td class="govuk-table__cell">
           
           
@@ -463,17 +521,18 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Raka Banerjee</td>
-                      <td class="govuk-table__cell">rakabanerjee@domain.gov.uk </td>
+                      <td class="govuk-table__cell">rakabanerjee@<br>domain.gov.uk </td>
                       <td class="govuk-table__cell"> London, Tresco House </td>
+                      <td class="govuk-table__cell"> Remote </td>
                        <td class="govuk-table__cell">
           
           
           
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
+                      
                         <li>PIP TA</li>
                         
-                          <li>WCA F2F</li>
+                       
                           <li>WCA TA</li> 
                     
                          </ul>

@@ -14,7 +14,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         
       <main class="govuk-main-wrapper " id="main-content" role="main">
         
-        <a href="agent-profiles" class="govuk-back-link">Back</a>
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 
    
 
@@ -41,7 +42,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         </li>
         <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#past-week">
-           Location
+           Working pattern
           </a>
         </li>
      
@@ -70,9 +71,29 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
               amygill@domain.gov.uk
             </dd>
           </div>
-        
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+              Home location 
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+              Birmingham, Handsworth
+            </dd>
+          </div>
 
-        
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+             Available location
+            </dt>
+            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+              Birmingham, Handsworth
+            </dd>
+
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href=" ">Change </a>
+          </dd>
+
+
+          </div>
 
 
           <div class="govuk-summary-list__row">
@@ -97,7 +118,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="agent-skills">Change </a>
+              <a class="govuk-link" href=" ">Change </a>
           </dd>
           </div>
 
@@ -112,52 +133,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
       </div>
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-        <h2 class="govuk-heading-m">Location</h2>
        
-
-        <dl class="govuk-summary-list">
-         
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-              Home location 
-            </dt>
-            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-              Birmingham, Handsworth
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-            Office location
-            </dt>
-            <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-              Birmingham, Handsworth
-            </dd>
-
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="agent-hub-location">Change </a>
-          </dd>
-
-
-          </div>
-
-
-          
-
-
-
-          
-        
-        </dl>
-
-
 
         <div class="govuk-form-group" style="margin-bottom:-10px;">
           <fieldset class="govuk-fieldset">
             <dl class="govuk-summary-list">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-               Available working locations
+               Working pattern
               </h1>
             </legend>
             
@@ -167,9 +150,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     
     
         <!-- Change / add link -->
-                <dd class="govuk-summary-list__value" style="width:8%;     padding-right: 0px;"> 
+                <dd class="govuk-summary-list__value" style="width:10%;     padding-right: 0px;"> 
                   <li class="govuk-summary-list__actions-list-item">
-                    <a class="govuk-link" href="agent-working-location">
+                    <a class="govuk-link" href="agent-times">
                      Change
                       </a>
                   </li>
@@ -183,44 +166,52 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Day</th>
-              <th scope="col" class="govuk-table__header">Morning location</th>
-              <th scope="col" class="govuk-table__header">Afternoon location</th>
+              <th scope="col" class="govuk-table__header">Morning availability</th>
+              <th scope="col" class="govuk-table__header">Afternoon availability</th>
+              <th scope="col" class="govuk-table__header">Working location</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Monday</th>
-              <td class="govuk-table__cell">Birmingham, Handsworth </td>
+              <td class="govuk-table__cell">8:45 - 11:45 </td>
+              <td class="govuk-table__cell">12:45 - 4:30 </td>
               <td class="govuk-table__cell">Birmingham, Handsworth </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Tuesday</th>
-              <td class="govuk-table__cell">Birmingham, Handsworth</td>
+              <td class="govuk-table__cell">9:00 - 12:00 </td>
+              <td class="govuk-table__cell">12:30 - 5:00 </td>
               <td class="govuk-table__cell">Birmingham, Handsworth </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Wednesday</th>
-              <td class="govuk-table__cell">Birmingham, Handsworth </td>
+              <td class="govuk-table__cell">9:00 - 12:00 </td>
+              <td class="govuk-table__cell">12:30 - 5:00 </td>
               <td class="govuk-table__cell">Birmingham, Handsworth </td>
             </tr>
 
 
             <th scope="row" class="govuk-table__header">Thursday</th>
-            <td class="govuk-table__cell">Remote </td>
+            <td class="govuk-table__cell">9:00 - 12:00 </td>
+            <td class="govuk-table__cell">12:30 - 5:00 </td>
             <td class="govuk-table__cell">Remote </td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Friday</th>
-            <td class="govuk-table__cell">Remote </td>
-            <td class="govuk-table__cell">Remote </td>
+            <td class="govuk-table__cell">8:30 - 11:30 </td>
+            <td class="govuk-table__cell">12:00 - 3:00 </td>
+            <td class="govuk-table__cell">Remote</td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Saturday</th>
             <td class="govuk-table__cell">Not available</td>
             <td class="govuk-table__cell">Not available</td>
+            <td class="govuk-table__cell">Not available</td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Saturday</th>
+            <td class="govuk-table__cell">Not available</td>
             <td class="govuk-table__cell">Not available</td>
             <td class="govuk-table__cell">Not available</td>
           </tr>
