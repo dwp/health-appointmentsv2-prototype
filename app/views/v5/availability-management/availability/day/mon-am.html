@@ -88,7 +88,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   classes: "govuk-checkboxes--small",
   fieldset: {
   legend: {
-  text: "Office location",
+  text: "Work location",
   isPageHeading: false,
   classes: "govuk-fieldset__legend--s"
   }
@@ -104,7 +104,13 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   id: "tresco",
   value: "tresco",
   text: "London, Tresco House"
-  }
+  },
+
+  {
+    id: "online",
+    value: "online",
+    text: "Online"
+    }
   ]
   }) }}
 
@@ -185,11 +191,11 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
               
               </th> </div>
-              <th scope="col" class="govuk-table__header" style="width: 10%;">Name</th>
-              <th scope="col" class="govuk-table__header" style="width: 20%;">Email</th>
-              <th scope="col" class="govuk-table__header" style="width: 10%;">Office location</th> 
-              <th scope="col" class="govuk-table__header" style="width: 15%;">Working location</th> 
-              <th scope="col" class="govuk-table__header" style="width: 30%;">Skills</th>
+              <th scope="col" class="govuk-table__header" style="width: 33%;">Name</th>
+            
+              <th scope="col" class="govuk-table__header" style="width: 33%;">Work location</th> 
+           
+              <th scope="col" class="govuk-table__header" style="width: 33%;">Available for</th>
               
             </tr>
               </thead>
@@ -207,9 +213,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                  
                     <td class="govuk-table__cell">Amy Gill</td>
-                    <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
+                  
                     <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                    <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                  
                     <td class="govuk-table__cell">
                       <ul class="govuk-list govuk-list--bullet">
                         <li>PIP F2F </li>
@@ -224,7 +230,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
 
-                <tr class="govuk-table__row wcata tresco">
+                <tr class="govuk-table__row wcata online">
                   <td class="govuk-table__cell">
                     <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                       <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-2" name="agent-mon-am-name" type="checkbox" value="Benjamin Marshall" {{ checked("agent-mon-am-name", "Benjamin Marshall") }}>
@@ -234,9 +240,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     </div>
                   </td>
                   <td class="govuk-table__cell">Benjamin Marshall</td>
-                  <td class="govuk-table__cell"> benjaminmarshall@<br>domain.gov.uk </td>
-                  <td class="govuk-table__cell"> London, Tresco House </td>
-                  <td class="govuk-table__cell"> Remote </td>
+               
+                  <td class="govuk-table__cell"> Online </td>
+                 
                    <td class="govuk-table__cell">
                     
                     <ul class="govuk-list govuk-list--bullet">
@@ -258,9 +264,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Bernhard Fischer</td>
-                      <td class="govuk-table__cell"> bernhardfischer@<br>domain.gov.uk </td>
+                   
                       <td class="govuk-table__cell"> London, Tresco House </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                     
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
@@ -285,9 +291,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Danny Zuko</td>
-                      <td class="govuk-table__cell">dannyzuko@<br>domain.gov.uk </td>
+               
                       <td class="govuk-table__cell"> London, Tresco House </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                   
                        <td class="govuk-table__cell">  
                         <ul class="govuk-list govuk-list--bullet">
                           <li>PIP F2F</li>
@@ -311,9 +317,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Emma Bradley</td>
-                      <td class="govuk-table__cell"> emmabradley@<br>domain.gov.uk </td>
+              
                       <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                   
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
@@ -328,7 +334,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row wcata handsworth">
+                    <tr class="govuk-table__row wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-6" name="agent-mon-am-name" type="checkbox" value="Frieda Döring" {{ checked("agent-mon-am-name", "Frieda Döring") }}>
@@ -338,9 +344,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Frieda Döring</td>
-                      <td class="govuk-table__cell"> freidadoring@<br>domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                      <td class="govuk-table__cell"> Remote</td>
+                     
+                      <td class="govuk-table__cell"> Online </td>
+                    
                       <td class="govuk-table__cell">  
                     
                       <ul class="govuk-list govuk-list--bullet">
@@ -362,9 +368,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Gabriel Mello</td>
-                      <td class="govuk-table__cell"> gabrielmello@<br>domain.gov.uk </td>
+              
                       <td class="govuk-table__cell"> London, Tresco House </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
+                   
                       <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
@@ -377,7 +383,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
           
                     </tr>
-                    <tr class="govuk-table__row pipta wcata handsworth">
+                    <tr class="govuk-table__row pipta wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-8" name="agent-mon-am-name" type="checkbox" value="Jane Smith" {{ checked("agent-mon-am-name", "Jane Smith") }}>
@@ -387,9 +393,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Jane Smith</td>
-                      <td class="govuk-table__cell"> janesmith@<br>domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                      <td class="govuk-table__cell"> Remote </td>
+               
+                      <td class="govuk-table__cell"> Online </td>
+                     
                        <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
@@ -412,9 +418,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Joe Bloggs</td>
-                      <td class="govuk-table__cell"> joebloggs@<br>domain.gov.uk </td>
+               
                       <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                    
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
@@ -428,7 +434,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row pipta tresco">
+                    <tr class="govuk-table__row pipta online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-10" name="agent-mon-am-name" type="checkbox" value="Julie Smails" {{ checked("agent-mon-am-name", "Julie Smails") }}>
@@ -438,9 +444,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Julie Smails</td>
-                      <td class="govuk-table__cell">juliesmails@<br>domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                      <td class="govuk-table__cell"> Remote </td>
+                   
+                      <td class="govuk-table__cell"> Online </td>
+                    
                        <td class="govuk-table__cell">
           
           
@@ -456,7 +462,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     </tr>
 
 
-                    <tr class="govuk-table__row wcata tresco">
+                    <tr class="govuk-table__row wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-11" name="agent-mon-am-name" type="checkbox" value="Monica Anyanwu" {{ checked("agent-mon-am-name", "Monica Anyanwu") }}>
@@ -466,9 +472,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Monica Anyanwu </td>
-                      <td class="govuk-table__cell">monicaanyanwu@<br>domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                      <td class="govuk-table__cell"> Remote </td>
+                  
+                      <td class="govuk-table__cell"> Online </td>
+                      
                        <td class="govuk-table__cell">
           
           
@@ -482,7 +488,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                       </td> 
                     </tr>
 
-                    <tr class="govuk-table__row pipta wcata tresco">
+                    <tr class="govuk-table__row pipta wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-12" name="agent-mon-am-name" type="checkbox" value="Raka Banerjee" {{ checked("agent-mon-am-name", "Raka Banerjee") }}>
@@ -492,9 +498,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Raka Banerjee</td>
-                      <td class="govuk-table__cell">rakabanerjee@<br>domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                      <td class="govuk-table__cell"> Remote </td>
+                    
+                      <td class="govuk-table__cell"> Online </td>
+                     
                        <td class="govuk-table__cell">
           
           
@@ -569,6 +575,7 @@ $('#select-all').click(function(event) {
     hideAllWithClass("wcaf2f");
     hideAllWithClass("tresco");
     hideAllWithClass("handsworth");
+    hideAllWithClass("online");
     let benefitTypes = [];
     let sites = [];
 
@@ -594,13 +601,17 @@ $('#select-all').click(function(event) {
 
     
 
-    if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true) {
+    if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true || document.getElementById('online').checked == true) {
       if (document.getElementById('handsworth').checked == true) {
         showAllWithClass("handsworth");
       } 
 
       if (document.getElementById('tresco').checked == true) {
         showAllWithClass("tresco");
+      } 
+
+      if (document.getElementById('online').checked == true) {
+        showAllWithClass("online");
       } 
     }
 

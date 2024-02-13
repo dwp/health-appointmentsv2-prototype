@@ -23,6 +23,22 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     
  <div class="govuk-grid-column-three-quarters">
 
+  <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+  <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+  Success
+  </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+  <h3 class="govuk-notification-banner__heading" style="white-space:nowrap;">
+    Amy Gill's daily appointment locations have been updated
+  </h3>
+  </div>
+  </div>
+  
+
    <h1 class="govuk-heading-l">
     Amy Gill
     </h1>
@@ -34,19 +50,19 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         Contents
       </h2>
       <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#past-day">
            Personal details
           </a>
         </li>
-        <li class="govuk-tabs__list-item">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
           <a class="govuk-tabs__tab" href="#past-week">
            Location
           </a>
         </li>
      
       </ul>
-      <div class="govuk-tabs__panel" id="past-day">
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-day">
         <h2 class="govuk-heading-m">Personal details</h2>
        
 
@@ -111,7 +127,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
       </div>
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <div class="govuk-tabs__panel" id="past-week">
         <h2 class="govuk-heading-m">Location</h2>
        
 

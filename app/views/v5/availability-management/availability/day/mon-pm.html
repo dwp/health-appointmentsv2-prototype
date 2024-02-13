@@ -6,16 +6,16 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 {% block content %}
 
+
 <div class="govuk-grid-row" style="margin-top: -40px;">
 
 
   <div class="govuk-grid-column-one-quarter" style="margin-top: 0px;">
 
-    {% if data['agent-mon-pm-name']  %}  <a href="../availability-added" class="govuk-back-link">Back</a>
-    {% else %}
+ 
   <a href="../availability-view" class="govuk-back-link">Back</a>
-  {% endif %} 
-  
+
+
     <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5" style="padding-top:20px;">
       Filters
     </h2>
@@ -39,7 +39,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 
-<!-- 
+
   {{ govukCheckboxes({
   idPrefix: "benefitType",
   name: "benefit-type",
@@ -52,23 +52,35 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   }
   },
   items: [
+ 
   {
-  id: "esa",
-  value: "esa",
-  text: "Employment Support Allowance (13)"
+  id: "pipf2f",
+  value: "pipf2f",
+  text: "PIP F2F"
   },
   {
-  id: "pip",
-  value: "pip",
-  text: "Personal Independence Payment (25)"
-  },
+  id: "pipta",
+  value: "pipta",
+  text: "PIP TA"
+  }, 
   {
-  id: "uc",
-  value: "uc",
-  text: "Universal Credit (22)"
-  }
+    id: "wcacn",
+    value: "wcacn",
+    text: "WCA CN"
+    },
+  {
+    id: "wcaf2f",
+    value: "wcaf2f",
+    text: "WCA F2F"
+    }, 
+    {
+      id: "wcata",
+      value: "wcata",
+      text: "WCA TA"
+      }
+
   ]
-  }) }} -->
+  }) }} 
 
   {{ govukCheckboxes({
   idPrefix: "assessmentCentre",
@@ -76,7 +88,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   classes: "govuk-checkboxes--small",
   fieldset: {
   legend: {
-  text: "Location",
+  text: "Work location",
   isPageHeading: false,
   classes: "govuk-fieldset__legend--s"
   }
@@ -85,16 +97,26 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   {
   id: "handsworth",
   value: "handsworth",
-  text: "Leeds (5)"
+  text: "Birmingham, Handsworth"
   },
 
   {
   id: "tresco",
   value: "tresco",
-  text: "Newcastle (7)"
-  }
+  text: "London, Tresco House"
+  },
+
+  {
+    id: "online",
+    value: "online",
+    text: "Online"
+    }
   ]
   }) }}
+
+
+ 
+      
 
 
      
@@ -130,14 +152,15 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
    
 
-    
+  
 
       <form action="../time/times-mon-pm" method="post" class="form" >  
        
+        
         <span class="govuk-caption-l">Monday 11 March 2024</span>
 
             <h1 class="govuk-heading-l" style="padding-top:10px;">
-              Who is available in the afternoon?
+             Who is available in the afternoon? 
             
            
             </h1>
@@ -168,15 +191,17 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
               
               </th> </div>
-              <th scope="col" class="govuk-table__header" style="width: 30%;">Name</th>
-              <th scope="col" class="govuk-table__header" style="width: 10%;">Email</th>
-              <th scope="col" class="govuk-table__header" style="width: 20%;">Location</th>
-              <th scope="col" class="govuk-table__header" style="width: 30%;">Skills</th>
+              <th scope="col" class="govuk-table__header" style="width: 33%;">Name</th>
+            
+              <th scope="col" class="govuk-table__header" style="width: 33%;">Work location</th> 
+           
+              <th scope="col" class="govuk-table__header" style="width: 33%;">Available for</th>
+              
             </tr>
               </thead>
               <tbody class="govuk-table__body">
 
-                <tr class="govuk-table__row handsworth">
+                <tr class="govuk-table__row pipf2f pipta wcacn wcaf2f wcata handsworth">
                   <td class="govuk-table__cell">
                     <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                       <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-1" name="agent-mon-pm-name" type="checkbox" value="Amy Gill"  {{ checked("agent-mon-pm-name", "Amy Gill") }}>
@@ -188,20 +213,24 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                  
                     <td class="govuk-table__cell">Amy Gill</td>
-                    <td class="govuk-table__cell"> amygill@domain.gov.uk </td>
-                    <td class="govuk-table__cell"> Leeds </td>
+                  
+                    <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                  
                     <td class="govuk-table__cell">
                       <ul class="govuk-list govuk-list--bullet">
-                      <li>Identity</li>
-                      <li>Decision</li>
-                     
-                    </ul>
+                        <li>PIP F2F </li>
+                        <li>  PIP TA</li> 
+                       <li>   WCA CN</li> 
+                       <li>    WCA F2F</li> 
+                         <li> WCA TA</li> 
+                        
+                      </ul>
                   </td>
                   </tr>
 
 
 
-                <tr class="govuk-table__row tresco">
+                <tr class="govuk-table__row wcata online">
                   <td class="govuk-table__cell">
                     <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                       <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-2" name="agent-mon-pm-name" type="checkbox" value="Benjamin Marshall" {{ checked("agent-mon-pm-name", "Benjamin Marshall") }}>
@@ -211,21 +240,21 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     </div>
                   </td>
                   <td class="govuk-table__cell">Benjamin Marshall</td>
-                  <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
-                  <td class="govuk-table__cell"> Newcastle </td>
+               
+                  <td class="govuk-table__cell"> Online </td>
+                 
                    <td class="govuk-table__cell">
                     
                     <ul class="govuk-list govuk-list--bullet">
                       
-                      <li>Identity</li>
-                     
+                      <li>WCA TA</li>
                      </ul>
                   </td>
       
       
                 </tr>
 
-                    <tr class="govuk-table__row tresco">
+                    <tr class="govuk-table__row pipf2f pipta wcaf2f wcata tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-3"  name="agent-mon-pm-name" type="checkbox" value="Bernhard Fischer" {{ checked("agent-mon-pm-name", "Bernhard Fischer") }}>
@@ -235,23 +264,24 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Bernhard Fischer</td>
-                      <td class="govuk-table__cell"> bernhardfischer@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Newcastle </td>
+                   
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                     
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
                         
-                          <li>Identity</li>
-                          <li>Decision</li>
-                          <li>Specialist</li>
-                          
+                          <li>PIP F2F</li>
+                          <li>PIP TA</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
                          </ul>
           
           
                       </td>
                       
                     </tr>
-                    <tr class="govuk-table__row tresco">
+                    <tr class="govuk-table__row pipf2f pipta wcacn wcaf2f wcata wca tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-4" name="agent-mon-pm-name" type="checkbox" value="Danny Zuko" {{ checked("agent-mon-pm-name", "Danny Zuko") }}>
@@ -261,22 +291,23 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Danny Zuko</td>
-                      <td class="govuk-table__cell">dannyzuko@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Newcastle </td>
+               
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                   
                        <td class="govuk-table__cell">  
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>Identity</li>
-                        <li>Decision</li>
-                         
-                          <li>Specialist</li>
-                          
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
                          </ul>
           
                         
                         </td>
                      
                     </tr>
-                    <tr class="govuk-table__row handsworth">
+                    <tr class="govuk-table__row pipf2f pipta wcaf2f wcata handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-5" name="agent-mon-pm-name" type="checkbox" value="Emma Bradley" {{ checked("agent-mon-pm-name", "Emma Bradley") }}>
@@ -286,23 +317,24 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Emma Bradley</td>
-                      <td class="govuk-table__cell"> emmabradley@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Leeds </td>
+              
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                   
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>Identity</li>
-                        <li>Decision</li>
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
                         
-                          <li>Specialist</li>
-                         
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
                          </ul>
           
           
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row handsworth">
+                    <tr class="govuk-table__row wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-6" name="agent-mon-pm-name" type="checkbox" value="Frieda Döring" {{ checked("agent-mon-pm-name", "Frieda Döring") }}>
@@ -312,20 +344,21 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Frieda Döring</td>
-                      <td class="govuk-table__cell"> freidadoring@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Leeds </td>
+                     
+                      <td class="govuk-table__cell"> Online </td>
+                    
                       <td class="govuk-table__cell">  
                     
                       <ul class="govuk-list govuk-list--bullet">
                       
                       
-                        <li>Identity</li>
-                       
+                     
+                        <li>WCA TA</li>
                        </ul>
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row tresco">
+                    <tr class="govuk-table__row wcata wcaf2f tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-7" name="agent-mon-pm-name" type="checkbox" value="Gabriel Mello" {{ checked("agent-mon-pm-name", "Gabriel Mello") }}>
@@ -335,21 +368,22 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Gabriel Mello</td>
-                      <td class="govuk-table__cell"> gabrielmello@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Newcastle </td>
+              
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                   
                       <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
                        
                       
-                          <li>Identity</li>
-                          
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
                          </ul>
                         </td>
           
           
                     </tr>
-                    <tr class="govuk-table__row handsworth">
+                    <tr class="govuk-table__row pipta wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-8" name="agent-mon-pm-name" type="checkbox" value="Jane Smith" {{ checked("agent-mon-pm-name", "Jane Smith") }}>
@@ -359,21 +393,22 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Jane Smith</td>
-                      <td class="govuk-table__cell"> janesmith@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Leeds </td>
+               
+                      <td class="govuk-table__cell"> Online </td>
+                     
                        <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>Identity</li>
-                        <li>Decision</li>
+                 
+                        <li>PIP TA</li>
                         
-                          <li>Specialist</li>
-                          
+                     
+                          <li>WCA TA</li>
                          </ul>
           
                         </td>
                     </tr>
-                    <tr class="govuk-table__row handsworth">
+                    <tr class="govuk-table__row wcacn wcaf2f wcata handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-9" name="agent-mon-pm-name" type="checkbox" value="Joe Bloggs" {{ checked("agent-mon-pm-name", "Joe Bloggs") }}>
@@ -383,22 +418,23 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Joe Bloggs</td>
-                      <td class="govuk-table__cell"> joebloggs@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Leeds </td>
+               
+                      <td class="govuk-table__cell"> Birmingham, Handsworth </td>
+                    
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
                           
-                     
-                          <li>Identity</li>
-                          
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
                          </ul>
           
           
           
                       </td>
                     </tr>
-                    <tr class="govuk-table__row tresco">
+                    <tr class="govuk-table__row pipta online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-10" name="agent-mon-pm-name" type="checkbox" value="Julie Smails" {{ checked("agent-mon-pm-name", "Julie Smails") }}>
@@ -408,15 +444,16 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Julie Smails</td>
-                      <td class="govuk-table__cell">juliesmails@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Newcastle </td>
+                   
+                      <td class="govuk-table__cell"> Online </td>
+                    
                        <td class="govuk-table__cell">
           
           
           
                         <ul class="govuk-list govuk-list--bullet">
                          
-                        <li>Identity</li>
+                        <li>PIP TA</li>
                         
                         
                          </ul>
@@ -425,7 +462,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     </tr>
 
 
-                    <tr class="govuk-table__row tresco">
+                    <tr class="govuk-table__row wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-11" name="agent-mon-pm-name" type="checkbox" value="Monica Anyanwu" {{ checked("agent-mon-pm-name", "Monica Anyanwu") }}>
@@ -435,8 +472,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Monica Anyanwu </td>
-                      <td class="govuk-table__cell">monicaanyanwu@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Newcastle </td>
+                  
+                      <td class="govuk-table__cell"> Online </td>
+                      
                        <td class="govuk-table__cell">
           
           
@@ -444,13 +482,13 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         <ul class="govuk-list govuk-list--bullet">
                         
                          
-                          <li>Identity</li>
+                          <li>WCA TA</li>
                          </ul>
           
                       </td> 
                     </tr>
 
-                    <tr class="govuk-table__row tresco">
+                    <tr class="govuk-table__row pipta wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                           <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-12" name="agent-mon-pm-name" type="checkbox" value="Raka Banerjee" {{ checked("agent-mon-pm-name", "Raka Banerjee") }}>
@@ -460,18 +498,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
                       <td class="govuk-table__cell">Raka Banerjee</td>
-                      <td class="govuk-table__cell">rakabanerjee@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> Newcastle </td>
+                    
+                      <td class="govuk-table__cell"> Online </td>
+                     
                        <td class="govuk-table__cell">
           
           
           
                         <ul class="govuk-list govuk-list--bullet">
-                          <li>Identity</li>
-                        <li>Decision</li>
+                      
+                        <li>PIP TA</li>
                         
-                          <li>Specialist</li>
-                        
+                       
+                          <li>WCA TA</li> 
+                    
                          </ul>
           
                       </td> 
@@ -528,48 +568,51 @@ $('#select-all').click(function(event) {
 
     e.preventDefault();    //stop form from submitting
 
-    // showAllWithClass("esa");
-    // showAllWithClass("pip");
-    // showAllWithClass("uc");
-    showAllWithClass("tresco");
-    showAllWithClass("handsworth");
+    hideAllWithClass("pipf2f");
+    hideAllWithClass("pipta");
+    hideAllWithClass("wcacn");
+    hideAllWithClass("wcata");
+    hideAllWithClass("wcaf2f");
+    hideAllWithClass("tresco");
+    hideAllWithClass("handsworth");
+    hideAllWithClass("online");
     let benefitTypes = [];
     let sites = [];
 
     
-
-    // if (document.getElementById('pip').checked == true || document.getElementById('esa').checked == true || document.getElementById('uc').checked == true) {
-    //   if (document.getElementById('pip').checked == false) {
-    //     hideAllWithClass("pip");
-    //   } else {
-    //     benefitTypes.push("Personal Independence Payment");
-    //   }
-
-    //   if (document.getElementById('esa').checked == false) {
-    //     hideAllWithClass("esa");
-    //   } else {
-    //     benefitTypes.push("Employment Support Allowance");
-    //   }
-
-    //   if (document.getElementById('uc').checked == false) {
-    //     hideAllWithClass("uc");
-    //   } else {
-    //     benefitTypes.push("Universal Credit");
-    //   }
-    // }
-
-    if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true) {
-      if (document.getElementById('handsworth').checked == false) {
-        hideAllWithClass("handsworth");
-      } else {
-        sites.push("Handsworth");
+    
+    if (document.getElementById('pipf2f').checked == true) {
+        showAllWithClass("pipf2f");
       }
 
-      if (document.getElementById('tresco').checked == false) {
-        hideAllWithClass("tresco");
-      } else {
-        sites.push('Tresco');
+      if (document.getElementById('pipta').checked == true) {
+        showAllWithClass("pipta");
       }
+      if (document.getElementById('wcacn').checked == true) {
+        showAllWithClass("wcacn");
+      }
+
+      if (document.getElementById('wcaf2f').checked == true) {
+        showAllWithClass("wcaf2f");
+      } 
+      if (document.getElementById('wcata').checked == true) {
+        showAllWithClass("wcata");
+      } 
+
+    
+
+    if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true || document.getElementById('online').checked == true) {
+      if (document.getElementById('handsworth').checked == true) {
+        showAllWithClass("handsworth");
+      } 
+
+      if (document.getElementById('tresco').checked == true) {
+        showAllWithClass("tresco");
+      } 
+
+      if (document.getElementById('online').checked == true) {
+        showAllWithClass("online");
+      } 
     }
 
     var count = 0;
@@ -580,22 +623,7 @@ $('#select-all').click(function(event) {
         }
       })
 
-    // if (count < 20) {
-    //   document.getElementById('pagination').style.visibility = 'collapse';
-    // } else {
-    //   document.getElementById('pagination').style.visibility = 'visible';
-    // }
-
-    // document.getElementById('paginationTotal').innerText = count;
-
-    // var eol = document.getElementById('srel').checked ? " end of life" : "";
-    // var benefitTypeString = benefitTypes.join(", ");
-    // var sitesString = sites.join(", ");
-    // var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
-    // var ifSites = sites.length > 0 ? ' at ' : '';
-
-    //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth
-    // var text = count + " report ready " + eol + " referrals " + ifBenefitType + benefitTypeString + ifSites + sitesString;
+  
     var text = count + " referrals";
 
     document.getElementById('filter-playback').innerText = text;
