@@ -1,0 +1,208 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/internal-header.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-full">
+
+<a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+          
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="book-assessment" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                View a caseload or status
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              View referrals in a caseload or by status.
+            </div>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Caseload
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <div class="govuk-radios--small">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status" name="status2" type="radio" value="list-1">
+                      <label class="govuk-label govuk-radios__label" for="status">
+                        Jared Mosely-Redman (74)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-2" name="status2" type="radio" value="list-2">
+                      <label class="govuk-label govuk-radios__label" for="status-2">
+                        Zoe Hall (62)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-3" name="status2" type="radio" value="list-3">
+                      <label class="govuk-label govuk-radios__label" for="status-3">
+                        Akhtar Ahmed (62)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Status
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <div class="govuk-radios--small">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-1" name="status" type="radio" value="assigned">
+                      <label class="govuk-label govuk-radios__label" for="status-1">
+                        Assigned (50)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-2" name="status" type="radio" value="awaiting-questionnaire-wca">
+                      <label class="govuk-label govuk-radios__label" for="status-2">
+                        Awaiting questionnaire (120)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-3" name="status" type="radio" value="questionnaire-reminder-issued">
+                      <label class="govuk-label govuk-radios__label" for="status-3">
+                        Questionnaire reminder sent (65)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-4" name="status" type="radio" value="questionnaire-received">
+                      <label class="govuk-label govuk-radios__label" for="status-4">
+                        Questionnaire not returned (25)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-5" name="status" type="radio" value="questionnaire-not-received-mh">
+                      <label class="govuk-label govuk-radios__label" for="status-5">
+                        HCP review (7)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-6" name="status" type="radio" value="ftrq-action-needed">
+                      <label class="govuk-label govuk-radios__label" for="status-6">
+                        Request medical evidence (4)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-7" name="status" type="radio" value="awaiting-evidence">
+                      <label class="govuk-label govuk-radios__label" for="status-7">
+                        Awaiting medical evidence (76)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-9" name="status" type="radio" value="evidence-not-received">
+                      <label class="govuk-label govuk-radios__label" for="status-9">
+                        Medical evidence not received (22)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-8" name="status" type="radio" value="evidence-received">
+                      <label class="govuk-label govuk-radios__label" for="status-8">
+                        Medical evidence received (36)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-16" name="status" type="radio" value="book-assessment">
+                      <label class="govuk-label govuk-radios__label" for="status-16">
+                        Book assessment (22)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-17" name="status" type="radio" value="book-pbr">
+                      <label class="govuk-label govuk-radios__label" for="status-17">
+                        Assessment booked (31)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-19" name="status" type="radio" value="pbr-booked">
+                      <label class="govuk-label govuk-radios__label" for="status-19">
+                        PIP paper based review (29)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-19" name="status" type="radio" value="pbr-booked">
+                      <label class="govuk-label govuk-radios__label" for="status-19">
+                        WCA paper based review (19)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-20" name="status" type="radio" value="fta-action-needed">
+                      <label class="govuk-label govuk-radios__label" for="status-20">
+                        Failed to attend (19)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-22" name="status" type="radio" value="report-ready">
+                      <label class="govuk-label govuk-radios__label" for="status-22">
+                        Report ready (15)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-23" name="status" type="radio" value="bau-decision-needed">
+                      <label class="govuk-label govuk-radios__label" for="status-23">
+                        HCP audit (37)
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="status-24" name="status" type="radio" value="wca-completed">
+                      <label class="govuk-label govuk-radios__label" for="status-24">
+                        PIPCS descriptors updated (67)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+    </div>
+  </div>
+
+
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+
