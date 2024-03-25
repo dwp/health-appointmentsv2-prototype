@@ -1,0 +1,820 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+
+
+   <a href="amy-gill-profile2" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-column-full-width">
+
+    
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+    
+
+      <form action="amy-gill-profile2" method="post" class="form" >  
+       
+        
+     
+
+            <h1 class="govuk-heading-l">
+            
+Edit Amy's available hours
+            
+           
+            </h1>
+            <div class="govuk-hint">
+             For example, 12:00 for midday.
+            </div>
+
+            
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row" >
+                   
+                   
+
+                        
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                 
+              <th scope="col" class="govuk-table__header" style="width: 9%;">Day</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Morning start</th>
+              <th scope="col" class="govuk-table__header" style="width: 15%;">Morning stop</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Afternoon start</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Afternoon stop</th>
+              <th scope="col" class="govuk-table__header" style="width: 11%;">Working location</th>
+            </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+
+              
+
+               
+
+<!-- Monday-->
+                <tr class="govuk-table__row handsworth">
+                 
+                    <td class="govuk-table__cell">Monday</td>  
+          
+                  <td class="govuk-table__cell">
+                  
+                    <div class="time-wrapper"> 
+                      <div class="time-start">
+                     
+                    <label class="govuk-label">
+                      Start time
+                    </label>
+        
+                    <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="08:45">   
+                    
+                  </div>
+                  </div>
+
+                </td>
+
+                <td class="govuk-table__cell">
+                  <div class="time-wrapper"> 
+                <div class="time-end2"> 
+                  <label class="govuk-label">
+                    End time
+                  </label>
+                  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="11:45">
+                 </div>
+                </div>
+                </td>
+
+
+                <td class="govuk-table__cell">
+                  
+                  <div class="time-wrapper"> 
+                    <div class="time-start">
+                   
+                  <label class="govuk-label">
+                    Start time
+                  </label>
+      
+                  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:45">   
+                  
+                </div>
+                </div>
+
+              </td>
+
+              <td class="govuk-table__cell">
+                <div class="time-wrapper"> 
+              <div class="time-end2"> 
+                <label class="govuk-label">
+                  End time
+                </label>
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="4:30">
+               </div>
+              </div>
+              </td>
+
+
+              <td class="govuk-table__cell">
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="mon-worklocation" name="mon-worklocation" type="radio" value="birmingham" checked>
+          <label class="govuk-label govuk-radios__label" for="mon-worklocation">
+            Birmingham, Handsworth
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="mon-worklocation-2" name="mon-worklocation" type="radio" value="remote">
+          <label class="govuk-label govuk-radios__label" for="mon-worklocation-2">
+            Working remotely
+          </label>
+        </div>
+     
+
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="mon-worklocation-3" name="mon-worklocation" type="radio" value="not-available">
+        <label class="govuk-label govuk-radios__label" for="mon-worklocation-3">
+          Not available
+        </label>
+      </div>
+    </div>
+
+    </fieldset>
+  </div>
+
+
+
+  
+               
+
+                  </tr>
+                  
+<!--TUESDAY-->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Tuesday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:30">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="5:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+<div class="govuk-form-group">
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="tue-worklocation" name="tue-worklocation" type="radio" value="birmingham" checked>
+          <label class="govuk-label govuk-radios__label" for="tue-worklocation">
+            Birmingham, Handsworth
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="tue-worklocation-2" name="tue-worklocation" type="radio" value="remote">
+          <label class="govuk-label govuk-radios__label" for="tue-worklocation-2">
+            Working remotely
+          </label>
+        </div>
+    
+        <div class="govuk-radios__divider">or</div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="tue-worklocation-3" name="tue-worklocation" type="radio" value="not-available">
+          <label class="govuk-label govuk-radios__label" for="tue-worklocation-3">
+            Not available
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+</div>
+
+
+</tr>
+
+<!--WEDNESDAY -->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Wednesday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:30">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="5:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+
+  
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="wed-worklocation" name="wed-worklocation" type="radio" value="birmingham" checked>
+          <label class="govuk-label govuk-radios__label" for="wed-worklocation">
+            Birmingham, Handsworth
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="wed-worklocation-2" name="wed-worklocation" type="radio" value="remote">
+          <label class="govuk-label govuk-radios__label" for="wed-worklocation-2">
+            Working remotely
+          </label>
+        </div>
+
+
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="wed-worklocation-3" name="wed-worklocation" type="radio" value="not-available">
+        <label class="govuk-label govuk-radios__label" for="wed-worklocation-3">
+          Not available
+        </label>
+      </div>
+    </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+</tr>
+
+
+<!-- THURSDAY--> 
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Thursday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:30">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="5:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="thu-worklocation" name="thu-worklocation" type="radio" value="birmingham" >
+          <label class="govuk-label govuk-radios__label" for="thu-worklocation">
+            Birmingham, Handsworth
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="thu-worklocation-2" name="thu-worklocation" type="radio" value="remote" checked>
+          <label class="govuk-label govuk-radios__label" for="thu-worklocation-2">
+            Working remotely
+          </label>
+        </div>
+
+
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="thu-worklocation-3" name="thu-worklocation" type="radio" value="not-available">
+        <label class="govuk-label govuk-radios__label" for="thu-worklocation-3">
+          Not available
+        </label>
+      </div>
+    </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+
+
+  
+  
+
+
+</tr>
+
+<!-- FRIDAY-->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Friday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="08:30">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="11:30">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="12:00">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="3:00">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="fri-worklocation" name="fri-worklocation" type="radio" value="birmingham" >
+          <label class="govuk-label govuk-radios__label" for="fri-worklocation">
+            Birmingham, Handsworth
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="fri-worklocation-2" name="fri-worklocation" type="radio" value="remote" checked>
+          <label class="govuk-label govuk-radios__label" for="fri-worklocation-2">
+            Working remotely
+          </label>
+        </div>
+
+        <div class="govuk-radios__divider">or</div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="fri-worklocation-3" name="fri-worklocation" type="radio" value="not-available">
+          <label class="govuk-label govuk-radios__label" for="fri-worklocation-3">
+            Not available
+          </label>
+        </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+
+
+  </div>
+</fieldset>
+</div>
+
+
+</tr>
+
+<!-- SATURDAY-->
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Saturday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sat-worklocation" name="sat-worklocation" type="radio" value="birmingham" >
+          <label class="govuk-label govuk-radios__label" for="sat-worklocation">
+            Birmingham, Handsworth
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sat-worklocation-2" name="sat-worklocation" type="radio" value="remote">
+          <label class="govuk-label govuk-radios__label" for="sat-worklocation-2">
+            Working remotely
+          </label>
+        </div>
+
+        <div class="govuk-radios__divider">or</div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sat-worklocation-3" name="sat-worklocation" type="radio" value="not-available" checked>
+          <label class="govuk-label govuk-radios__label" for="sat-worklocation-3">
+            Not available
+          </label>
+        </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+</fieldset>
+</div>
+
+
+</tr>
+
+<!-- SUNDAY-->
+
+
+<tr class="govuk-table__row handsworth">
+                 
+  <td class="govuk-table__cell">Sunday</td>  
+
+<td class="govuk-table__cell">
+
+  <div class="time-wrapper"> 
+    <div class="time-start">
+   
+  <label class="govuk-label">
+    Start time
+  </label>
+
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+  
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+  End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+<div class="time-wrapper"> 
+  <div class="time-start">
+ 
+<label class="govuk-label">
+  Start time
+</label>
+
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value=" ">   
+
+</div>
+</div>
+
+</td>
+
+<td class="govuk-table__cell">
+<div class="time-wrapper"> 
+<div class="time-end2"> 
+<label class="govuk-label">
+End time
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value=" ">
+</div>
+</div>
+</td>
+
+
+<td class="govuk-table__cell">
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sun-worklocation" name="sun-worklocation" type="radio" value="birmingham" >
+          <label class="govuk-label govuk-radios__label" for="sun-worklocation">
+            Birmingham, Handsworth
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sun-worklocation-2" name="sun-worklocation" type="radio" value="remote">
+          <label class="govuk-label govuk-radios__label" for="sun-worklocation-2">
+            Working remotely
+          </label>
+        </div>
+
+        <div class="govuk-radios__divider">or</div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sun-worklocation-3" name="sun-worklocation" type="radio" value="not-available" checked>
+          <label class="govuk-label govuk-radios__label" for="sun-worklocation-3">
+            Not available
+          </label>
+        </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+
+
+</fieldset>
+</div>
+
+
+</tr>
+
+                 
+                  
+                </tbody>
+              </table>
+           
+             
+ 
+
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+    </div>
+
+
+</div>
+
+
+    </div>
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}
