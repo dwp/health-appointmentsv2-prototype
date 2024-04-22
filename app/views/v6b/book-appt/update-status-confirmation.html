@@ -1,0 +1,64 @@
+
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/internal-header.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+          <div class="govuk-width-container">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                      Status updated for {% if  data['appt'] %}
+      
+                      {{ data['appt'] }}
+                      {% else %}
+                     
+                       Jane Doe
+                     
+                      {% endif %}
+                    </h1>
+                    
+                  </div>
+                  <br>  <br>
+
+                  <h2 class="govuk-heading-m">What you can do next </h2>
+
+               
+
+                 <p> <a href="claimant-detail"> View details for Jane Doe</a></p>
+                   <p> <a href="claimant-detail">Add entry to timeline for Jane Doe</a></p>
+            
+                   <p> <a href="../caseload-or-status">Go back to referrals in progress</a></p>
+
+
+                </div>
+              </div>
+            </main>
+          </div>
+
+
+    </div>
+
+</div>
+
+        </main>
+      </div>
+
+
+
+      {% endblock %}
