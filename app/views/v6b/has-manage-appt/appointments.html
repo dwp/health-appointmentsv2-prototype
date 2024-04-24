@@ -212,7 +212,7 @@ Booked assessments - GOV.UK prototype
         <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
          
           <div id="dob-hint" class="govuk-hint">
-            For example, 15 3 2023
+            For example, 15 3 2024
           </div>
           <div class="govuk-date-input" id="dob">
             <div class="govuk-date-input__item">
@@ -271,8 +271,10 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Claimant</th>
             <th scope="col" class="govuk-table__header">Benefit</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none" >Date and time</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none" >HCP</th>
+           
+            <th scope="col" class="govuk-table__header" > <span style="color: #005ea5;">Date and time ▼  </span></th>
+
+            <th scope="col" class="govuk-table__header" > <span style="color: #005ea5;">HCP ▼  </span></th>
             <th scope="col" class="govuk-table__header" aria-sort="none" >Type</th>
            
           </tr>
@@ -283,7 +285,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href="appt-details" aria-describedby="claimant-detail-report">Jane Doe</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Wed 7 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Wed 7 May 2024, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  
               
@@ -297,7 +299,7 @@ Booked assessments - GOV.UK prototype
            <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Noelle Carmel</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 May 2024, 
               9am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Amy Gill</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -307,14 +309,12 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href="view-assessment-unassigned" aria-describedby="claimant-detail-report">Alex Smith</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 May 2024, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">      
-              {% if  data['hcp99'] %}
-              {{ data['hcp99'] }}
-             {% else %}
-             Unassigned
-             {% endif %} 
+             
+       Amy Gill
+          
             
            </td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -324,7 +324,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Fran Cliffe</a></td>
             <td class="govuk-table__cell">UC</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Fri 9 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Fri 9 May 2024, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Danny Travasso    </td>
             <td class="govuk-table__cell" data-sort-value="1"> Telephone </td>
@@ -335,7 +335,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Xia Jeana</a></td>
             <td class="govuk-table__cell">ESA</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Tue 13 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Tue 13 May 2024, 
               1pm</td>
             <td class="govuk-table__cell" data-sort-value="1"> Julie Smails</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -346,7 +346,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Sam Smart</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Wed 14 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Wed 14 May 2024, 
               3pm</td>
             <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -357,7 +357,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Derren Brown</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Fri 15 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Fri 15 May 2024, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -368,7 +368,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Noah Best</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Raka Banerjee</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -379,7 +379,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Lucy Steel</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
               9am</td>
             <td class="govuk-table__cell" data-sort-value="1"> Amy Gill</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -390,7 +390,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Rachel Brown</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 August 2023, 
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
               1pm</td>
             <td class="govuk-table__cell" data-sort-value="1">  Amy Gill</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -415,107 +415,46 @@ Booked assessments - GOV.UK prototype
     </div>
   </div>
   
-  <script>
   
-    function hideAllWithClass(classname) {
-      document.querySelectorAll("." + classname).forEach((element) => {
-        element.style.visibility = 'collapse';
-      });
-    }
+<script>
   
-    function showAllWithClass(classname) {
-      document.querySelectorAll("." + classname).forEach((element) => {
-        element.style.visibility = 'visible';
-      });
-    }
-  
-    document.querySelector("#filters").addEventListener("submit", function (e) {
-  
-      e.preventDefault();    //stop form from submitting
-  
-      showAllWithClass("esa");
-      showAllWithClass("pip");
-      showAllWithClass("uc");
-      showAllWithClass("tresco");
-      showAllWithClass("handsworth");
-      showAllWithClass("srel");
-      showAllWithClass("no-srel");
-  
-      let benefitTypes = [];
-      let sites = [];
-  
-      if (document.getElementById('srel').checked == true) {
-        hideAllWithClass("no-srel");
-      }
-  
-      if (document.getElementById('pip').checked == true || document.getElementById('esa').checked == true || document.getElementById('uc').checked == true) {
-        if (document.getElementById('pip').checked == false) {
-          hideAllWithClass("pip");
-        } else {
-          benefitTypes.push("Personal Independence Payment");
-        }
-  
-        if (document.getElementById('esa').checked == false) {
-          hideAllWithClass("esa");
-        } else {
-          benefitTypes.push("Employment Support Allowance");
-        }
-  
-        if (document.getElementById('uc').checked == false) {
-          hideAllWithClass("uc");
-        } else {
-          benefitTypes.push("Universal Credit");
-        }
-      }
-  
-      if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true) {
-        if (document.getElementById('handsworth').checked == false) {
-          hideAllWithClass("handsworth");
-        } else {
-          sites.push("Handsworth");
-        }
-  
-        if (document.getElementById('tresco').checked == false) {
-          hideAllWithClass("tresco");
-        } else {
-          sites.push('Tresco');
-        }
-      }
-  
-      var count = 0;
-      var elemnts = document
-        .querySelectorAll('.govuk-table tr').forEach((element) => {
-          if (element.style.visibility === 'visible') {
-            count += 1;
-          }
-        })
-  
-      if (count < 20) {
-        document.getElementById('pagination').style.visibility = 'collapse';
-      } else {
-        document.getElementById('pagination').style.visibility = 'visible';
-      }
-  
-      document.getElementById('paginationTotal').innerText = count;
-  
-      // var eol = document.getElementById('srel').checked ? " end of life" : "";
-      // var benefitTypeString = benefitTypes.join(", ");
-      // var sitesString = sites.join(", ");
-      // var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
-      // var ifSites = sites.length > 0 ? ' at ' : '';
-  
-      //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth
-      // var text = count + " report ready " + eol + " referrals " + ifBenefitType + benefitTypeString + ifSites + sitesString;
-      var text = count + " referrals";
-  
-      document.getElementById('filter-playback').innerText = text;
-  
-      // document.getElementById('srelCount').innertext = document.querySelectorAll('.govuk-table tr.srel').length;
-  
+
+
+  function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+                .localeCompare(b.cells[col].textContent.trim())
+               );
     });
-  
-  </script>
-  
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+
+
+</script>
   
 </main>
 </div>
