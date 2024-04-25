@@ -401,3 +401,21 @@ router.post('/select-hcp6b', function (req, res) {
   }
 
 })
+
+
+
+router.post('/select-hcp6b-manage', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var selectagent = req.session.data['select-agent']
+
+  // Check whether the variable matches a condition
+  if (selectagent == "choose-hcp"){
+    // Send user to what language page
+    res.redirect('/v6b/has-manage-appt/assign-hcp-while-booking')
+  } else {
+    // Send user to next page
+    res.redirect('/v6b/has-manage-appt/appt-details-change-hcp')
+  }
+
+})

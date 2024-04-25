@@ -38,7 +38,7 @@ Prototype page title
   </div>
   <div class="govuk-notification-banner__content">
     <h3 class="govuk-notification-banner__heading">
-     Another HCP has been assigned to the appointment
+      {{ data['select-hcp-manage'] }}  has been assigned to the appointment
     </h3>
   <!-- additional content if needed--> 
   <!--  <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> -->
@@ -147,7 +147,7 @@ Prototype page title
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                 Wed 7 September 2023 at 9am
+                 Wed 7 May 2024 at 9am
                 </dd>
                 <dd class="govuk-summary-list__actions">
              <!--  <a class="govuk-link" href="app-date-time">
@@ -169,21 +169,33 @@ Prototype page title
                 <dd class="govuk-summary-list__value">
                  
                 
-                  Benjamin Marshall
                 
-              
-               
-                
+                  {{ data['select-hcp-manage'] }} 
                  
+
+
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="assign-hcp-option">
+                                      Change<span class="govuk-visually-hidden"> any additional information</span>
+                                    </a>
                 
                   
-                </dd>
+                </dd></div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Additional information
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                 None
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+              
+                  </dd>
+                </div>
               
   
-                <dd class="govuk-summary-list__actions">
-  <a class="govuk-link" href="">
-                    Change<span class="govuk-visually-hidden"> any additional information</span>
-                  </a>
+               
                 
                 </dd>
               </div>
