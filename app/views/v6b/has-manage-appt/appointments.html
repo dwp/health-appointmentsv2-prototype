@@ -25,7 +25,7 @@ Booked assessments - GOV.UK prototype
 <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
-<a class="govuk-back-link docs-creator" href="../main-menu">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing govuk-width-container--extended" id="main-content" role="main">
   
@@ -41,6 +41,33 @@ Booked assessments - GOV.UK prototype
   <form id="filters">
   
   
+ <div class="govuk-form-group">
+  
+  <fieldset class="govuk-fieldset">
+  
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+   HCP
+  </legend>
+  
+
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+     
+
+            
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
+      <label class="govuk-label govuk-checkboxes__label" for="tresco">
+       Unassigned (1)
+      </label>
+    </div>
+
+  </div>
+  
+  </fieldset>
+  
+</div>
+
+
     <div class="govuk-form-group">
   
       <fieldset class="govuk-fieldset">
@@ -107,36 +134,6 @@ Booked assessments - GOV.UK prototype
   </div>
 
 
-<!--  <div class="govuk-form-group">
-  
-    <fieldset class="govuk-fieldset">
-    
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
-     HCP
-    </legend>
-    
-  
-    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-       
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
-        <label class="govuk-label govuk-checkboxes__label" for="handsworth">
-          Assigned (9)
-        </label>
-      </div>
-              
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
-        <label class="govuk-label govuk-checkboxes__label" for="tresco">
-         Unassigned (1)
-        </label>
-      </div>
-
-    </div>
-    
-    </fieldset>
-    
-  </div>-->
 
   <div class="govuk-form-group">
   
@@ -392,7 +389,7 @@ Booked assessments - GOV.UK prototype
             <td class="govuk-table__cell">PIP</td>
             <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
               1pm</td>
-            <td class="govuk-table__cell" data-sort-value="1">  Amy Gill</td>
+            <td class="govuk-table__cell" data-sort-value="1">  Unassigned</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
 
           </tr>
