@@ -7,8 +7,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 {% block content %}
 
 <div class="govuk-grid-row" style="margin-top: -40px;">
-
-
+  <a href="../availability-management/manage-select" class="govuk-back-link">Back</a>
+<!-- 
   <div class="govuk-grid-column-one-quarter" style="margin-top: 0px;">
 
     <a href="../index" class="govuk-back-link">Back</a>
@@ -35,36 +35,6 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 
-<!-- 
-  {{ govukCheckboxes({
-  idPrefix: "benefitType",
-  name: "benefit-type",
-  classes: "govuk-checkboxes--small",
-  fieldset: {
-  legend: {
-  text: "Skills",
-  isPageHeading: false,
-  classes: "govuk-fieldset__legend--s"
-  }
-  },
-  items: [
-  {
-  id: "esa",
-  value: "esa",
-  text: "Employment Support Allowance (13)"
-  },
-  {
-  id: "pip",
-  value: "pip",
-  text: "Personal Independence Payment (25)"
-  },
-  {
-  id: "uc",
-  value: "uc",
-  text: "Universal Credit (22)"
-  }
-  ]
-  }) }} -->
 
   {{ govukCheckboxes({
   idPrefix: "assessmentCentre",
@@ -87,7 +57,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   {
   id: "tresco",
   value: "tresco",
-  text: "London, Tresco House (7)"
+  text: "Birmingham, Handsworth (7)"
   }
   ]
   }) }}
@@ -118,10 +88,10 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
 
-</div>
+</div> -->
 
 
-  <div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-column-full-width">
 
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
    
@@ -195,7 +165,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                    
                     <td class="govuk-table__cell"><a href="">Benjamin Marshall </a></td>
                     <td class="govuk-table__cell"> benjaminmarshall@domain.gov.uk </td>
-                    <td class="govuk-table__cell"> London, Tresco House </td>
+                    <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                      <td class="govuk-table__cell">
                       
                       <ul class="govuk-list govuk-list--bullet">
@@ -212,7 +182,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                      
                         <td class="govuk-table__cell"><a href="">Bernhard Fischer</a></td>
                         <td class="govuk-table__cell"> bernhardfischer@domain.gov.uk </td>
-                        <td class="govuk-table__cell"> London, Tresco House </td>
+                        <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                          <td class="govuk-table__cell">
             
                           <ul class="govuk-list govuk-list--bullet">
@@ -231,7 +201,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                    
                         <td class="govuk-table__cell"><a href=""> 	Danny Zuko</a></td>
                         <td class="govuk-table__cell">dannyzuko@domain.gov.uk </td>
-                        <td class="govuk-table__cell"> London, Tresco House </td>
+                        <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                          <td class="govuk-table__cell">  
                           <ul class="govuk-list govuk-list--bullet">
                             <li>PIP F2F</li>
@@ -284,7 +254,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                       
                         <td class="govuk-table__cell"><a href="">Gabriel Mello</a></td>
                         <td class="govuk-table__cell"> gabrielmello@domain.gov.uk </td>
-                        <td class="govuk-table__cell"> London, Tresco House </td>
+                        <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                         <td class="govuk-table__cell">
                           
                           <ul class="govuk-list govuk-list--bullet">
@@ -336,7 +306,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                      
                         <td class="govuk-table__cell"><a href="">Julie Smails</a></td>
                         <td class="govuk-table__cell">juliesmails@domain.gov.uk </td>
-                        <td class="govuk-table__cell"> London, Tresco House </td>
+                        <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                          <td class="govuk-table__cell">
             
             
@@ -355,7 +325,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                      
                         <td class="govuk-table__cell"><a href="">Monica Anyanwu</a></td>
                         <td class="govuk-table__cell">monicaanyanwu@domain.gov.uk </td>
-                        <td class="govuk-table__cell"> London, Tresco House </td>
+                        <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                          <td class="govuk-table__cell">
             
             
@@ -372,7 +342,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     
                         <td class="govuk-table__cell"><a href="">Raka Banerjee</a></td>
                         <td class="govuk-table__cell">rakabanerjee@domain.gov.uk </td>
-                        <td class="govuk-table__cell"> London, Tresco House </td>
+                        <td class="govuk-table__cell"> Birmingham, Handsworth </td>
                          <td class="govuk-table__cell">
             
             
@@ -388,19 +358,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                       </td> 
                     </tr>
 
-                    <tr class="govuk-table__row tresco">
-                    
-                      <td class="govuk-table__cell"><a href="">Selina Kyle</a></td>
-                      <td class="govuk-table__cell">selinakyle@domain.gov.uk </td>
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                       <td class="govuk-table__cell">
-          
-          
-          
-                      Not available for appointments
-        
-                    </td> 
-                  </tr>
+                
 
                  
                   
