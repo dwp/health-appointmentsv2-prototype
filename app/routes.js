@@ -357,7 +357,7 @@ router.post('/manage-what6b', function (req, res) {
   // Check whether the variable matches a condition
   if (manage == "agents"){
     // Send user to what language page
-    res.redirect('/v6b/availability-management/location')
+    res.redirect('/v6b/availability-management/agents/agent-profiles')
   } else {
     // Send user to next page
     res.redirect('/v6b/availability-management/availability/availability-view')
