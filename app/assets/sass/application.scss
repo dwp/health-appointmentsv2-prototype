@@ -988,3 +988,75 @@ a:visited, .govuk-link:visited {
   padding-left: 15px !important;
   border-left: 5px solid #d4351c;
 }
+
+
+.dwp-quick-reference__block {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px 30px 20px 20px;
+  position: relative;
+  font-family: "Arial";
+}
+
+@media (min-width: 40.0625em) {
+  .dwp-quick-reference__primary {
+      font-size: 1.6875rem;
+      line-height: 1.1111111111;
+  }
+}
+
+.dwp-quick-reference__primary {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+ // font-size: 1.125rem;
+  line-height: 1.1111111111;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 40.0625em) {
+  .dwp-quick-reference__label {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+.dwp-quick-reference__label {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  //font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0 10px 0 0;
+  float: left;
+}
+
+@media (min-width: 40.0625em) {
+  .dwp-quick-reference__secondary {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+.dwp-quick-reference__secondary {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.dwp-quick-reference__status {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
