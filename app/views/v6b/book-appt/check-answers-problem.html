@@ -33,9 +33,9 @@ Check appointment details - GOV.UK prototype
      
       
       <div class="govuk-notification-banner__content">
-        <p class="govuk-notification-banner__heading" style="white-space:nowrap !important;">HCP could not be assigned</p>
+        <p class="govuk-notification-banner__heading" style="white-space:nowrap !important;">HCP has changed</p>
        
-        <p style="white-space:nowrap !important;">Assign a new HCP or select a different date or time.</p>
+        <p style="">The previous HCP is no longer available. Danny Zuko is now assigned to this appointment. </p>
        </div>
        
         
@@ -117,7 +117,7 @@ Check appointment details - GOV.UK prototype
               <dt class="govuk-summary-list__key">
                 HCP
               </dt>
-              <dd class="govuk-summary-list__value">
+              <dd class="govuk-summary-list__value">Danny Zuko
                
                
                 
@@ -126,7 +126,7 @@ Check appointment details - GOV.UK prototype
 
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="assign-hcp-while-booking">
-                  Add<span class="govuk-visually-hidden"> any additional information</span>
+                 Change<span class="govuk-visually-hidden"> HCP</span>
                 </a>
               </dd>
             </div>
@@ -164,10 +164,20 @@ Check appointment details - GOV.UK prototype
 
 
 
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Book appointment
+            </button>
+
+            {% from "govuk/components/button/macro.njk" import govukButton %}
+
+
           </form>
 
          <p>  <a class="govuk-link" href="claimant-detail">Cancel</a> </p>
         </div>
+
+       
         </div>
       </div>
     </main>
