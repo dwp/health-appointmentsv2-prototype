@@ -1,0 +1,271 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Check appointment details - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper" action="confirmation" id="main-content" role="main">
+      
+
+          <h1 class="govuk-heading-l">Check appointment details</h1>
+
+          <!-- <h2 class="govuk-heading-m">Assesment details</h2> -->
+
+      
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Assessment centre
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Birmingham, Handsworth
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+        
+      
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Benefit
+              </dt>
+              <dd class="govuk-summary-list__value">
+               UC
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Appointment type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['assessment-channel'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="assessment-channel">
+                  Change<span class="govuk-visually-hidden"> the appointment type</span>
+                </a>
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                WCA complex neuro
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['complex-neuro'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="wca-complex-neuro">
+                  Change<span class="govuk-visually-hidden"> whether case is complex neuro</span>
+                </a>
+            
+              </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date and time
+              </dt>
+              <dd class="govuk-summary-list__value">
+               Wed 7 August 2023, 11am
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="app-date-time">
+                  Change<span class="govuk-visually-hidden">appointment date and time</span>
+                </a>
+              </dd>
+            </div>
+      
+
+          
+      
+          
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                HCP
+              </dt>
+              <dd class="govuk-summary-list__value">
+               
+                {{ data['hcp'] }}
+                
+              </dd>
+            
+
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="assign-hcp-while-booking">
+                  Change<span class="govuk-visually-hidden"> any additional information</span>
+                </a>
+              </dd>
+            </div>
+
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Additional information
+              </dt>
+              <dd class="govuk-summary-list__value">
+                
+
+                {% if  data['more-detail'] %}
+                {{ data['more-detail'] }}
+               {% else %}
+               None
+               {% endif %}
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="more-info">
+                  Change<span class="govuk-visually-hidden"> any additional information</span>
+                </a>
+              </dd>
+            </div>
+            
+          </dl>
+
+         
+         
+         <!--  <h2 class="govuk-heading-m">Claimant details</h2>
+          <div class="govuk-inset-text">To change this information, <a href="#">go to the claimant's personal details (opens in new tab)</a>.</div>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Interpreter
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Unacceptable behaviour
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Appointee
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Phone number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                079000 910001
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Reasonable adjustments
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Hearing or Induction loop systems
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+      
+
+          
+        -->
+
+          <form action="confirmation" method="post" novalidate>
+
+            <input type="hidden" name="answers-checked" value="true">
+
+
+<!-- using this on claimant details page to show previous / current assessments --> 
+            <div class="hidden-radio-post">
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="apptbooked-yes" name="apptbooked" type="radio" value="yes" {{ checked('apptbooked', 'yes') }} checked>
+
+                  <label class="govuk-label govuk-radios__label" for="apptbooked-yes">
+                    Hidden radio = Appointment booked
+                  </label>
+                </div>
+              </div>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="appt-jane" name="appt" type="radio" value="Jane Doe" {{ checked('appt', 'Jane Doe') }} checked>
+            
+                  <label class="govuk-label govuk-radios__label" for="appt-jane">
+                    Hidden radio = pass this to next page. Replace name.
+                  </label>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+           
+            
+        
+
+            <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Book appointment
+            </button>
+
+            {% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+          </form>
+
+         <p>  <a class="govuk-link" href="claimant-detail">Cancel</a> </p>
+        </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  {% endblock %}
+
