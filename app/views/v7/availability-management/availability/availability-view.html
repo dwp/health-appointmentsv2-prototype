@@ -1,0 +1,710 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-full">
+    <a href="../manage-select" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+  
+    <h1 class="govuk-heading-l">
+      Appointment availability in Birmingham, Handsworth
+    </h1>
+
+   
+
+    <nav class="govuk-pagination" role="navigation" aria-label="results">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="#8" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous week</span></a>
+      </div>
+
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#8" rel="next"> <span class="govuk-pagination__link-title">Next week</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg></a>
+      </div>
+    </nav>
+
+
+  
+
+    <form class="form" action="check-answers" method="post">
+    <div class="govuk-tabs " data-module="govuk-tabs">
+      <ul class="govuk-tabs__list " role="tablist">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" style="text-align: left;" role="presentation">
+          <a class="govuk-tabs__tab" href="#monday" id="tab_monday" role="tab" aria-controls="monday" aria-selected="true" tabindex="0">
+            <strong>Monday</strong><br>
+            11 Mar 2024<br><br>
+           
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item" style="text-align: left;" role="presentation">
+          <a class="govuk-tabs__tab" href="#tuesday" id="tab_tuesday" role="tab" aria-controls="tuesday" aria-selected="false" tabindex="-1">
+            <strong>Tuesday</strong><br>
+            12 Mar 2024<br><br>
+           
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item" style="text-align: left;" role="presentation">
+          <a class="govuk-tabs__tab" href="#wednesday" id="tab_wednesday" role="tab" aria-controls="wednesday" aria-selected="false" tabindex="-1">
+            <strong>Wednesday</strong><br>
+            13 Mar 2024<br><br>
+           
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item" style="text-align: left;" role="presentation">
+          <a class="govuk-tabs__tab" href="#thursday" id="tab_thursday" role="tab" aria-controls="thursday" aria-selected="false" tabindex="-1">
+            <strong>Thursday</strong><br>
+            14 Mar 2024<br><br>
+           
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item" style="text-align: left;" role="presentation">
+          <a class="govuk-tabs__tab" href="#friday" id="tab_friday" role="tab" aria-controls="friday" aria-selected="false" tabindex="-1">
+            <strong>Friday</strong><br>
+            15 Mar 2024<br><br>
+            
+          </a>
+        </li>
+
+        <li class="govuk-tabs__list-item" style="text-align: left;" role="presentation">
+          <a class="govuk-tabs__tab" href="#saturday" id="tab_saturday" role="tab" aria-controls="saturday" aria-selected="false" tabindex="-1">
+            <strong>Saturday</strong><br>
+            16 Mar 2024<br><br>
+            
+          </a>
+        </li>
+
+        <li class="govuk-tabs__list-item" style="text-align: left;" role="presentation">
+          <a class="govuk-tabs__tab" href="#sunday" id="tab_suday" role="tab" aria-controls="sunday" aria-selected="false" tabindex="-1">
+            <strong>Sunday</strong><br>
+            17 Mar 2024<br><br>
+            
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Day one-->
+        <div class="govuk-tabs__panel" id="monday" role="tabpanel" aria-labelledby="tab_monday">
+          <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+
+
+  
+
+    <div class="govuk-form-group" style="margin-bottom:-10px;">
+      <fieldset class="govuk-fieldset">
+        <dl class="govuk-summary-list">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h1 class="govuk-fieldset__heading">
+            Monday morning
+          </h1>
+        </legend>
+        
+    
+        </dd>
+    
+            <dd class="govuk-summary-list__value" style="width:10%;"> 
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="day/mon-am">
+                  Add 
+                  </a>
+              </li>
+            </dd>
+          </div>
+
+          
+      
+      <p> No availability added  </p>
+      </dd>
+
+       
+    
+    
+    </dl>
+
+
+  </fieldset>
+  
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+  <div class="govuk-form-group" style="margin-bottom:-10px;">
+  <fieldset class="govuk-fieldset">
+    <dl class="govuk-summary-list">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Monday afternoon 
+      </h1>
+    </legend>
+    
+
+    </dd>
+
+        <dd class="govuk-summary-list__value" style="width:10%;"> 
+          <li class="govuk-summary-list__actions-list-item">
+            <a class="govuk-link" href="day/mon-pm">
+            Add
+              </a>
+          </li>
+        </dd>
+      </div>
+    
+           
+      <p> No availability added  </p>
+    
+    
+    </dl>
+
+
+
+  </div>
+  </div>
+
+        </div>
+
+        <!--eND OF DAY 1 -->
+
+        <!-- day 2-->
+
+        <div class="govuk-tabs__panel" id="tuesday" role="tabpanel" aria-labelledby="tab_tuesday">
+          
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+          
+          
+            
+          
+              <div class="govuk-form-group" style="margin-bottom:-10px;">
+                <fieldset class="govuk-fieldset">
+                  <dl class="govuk-summary-list">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h1 class="govuk-fieldset__heading">
+                     Tuesday morning
+                    </h1>
+                  </legend>
+                  
+              
+                  </dd>
+              
+                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                        <li class="govuk-summary-list__actions-list-item">
+                          <a class="govuk-link" href=" ">
+                            Add 
+                            </a>
+                        </li>
+                      </dd>
+                    </div>
+          
+                    
+                
+                <p> No availability added  </p>
+                </dd>
+          
+                 
+              
+              
+              </dl>
+          
+          
+            </fieldset>
+            
+            </div>
+          
+            <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group" style="margin-bottom:-10px;">
+            <fieldset class="govuk-fieldset">
+              <dl class="govuk-summary-list">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                 Tuesday afternoon 
+                </h1>
+              </legend>
+              
+          
+              </dd>
+          
+                  <dd class="govuk-summary-list__value" style="width:10%;"> 
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href=" ">
+                      Add
+                        </a>
+                    </li>
+                  </dd>
+                </div>
+              
+                     
+                <p> No availability added  </p>
+              
+              
+              </dl>
+          
+          
+          
+            </div>
+            </div>
+          
+        </div>
+
+        <!--day 3-->
+
+        <div class="govuk-tabs__panel" id="wednesday" role="tabpanel" aria-labelledby="tab_wednesday">
+           <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+          
+          
+            
+          
+              <div class="govuk-form-group" style="margin-bottom:-10px;">
+                <fieldset class="govuk-fieldset">
+                  <dl class="govuk-summary-list">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h1 class="govuk-fieldset__heading">
+                     Wednesday morning
+                    </h1>
+                  </legend>
+                  
+              
+                  </dd>
+              
+                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                        <li class="govuk-summary-list__actions-list-item">
+                          <a class="govuk-link" href=" ">
+                            Add 
+                            </a>
+                        </li>
+                      </dd>
+                    </div>
+          
+                    
+                
+                <p> No availability added  </p>
+                </dd>
+          
+                 
+              
+              
+              </dl>
+          
+          
+            </fieldset>
+            
+            </div>
+          
+            <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group" style="margin-bottom:-10px;">
+            <fieldset class="govuk-fieldset">
+              <dl class="govuk-summary-list">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                 Wednesday afternoon 
+                </h1>
+              </legend>
+              
+          
+              </dd>
+          
+                  <dd class="govuk-summary-list__value" style="width:10%;"> 
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href=" ">
+                      Add
+                        </a>
+                    </li>
+                  </dd>
+                </div>
+              
+                     
+                <p> No availability added  </p>
+              
+              
+              </dl>
+          
+          
+          
+            </div>
+            </div>
+
+            
+        </div>
+
+        <!-- day 4-->
+
+        <div class="govuk-tabs__panel" id="thursday" role="tabpanel" aria-labelledby="tab_thursday">
+          
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+          
+          
+            
+          
+              <div class="govuk-form-group" style="margin-bottom:-10px;">
+                <fieldset class="govuk-fieldset">
+                  <dl class="govuk-summary-list">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h1 class="govuk-fieldset__heading">
+                    Thursday morning
+                    </h1>
+                  </legend>
+                  
+              
+                  </dd>
+              
+                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                        <li class="govuk-summary-list__actions-list-item">
+                          <a class="govuk-link" href=" ">
+                            Add 
+                            </a>
+                        </li>
+                      </dd>
+                    </div>
+          
+                    
+                
+                <p> No availability added  </p>
+                </dd>
+          
+                 
+              
+              
+              </dl>
+          
+          
+            </fieldset>
+            
+            </div>
+          
+            <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group" style="margin-bottom:-10px;">
+            <fieldset class="govuk-fieldset">
+              <dl class="govuk-summary-list">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+             Thursday afternoon 
+                </h1>
+              </legend>
+              
+          
+              </dd>
+          
+                  <dd class="govuk-summary-list__value" style="width:10%;"> 
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href=" ">
+                      Add
+                        </a>
+                    </li>
+                  </dd>
+                </div>
+              
+                     
+                <p> No availability added  </p>
+              
+              
+              </dl>
+          
+          
+          
+            </div>
+            </div>
+
+            
+  
+        </div>
+
+        <!-- day 5-->
+
+        <div class="govuk-tabs__panel" id="friday" role="tabpanel" aria-labelledby="tab_friday">
+          
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+          
+          
+            
+          
+              <div class="govuk-form-group" style="margin-bottom:-10px;">
+                <fieldset class="govuk-fieldset">
+                  <dl class="govuk-summary-list">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h1 class="govuk-fieldset__heading">
+                    Friday morning
+                    </h1>
+                  </legend>
+                  
+              
+                  </dd>
+              
+                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                        <li class="govuk-summary-list__actions-list-item">
+                          <a class="govuk-link" href=" ">
+                            Add 
+                            </a>
+                        </li>
+                      </dd>
+                    </div>
+          
+                    
+                
+                <p> No availability added  </p>
+                </dd>
+          
+                 
+              
+              
+              </dl>
+          
+          
+            </fieldset>
+            
+            </div>
+          
+            <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group" style="margin-bottom:-10px;">
+            <fieldset class="govuk-fieldset">
+              <dl class="govuk-summary-list">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                  Friday afternoon 
+                </h1>
+              </legend>
+              
+          
+              </dd>
+          
+                  <dd class="govuk-summary-list__value" style="width:10%;"> 
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href=" ">
+                      Add
+                        </a>
+                    </li>
+                  </dd>
+                </div>
+              
+                     
+                <p> No availability added  </p>
+              
+              
+              </dl>
+          
+          
+          
+            </div>
+            </div>
+
+            
+
+        </div>
+
+        <!--day 6-->
+
+        <div class="govuk-tabs__panel" id="saturday" role="tabpanel" aria-labelledby="tab_saturday">
+         
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+          
+          
+            
+          
+              <div class="govuk-form-group" style="margin-bottom:-10px;">
+                <fieldset class="govuk-fieldset">
+                  <dl class="govuk-summary-list">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h1 class="govuk-fieldset__heading">
+                     Saturday morning
+                    </h1>
+                  </legend>
+                  
+              
+                  </dd>
+              
+                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                        <li class="govuk-summary-list__actions-list-item">
+                          <a class="govuk-link" href=" ">
+                            Add 
+                            </a>
+                        </li>
+                      </dd>
+                    </div>
+          
+                    
+                
+                <p> No availability added  </p>
+                </dd>
+          
+                 
+              
+              
+              </dl>
+          
+          
+            </fieldset>
+            
+            </div>
+          
+            <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group" style="margin-bottom:-10px;">
+            <fieldset class="govuk-fieldset">
+              <dl class="govuk-summary-list">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                 Saturday afternoon 
+                </h1>
+              </legend>
+              
+          
+              </dd>
+          
+                  <dd class="govuk-summary-list__value" style="width:10%;"> 
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href=" ">
+                      Add
+                        </a>
+                    </li>
+                  </dd>
+                </div>
+              
+                     
+                <p> No availability added  </p>
+              
+              
+              </dl>
+          
+          
+          
+            </div>
+            </div>
+          
+
+
+  
+        </div>
+
+        <!-- day 7-->
+
+        <div class="govuk-tabs__panel" id="sunday" role="tabpanel" aria-labelledby="tab_sunday">
+          <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+
+
+  
+
+    <div class="govuk-form-group" style="margin-bottom:-10px;">
+      <fieldset class="govuk-fieldset">
+        <dl class="govuk-summary-list">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h1 class="govuk-fieldset__heading">
+            Sunday morning
+          </h1>
+        </legend>
+        
+    
+        </dd>
+    
+            <dd class="govuk-summary-list__value" style="width:10%;"> 
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href=" ">
+                  Add 
+                  </a>
+              </li>
+            </dd>
+          </div>
+
+          
+      
+      <p> No availability added  </p>
+      </dd>
+
+       
+    
+    
+    </dl>
+
+
+  </fieldset>
+  
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+  <div class="govuk-form-group" style="margin-bottom:-10px;">
+  <fieldset class="govuk-fieldset">
+    <dl class="govuk-summary-list">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Sunday afternoon 
+      </h1>
+    </legend>
+    
+
+    </dd>
+
+        <dd class="govuk-summary-list__value" style="width:10%;"> 
+          <li class="govuk-summary-list__actions-list-item">
+            <a class="govuk-link" href=" ">
+            Add
+              </a>
+          </li>
+        </dd>
+      </div>
+    
+           
+      <p> No availability added  </p>
+    
+    
+    </dl>
+
+
+
+  </div>
+  </div>
+
+  
+        </div>
+
+
+
+
+      
+  </div>
+
+</div></div>
+
+    <nav class="govuk-pagination" role="navigation" aria-label="results">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="#8" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous week</span></a>
+      </div>
+
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#8" rel="next"> <span class="govuk-pagination__link-title">Next week</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg></a>
+      </div>
+    </nav>
+
+
+
+
+      
+    </div>
+  </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

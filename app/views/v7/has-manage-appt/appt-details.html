@@ -1,0 +1,232 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+    
+    
+   
+   
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    
+    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+     
+
+    
+
+      
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+             Appointment details    
+            </h1>
+          </legend>
+
+      
+    
+      
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            
+             <!--  <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 Jane Doe
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    <span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  NINO
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  RN000123
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    <span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div> -->
+          
+          
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Location
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Birmingham,   Handsworth
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    <span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+          
+        
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Benefit
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  PIP
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    <span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+  
+  
+  
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Appointment type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                
+                Face to face
+                 
+        
+                 
+                 
+
+                  
+                </dd>
+                <dd class="govuk-summary-list__actions">
+          <!--  <a class="govuk-link" href="assessment-channel">
+                    Change<span class="govuk-visually-hidden"> the appointment type</span>
+                  </a>  -->
+                </dd>
+              </div>
+            
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date and time
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 Wed 7 May 2024 at 9am
+                </dd>
+                <dd class="govuk-summary-list__actions">
+             <!--  <a class="govuk-link" href="app-date-time">
+                    Change<span class="govuk-visually-hidden">appointment date and time</span>
+                  </a>
+                -->
+                </dd>
+              </div>
+        
+  
+            
+        
+            
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  HCP
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                
+              
+                 Amy Gill
+                
+                  
+                </dd>
+              
+  
+                <dd class="govuk-summary-list__actions">
+  <a class="govuk-link" href="assign-hcp-while-booking">
+                    Change<span class="govuk-visually-hidden"> any additional information</span>
+                  </a>
+                
+                </dd>
+              </div>
+
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Additional information
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                
+              
+                None
+                
+                  
+                </dd>
+              
+  
+                <dd class="govuk-summary-list__actions">
+  
+                
+                </dd>
+              </div>
+  
+              
+            
+              
+            </dl>
+
+      
+          <div>
+
+         
+
+
+    {% if  data['manage']   == 'availability' %}
+    
+  
+
+
+    <a href="../agents/cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel appointment
+    </a>
+
+    {% else %} 
+
+    <a href="cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel appointment
+    </a>
+    {% endif %}
+
+
+          
+           
+          </div>
+      
+        </fieldset>
+      </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
