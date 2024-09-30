@@ -38,11 +38,75 @@ Booked assessments - GOV.UK prototype
         Select one or more filters to apply to the list.
       </div>
       <div class="table-filter">
-  <form id="filters">
+  <form id="filters"  action="appointments-filter-results" method="post"> 
   
   
- 
-
+ <!-- 
+    <div class="moj-filter">
+    
+          <div class="moj-filter__header">
+        
+            <div class="moj-filter__header-title">
+              <h2 class="govuk-heading-m">Filter</h2>
+            </div>
+        
+            <div class="moj-filter__header-action">
+        
+            </div>
+        
+          </div>
+        
+          <div class="moj-filter__content">
+        
+            <div class="moj-filter__selected">
+        
+              <div class="moj-filter__selected-heading">
+        
+                <div class="moj-filter__heading-title">
+                  <h2 class="govuk-heading-m">Selected Filters</h2>
+                </div>
+        
+                <div class="moj-filter__heading-action">
+                  <p class="govuk-body-s"><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+                </div>
+        
+              </div>
+        
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-0">HCP</h3>
+        
+              <ul class="moj-filter-tags">
+        
+                <li><a class="moj-filter__tag" href=" "><span class="govuk-visually-hidden">Remove this filter</span> Amy Gill</a></li>
+        
+                <li><a class="moj-filter__tag" href=" "><span class="govuk-visually-hidden">Remove this filter</span> Danny Travasso</a></li>
+        
+              </ul>
+        
+           
+        
+            </div>
+        <br> -->
+            <div class="moj-filter__options">
+        
+            
+        
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="keywords">
+                  HCP
+                </label>
+        
+                <input class="govuk-input" id="keywords" name="keywords" type="text">
+        
+              </div>
+        
+            
+           
+        
+            </div>
+        
+        
+        
+        
 
     <div class="govuk-form-group">
   
@@ -68,13 +132,13 @@ Booked assessments - GOV.UK prototype
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="uc" name="benefit-type" type="checkbox" value="uc">
           <label class="govuk-label govuk-checkboxes__label" for="uc">
-          UC
+          UC (1)
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="esa" name="benefit-type" type="checkbox" value="esa">
           <label class="govuk-label govuk-checkboxes__label" for="esa">
-          ESA
+          ESA (1)
           </label>
         </div>
         
@@ -116,6 +180,10 @@ Booked assessments - GOV.UK prototype
   </div> 
 
 
+ 
+
+
+<!-- 
   <div class="govuk-form-group">
   
     <fieldset class="govuk-fieldset">
@@ -147,7 +215,7 @@ Booked assessments - GOV.UK prototype
     
     </fieldset>
     
-  </div>
+  </div>-->
 
 
 
