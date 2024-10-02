@@ -38,13 +38,12 @@ Booked assessments - GOV.UK prototype
         Select one or more filters to apply to the list.
       </div>
       <div class="table-filter">
-  <form id="filters"  action="appointments-filter-results" method="post"> 
+  <form id="filters">
   
   
- <!-- 
     <div class="moj-filter">
     
-          <div class="moj-filter__header">
+        <!--   <div class="moj-filter__header">
         
             <div class="moj-filter__header-title">
               <h2 class="govuk-heading-m">Filter</h2>
@@ -54,7 +53,7 @@ Booked assessments - GOV.UK prototype
         
             </div>
         
-          </div>
+          </div> -->
         
           <div class="moj-filter__content">
         
@@ -67,7 +66,7 @@ Booked assessments - GOV.UK prototype
                 </div>
         
                 <div class="moj-filter__heading-action">
-                  <p class="govuk-body-s"><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+                  <p class="govuk-body-s"><a class="govuk-link govuk-link--no-visited-state" href="appointments-hcp-filter">Clear filters</a></p>
                 </div>
         
               </div>
@@ -85,7 +84,7 @@ Booked assessments - GOV.UK prototype
            
         
             </div>
-        <br> -->
+        <br>
             <div class="moj-filter__options">
         
             
@@ -104,7 +103,10 @@ Booked assessments - GOV.UK prototype
         
             </div>
         
+          </div>
         
+        </div>
+     
         
         
 
@@ -125,7 +127,7 @@ Booked assessments - GOV.UK prototype
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="pip" name="benefit-type" type="checkbox" value="pip">
           <label class="govuk-label govuk-checkboxes__label" for="pip">
-           PIP (8)
+           PIP (5)
           </label>
         </div>
   
@@ -138,7 +140,7 @@ Booked assessments - GOV.UK prototype
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="esa" name="benefit-type" type="checkbox" value="esa">
           <label class="govuk-label govuk-checkboxes__label" for="esa">
-          ESA (1)
+          ESA (0)
           </label>
         </div>
         
@@ -162,14 +164,14 @@ Booked assessments - GOV.UK prototype
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
         <label class="govuk-label govuk-checkboxes__label" for="handsworth">
-          Birmingham Handsworth (8)
+          Birmingham Handsworth (6)
         </label>
       </div>
               
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
         <label class="govuk-label govuk-checkboxes__label" for="tresco">
-          London Tresco House (2)
+          London Tresco House (0)
         </label>
       </div>
 
@@ -234,7 +236,7 @@ Booked assessments - GOV.UK prototype
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
         <label class="govuk-label govuk-checkboxes__label" for="handsworth">
-        Telephone (9)
+        Telephone (5)
         </label>
       </div>
               
@@ -414,49 +416,13 @@ Booked assessments - GOV.UK prototype
           </tr>
          
 
-          <tr class="govuk-table__row srel esa handsworth">
-            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Xia Jeana</a></td>
-            <td class="govuk-table__cell">ESA</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Tue 13 May 2024, 
-              1pm</td>
-            <td class="govuk-table__cell" data-sort-value="1"> Julie Smails</td>
-            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
-
-          </tr>
+       
          
 
-          <tr class="govuk-table__row srel esa handsworth">
-            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Sam Smart</a></td>
-            <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Wed 14 May 2024, 
-              3pm</td>
-            <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
-            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
-
-          </tr>
+         
          
 
-          <tr class="govuk-table__row srel esa handsworth">
-            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Derren Brown</a></td>
-            <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Fri 15 May 2024, 
-              11am</td>
-            <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
-            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
-
-          </tr>
-         
-
-          <tr class="govuk-table__row srel esa handsworth">
-            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Noah Best</a></td>
-            <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
-              11am</td>
-            <td class="govuk-table__cell" data-sort-value="1">  Raka Banerjee</td>
-            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
-
-          </tr>
-         
+        
 
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Lucy Steel</a></td>
@@ -490,7 +456,7 @@ Booked assessments - GOV.UK prototype
   
       <nav class="moj-pagination" aria-label="Pagination navigation" style="text-align: right;">
       
-        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>10</b> appointments</p>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>6</b> of <b>6</b> appointments</p>
       </nav>
   
   
