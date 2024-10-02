@@ -1099,3 +1099,75 @@ a:visited, .govuk-link:visited {
   text-decoration: none;
   overflow-wrap: break-word;
 }
+
+
+.moj-filter__header {
+  background-color: #b1b4b6;
+  font-size: 0;
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+.moj-filter__selected-heading {
+  font-size: 0;
+  text-align: justify;
+}
+
+.moj-filter-tags {
+  font-size: 0;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.moj-filter__tag {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+  background-color: #ffffff;
+  border: 1px solid #0b0c0c;
+  color: #0b0c0c;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.moj-filter-tags li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.moj-filter__tag:link, .moj-filter__tag:visited {
+  color: #0b0c0c;
+}
+
+.moj-filter__selected {
+  background-color: #f3f2f1;
+  box-shadow: inset 0 0 0 1px #b1b4b6;
+  padding: 20px;
+}
+
+
+.moj-filter__tag:after {
+  background-image: url(../images/icon-tag-remove-cross.svg);
+  content: "";
+  display: inline-block;
+  font-weight: bold;
+  height: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+  width: 10px;
+}
+
+.moj-filter__heading-title, .moj-filter__heading-action {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

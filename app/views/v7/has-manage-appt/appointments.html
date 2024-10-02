@@ -68,13 +68,13 @@ Booked assessments - GOV.UK prototype
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="uc" name="benefit-type" type="checkbox" value="uc">
           <label class="govuk-label govuk-checkboxes__label" for="uc">
-          UC
+          UC (1)
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="esa" name="benefit-type" type="checkbox" value="esa">
           <label class="govuk-label govuk-checkboxes__label" for="esa">
-          ESA
+          ESA (1)
           </label>
         </div>
         
@@ -116,6 +116,42 @@ Booked assessments - GOV.UK prototype
   </div> 
 
 
+<!-- 
+  <div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+    HCP
+    </legend>
+    
+    <div class="govuk-form-group">
+      
+      <select class="govuk-select" id="sort" name="sort">
+        <option value=" " selected>Choose HCP</option>
+        <option value=" ">Amy Gill</option>
+        <option value=" ">Benjamin Marshall</option>
+        <option value=" ">Bernhard Fischer</option>
+
+        <option value=" ">Danny Zuko</option>
+        <option value=" ">Emma Bradley</option>
+        <option value=" ">Frieda Döring</option>
+        <option value=" ">Gabriel Mello</option>
+        <option value=" ">Jane Smith</option>
+        <option value=" ">Joe Bloggs</option>
+        <option value=" ">Julie Smails</option>
+        <option value=" ">Monica Anyanwu</option>
+        <option value=" ">Raka Banerjee</option>
+      </select>
+    </div>
+    
+    
+    </fieldset>
+    
+  </div> -->
+
+
+
 
   <div class="govuk-form-group">
   
@@ -129,15 +165,15 @@ Booked assessments - GOV.UK prototype
     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
        
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
-        <label class="govuk-label govuk-checkboxes__label" for="handsworth">
+        <input class="govuk-checkboxes__input" id="phone" name="assessment-type" type="checkbox" value="phone">
+        <label class="govuk-label govuk-checkboxes__label" for="phone">
         Telephone (9)
         </label>
       </div>
               
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
-        <label class="govuk-label govuk-checkboxes__label" for="tresco">
+        <input class="govuk-checkboxes__input" id="face" name="assessment-ctype" type="checkbox" value="face">
+        <label class="govuk-label govuk-checkboxes__label" for="face">
         Face to face (1)
         </label>
       </div>
@@ -148,8 +184,8 @@ Booked assessments - GOV.UK prototype
     
   </div>
 
-
- <!--  <div class="govuk-form-group">
+<!-- 
+  <div class="govuk-form-group">
   
     <fieldset class="govuk-fieldset">
     
@@ -218,6 +254,24 @@ Booked assessments - GOV.UK prototype
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
               </div>
             </div>
+          </div>
+
+<br> 
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <p>  or  </p>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+               
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="date" name="today-date" type="checkbox" value="date">
+                  <label class="govuk-label govuk-checkboxes__label" for="date">
+                 Show appointments for today only
+                  </label>
+                </div>
+          
+              </div>
+            </fieldset>
           </div>
         </fieldset>
       </div>
