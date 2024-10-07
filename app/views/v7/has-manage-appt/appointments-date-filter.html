@@ -218,6 +218,23 @@ Booked assessments - GOV.UK prototype
     Date of appointment
     </legend>
     
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="email" checked="true" />
+      <label class="govuk-label govuk-radios__label" for="contact-3" >
+       All dates
+      </label>
+    </div>
+
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="today" >
+      <label class="govuk-label govuk-radios__label" for="contact-4" >
+       Today
+      </label>
+    </div>
+
+    
   
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
@@ -275,7 +292,7 @@ Booked assessments - GOV.UK prototype
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
         <label class="govuk-label govuk-radios__label" for="contact-2">
-          Search range
+          Specific range
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
@@ -295,6 +312,8 @@ Booked assessments - GOV.UK prototype
             <div id="passport-issued-hint" class="govuk-hint">
               For example, 30 1 2024
             </div>
+
+            
            
             <div class="govuk-date-input" id="filter-date-start">
               <p class="govuk-body govuk-!-font-weight-bold" style="margin-top: 0;">Start date</p>
@@ -354,12 +373,7 @@ Booked assessments - GOV.UK prototype
           </fieldset>
         </div>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="email">
-        <label class="govuk-label govuk-radios__label" for="contact-3">
-          Search all dates
-        </label>
-      </div>
+     
   
     </div>
 
