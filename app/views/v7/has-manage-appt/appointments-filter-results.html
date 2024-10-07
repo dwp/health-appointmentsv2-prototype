@@ -30,7 +30,9 @@ Booked assessments - GOV.UK prototype
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing govuk-width-container--extended" id="main-content" role="main">
   
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-grid-column-one-third" style="border-top: none;
+    margin-top: 0px;
+    padding-top: 0px;">
       <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5">
         Filters
       </h2>
@@ -66,7 +68,7 @@ Booked assessments - GOV.UK prototype
                 </div>
         
                 <div class="moj-filter__heading-action">
-                  <p class="govuk-body-s"><a class="govuk-link govuk-link--no-visited-state" href="appointments-hcp-filter">Clear filters</a></p>
+                  <p class="govuk-body-s" style="padding-left: 53px;"><a class="govuk-link govuk-link--no-visited-state" href="appointments-hcp-filter">Clear filters</a></p>
                 </div>
         
               </div>
@@ -75,9 +77,9 @@ Booked assessments - GOV.UK prototype
         
               <ul class="moj-filter-tags">
         
-                <li><a class="moj-filter__tag" href=" "><span class="govuk-visually-hidden">Remove this filter</span> Amy Gill</a></li>
+                <li><a class="moj-filter__tag" href="appointments-hcp-filter"><span class="govuk-visually-hidden">Remove this filter</span> Amy Gill</a></li>
         
-                <li><a class="moj-filter__tag" href=" "><span class="govuk-visually-hidden">Remove this filter</span> Danny Travasso</a></li>
+                <li><a class="moj-filter__tag" href="appointments-hcp-filter"><span class="govuk-visually-hidden">Remove this filter</span> Danny Travasso</a></li>
         
               </ul>
         
@@ -89,12 +91,12 @@ Booked assessments - GOV.UK prototype
         
             
         
-              <div class="govuk-form-group">
+              <div class="govuk-form-group" style="width: 90%;">
                 <label class="govuk-label govuk-label--m" for="keywords">
                   HCP
                 </label>
         
-                <input class="govuk-input" id="keywords" name="keywords" type="text">
+                <input class="govuk-input" id="keywords" name="keywords" type="text" >
         
               </div>
         
@@ -289,49 +291,166 @@ Booked assessments - GOV.UK prototype
     Date of appointment
     </legend>
     
-  
-    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-       
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-         
-          <div id="dob-hint" class="govuk-hint">
-            For example, 15 3 2024
-          </div>
-          <div class="govuk-date-input" id="dob">
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="dob-day">
-                  Day
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="dob-month">
-                  Month
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="dob-year">
-                  Year
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
 
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="email" checked="true">
+      <label class="govuk-label govuk-radios__label" for="contact-3">
+       All dates
+      </label>
     </div>
+
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="today">
+      <label class="govuk-label govuk-radios__label" for="contact-4">
+       Today
+      </label>
+    </div>
+
     
-    </fieldset>
-    
-  </div>
+  
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" aria-controls="conditional-contact" aria-expanded="false">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Specific date
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                When was your passport issued?
+              </h1>
+            </legend> -->
+            <div id="passport-issued-hint" class="govuk-hint">
+              For example, 30 1 2024
+            </div>
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+        </div> -->
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Specific range
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            Phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+        </div> -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                When was your passport issued?
+              </h1>
+            </legend> -->
+            <div id="passport-issued-hint" class="govuk-hint">
+              For example, 30 1 2024
+            </div>
+
+            
+           
+            <div class="govuk-date-input" id="filter-date-start">
+              <p class="govuk-body govuk-!-font-weight-bold" style="margin-top: 0;">Start date</p>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-start-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-start-day" name="filter-date-start-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-start-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-start-month" name="filter-date-start-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-start-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="filter-date-start-year" name="filter-date-start-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-date-input" id="filter-date-end">
+              <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:20px;">End date</p>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-end-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-endd-day" name="filter-date-end-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-end-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-end-month" name="filter-date-endd-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-end-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="filter-date-end-year" name="filter-date-end-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+     
+  
+    </div>
+
+    </fieldset></div>
 
   <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
 
@@ -341,7 +460,7 @@ Booked assessments - GOV.UK prototype
   
   </div>
 </div>
-    <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-grid-column-two-thirds">
 
       
 
