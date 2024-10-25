@@ -26,20 +26,12 @@ Cancel appointment - GOV.UK prototype
 
     <form class="form" action="cancel-check-answers" method="post">
 
-      <h1 class="govuk-heading-l">Why are you cancelling this appointment</h1>
+      <h1 class="govuk-heading-l">Why are you cancelling this appointment?</h1>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           
           <div class="govuk-radios" data-module="govuk-radios">
-           
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Claimant failed to attend">
-              <label class="govuk-label govuk-radios__label" for="cancelReason">
-            Claimant failed to attend
-              </label>
-            </div>
-           
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="Claimant cancelled">
               <label class="govuk-label govuk-radios__label" for="cancelReason-2">
@@ -47,9 +39,17 @@ Cancel appointment - GOV.UK prototype
               </label>
             </div>
             <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Claimant failed to attend">
+              <label class="govuk-label govuk-radios__label" for="cancelReason">
+            Claimant failed to attend
+              </label>
+            </div>
+           
+          
+            <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="cancelReason-3" name="cancelReason" type="radio" value="No HCP is available">
               <label class="govuk-label govuk-radios__label" for="cancelReason-3">
-              No HCP is available
+             HCP is unavailable
               </label>
             </div>
             
@@ -59,14 +59,14 @@ Cancel appointment - GOV.UK prototype
                 <input class="govuk-radios__input" id="cancelReason-4" name="cancelReason" type="radio" aria-controls="conditional-cancelReason" aria-expanded="true" value="Other">
                 
                 <label class="govuk-label govuk-radios__label" for="cancelReason">
-                  Other
+                  Other reason
                 </label>
               </div>
 
               <div class="govuk-radios__conditional" id="conditional-cancelReason">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="cancelReason-4">
-                    Add a title
+                    Reason for cancellation
                   </label>
 
                   <input class="govuk-input govuk-!-width-one-half" id="cancelReason-other" name="cancelReason-other" type="text" value="" autocomplete="off">

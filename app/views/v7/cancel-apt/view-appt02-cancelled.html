@@ -41,7 +41,9 @@ Appointment details - GOV.UK prototype
 
           
           <br>
-
+          <h2 class="govuk-heading-m">
+           Appointment not attended
+          </h2>
   
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
@@ -49,7 +51,7 @@ Appointment details - GOV.UK prototype
                Reason
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['cancelReason'] }}   {{ data['cancelReason-other'] }} 
+                {{ data['cancelReason'] }}     {% if  data['cancelReason-other'] %}{{': ' + data['cancelReason-other'] }}  {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -57,11 +59,10 @@ Appointment details - GOV.UK prototype
                 </a>
               </dd>
             </div>
-        
-      
+          
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-              Additional detail
+              More detail
               </dt>
               <dd class="govuk-summary-list__value">
                 {% if  data['cancel-additional-details'] %}
@@ -78,7 +79,7 @@ Appointment details - GOV.UK prototype
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-             Date and time
+             Date cancelled
               </dt>
               <dd class="govuk-summary-list__value">
               Wed 7 Nov 2024, 11:15am
@@ -105,7 +106,10 @@ Appointment details - GOV.UK prototype
 
 
           
-       
+          <h2 class="govuk-heading-m">
+            Original appointment
+           </h2>
+    
       
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
