@@ -37,9 +37,12 @@ Cancel appointment - GOV.UK prototype
             {{ data['cancelReason'] }}   {% if  data['cancelReason-other'] %}{{': ' + data['cancelReason-other'] }}  {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              <span class="govuk-visually-hidden"> </span>
-            </a>
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">  <a class="govuk-link" href="javascript:history.back()">
+                    Change
+                </a></li>
+             
+            </ul>
           </dd>
         </div>
     
