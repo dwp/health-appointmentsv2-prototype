@@ -1181,3 +1181,14 @@ a:visited, .govuk-link:visited {
   position: relative;
 }
 
+.left-float {
+width:60%;
+float:left;
+}
+
+.right-float {
+  width:40%;
+  float:right;
+  text-align: right;
+  padding-top:10px;
+  }
