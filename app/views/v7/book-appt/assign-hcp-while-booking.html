@@ -19,7 +19,7 @@ Select HCP - GOV.UK prototype
 <div class="govuk-grid-row" style="margin-top: -40px;">
   <div class="govuk-grid-column-three-quarters">
 
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    <a href="check-answers" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
@@ -28,6 +28,7 @@ Select HCP - GOV.UK prototype
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Wed 7 Dec 2024, 11am</span>
               <h1 class="govuk-fieldset__heading">
                 Select the HCP
               </h1>
@@ -53,11 +54,13 @@ Select HCP - GOV.UK prototype
                 
                       <th scope="col" class="govuk-table__header" ></th>
                      </div>
-              <th scope="col" class="govuk-table__header" style="width: 60%;">Name</th>
+              <th scope="col" class="govuk-table__header" style="width: 30%;">Name</th>
             
               <!-- <th scope="col" class="govuk-table__header" style="width: 33%;">Work location</th>  -->
            
-              <th scope="col" class="govuk-table__header" style="width: 40%;">Available for</th>
+              <th scope="col" class="govuk-table__header" style="width: 30%;">Available for</th>
+
+              <th scope="col" class="govuk-table__header" style="width: 40%;">Booked appointments on this day</th>
               
             </tr>
               </thead>
@@ -91,10 +94,21 @@ Select HCP - GOV.UK prototype
                         
                       </ul>
                   </td>
+
+
+                  <td class="govuk-table__cell">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>1 WCA CN F2F</li>
+                      <li> 2 WCA CN TA (1 with translator)</li> 
+                    
+                      
+                    </ul>
+                </td>
+
                   </tr>
 
 
-                  {% if  data['assessment-channel']  !== 'Face to face' %}
+                 
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">
                     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
@@ -118,107 +132,24 @@ Select HCP - GOV.UK prototype
                       <li>WCA TA</li>
                      </ul>
                   </td>
-      
-      
-                </tr>{% endif %} 
 
-                <!--     <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="select-hcp-03" name="select-hcp" type="radio" value="Bernhard Fischer">
-                            <label class="govuk-label govuk-radios__label" for="select-hcp-03">
-                             
-                            </label>
-                          </div>
-                          </div>
-                          </td>
-                
-                      <td class="govuk-table__cell">Bernhard Fischer</td>
-                   
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                     
-                       <td class="govuk-table__cell">
-          
-                        <ul class="govuk-list govuk-list--bullet">
-                        
-                          <li>PIP F2F</li>
-                          <li>PIP TA</li>
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
-                         </ul>
-          
-          
-                      </td>
+
+                  <td class="govuk-table__cell">
+                   <p> No appointments booked</p>
                       
-                    </tr> -->
+                    
+                      
+                    </ul>
+                </td>
+      
+      
+                </tr>
 
-                    <!-- 
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="select-hcp-04" name="select-hcp" type="radio" value="Danny Zuko">
-                            <label class="govuk-label govuk-radios__label" for="select-hcp-04">
-                             
-                            </label>
-                          </div>
-                          </div>
-                          </td>
-                
-                      <td class="govuk-table__cell">Danny Zuko</td>
                
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                   
-                       <td class="govuk-table__cell">  
-                        <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
-                        <li>PIP TA</li>
-                         <li>WCA CN</li>
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
-                         </ul>
-          
-                        
-                        </td>
-                     
-                    </tr> -->
-
-                   
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="select-hcp-05" name="select-hcp" type="radio" value="Emma Bradley">
-                            <label class="govuk-label govuk-radios__label" for="select-hcp-05">
-                             
-                            </label>
-                          </div>
-                          </div>
-                          </td>
-                
-                      <td class="govuk-table__cell">Emma Bradley</td>
-              
-                      <!-- <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                    -->
-                       <td class="govuk-table__cell">
-          
-                        <ul class="govuk-list govuk-list--bullet">
-                          <li>PIP F2F</li>
-                        <li>PIP TA</li>
-                        
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
-                         </ul>
-          
-          
-          
-                      </td>
-                    </tr>
 
                  
 
-                    {% if  data['assessment-channel']  !== 'Face to face' %}
+                  
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
@@ -245,71 +176,21 @@ Select HCP - GOV.UK prototype
                        </ul>
           
                       </td>
+
+                      <td class="govuk-table__cell">
+                        <p> No appointments booked</p>
+                           
+                         
+                           
+                         </ul>
+                     </td>
+
+
                     </tr>
 
-                    {% endif %} 
-
-                    <!-- 
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="select-hcp-07" name="select-hcp" type="radio" value="Gabriel Mello">
-                            <label class="govuk-label govuk-radios__label" for="select-hcp-07">
-                             
-                            </label>
-                          </div>
-                          </div>
-                          </td>
-                
-                      <td class="govuk-table__cell">Gabriel Mello</td>
-              
-                      <td class="govuk-table__cell"> London, Tresco House </td>
-                   
-                      <td class="govuk-table__cell">
-                        
-                        <ul class="govuk-list govuk-list--bullet">
-                       
-                      
-                          <li>WCA F2F</li>
-                          <li>WCA TA</li>
-                         </ul>
-                        </td>
-          
-          
-                    </tr> -->
-
-                    {% if  data['assessment-channel']  !== 'Face to face' %}
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="select-hcp-08" name="select-hcp" type="radio" value="Jane Smith">
-                            <label class="govuk-label govuk-radios__label" for="select-hcp-08">
-                             
-                            </label>
-                          </div>
-                          </div>
-                          </td>
-                
-                      <td class="govuk-table__cell">Jane Smith</td>
-               
-                      <!-- <td class="govuk-table__cell"> Working from home </td>
-                      -->
-                       <td class="govuk-table__cell">
-                        
-                        <ul class="govuk-list govuk-list--bullet">
                  
-                        <li>PIP TA</li>
-                        
-                     
-                          <li>WCA TA</li>
-                         </ul>
-          
-                        </td>
-                    </tr>
 
-                    {% endif %} 
+                    
 
 
                     <tr class="govuk-table__row">
@@ -340,43 +221,22 @@ Select HCP - GOV.UK prototype
           
           
                       </td>
-                    </tr>
 
-                    {% if  data['assessment-channel']  !== 'Face to face' %}
-                    <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="select-hcp-10" name="select-hcp" type="radio" value="Julie Smails">
-                            <label class="govuk-label govuk-radios__label" for="select-hcp-10">
-                             
-                            </label>
-                          </div>
-                          </div>
-                          </td>
-                
-                      <td class="govuk-table__cell">Julie Smails</td>
-                   
-                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
-                    
-                       <td class="govuk-table__cell">
-          
-          
-          
                         <ul class="govuk-list govuk-list--bullet">
+                       
+                          <li> 1 WCA TA (with translator)</li> 
+                        
+                          
+                        </ul>
+                           
                          
-                        <li>PIP TA</li>
-                        
-                        
+                           
                          </ul>
-          
-                      </td> 
+                     </td>
                     </tr>
 
-                    {% endif %} 
-
-
-                    {% if  data['assessment-channel']  !== 'Face to face' %}
+            
 
 
                     <tr class="govuk-table__row">
@@ -406,47 +266,22 @@ Select HCP - GOV.UK prototype
                          </ul>
           
                       </td> 
-                    </tr>
-
-                       {% endif %} 
-
-                       {% if  data['assessment-channel']  !== 'Face to face' %}
 
 
-
-
-                    <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="select-hcp-12" name="select-hcp" type="radio" value="Raka Banerjee">
-                            <label class="govuk-label govuk-radios__label" for="select-hcp-12">
-                             
-                            </label>
-                          </div>
-                          </div>
-                          </td>
-                
-                      <td class="govuk-table__cell">Raka Banerjee</td>
-                    
-                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
-                     
-                       <td class="govuk-table__cell">
-          
-          
-          
-                        <ul class="govuk-list govuk-list--bullet">
-                      
-                        <li>PIP TA</li>
-                        
-                       
-                          <li>WCA TA</li> 
-                    
+                        <p> No appointments booked</p>
+                           
+                         
+                           
                          </ul>
-          
-                      </td> 
+                     </td>
+
+
                     </tr>
-  {% endif %} 
+
+                      
+
+                     
 
 
 
@@ -466,7 +301,7 @@ Select HCP - GOV.UK prototype
             <button class="govuk-button" data-module="govuk-button">
               Continue
             </button>
-            <a class="govuk-link" href="claimant-detail">Cancel</a>
+            <a class="govuk-link" href="check-answers">Cancel</a>
           </div>
       </div>
     </div>

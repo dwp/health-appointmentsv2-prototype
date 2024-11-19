@@ -17,11 +17,42 @@ Check appointment details - GOV.UK prototype
 
 
 <div class="govuk-grid-row" style="margin-top: -40px;">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-    <main class="govuk-main-wrapper" action="confirmation" id="main-content" role="main">
+    <main class="govuk-main-wrapper" action="confirmation" id="main-content" role="main" style="padding-bottom:0px;">
+      
+
+      <div class="govuk-notification-banner govuk-notification-banner" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Important     
+      
+        </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+       
+        
+         
+         
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading" style="white-space:nowrap !important;">On this day Amy Gill already has: </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>1 WCA CN F2F </li>
+            <li>2 WCA CN TA (1 with translator) </li>
+           <!-- <li>Complex neuro </li> -->
+          <!--  <li>Face to face </li> --> 
+        </ul>
+          <p style="white-space:nowrap !important;">Consider selecting a different agent.</p>
+         </div>
+         
+          
+      
+        </div>
+        </div>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
       
 
           <h1 class="govuk-heading-l">Check appointment details</h1>
@@ -60,6 +91,22 @@ Check appointment details - GOV.UK prototype
             </div>
 
 
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Interpreter information
+              </dt>
+              <dd class="govuk-summary-list__value">
+               Polish
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+          
+
+            
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -74,14 +121,15 @@ Check appointment details - GOV.UK prototype
                 </a>
               </dd>
             </div>
-          
+
+           
             
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Date and time
               </dt>
               <dd class="govuk-summary-list__value">
-               Wed 7 May 2024, 11am
+               Wed 7 Dec 2024, 11am
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="app-date-time">

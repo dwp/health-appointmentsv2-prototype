@@ -35,8 +35,8 @@ Date and time - GOV.UK prototype
       
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-one-half">
-                <div class="govuk-grid-row">
-                  <div class="govuk-grid-column-three-quarters">
+                <div class="govuk-grid-row"  >
+                  <div class="govuk-grid-column-three-quarters" >
                     <p id="chosen-centre-label" class="govuk-body govuk-!-font-weight-bold">
                       Assessment centre:
                     </p>
@@ -59,11 +59,22 @@ Date and time - GOV.UK prototype
           
             
               <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key key-chooseDateTime-channel">
+                <dt class="govuk-summary-list__key key-chooseDateTime-channel" style="width: 50%;">
                   Appointment type
                 </dt>
                 <dd class="govuk-summary-list__value val-chooseDateTime-channel">
                   {{ data['assessment-channel'] }}
+                </dd>
+                
+              </div>
+            
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key key-chooseDateTime-channel">
+                  Interpreter information
+                </dt>
+                <dd class="govuk-summary-list__value val-chooseDateTime-channel">
+                 Polish
                 </dd>
                 
               </div>
@@ -98,15 +109,15 @@ Date and time - GOV.UK prototype
           <thead>
             <tr>
               
-                <th scope="col">Mon 5 May</th>
+                <th scope="col">Mon 5 Dec</th>
               
-                <th scope="col">Tue 6 May</th>
+                <th scope="col">Tue 6 Dec</th>
               
-                <th scope="col">Wed 7 May</th>
+                <th scope="col">Wed 7 Dec</th>
               
-                <th scope="col">Thu 8 May</th>
+                <th scope="col">Thu 8 Dec</th>
               
-                <th scope="col">Fri 9 May</th>
+                <th scope="col">Fri 9 Dec</th>
               
             </tr>
           </thead>
@@ -128,7 +139,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1685952000000">
           <input id="time-grain-1685952000000" name="timeGrain" type="radio" value="2024-06-05T08:00:00.000Z">
           <label id="time-grain-1685952000000-label" for="time-grain-1685952000000">
-            <time id="time-1685952000000" datetime="2024-06-05T08:00:00.000Z" aria-label="Monday 5 May 2024 at">
+            <time id="time-1685952000000" datetime="2024-06-05T08:00:00.000Z" aria-label="Monday 5 Dec 2024 at">
               9am
             </time>
           </label>
@@ -164,7 +175,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686124800000">
           <input id="time-grain-1686124800000" name="timeGrain" type="radio" value="2024-06-07T08:00:00.000Z">
           <label id="time-grain-1686124800000-label" for="time-grain-1686124800000">
-            <time id="time-1686124800000" datetime="2024-06-07T08:00:00.000Z" aria-label="Wednesday 7 May 2024 at">
+            <time id="time-1686124800000" datetime="2024-06-07T08:00:00.000Z" aria-label="Wednesday 7 Dec 2024 at">
               9am
             </time>
           </label>
@@ -197,7 +208,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686297600000">
           <input id="time-grain-1686297600000" name="timeGrain" type="radio" value="2024-06-09T08:00:00.000Z">
           <label id="time-grain-1686297600000-label" for="time-grain-1686297600000">
-            <time id="time-1686297600000" datetime="2024-06-09T08:00:00.000Z" aria-label="Friday 9 May 2024 at">
+            <time id="time-1686297600000" datetime="2024-06-09T08:00:00.000Z" aria-label="Friday 9 Dec 2024 at">
               9am
             </time>
           </label>
@@ -234,7 +245,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686045600000">
           <input id="time-grain-1686045600000" name="timeGrain" type="radio" value="2024-06-06T10:00:00.000Z">
           <label id="time-grain-1686045600000-label" for="time-grain-1686045600000">
-            <time id="time-1686045600000" datetime="2024-06-06T10:00:00.000Z" aria-label="Tuesday 6 May 2024 at">
+            <time id="time-1686045600000" datetime="2024-06-06T10:00:00.000Z" aria-label="Tuesday 6 Dec 2024 at">
               10am
             </time>
           </label>
@@ -254,7 +265,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686132000000">
           <input id="time-grain-1686132000000" name="timeGrain" type="radio" value="2024-06-07T10:00:00.000Z">
           <label id="time-grain-1686132000000-label" for="time-grain-1686132000000">
-            <time id="time-1686132000000" datetime="2024-06-07T10:00:00.000Z" aria-label="Wednesday 7 May 2024 at">
+            <time id="time-1686132000000" datetime="2024-06-07T10:00:00.000Z" aria-label="Wednesday 7 Dec 2024 at">
               10am
             </time>
           </label>
@@ -274,7 +285,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686218400000">
           <input id="time-grain-1686218400000" name="timeGrain" type="radio" value="2024-06-08T10:00:00.000Z">
           <label id="time-grain-1686218400000-label" for="time-grain-1686218400000">
-            <time id="time-1686218400000" datetime="2024-06-08T10:00:00.000Z" aria-label="Thursday 8 May 2024 at">
+            <time id="time-1686218400000" datetime="2024-06-08T10:00:00.000Z" aria-label="Thursday 8 Dec 2024 at">
               10am
             </time>
           </label>
@@ -294,7 +305,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686304800000">
           <input id="time-grain-1686304800000" name="timeGrain" type="radio" value="2024-06-09T10:00:00.000Z">
           <label id="time-grain-1686304800000-label" for="time-grain-1686304800000">
-            <time id="time-1686304800000" datetime="2024-06-09T10:00:00.000Z" aria-label="Friday 9 May 2024 at">
+            <time id="time-1686304800000" datetime="2024-06-09T10:00:00.000Z" aria-label="Friday 9 Dec 2024 at">
               10am
             </time>
           </label>
@@ -322,100 +333,6 @@ Date and time - GOV.UK prototype
                     
 
 
-                      <td>
-                        
-                        
-                          
-        
-      
-                        <div id="cell-1686045600000">
-                          <input id="time-grain-1686045600000" name="timeGrain" type="radio" value="2024-06-06T10:00:00.000Z">
-                          <label id="time-grain-1686045600000-label" for="time-grain-1686045600000">
-                            <time id="time-1686045600000" datetime="2024-06-06T10:00:00.000Z" aria-label="Tuesday 6 May 2024 at">
-                              11am
-                            </time>
-                          </label>
-                        </div>
-                      
-                                        
-                                      </td>
-                                    
-                                  
-                                    
-                                      <td>
-                                        
-                                        
-                                          
-                        
-                      
-                        <div id="cell-1686132000000">
-                          <input id="time-grain-1686132000000" name="timeGrain" type="radio" value="2024-06-07T10:00:00.000Z">
-                          <label id="time-grain-1686132000000-label" for="time-grain-1686132000000">
-                            <time id="time-1686132000000" datetime="2024-06-07T10:00:00.000Z" aria-label="Wednesday 7 May 2024 at">
-                              11am
-                            </time>
-                          </label>
-                        </div>
-                      
-                                        
-                                      </td>
-                                    
-                                  
-                                    
-                                      <td>
-                                        
-                                        
-                                          
-                        
-                      
-                        <div id="cell-1686218400000">
-                          <input id="time-grain-1686218400000" name="timeGrain" type="radio" value="2024-06-08T10:00:00.000Z">
-                          <label id="time-grain-1686218400000-label" for="time-grain-1686218400000">
-                            <time id="time-1686218400000" datetime="2024-06-08T10:00:00.000Z" aria-label="Thursday 8 May 2024 at">
-                              11am
-                            </time>
-                          </label>
-                        </div>
-                      
-                                        
-                                      </td>
-                                    
-                                  
-                                    
-                                      <td>
-                                        
-                                        
-                                          
-                        
-                      
-                        <div id="cell-1686304800000">
-                          <input id="time-grain-1686304800000" name="timeGrain" type="radio" value="2024-06-09T10:00:00.000Z">
-                          <label id="time-grain-1686304800000-label" for="time-grain-1686304800000">
-                            <time id="time-1686304800000" datetime="2024-06-09T10:00:00.000Z" aria-label="Friday 9 May 2024 at">
-                              11am
-                            </time>
-                          </label>
-                        </div>
-                      
-                                        
-                                      </td>
-                                    
-                                  
-                                </tr>
-                              
-                                
-                                <tr>
-                                  
-                                  
-                                    
-                                      <td>
-                                        
-                                        
-                                          
-                        
-                      
-                        
-                                      </td>
                                     
                   
                     
@@ -428,7 +345,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686052800000">
           <input id="time-grain-1686052800000" name="timeGrain" type="radio" value="2024-06-06T12:00:00.000Z">
           <label id="time-grain-1686052800000-label" for="time-grain-1686052800000">
-            <time id="time-1686052800000" datetime="2024-06-06T12:00:00.000Z" aria-label="Tuesday 6 May 2024 at">
+            <time id="time-1686052800000" datetime="2024-06-06T12:00:00.000Z" aria-label="Tuesday 6 Dec 2024 at">
               1pm
             </time>
           </label>
@@ -448,7 +365,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686139200000">
           <input id="time-grain-1686139200000" name="timeGrain" type="radio" value="2024-06-07T12:00:00.000Z">
           <label id="time-grain-1686139200000-label" for="time-grain-1686139200000">
-            <time id="time-1686139200000" datetime="2024-06-07T12:00:00.000Z" aria-label="Wednesday 7 May 2024 at">
+            <time id="time-1686139200000" datetime="2024-06-07T12:00:00.000Z" aria-label="Wednesday 7 Dec 2024 at">
               1pm
             </time>
           </label>
@@ -468,7 +385,7 @@ Date and time - GOV.UK prototype
         <div id="cell-1686225600000">
           <input id="time-grain-1686225600000" name="timeGrain" type="radio" value="2024-06-08T12:00:00.000Z">
           <label id="time-grain-1686225600000-label" for="time-grain-1686225600000">
-            <time id="time-1686225600000" datetime="2024-06-08T12:00:00.000Z" aria-label="Thursday 8 May 2024 at">
+            <time id="time-1686225600000" datetime="2024-06-08T12:00:00.000Z" aria-label="Thursday 8 Dec 2024 at">
               1pm
             </time>
           </label>
@@ -505,7 +422,7 @@ Date and time - GOV.UK prototype
     <div id="cell-1685973600000">
       <input id="time-grain-1685973600000" name="timeGrain" type="radio" value="2024-06-05T14:00:00.000Z">
       <label id="time-grain-1685973600000-label" for="time-grain-1685973600000">
-        <time id="time-1685973600000" datetime="2024-06-05T14:00:00.000Z" aria-label="Monday 5 May 2024 at">
+        <time id="time-1685973600000" datetime="2024-06-05T14:00:00.000Z" aria-label="Monday 5 Dec 2024 at">
           2pm
         </time>
       </label>
@@ -525,7 +442,7 @@ Date and time - GOV.UK prototype
     <div id="cell-1686060000000">
       <input id="time-grain-1686060000000" name="timeGrain" type="radio" value="2024-06-06T14:00:00.000Z">
       <label id="time-grain-1686060000000-label" for="time-grain-1686060000000">
-        <time id="time-1686060000000" datetime="2024-06-06T14:00:00.000Z" aria-label="Tuesday 6 May 2024 at">
+        <time id="time-1686060000000" datetime="2024-06-06T14:00:00.000Z" aria-label="Tuesday 6 Dec 2024 at">
           2pm
         </time>
       </label>
@@ -545,7 +462,7 @@ Date and time - GOV.UK prototype
     <div id="cell-1686146400000">
       <input id="time-grain-1686146400000" name="timeGrain" type="radio" value="2024-06-07T14:00:00.000Z">
       <label id="time-grain-1686146400000-label" for="time-grain-1686146400000">
-        <time id="time-1686146400000" datetime="2024-06-07T14:00:00.000Z" aria-label="Wednesday 7 May 2024 at">
+        <time id="time-1686146400000" datetime="2024-06-07T14:00:00.000Z" aria-label="Wednesday 7 Dec 2024 at">
           2pm
         </time>
       </label>
@@ -565,7 +482,7 @@ Date and time - GOV.UK prototype
     <div id="cell-1686232800000">
       <input id="time-grain-1686232800000" name="timeGrain" type="radio" value="2024-06-08T14:00:00.000Z">
       <label id="time-grain-1686232800000-label" for="time-grain-1686232800000">
-        <time id="time-1686232800000" datetime="2024-06-08T14:00:00.000Z" aria-label="Thursday 8 May 2024 at">
+        <time id="time-1686232800000" datetime="2024-06-08T14:00:00.000Z" aria-label="Thursday 8 Dec 2024 at">
           2pm
         </time>
       </label>
@@ -592,92 +509,7 @@ Date and time - GOV.UK prototype
 
               
                 
-                <tr>
-                  
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1685973600000">
-          <input id="time-grain-1685973600000" name="timeGrain" type="radio" value="2024-06-05T14:00:00.000Z">
-          <label id="time-grain-1685973600000-label" for="time-grain-1685973600000">
-            <time id="time-1685973600000" datetime="2024-06-05T14:00:00.000Z" aria-label="Monday 5 May 2024 at">
-              3pm
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686060000000">
-          <input id="time-grain-1686060000000" name="timeGrain" type="radio" value="2024-06-06T14:00:00.000Z">
-          <label id="time-grain-1686060000000-label" for="time-grain-1686060000000">
-            <time id="time-1686060000000" datetime="2024-06-06T14:00:00.000Z" aria-label="Tuesday 6 May 2024 at">
-              3pm
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686146400000">
-          <input id="time-grain-1686146400000" name="timeGrain" type="radio" value="2024-06-07T14:00:00.000Z">
-          <label id="time-grain-1686146400000-label" for="time-grain-1686146400000">
-            <time id="time-1686146400000" datetime="2024-06-07T14:00:00.000Z" aria-label="Wednesday 7 May 2024 at">
-              3pm
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686232800000">
-          <input id="time-grain-1686232800000" name="timeGrain" type="radio" value="2024-06-08T14:00:00.000Z">
-          <label id="time-grain-1686232800000-label" for="time-grain-1686232800000">
-            <time id="time-1686232800000" datetime="2024-06-08T14:00:00.000Z" aria-label="Thursday 8 May 2024 at">
-              3pm
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      
-                      <td>
+              
                         
                         
                           
@@ -685,10 +517,6 @@ Date and time - GOV.UK prototype
       
        
       
-                        
-                      </td>
-                    
-                  
                 </tr>
               
             
