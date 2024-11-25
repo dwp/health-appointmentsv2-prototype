@@ -74,6 +74,20 @@ Appointment details - GOV.UK prototype
                   </a>
                 </dd>
               </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Interpreter information
+              </dt>
+              <dd class="govuk-summary-list__value">
+               Polish
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    <span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
   
   
   
@@ -107,7 +121,7 @@ Appointment details - GOV.UK prototype
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                 Wed 7 May 2024, 11am
+                 Wed 7 Dec 2024, 11am
                 </dd>
                <!--  <dd class="govuk-summary-list__actions">
                   {% if  data['apptbooked']   == 'yes' %}  <a class="govuk-link" href="app-date-time">
@@ -143,7 +157,7 @@ Appointment details - GOV.UK prototype
               
   
              <dd class="govuk-summary-list__actions">
-                  {% if  data['apptbooked']   == 'yes' %} <a class="govuk-link" href="../book-appt/assign-hcp-option">
+                  {% if  data['apptbooked']   == 'yes' %} <a class="govuk-link" href="assign-hcp-while-booking">
                     Change<span class="govuk-visually-hidden"> any additional information</span>
                   </a>
                   {% endif %}
