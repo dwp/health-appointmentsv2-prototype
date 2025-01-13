@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+
+
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <a href="../manage-select" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+
+
+      <form action="availability-copied-am" method="post" class="form" >  
+       
+        
+        <span class="govuk-caption-l">Monday 11 March 2025</span>
+
+            <h1 class="govuk-heading-l" style="padding-top:10px;">
+             Copy morning to when?
+            
+           
+            </h1>
+            <div class="govuk-hint">
+              Select all that apply.
+            </div>
+
+            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes" data-module="govuk-checkboxes">
+                      
+                  <!-- <div id="waste-hint" class="govuk-hint">
+                    Apply to
+                  </div> -->
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day" name="day" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="day">
+                        Tuesday 12 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-2" name="day" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-2">
+                        Wednesday 13 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-3" name="day" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-3">
+                        Thursday 14 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-4" name="day" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-4">
+                        Friday 15 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-5" name="day" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-5">
+                        Saturday 16 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-6" name="day" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-6">
+                        Sunday 17 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-7" name="day" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-7">
+                        Monday 18 March 2025
+                      </label>
+                    </div>
+    
+                  </div>
+               
+                </div>
+              </fieldset>
+            </div>
+
+
+           
+
+        <button class="govuk-button" data-module="govuk-button">Copy</button>
+    </form>
+
+    
+    </div>
+
+
+</div>
+
+
+    </div>
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}

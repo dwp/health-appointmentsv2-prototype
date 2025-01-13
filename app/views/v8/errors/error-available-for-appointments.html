@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-full">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+          
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+     
+        <div class="govuk-form-group">
+        
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+          Amy Gill has appointments booked
+              </h1>
+            </legend>
+          <br>
+
+       <p>  Select the claimant to assign the appointment to someone else before removing what Amy Gill is available for.</p>
+
+<p>You can also  manage all <a href="../has-manage-appt/appointments">booked appointments</a>.</p>
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Claimant</th>
+      <th scope="col" class="govuk-table__header">Benefit</th>
+      <th scope="col" class="govuk-table__header">Date and time</th>
+    
+      <th scope="col" class="govuk-table__header">Type</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="" aria-describedby="claimant-detail-assined">Noelle Carmel</a></td>
+      <td class="govuk-table__cell">PIP</td>
+      <td class="govuk-table__cell">Thu 8 September 2023, 9am</td>
+     
+      <td class="govuk-table__cell">Telephone</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="" aria-describedby="claimant-detail-assined">Lucy Steel</a></td>
+      <td class="govuk-table__cell">PIP</td>
+      <td class="govuk-table__cell">Mon 18 September 2023, 9am</td>
+     
+      <td class="govuk-table__cell">Telephone</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="" aria-describedby="claimant-detail-assined">Rachel Brown</a></td>
+      <td class="govuk-table__cell">PIP</td>
+      <td class="govuk-table__cell">Tue 19 September 2023, 1pm</td>
+     
+      <td class="govuk-table__cell">Telephone</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+
