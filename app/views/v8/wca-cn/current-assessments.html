@@ -1,0 +1,136 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Claimant appointments - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-three-quarters">  
+    
+    <a href="claimant-detail" class="govuk-back-link" >Back</a>
+    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+     
+     
+     
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+            <h1 class="govuk-heading-l">
+             Jane Doe's appointments
+            </h1>
+
+            {% if  data['apptbooked']   == 'cancelled' %}
+         
+         <p>There are no current appointments.</p>
+
+            <a href="assessment-channel">
+              <button class="govuk-button" data-module="govuk-button">
+               Book new appointment
+              </button>
+            </a>
+  
+            {% endif %} 
+            
+            
+            {% if  data['apptbooked']   == 'yes' %}
+            <h2 class="govuk-heading-m">
+
+              
+              Current appointments
+            </h2>
+            {% endif %} 
+         
+          
+               
+          {% if  data['apptbooked']   == 'cancelled' %}
+          <h2 class="govuk-heading-m">
+
+           Previous appointments
+          </h2>
+          {% endif %} 
+        </legend>
+        
+        
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" style="width:25%;">   Date and time</th>
+                <th scope="col" class="govuk-table__header govuk-table__header" style="width:10%;">Location</th>
+                <th scope="col" class="govuk-table__header govuk-table__header">Benefit</th>
+
+                <th scope="col" class="govuk-table__header govuk-table__header">Type</th>
+
+        
+                <th scope="col" class="govuk-table__header govuk-table__header">Status</th>
+        <th scope="col" class="govuk-table__header govuk-table__header">HCP</th>
+
+                <th scope="col" class="govuk-table__header govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell">Wed 7 August 2023, 11am</td>
+                  <td class="govuk-table__cell govuk-table__cell">Birmingham, Handsworth</td>
+                <td class="govuk-table__cell govuk-table__cell">UC</td>
+                <td class="govuk-table__cell govuk-table__cell">Telephone</td>
+              
+                {% if  data['apptbooked']   == 'yes' %}
+
+                <td class="govuk-table__cell govuk-table__cell"> Booked</th>
+                {% else %} 
+                <td class="govuk-table__cell govuk-table__cell"> Cancelled</th>
+                {% endif %} 
+
+                
+
+               
+
+                <td class="govuk-table__cell govuk-table__cell" style="white-space:nowrap">  {{ data['hcp'] }}</td>
+                <td class="govuk-table__cell govuk-table__cell"><a href="view-assessment"> Edit</a></td>
+              </tr>
+            
+            </tbody>
+          </table>
+
+
+          {% if  data['apptbooked']   == 'yes' %}
+         
+         
+
+          <a href="assessment-channel">
+            <button class="govuk-button" data-module="govuk-button">
+             Book new appointment
+            </button>
+          </a>
+
+          {% endif %} 
+
+          {% if  data['apptbooked']   == 'yes' %}
+          <p>There are no previous appointments</p>
+          {% endif %} 
+
+
+
+
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
