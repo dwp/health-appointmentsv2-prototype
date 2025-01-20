@@ -8,7 +8,7 @@ Cancel appointment - GOV.UK prototype
 
 {% block header %}
 
-  {% include "includes/blue-banner-book-assessment.html" %}
+  {% include "includes/blue-banner-assessment-booked.html" %}
 
 
 {% endblock %}
@@ -40,14 +40,14 @@ Cancel appointment - GOV.UK prototype
           
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="Booking error">
-              <label class="govuk-label govuk-radios__label" for="cancelReason-2">
+              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Booking error">
+              <label class="govuk-label govuk-radios__label" for="cancelReason-1">
                 Booking error
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Claimant asked to rebook">
-              <label class="govuk-label govuk-radios__label" for="cancelReason">
+              <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="Claimant asked to rebook">
+              <label class="govuk-label govuk-radios__label" for="cancelReason-2">
             Claimant asked to rebook
               </label>
             </div>
@@ -61,49 +61,49 @@ Cancel appointment - GOV.UK prototype
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="HCP absent">
-                <label class="govuk-label govuk-radios__label" for="cancelReason-2">
+                <input class="govuk-radios__input" id="cancelReason-4" name="cancelReason" type="radio" value="HCP absent">
+                <label class="govuk-label govuk-radios__label" for="cancelReason-4">
                 HCP absent
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="HCP over-booked">
-                <label class="govuk-label govuk-radios__label" for="cancelReason">
+                <input class="govuk-radios__input" id="cancelReason-5" name="cancelReason" type="radio" value="HCP over-booked">
+                <label class="govuk-label govuk-radios__label" for="cancelReason-5">
              HCP over-booked
                 </label>
               </div>
              
             
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-3" name="cancelReason" type="radio" value="HCP over-running">
-                <label class="govuk-label govuk-radios__label" for="cancelReason-3">
+                <input class="govuk-radios__input" id="cancelReason-6" name="cancelReason" type="radio" value="HCP over-running">
+                <label class="govuk-label govuk-radios__label" for="cancelReason-6">
               HCP over-running
                 </label>
               </div>  <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="HCP re-assigned">
-                  <label class="govuk-label govuk-radios__label" for="cancelReason-2">
+                  <input class="govuk-radios__input" id="cancelReason-7" name="cancelReason" type="radio" value="HCP re-assigned">
+                  <label class="govuk-label govuk-radios__label" for="cancelReason-7">
                    HCP re-assigned
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Interpreter issues">
-                  <label class="govuk-label govuk-radios__label" for="cancelReason">
+                  <input class="govuk-radios__input" id="cancelReason-8" name="cancelReason" type="radio" value="Interpreter issues">
+                  <label class="govuk-label govuk-radios__label" for="cancelReason-8">
                 Interpreter issues
                   </label>
                 </div>
                
               
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cancelReason-3" name="cancelReason" type="radio" value="Technology failure">
-                  <label class="govuk-label govuk-radios__label" for="cancelReason-3">
+                  <input class="govuk-radios__input" id="cancelReason-9" name="cancelReason" type="radio" value="Technology failure">
+                  <label class="govuk-label govuk-radios__label" for="cancelReason-9">
                 Technology failure
                   </label>
                 </div>
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-4" name="cancelReason" type="radio" aria-controls="conditional-cancelReason" aria-expanded="true" value="Other">
+                <input class="govuk-radios__input" id="cancelReason-10" name="cancelReason" type="radio" aria-controls="conditional-cancelReason" aria-expanded="true" value="Other">
                 
                 <label class="govuk-label govuk-radios__label" for="cancelReason">
                   Other reason
@@ -112,7 +112,7 @@ Cancel appointment - GOV.UK prototype
 
               <div class="govuk-radios__conditional" id="conditional-cancelReason">
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="cancelReason-4">
+                  <label class="govuk-label" for="cancelReason-10">
                     Reason for cancellation
                   </label>
 
