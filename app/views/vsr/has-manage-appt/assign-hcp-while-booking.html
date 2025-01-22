@@ -1,0 +1,476 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Select HCP - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-three-quarters">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+   
+      <form class="form" action="appt-details-change-hcp" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Select another HCP 
+              </h1>
+              
+            </legend>
+
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row" >
+                   
+                   
+
+                        
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item" >
+                    
+
+
+
+                
+                      <th scope="col" class="govuk-table__header" ></th>
+                     </div>
+              <th scope="col" class="govuk-table__header" style="width: 60%;">Name</th>
+            
+              <!-- <th scope="col" class="govuk-table__header" style="width: 33%;">Work location</th>  -->
+           
+              <th scope="col" class="govuk-table__header" style="width: 40%;">Available for</th>
+              
+            </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row" >
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="select-hcp-manage-01" name="select-hcp-manage" type="radio" value="Amy Gill" checked>
+                        <label class="govuk-label govuk-radios__label" for="select-hcp-manage-01">
+                         
+                        </label>
+                      </div>
+                      </div>
+                      </td>
+            
+
+                 
+                    <td class="govuk-table__cell">Amy Gill</td>
+                  
+                    <!-- <td class="govuk-table__cell"> Birmingham, Handsworth </td> -->
+                  
+                    <td class="govuk-table__cell">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>PIP F2F </li>
+                        <li>  PIP TA</li> 
+                       <li>   WCA CN</li> 
+                       <li>    WCA F2F</li> 
+                         <li> WCA TA</li> 
+                        
+                      </ul>
+                  </td>
+                  </tr>
+
+
+                  {% if  data['assessment-channel']  !== 'Face to face' %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="select-hcp-manage-02" name="select-hcp-manage" type="radio" value="Benjamin Marshall">
+                        <label class="govuk-label govuk-radios__label" for="select-hcp-manage-02">
+                         
+                        </label>
+                      </div>
+                      </div>
+                      </td>
+            
+                  <td class="govuk-table__cell">Benjamin Marshall</td>
+               
+                  <!-- <td class="govuk-table__cell"> Working from home </td> -->
+                 
+                   <td class="govuk-table__cell">
+                    
+                    <ul class="govuk-list govuk-list--bullet">
+                      
+                      <li>WCA TA</li>
+                     </ul>
+                  </td>
+      
+      
+                </tr>{% endif %} 
+
+                <!--     <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-03" name="select-hcp-manage" type="radio" value="Bernhard Fischer">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-03">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Bernhard Fischer</td>
+                   
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                     
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                        
+                          <li>PIP F2F</li>
+                          <li>PIP TA</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+                      </td>
+                      
+                    </tr> -->
+
+                    <!-- 
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-04" name="select-hcp-manage" type="radio" value="Danny Zuko">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-04">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Danny Zuko</td>
+               
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                   
+                       <td class="govuk-table__cell">  
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+                        
+                        </td>
+                     
+                    </tr> -->
+
+                   
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-05" name="select-hcp-manage" type="radio" value="Emma Bradley">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-05">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Emma Bradley</td>
+              
+                      <!-- <td class="govuk-table__cell"> Birmingham, Handsworth </td> -->
+                   
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>PIP F2F</li>
+                        <li>PIP TA</li>
+                        
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+          
+                      </td>
+                    </tr>
+
+                 
+
+                    {% if  data['assessment-channel']  !== 'Face to face' %}
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-06" name="select-hcp-manage" type="radio" value="Frieda Döring">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-06">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Frieda Döring</td>
+                     
+                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
+                    
+                      <td class="govuk-table__cell">  
+                    
+                      <ul class="govuk-list govuk-list--bullet">
+                      
+                      
+                     
+                        <li>WCA TA</li>
+                       </ul>
+          
+                      </td>
+                    </tr>
+
+                    {% endif %} 
+
+                    <!-- 
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-07" name="select-hcp-manage" type="radio" value="Gabriel Mello">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-07">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Gabriel Mello</td>
+              
+                      <td class="govuk-table__cell"> London, Tresco House </td>
+                   
+                      <td class="govuk-table__cell">
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                       
+                      
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+                        </td>
+          
+          
+                    </tr> -->
+
+                    {% if  data['assessment-channel']  !== 'Face to face' %}
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-08" name="select-hcp-manage" type="radio" value="Jane Smith">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-08">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Jane Smith</td>
+               
+                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
+                     
+                       <td class="govuk-table__cell">
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                 
+                        <li>PIP TA</li>
+                        
+                     
+                          <li>WCA TA</li>
+                         </ul>
+          
+                        </td>
+                    </tr>
+
+                    {% endif %} 
+
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-09" name="select-hcp-manage" type="radio" value="Joe Bloggs">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-09">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+               
+                      <!-- <td class="govuk-table__cell"> Birmingham, Handsworth </td> -->
+                    
+                       <td class="govuk-table__cell">
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                          
+                         <li>WCA CN</li>
+                          <li>WCA F2F</li>
+                          <li>WCA TA</li>
+                         </ul>
+          
+          
+          
+                      </td>
+                    </tr>
+
+                    {% if  data['assessment-channel']  !== 'Face to face' %}
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-10" name="select-hcp-manage" type="radio" value="Julie Smails">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-10">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Julie Smails</td>
+                   
+                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
+                    
+                       <td class="govuk-table__cell">
+          
+          
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                         
+                        <li>PIP TA</li>
+                        
+                        
+                         </ul>
+          
+                      </td> 
+                    </tr>
+
+                    {% endif %} 
+
+
+                    {% if  data['assessment-channel']  !== 'Face to face' %}
+
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-11" name="select-hcp-manage" type="radio" value="Monica Anyanwu">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-11">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Monica Anyanwu </td>
+                  
+                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
+                      
+                       <td class="govuk-table__cell">
+          
+          
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                        
+                         
+                          <li>WCA TA</li>
+                         </ul>
+          
+                      </td> 
+                    </tr>
+
+                       {% endif %} 
+
+                       {% if  data['assessment-channel']  !== 'Face to face' %}
+
+
+
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" style="margin-top:-7px;">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="select-hcp-manage-12" name="select-hcp-manage" type="radio" value="Raka Banerjee">
+                            <label class="govuk-label govuk-radios__label" for="select-hcp-manage-12">
+                             
+                            </label>
+                          </div>
+                          </div>
+                          </td>
+                
+                      <td class="govuk-table__cell">Raka Banerjee</td>
+                    
+                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
+                     
+                       <td class="govuk-table__cell">
+          
+          
+          
+                        <ul class="govuk-list govuk-list--bullet">
+                      
+                        <li>PIP TA</li>
+                        
+                       
+                          <li>WCA TA</li> 
+                    
+                         </ul>
+          
+                      </td> 
+                    </tr>
+  {% endif %} 
+
+
+
+                 
+                  
+                </tbody>
+              </table>
+           
+
+
+
+           
+
+          <br>
+          <br>
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+            <a class="govuk-link" href="claimant-detail">Cancel</a>
+          </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+{% endblock %}
