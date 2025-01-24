@@ -43,7 +43,15 @@ Check HCP details
       Name
     </dt>
     <dd class="govuk-summary-list__value">
+     
+
+     {% if  data['HCP-name'] %}
+     {{ data['HCP-name'] }} 
+    {% else %}
      Joe Smith
+    {% endif %}
+
+
     </dd>
   </div>
 

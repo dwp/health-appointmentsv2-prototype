@@ -111,14 +111,17 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-       Joe Smith has been added
+      
+     {% if  data['HCP-name'] %}
+     {{ data['HCP-name'] }} 
+    {% else %}
+     Joe Smith
+    {% endif %} has been added.
          </h3>
            </div>  </div>
 
 
 
-      <form action=" " method="post" class="form" >  
-       
         
         
 
@@ -129,9 +132,11 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             </h1>
          
 
-            <form action="add-HCP" method="post" class="form" >    <button type="submit" class="govuk-button" data-module="govuk-button">
-             Add a HCP
-            </button></form>
+            <form action="add-HCP" method="post" class="form" >  
+              <button type="submit" class="govuk-button" data-module="govuk-button">
+                Add a HCP
+               </button>
+               </form>
 
             
             <table class="govuk-table">
@@ -147,6 +152,29 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             </tr>
               </thead>
               <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row handsworth">
+              
+                 
+                  <td class="govuk-table__cell"><a href="#">   {% if  data['HCP-name'] %}
+                    {{ data['HCP-name'] }} 
+                   {% else %}
+                    Joe Smith
+                   {% endif %}</a></td>
+                 
+                  <td class="govuk-table__cell">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>PIP F2F </li>
+                      <li>  PIP TA</li> 
+                     <li>   WCA CN</li> 
+                     <li>    WCA F2F</li> 
+                       <li> WCA TA</li> 
+                     
+                    </ul>
+                  </td>
+                  </tr>
+
+
 
                 <tr class="govuk-table__row handsworth">
               
