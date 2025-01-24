@@ -25,7 +25,7 @@ Booked assessments - GOV.UK prototype
 <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<a href="location" class="govuk-back-link">Back</a>
 
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing govuk-width-container--extended" id="main-content" role="main">
   
@@ -227,7 +227,7 @@ Booked assessments - GOV.UK prototype
         <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
          
           <div id="dob-hint" class="govuk-hint">
-            For example, 15 3 2024
+            For example, 15 3 2025
           </div>
           <div class="govuk-date-input" id="dob">
             <div class="govuk-date-input__item">
@@ -318,11 +318,15 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href="appt-details" aria-describedby="claimant-detail-report">Jane Doe</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Wed 7 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Wed 7 Mar 2025, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  
               
-             Amy Gill
+              {% if  data['select-hcp-manage'] %}
+              {{ data['select-hcp-manage'] }} 
+             {% else %}
+               Amy Gill
+             {% endif %}
          </td>
             <td class="govuk-table__cell" data-sort-value="1"> Face to face</td>
 
@@ -332,7 +336,7 @@ Booked assessments - GOV.UK prototype
            <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Noelle Carmel</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 Mar 2025, 
               9am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Amy Gill</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -342,7 +346,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Alex Smith</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 Mar 2025, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">      
              
@@ -357,7 +361,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Fran Cliffe</a></td>
             <td class="govuk-table__cell">UC</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Fri 9 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Fri 9 Mar 2025, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Danny Travasso    </td>
             <td class="govuk-table__cell" data-sort-value="1"> Telephone </td>
@@ -368,7 +372,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Xia Jeana</a></td>
             <td class="govuk-table__cell">ESA</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Tue 13 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Tue 13 Mar 2025, 
               1pm</td>
             <td class="govuk-table__cell" data-sort-value="1"> Julie Smails</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -379,7 +383,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Sam Smart</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Wed 14 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Wed 14 Mar 2025, 
               3pm</td>
             <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -390,7 +394,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Derren Brown</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Fri 15 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Fri 15 Mar 2025, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -401,7 +405,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Noah Best</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 Mar 2025, 
               11am</td>
             <td class="govuk-table__cell" data-sort-value="1">  Raka Banerjee</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -412,7 +416,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Lucy Steel</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 Mar 2025, 
               9am</td>
             <td class="govuk-table__cell" data-sort-value="1"> Amy Gill</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
@@ -423,7 +427,7 @@ Booked assessments - GOV.UK prototype
           <tr class="govuk-table__row srel esa handsworth">
             <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Rachel Brown</a></td>
             <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 Mar 2025, 
               1pm</td>
             <td class="govuk-table__cell" data-sort-value="1">  Amy Gill</td>
             <td class="govuk-table__cell" data-sort-value="1">Telephone</td>

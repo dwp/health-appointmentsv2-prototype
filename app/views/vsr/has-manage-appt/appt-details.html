@@ -131,7 +131,7 @@ Prototype page title
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                 Wed 7 May 2024 at 9am
+                 Wed 7 Mar 2025 at 9am
                 </dd>
                 <dd class="govuk-summary-list__actions">
              <!--  <a class="govuk-link" href="app-date-time">
@@ -153,9 +153,11 @@ Prototype page title
                 <dd class="govuk-summary-list__value">
                  
                 
-              
-                 Amy Gill
-                
+                  {% if  data['select-hcp-manage'] %}
+                  {{ data['select-hcp-manage'] }} 
+                 {% else %}
+                   Amy Gill
+                 {% endif %}
                   
                 </dd>
               
@@ -200,21 +202,11 @@ Prototype page title
          
 
 
-    {% if  data['manage']   == 'availability' %}
-    
-  
-
-
-    <a href="../agents/cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Cancel appointment
-    </a>
-
-    {% else %} 
 
     <a href="cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Cancel appointment
     </a>
-    {% endif %}
+   
 
 
           
