@@ -1,0 +1,132 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/internal-header.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-full">
+
+    <a href="index" class="govuk-back-link"> Back</a>
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <dl class="govuk-summary-list govuk-!-width-two-thirds" id="change-lot">
+
+  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current lot selected
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-tag-new">Lot 100</p>
+        </dd>
+        
+        <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="">Change Lot<span class="govuk-visually-hidden"> selected lot</span></a>
+          
+        </dd>
+        
+      </div>
+      
+    
+    </dl>
+
+
+
+    <h1 class="govuk-heading-l">
+       Main menu
+    </h1>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="caseload-or-status">View a caseload or status</a>
+            </h2>
+            <p class="dwp-card__description">View a referral in progress by caseload or status</p>
+          </div>
+        </div>
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="#">Find a claimant</a>
+            </h2>
+            <p class="dwp-card__description">Search for a claimant to view their referral</p>
+          </div>
+        </div>
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="#">New referrals to assign (1779)</a>
+            </h2>
+            <p class="dwp-card__description">Assign new referrals to a caseload</p>
+          </div>
+        </div>
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="#">Create a referral</a>
+            </h2>
+            <p class="dwp-card__description">Add a paper referral to the active referrals list</p>
+          </div>
+        </div>
+       
+
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="has-manage-appt/appointments">Manage appointments</a>
+            </h2>
+            <p class="dwp-card__description">Manage booked appointments </p>
+          </div>
+        </div>
+
+
+
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="availability-management/location">Manage availability</a>
+            </h2>
+            <p class="dwp-card__description">Manage healthcare professionals (HCPs) and their appointment availability</p>
+          </div>
+        </div>
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="#">View incomplete referrals</a>
+            </h2>
+            <p class="dwp-card__description">View a list of incomplete referrals</p>
+          </div>
+        </div>
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="#">Changes to PIP referrals</a>
+            </h2>
+            <p class="dwp-card__description">Confirm new referrals and view alerts for supporting evidence, documents and changes of circumstances added to existing referrals</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
+

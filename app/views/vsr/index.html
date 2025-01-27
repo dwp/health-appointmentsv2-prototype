@@ -1,0 +1,101 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <a href="../index" class="govuk-back-link" style="margin-top:-20px;">Back</a>
+
+       
+
+      <h1 class="govuk-heading-l">
+        Service Readiness prototype
+      </h1>
+
+
+   
+
+
+<p>This prototype journey is for the Service Readniess team to view the Royal Blue service in HAS. </p>
+
+
+
+
+<h3 class="govuk-heading-s"> Release: 3.2.0 <br>
+                             Date: 27 Nov 2024 <br> </h3>
+
+
+<p class="govuk-body">  Visible to users</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>a. View appointments on one screen for both Assessment Centres</li>
+  <li>b. Improve date search for an appointment on the booked appointment page</li>
+  <li>c. Return to claimant details link – ability to move to the claimant case directly from the booked appointment list
+  </li>
+  <li>d. Ability to filter by HCP on the booked appointment page </li>
+  <li>e. Increased pagination size to allow more viewable booked appointments on one screen</li>
+</ul>
+
+
+
+
+
+<p class="govuk-body">  Not visible to users</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>A large amount of technical work was released to cover security, accessibility, performance, vulnerabilities, component version checks, compliance issues, automated testing improvements and a bug fix.</li>
+  
+</ul>
+
+<hr>
+
+<div class="govuk-inset-text">
+       
+
+  Some features like filters, logic and validation won't work the same way they will in the live service. This is a prototype. If you see an error page, it may be because you did not enter any information on the previous page. 
+</div>
+<p>Use Amy Gill (HCP) and Jane Doe (claimant) to view individual examples of managing the HCP profile and booking appointments.</p>
+
+
+      <a href="/vsr/main-menu" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+        </svg></a>
+
+
+
+      <h1 class="govuk-heading-s">
+       Shortcut to Royal Blue areas of HAS
+        </h1>
+ 
+ 
+      
+         <ul class="govuk-list govuk-list--bullet">
+   <li><a href="/vsr/availability-management/location">Manage availability</a></li>
+  <li><a href="/vsr/has-manage-appt/appointments">Manage appointments</a>  </li>
+   
+   <li><a href="/vsr/book-appt/claimant-detail">Book an appointment</a> </li>
+ 
+
+ </ul>
+
+
+
+
+     
+
+    </div>
+  </div>
+
+
+        </main>
+      </div>
+
+
+      {% endblock %}
+

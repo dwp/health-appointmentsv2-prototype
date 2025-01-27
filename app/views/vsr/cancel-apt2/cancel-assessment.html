@@ -1,0 +1,123 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Cancel appointment - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="cancel-check-answers" method="post">
+
+      <h1 class="govuk-heading-l">Why are you cancelling this appointment?</h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="Claimant cancelled">
+              <label class="govuk-label govuk-radios__label" for="cancelReason-2">
+                Claimant cancelled
+              </label>
+            </div>
+          
+           
+          
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cancelReason-3" name="cancelReason" type="radio" value="No HCP is available">
+              <label class="govuk-label govuk-radios__label" for="cancelReason-3">
+             HCP is unavailable
+              </label>
+            </div>
+            
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Overbooking">
+              <label class="govuk-label govuk-radios__label" for="cancelReason">
+           Overbooking
+              </label>
+            </div>
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cancelReason-4" name="cancelReason" type="radio" aria-controls="conditional-cancelReason" aria-expanded="true" value="Other">
+                
+                <label class="govuk-label govuk-radios__label" for="cancelReason">
+                  Other reason
+                </label>
+              </div>
+
+              <div class="govuk-radios__conditional" id="conditional-cancelReason">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="cancelReason-4">
+                    Reason for cancellation
+                  </label>
+
+                  <input class="govuk-input govuk-!-width-one-half" id="cancelReason-other" name="cancelReason-other" type="text" value="" autocomplete="off">
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </fieldset>
+      </div>
+      
+
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="150">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="action">
+            Can you provide more detail?
+          </label>
+    
+          <textarea class="govuk-textarea govuk-js-character-count" id="action" name="cancel-additional-details" rows="3" aria-describedby="action-info"></textarea><div id="action-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 150 characters remaining</div>
+          
+          
+        </div>
+      </div>
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+       Cancel appointment
+        </button>
+
+
+
+        <a class="govuk-link" href="view-appt02">Return to appointment details</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+
