@@ -1227,3 +1227,100 @@ float:left;
   text-align: right;
   padding-top:10px;
   }
+
+
+  .govuk-tag-new {
+    font-family: arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: inline-block;
+    max-width: 160px;
+    margin-top: -2px;
+    margin-bottom: -3px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    padding-left: 8px;
+    color: rgb(11.6, 44.8, 73.6);
+    background-color: rgb(187.2, 212.1, 233.7);
+    text-decoration: none;
+    overflow-wrap: break-word;
+
+  }
+
+
+  .dwp-side-navigation__list {
+    font-family: arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.dwp-side-navigation__list>li {
+  margin-bottom: 5px;
+}
+@media (max-width: 40.0525em) {
+  .dwp-side-navigation__item--selected {
+      margin-left: 0;
+      padding: 0 0 0 10px;
+  }
+}
+
+.dwp-side-navigation__item--selected {
+  margin: 10px 0 5px -14px;
+  padding: 5px 0 5px 10px;
+  border-left: 4px solid #1d70b8;
+  background-color: #f3f2f1;
+}
+
+.dwp-side-navigation__link {
+  display: inline-block;
+  padding: 9px 0;
+}
+
+.dwp-side-navigation__link--selected {
+  font-weight: bold;
+}
+
+.dwp-side-navigation__link {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.dwp-side-navigation__list {
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+
+.dwp-side-navigation__item :last-child {
+  margin-bottom: 0;
+}
+
+.dwp-side-navigation__list--sub-item {
+  margin-top: 5px;
+}
+
+.dwp-side-navigation__sub-item::before {
+  content: "—";
+  color: #505a5f;
+  font-size: 16px;
+  font-weight: 700;
+}

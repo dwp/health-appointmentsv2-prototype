@@ -1,0 +1,508 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Booked assessments - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/internal-header.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-full">
+
+
+
+
+<div class="govuk-width-container ">
+  <a href="../index.html" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing govuk-width-container--extended" id="main-content" role="main">
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third" style="border-top: none;
+    margin-top: 0px;
+    padding-top: 0px;">
+      <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5">
+        Filters
+      </h2>
+      <div id="filter-hint" class="govuk-hint govuk-!-Marchgin-bottom-4">
+        Select one or more filters to apply to the list.
+      </div>
+      <div class="table-filter">
+  <form id="filters">
+  
+  
+    <div class="moj-filter__options">
+        
+            
+        
+      <div class="govuk-form-group" style="width: 90%;">
+        <label class="govuk-label govuk-label--m" for="keywords">
+          HCP
+        </label>
+
+        <input class="govuk-input" id="keywords" name="keywords" type="text" >
+
+      </div>
+
+    
+   
+
+    </div>
+
+
+ 
+
+
+    <div class="govuk-form-group">
+  
+      <fieldset class="govuk-fieldset">
+      
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">   
+     Available for
+      </legend>
+      
+    
+      <div class="govuk-checkboxes govuk-checkboxes--small"
+        data-module="govuk-checkboxes">
+        
+      
+       
+        
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="pip" name="benefit-type" type="checkbox" value="pip">
+          <label class="govuk-label govuk-checkboxes__label" for="pip">
+            PIP F2F
+          </label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="pip" name="benefit-type" type="checkbox" value="pip">
+          <label class="govuk-label govuk-checkboxes__label" for="pip">
+            PIP TA
+          </label>
+        </div>
+  
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="uc" name="benefit-type" type="checkbox" value="uc">
+          <label class="govuk-label govuk-checkboxes__label" for="uc">
+            WCA CN
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="esa" name="benefit-type" type="checkbox" value="esa">
+          <label class="govuk-label govuk-checkboxes__label" for="esa">
+            WCA F2F
+          </label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="esa" name="benefit-type" type="checkbox" value="esa">
+          <label class="govuk-label govuk-checkboxes__label" for="esa">
+            WCA TA
+          </label>
+        </div>
+        
+      </div>    
+    
+      </fieldset>
+    
+    </div>
+  
+<div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+      Assessment centre
+    </legend>
+    
+  
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+       
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
+        <label class="govuk-label govuk-checkboxes__label" for="handsworth">
+          Birmingham Handsworth (2)
+        </label>
+      </div>
+              
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
+        <label class="govuk-label govuk-checkboxes__label" for="tresco">
+          London Tresco House (1)
+        </label>
+      </div>
+
+    </div>
+    
+    </fieldset>
+    
+  <br><br>
+
+
+    <div class="govuk-form-group">
+  
+      <fieldset class="govuk-fieldset">
+      
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+      Dates to filter
+      </legend>
+      
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+         
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="All dates" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+            All dates
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="Today" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+            Today
+              </label>
+            </div>
+           
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="Specific date" data-aria-controls="conditional-contact-3">
+              <label class="govuk-label govuk-radios__label" for="contact-3">
+               Specific date
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+               
+                  <div id="passport-issued-hint" class="govuk-hint">
+                    For example, 30 1 2024
+                  </div>
+                  <div class="govuk-date-input" id="passport-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="Specific range" data-aria-controls="conditional-contact-4">
+              <label class="govuk-label govuk-radios__label" for="contact-4">
+               Specific range
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                
+                  <div id="passport-issued-hint" class="govuk-hint">
+                    For example, 30 1 2024
+                  </div>
+      
+                  
+                 
+                  <div class="govuk-date-input" id="filter-date-start">
+                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-top: 0;">Start date</p>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter-date-start-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-start-day" name="filter-date-start-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter-date-start-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-start-month" name="filter-date-start-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter-date-start-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="filter-date-start-year" name="filter-date-start-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="govuk-date-input" id="filter-date-end">
+                    <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:20px;">End date</p>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter-date-end-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-endd-day" name="filter-date-end-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter-date-end-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-end-month" name="filter-date-endd-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter-date-end-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="filter-date-end-year" name="filter-date-end-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            
+            
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+  </div>
+
+  <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
+
+  </form>
+  
+  
+  
+  </div>
+</div>
+<div class="govuk-grid-column-two-thirds">
+      
+
+<div class="heading-wrapper" >  
+  <div class="left-float">
+      <h1 class="govuk-heading-l">
+      Available HCP times
+      </h1>
+    </div>
+    <div class="right-float"> 
+      <p><a href="booked-appointments">View booked appointments</a></p>
+    </div>
+    </div> 
+  
+      <table data-module="moj-sortable-table" class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" > <span style="color: #005ea5;">HCP ▼  </span></th>
+           
+            <th scope="col" class="govuk-table__header" aria-sort="none" >Available for</th>
+           
+            <th scope="col" class="govuk-table__header" > <span style="color: #005ea5;">Date and time ▼  </span></th>
+
+      
+           
+
+
+            <th scope="col" class="govuk-table__header" aria-sort="none" >Duration</th>
+           
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+         
+         
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell">
+              Amy Gill
+
+            </td>
+            <td class="govuk-table__cell">
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>PIP F2F </li>
+                <li>  PIP TA</li> 
+               <li>   WCA CN</li> 
+               <li>    WCA F2F</li> 
+                 <li> WCA TA</li> 
+                
+              </ul>
+
+
+            </td>
+            <td class="govuk-table__cell" data-sort-value="220708">Wed 7 Nov 2024, <br>
+              10:30 to 12:00 </td>
+            <td class="govuk-table__cell" data-sort-value="1">  
+              
+       1 hour 30 minutes
+         </td>
+          
+          </tr>
+
+
+
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell">
+              Amy Gill
+
+            </td>
+            <td class="govuk-table__cell">
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>PIP F2F </li>
+                <li>  PIP TA</li> 
+               <li>   WCA CN</li> 
+               <li>    WCA F2F</li> 
+                 <li> WCA TA</li> 
+                
+              </ul>
+
+
+            </td>
+            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 Nov 2024, <br>
+              13:00 to 16:00</td>
+            <td class="govuk-table__cell" data-sort-value="1">  
+              
+       3 hours
+         </td>
+          
+          </tr>
+
+
+
+
+
+
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell">
+              Benjamin Marshall
+
+            </td>
+            <td class="govuk-table__cell">
+
+              <ul class="govuk-list govuk-list--bullet">
+              
+                 <li> WCA TA</li> 
+                
+              </ul>
+
+
+            </td>
+            <td class="govuk-table__cell" data-sort-value="220708">Fri 9 Nov 2024, <br>
+              9:00 to 11:00 </td>
+            <td class="govuk-table__cell" data-sort-value="1">  
+              
+      2 hours
+         </td>
+          
+          </tr>
+
+
+
+
+
+          
+         
+
+       
+
+
+         
+        
+        </tbody>
+      </table>
+  
+      <nav class="moj-pagination" aria-label="Pagination navigation" style="text-align: right;">
+      
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> available HCP times</p>
+      </nav>
+  
+  
+    </div>
+  </div>
+  
+  
+<script>
+  
+
+
+  function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+                .localeCompare(b.cells[col].textContent.trim())
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+
+
+</script>
+  
+</main>
+</div>
+
+
+{% endblock %}
+
