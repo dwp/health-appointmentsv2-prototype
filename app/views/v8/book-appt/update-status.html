@@ -8,65 +8,30 @@ Prototype page title
 
 {% block header %}
 
-{% include "includes/internal-header.html" %}
+{% include "includes/blue-banner-book-assessment.html" %}
 
 
 
-
-<section class="key-details-bar" role="contentinfo" aria-label="Key details">
-  <dl class="key-details-bar__key-details">
-    <div class="key-details-bar__top-block">
-      <dt class="govuk-visually-hidden">Name:</dt>
-      <dt class="key-details-bar__name">   {% if  data['appt'] %}
-      
-        {{ data['appt'] }}
-        {% else %}
-       
-         Jane Doe
-       
-        {% endif %}
-        
-        
-        
-      </dt>
-
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dt class="key-details-bar__nino">JQ 00 11 44 B</dt>
-
-      <dt class="govuk-visually-hidden">Claim status:</dt>
-      <dd class="key-details-bar__status">ASSESSMENT BOOKED</dd>
-    </div>
-
-    <div class="key-details-bar__bottom-block">
-      <dt>Date of birth:</dt>
-      <dd>13 April 1979</dd>
-
-      <dt>Postcode:</dt>
-      <dd>N1 1XX</dd>
 
      
 
-    </div>
-  </dl>
-</section>
 {% endblock %}
 
 {% block content %}
 
 
 
-<div class="govuk-width-container ">
-<a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
+<div class="govuk-width-container" >
 
- 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-from-desktop">
+  <div class="govuk-grid-column-two-thirds" style="margin-top:-40px;">
+    <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)"  style="margin-bottom: 40px;">Back</a>
 
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
 
        
-      <form class="form" action="/status-check7" method="post">
+      <form class="form" action="/status-check-sr" method="post">
       
      
 
@@ -135,56 +100,85 @@ Prototype page title
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="status-10" name="status" type="radio" value="to-book-assessment">
             <label class="govuk-label govuk-radios__label" for="status-10">
-              Book assessment
+              Book appointment
             </label>
           </div>
+
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-11" name="status" type="radio" value="assessment-booked" {{ checked('status', 'assessment-booked') }} >
+            <input class="govuk-radios__input" id="status-11" name="status" type="radio" value="assessment-rebooked" {{ checked('status', 'assessment-rebooked') }} >
 
 
             <label class="govuk-label govuk-radios__label" for="status-11">
-              Assessment booked
+              Rebook appointment
             </label>
           </div>
+
+
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-12" name="status" type="radio" value="WCA paper based review">
+            <input class="govuk-radios__input" id="status-12" name="status" type="radio" value="assessment-booked" {{ checked('status', 'assessment-booked') }} >
+
+
             <label class="govuk-label govuk-radios__label" for="status-12">
-              WCA paper based review
+              Appointment booked
+            </label>
+          </div>
+
+         
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="status-13" name="status" type="radio" value="PIP paper based review">
+            <label class="govuk-label govuk-radios__label" for="status-13">
+              PIP paper based review
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-13" name="status" type="radio" value="Failed to attend">
-            <label class="govuk-label govuk-radios__label" for="status-13">
+            <input class="govuk-radios__input" id="status-14" name="status" type="radio" value="Failed to attend">
+            <label class="govuk-label govuk-radios__label" for="status-14">
               Failed to attend
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-14" name="status" type="radio" value="Report ready">
-            <label class="govuk-label govuk-radios__label" for="status-14">
+            <input class="govuk-radios__input" id="status-15" name="status" type="radio" value="Report ready">
+            <label class="govuk-label govuk-radios__label" for="status-15">
               Report ready
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-15" name="status" type="radio" value="HCP audit">
-            <label class="govuk-label govuk-radios__label" for="status-15">
+            <input class="govuk-radios__input" id="status-16" name="status" type="radio" value="HCP audit">
+            <label class="govuk-label govuk-radios__label" for="status-16">
               HCP audit
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-16" name="status" type="radio" value="Done">
-            <label class="govuk-label govuk-radios__label" for="status-16">
+            <input class="govuk-radios__input" id="status-17" name="status" type="radio" value="Done">
+            <label class="govuk-label govuk-radios__label" for="status-17">
               Done
             </label>
           </div>
+
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-17" name="status" type="radio" value="Withdrawn">
-            <label class="govuk-label govuk-radios__label" for="status-17">
+            <input class="govuk-radios__input" id="status-18" name="status" type="radio" value="Done">
+            <label class="govuk-label govuk-radios__label" for="status-18">
+              Return to PIP Service
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="status-19" name="status" type="radio" value="Done">
+            <label class="govuk-label govuk-radios__label" for="status-19">
+              Dead
+            </label>
+          </div>
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="status-20" name="status" type="radio" value="Withdrawn">
+            <label class="govuk-label govuk-radios__label" for="status-20">
               Withdrawn
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="status-18" name="status" type="radio" value="Created in error">
-            <label class="govuk-label govuk-radios__label" for="status-18">
+            <input class="govuk-radios__input" id="status-21" name="status" type="radio" value="Created in error">
+            <label class="govuk-label govuk-radios__label" for="status-21">
               Created in error
             </label>
           </div>
