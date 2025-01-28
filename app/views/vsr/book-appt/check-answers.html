@@ -113,7 +113,17 @@ Check appointment details - GOV.UK prototype
                 Appointment type
               </dt>
               <dd class="govuk-summary-list__value">
+               
+
+
+
+                {% if  data['assessment-channel'] %}
                 {{ data['assessment-channel'] }}
+               {% else %}
+              Telephone
+               {% endif %}
+
+
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="assessment-channel">
@@ -149,7 +159,16 @@ Check appointment details - GOV.UK prototype
               </dt>
               <dd class="govuk-summary-list__value">
                
-              Amy Gill
+            
+
+              {% if  data['select-hcp'] %}
+              {{ data['select-hcp'] }}
+             {% else %}
+             Amy Gill
+             {% endif %}
+
+
+
                 
               </dd>
             
