@@ -63,7 +63,12 @@ Date and time - GOV.UK prototype
                   Appointment type
                 </dt>
                 <dd class="govuk-summary-list__value val-chooseDateTime-channel">
-                  {{ data['assessment-channel'] }}
+                  {% if  data['assessment-channel'] %}
+                {{ data['assessment-channel'] }}
+               {% else %}
+              Telephone
+               {% endif %}
+
                 </dd>
                 
               </div>
