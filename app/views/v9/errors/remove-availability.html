@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="appointments-cancelled" method="post">
+
+      <h1 class="govuk-heading-l">Are you sure you want to remove all availability on Monday 27 May 2024?</h1>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Yes, remove availability
+        </button>
+
+      <div class="hidden-radio-post"> 
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="agent-appt-booked" name="agent-appt" type="radio" value="agent-cancelled" {{ checked('agent-appt', 'agent-cancelled') }} checked>
+
+              <label class="govuk-label govuk-radios__label" for="agent-appt-booked">
+                Hidden radio = Appointment cancelled
+              </label>
+            </div>
+          </div>
+   </div> 
+
+
+        <a class="govuk-link" href="appointments">Return to appointment availability</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+
