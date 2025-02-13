@@ -125,11 +125,9 @@ Appointment details - GOV.UK prototype
                 
                 
                 
-                  {% if  data['hcp'] %}
-                  {{ data['hcp'] }}
-                 {% else %}
+                 
                  Amy Gill
-                 {% endif %}
+                 
                  
                 
                   
@@ -137,10 +135,7 @@ Appointment details - GOV.UK prototype
               
   
              <dd class="govuk-summary-list__actions">
-                  {% if  data['apptbooked']   == 'yes' %} <a class="govuk-link" href="../book-appt/assign-hcp-option">
-                    Change<span class="govuk-visually-hidden"> any additional information</span>
-                  </a>
-                  {% endif %}
+               
                 </dd> 
               </div>
   
@@ -152,11 +147,9 @@ Appointment details - GOV.UK prototype
                 <dd class="govuk-summary-list__value">
                   
   
-                  {% if  data['more-detail'] %}
-                  {{ data['more-detail'] }}
-                 {% else %}
+                  
                  None
-                 {% endif %}
+                
   
                 </dd>
             <dd class="govuk-summary-list__actions">
@@ -168,11 +161,6 @@ Appointment details - GOV.UK prototype
       
           <div>
 
-            {% if  data['apptbooked']   == 'yes' %} 
-            <a href="cancel-assessment" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Cancel appointment
-            </a>
-            {% endif %}
           </div>
       
         </fieldset>

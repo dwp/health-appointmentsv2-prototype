@@ -83,9 +83,9 @@ Success
 
                 <th scope="col" class="govuk-table__header govuk-table__header">Type</th>
 
-        
+                <th scope="col" class="govuk-table__header govuk-table__header">HCP</th>
                 <th scope="col" class="govuk-table__header govuk-table__header">Last update</th>
-        <th scope="col" class="govuk-table__header govuk-table__header">HCP</th>
+       
 
                 <th scope="col" class="govuk-table__header govuk-table__header"></th>
               </tr>
@@ -96,20 +96,17 @@ Success
                   <td class="govuk-table__cell govuk-table__cell">	Birmingham, Handsworth</td>
                 <td class="govuk-table__cell govuk-table__cell">PIP</td>
                 <td class="govuk-table__cell govuk-table__cell">Telephone</td>
+                <td class="govuk-table__cell govuk-table__cell">  {{ data['hcp'] }}</td>
+         
+                <td class="govuk-table__cell govuk-table__cell"> {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }}  {% else %} {{ data['cancelReason'] }}  {% endif %}</th>
               
-                {% if  data['appt']   == 'booked' %}
-
-                <td class="govuk-table__cell govuk-table__cell"> Booked</th>
-                {% else %} 
-                <td class="govuk-table__cell govuk-table__cell"> Cancelled</th>
-                {% endif %} 
 
                 
 
                
 
-                <td class="govuk-table__cell govuk-table__cell">  {{ data['hcp'] }}</td>
-                <td class="govuk-table__cell govuk-table__cell"><a href="view-assessment"> View</a></td>
+               
+                <td class="govuk-table__cell govuk-table__cell"><a href="view-appt-cancelled"> View</a></td>
               </tr>
             
             </tbody>
