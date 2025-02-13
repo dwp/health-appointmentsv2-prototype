@@ -1,0 +1,55 @@
+
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Appointment cancelled - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+                  <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                     Appointment cancelled
+                    </h1>
+                    <!-- <div class="govuk-panel__body">
+                      Your reference number<br><strong>HDJ2123F</strong>
+                    </div> -->
+                  </div>
+                  <br>  <br>
+
+                  <h2 class="govuk-heading-m">Next steps</h2>
+
+                  <p class="govuk-body"> <a class="govuk-notification-banner__link" href="update-status">Update the status</a> for this claimant or <a class="govuk-notification-banner__link" href="claimant-detail">book a new appointment</a>.</p>
+                  </p>
+                </div>
+              </div>
+            </main>
+          </div>
+
+
+    </div>
+
+</div>
+
+        </main>
+      </div>
+
+
+
+      {% endblock %}
