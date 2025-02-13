@@ -1,0 +1,724 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Booked assessments - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/internal-header.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-full">
+
+
+
+
+<div class="govuk-width-container ">
+
+<!-- <a href="start" class="govuk-back-link">Back</a> -->
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing govuk-width-container--extended" id="main-content" role="main">
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third" style="border-top: none;
+    margin-top: 0px;
+    padding-top: 0px;">
+      <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5">
+        Filters
+      </h2>
+      <div id="filter-hint" class="govuk-hint govuk-!-Marchgin-bottom-4">
+        Select one or more filters to apply to the list.
+      </div>
+      <div class="table-filter">
+  <form id="filters"  action="appointments-filter-results" method="post"> 
+  
+  
+ <!-- 
+    <div class="moj-filter">
+    
+          <div class="moj-filter__header">
+        
+            <div class="moj-filter__header-title">
+              <h2 class="govuk-heading-m">Filter</h2>
+            </div>
+        
+            <div class="moj-filter__header-action">
+        
+            </div>
+        
+          </div>
+        
+          <div class="moj-filter__content">
+        
+            <div class="moj-filter__selected">
+        
+              <div class="moj-filter__selected-heading">
+        
+                <div class="moj-filter__heading-title">
+                  <h2 class="govuk-heading-m">Selected Filters</h2>
+                </div>
+        
+                <div class="moj-filter__heading-action">
+                  <p class="govuk-body-s"><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+                </div>
+        
+              </div>
+        
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-0">HCP</h3>
+        
+              <ul class="moj-filter-tags">
+        
+                <li><a class="moj-filter__tag" href=" "><span class="govuk-visually-hidden">Remove this filter</span> Amy Gill</a></li>
+        
+                <li><a class="moj-filter__tag" href=" "><span class="govuk-visually-hidden">Remove this filter</span> Danny Travasso</a></li>
+        
+              </ul>
+        
+           
+        
+            </div>
+        <br> -->
+
+
+        
+            <div class="moj-filter__options">
+        
+            
+        
+              <div class="govuk-form-group" style="width: 90%;">
+                <label class="govuk-label govuk-label--m" for="keywords">
+                  HCP
+                </label>
+        
+                <input class="govuk-input" id="keywords" name="keywords" type="text" >
+        
+              </div>
+        
+            
+           
+        
+            </div>
+        
+        
+        
+        
+
+    <div class="govuk-form-group">
+  
+      <fieldset class="govuk-fieldset">
+      
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">   
+       Benefit
+      </legend>
+      
+    
+      <div class="govuk-checkboxes govuk-checkboxes--small"
+        data-module="govuk-checkboxes">
+        
+      
+        
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="pip" name="benefit-type" type="checkbox" value="pip">
+          <label class="govuk-label govuk-checkboxes__label" for="pip">
+           PIP (8)
+          </label>
+        </div>
+  
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="uc" name="benefit-type" type="checkbox" value="uc">
+          <label class="govuk-label govuk-checkboxes__label" for="uc">
+          UC (1)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="esa" name="benefit-type" type="checkbox" value="esa">
+          <label class="govuk-label govuk-checkboxes__label" for="esa">
+          ESA (1)
+          </label>
+        </div>
+        
+      </div>    
+    
+      </fieldset>
+    
+    </div>
+  
+<div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+      Assessment centre
+    </legend>
+    
+  
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+       
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
+        <label class="govuk-label govuk-checkboxes__label" for="handsworth">
+          Birmingham Handsworth (8)
+        </label>
+      </div>
+              
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
+        <label class="govuk-label govuk-checkboxes__label" for="tresco">
+          London Tresco House (2)
+        </label>
+      </div>
+
+    </div>
+    
+    </fieldset>
+    
+  </div> 
+
+
+ 
+
+
+<!-- 
+  <div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+    HCP
+    </legend>
+    
+    <div class="govuk-form-group">
+      
+      <select class="govuk-select" id="sort" name="sort">
+        <option value=" " selected>Choose HCP</option>
+        <option value=" ">Amy Gill</option>
+        <option value=" ">Benjamin Marshall</option>
+        <option value=" ">Bernhard Fischer</option>
+
+        <option value=" ">Danny Zuko</option>
+        <option value=" ">Emma Bradley</option>
+        <option value=" ">Frieda Döring</option>
+        <option value=" ">Gabriel Mello</option>
+        <option value=" ">Jane Smith</option>
+        <option value=" ">Joe Bloggs</option>
+        <option value=" ">Julie Smails</option>
+        <option value=" ">Monica Anyanwu</option>
+        <option value=" ">Raka Banerjee</option>
+      </select>
+    </div>
+    
+    
+    </fieldset>
+    
+  </div>-->
+
+
+
+
+  <div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+    Appointment type
+    </legend>
+    
+  
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+       
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="handsworth" name="assessment-centre" type="checkbox" value="handsworth">
+        <label class="govuk-label govuk-checkboxes__label" for="handsworth">
+        Telephone (9)
+        </label>
+      </div>
+              
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="tresco" name="assessment-centre" type="checkbox" value="tresco">
+        <label class="govuk-label govuk-checkboxes__label" for="tresco">
+        Face to face (1)
+        </label>
+      </div>
+
+    </div>
+    
+    </fieldset>
+    
+  </div>
+
+
+
+  <div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+    Date of appointment
+    </legend>
+    
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="email" checked="true">
+      <label class="govuk-label govuk-radios__label" for="contact-3">
+      All dates
+      </label>
+    </div>
+
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="today">
+      <label class="govuk-label govuk-radios__label" for="contact-4">
+       Today
+      </label>
+    </div>
+
+    
+  
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" aria-controls="conditional-contact" aria-expanded="false">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Specific date
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                When was your passport issued?
+              </h1>
+            </legend> -->
+            <div id="passport-issued-hint" class="govuk-hint">
+              For example, 30 1 2024
+            </div>
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+        </div> -->
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Specific range
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            Phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+        </div> -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                When was your passport issued?
+              </h1>
+            </legend> -->
+            <div id="passport-issued-hint" class="govuk-hint">
+              For example, 30 1 2024
+            </div>
+
+            
+           
+            <div class="govuk-date-input" id="filter-date-start">
+              <p class="govuk-body govuk-!-font-weight-bold" style="margin-top: 0;">Start date</p>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-start-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-start-day" name="filter-date-start-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-start-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-start-month" name="filter-date-start-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-start-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="filter-date-start-year" name="filter-date-start-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-date-input" id="filter-date-end">
+              <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:20px;">End date</p>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-end-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-endd-day" name="filter-date-end-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-end-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter-date-end-month" name="filter-date-endd-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="filter-date-end-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="filter-date-end-year" name="filter-date-end-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+     
+  
+    </div>
+
+    </fieldset></div>
+
+
+
+
+ <!--  <div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">   
+      Case type
+    </legend>
+    
+  
+    <div class="govuk-checkboxes govuk-checkboxes--small"
+      data-module="govuk-checkboxes">
+      
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="esa" name="benefit-type" type="checkbox" value="esa">
+        <label class="govuk-label govuk-checkboxes__label" for="esa">
+          WCA complex neuro (1)
+        </label>  
+      </div>
+     
+      
+    </div>    
+  
+    </fieldset>
+  
+  </div> -->
+<!-- 
+
+  <div class="govuk-form-group">
+  
+    <fieldset class="govuk-fieldset">
+    
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">  
+    Date of appointment
+    </legend>
+    
+  
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+       
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+         
+          <div id="dob-hint" class="govuk-hint">
+            For example, 15 3 2024
+          </div>
+          <div class="govuk-date-input" id="dob">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+    </div>
+    
+    </fieldset>
+    
+  </div> -->
+
+  <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
+
+  </form>
+  
+  
+  
+  </div>
+</div>
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+  
+      <h1 class="govuk-heading-l">
+       Booked appointments 
+      </h1>
+  
+      <table data-module="moj-sortable-table" class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Claimant</th>
+            <th scope="col" class="govuk-table__header">Benefit</th>
+           
+            <th scope="col" class="govuk-table__header" > <span style="color: #005ea5;">Date and time ▼  </span></th>
+
+            <th scope="col" class="govuk-table__header" > <span style="color: #005ea5;">HCP ▼  </span></th>
+            <th scope="col" class="govuk-table__header" aria-sort="none" >Type</th>
+           
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+         
+         
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href="appt-details" aria-describedby="claimant-detail-report">Jane Doe</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Wed 7 May 2024, 
+              11am</td>
+            <td class="govuk-table__cell" data-sort-value="1">  
+              
+             Amy Gill
+         </td>
+            <td class="govuk-table__cell" data-sort-value="1"> Face to face</td>
+
+          </tr>
+
+
+           <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Noelle Carmel</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 May 2024, 
+              9am</td>
+            <td class="govuk-table__cell" data-sort-value="1">  Amy Gill</td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Alex Smith</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Thu 8 May 2024, 
+              11am</td>
+            <td class="govuk-table__cell" data-sort-value="1">      
+             
+       Amy Gill
+          
+            
+           </td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Fran Cliffe</a></td>
+            <td class="govuk-table__cell">UC</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Fri 9 May 2024, 
+              11am</td>
+            <td class="govuk-table__cell" data-sort-value="1">  Danny Travasso    </td>
+            <td class="govuk-table__cell" data-sort-value="1"> Telephone </td>
+
+          </tr>
+         
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Xia Jeana</a></td>
+            <td class="govuk-table__cell">ESA</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Tue 13 May 2024, 
+              1pm</td>
+            <td class="govuk-table__cell" data-sort-value="1"> Julie Smails</td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+         
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Sam Smart</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Wed 14 May 2024, 
+              3pm</td>
+            <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+         
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Derren Brown</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Fri 15 May 2024, 
+              11am</td>
+            <td class="govuk-table__cell" data-sort-value="1">  Monica Anyanwu</td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+         
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Noah Best</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
+              11am</td>
+            <td class="govuk-table__cell" data-sort-value="1">  Raka Banerjee</td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+         
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Lucy Steel</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
+              9am</td>
+            <td class="govuk-table__cell" data-sort-value="1"> Amy Gill</td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+         
+
+          <tr class="govuk-table__row srel esa handsworth">
+            <td class="govuk-table__cell"><a href=" " aria-describedby="claimant-detail-report">Rachel Brown</a></td>
+            <td class="govuk-table__cell">PIP</td>
+            <td class="govuk-table__cell" data-sort-value="220708">Mon 18 May 2024, 
+              1pm</td>
+            <td class="govuk-table__cell" data-sort-value="1">  Amy Gill</td>
+            <td class="govuk-table__cell" data-sort-value="1">Telephone</td>
+
+          </tr>
+         
+
+       
+
+
+         
+        
+        </tbody>
+      </table>
+  
+      <nav class="moj-pagination" aria-label="Pagination navigation" style="text-align: right;">
+      
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>10</b> appointments</p>
+      </nav>
+  
+  
+    </div>
+  </div>
+  
+  
+<script>
+  
+
+
+  function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+                .localeCompare(b.cells[col].textContent.trim())
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+
+
+</script>
+  
+</main>
+</div>
+
+
+{% endblock %}
+
