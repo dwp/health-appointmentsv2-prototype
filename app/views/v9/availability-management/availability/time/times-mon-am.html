@@ -45,8 +45,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                  
               <th scope="col" class="govuk-table__header" style="width: 20%;">Name</th>
            
-              <th scope="col" class="govuk-table__header" style="width: 20%;">Start</th>
-              <th scope="col" class="govuk-table__header" style="width: 20%;">Stop</th>
+              <th scope="col" class="govuk-table__header" style="width: 20%;">Morning</th>
+              <th scope="col" class="govuk-table__header" style="width: 20%;">Afternoon</th>
               <th scope="col" class="govuk-table__header" style="width: 20%;">Work location</th> 
              <!--  <th scope="col" class="govuk-table__header" style="width: 20%;">Available for</th> -->
             </tr>
@@ -66,29 +66,58 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                   <td class="govuk-table__cell">
                   
-                    <div class="time-wrapper"> 
-                      <div class="time-start">
-                     
-                    <label class="govuk-label">
-                      Start time
-                    </label>
-        
-                    <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                    
-                  </div>
-                  </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                       
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="hcp1-appt-time-am" name="hcp1-appt-time-am" type="checkbox" value="9am">
+                            <label class="govuk-label govuk-checkboxes__label" for="hcp1-appt-time-am">
+                              9am
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="hcp1-appt-time-am2" name="hcp1-appt-time-am" type="checkbox" value="10am">
+                            <label class="govuk-label govuk-checkboxes__label" for="hcp1-appt-time-am2">
+                              10am
+                            </label>
+                          </div>
+                         
+                         
+                        </div>
+                      </fieldset>
+                    </div>
+
+
 
                 </td>
 
                 <td class="govuk-table__cell">
-                  <div class="time-wrapper"> 
-                <div class="time-end2"> 
-                  <label class="govuk-label">
-                    Stop time
-                  </label>
-                  <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                 </div>
-                </div>
+                
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                     
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="hcp1-appt-time-pm" name="hcp1-appt-time-pm" type="checkbox" value="1pm">
+                          <label class="govuk-label govuk-checkboxes__label" for="hcp1-appt-time-pm">
+                          1pm
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="hcp1-appt-time-pm2" name="hcp1-appt-time-pm" type="checkbox" value="2pm">
+                          <label class="govuk-label govuk-checkboxes__label" for="hcp1-appt-time-pm2">
+                           2pm
+                          </label>
+                        </div>
+                       
+                       
+                      </div>
+                    </fieldset>
+                  </div>
+
+
                 </td>
 
                 <td class="govuk-table__cell"> 
@@ -171,29 +200,54 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       
                   <td class="govuk-table__cell">
                   
-                    <div class="time-wrapper"> 
-                      <div class="time-start">
-                     
-                    <label class="govuk-label">
-                      Start time
-                    </label>
-        
-                    <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                    
-                  </div>
-                  </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                       
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="hcp2-appt-time-am" name="hcp2-appt-time-am" type="checkbox" value="9am">
+                            <label class="govuk-label govuk-checkboxes__label" for="hcp2-appt-time-am">
+                              9am
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="hcp2-appt-time-am2" name="hcp2-appt-time-am" type="checkbox" value="10am">
+                            <label class="govuk-label govuk-checkboxes__label" for="hcp2-appt-time-am2">
+                              10am
+                            </label>
+                          </div>
+                         
+                         
+                        </div>
+                      </fieldset>
+                    </div>
 
                 </td> 
 
                 <td class="govuk-table__cell">
-                  <div class="time-wrapper"> 
-                <div class="time-end2"> 
-                  <label class="govuk-label">
-                    Stop time
-                  </label>
-                  <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                 </div>
-                </div>
+                 
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                     
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="hcp2-appt-time-pm" name="hcp2-appt-time-pm" type="checkbox" value="1pm">
+                          <label class="govuk-label govuk-checkboxes__label" for="hcp2-appt-time-pm">
+                          1pm
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="hcp2-appt-time-pm2" name="hcp2-appt-time-pm" type="checkbox" value="2pm">
+                          <label class="govuk-label govuk-checkboxes__label" for="hcp2-appt-time-pm2">
+                           2pm
+                          </label>
+                        </div>
+                       
+                       
+                      </div>
+                    </fieldset>
+                  </div>
+
                 </td>
 
 
@@ -252,29 +306,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                       <td class="govuk-table__cell">
                   
-                        <div class="time-wrapper"> 
-                          <div class="time-start">
-                         
-                        <label class="govuk-label">
-                          Start time
-                        </label>
-            
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                        
-                      </div>
-                      </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp3-appt-time-am" name="hcp3-appt-time-am" type="checkbox" value="9am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp3-appt-time-am">
+                                  9am
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp3-appt-time-am2" name="hcp3-appt-time-am" type="checkbox" value="10am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp3-appt-time-am2">
+                                  10am
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
     
                     </td>
     
                     <td class="govuk-table__cell">
-                      <div class="time-wrapper"> 
-                    <div class="time-end2"> 
-                      <label class="govuk-label">
-                        Stop time
-                      </label>
-                      <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                     </div>
-                    </div>
+                      
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                         
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp3-appt-time-pm" name="hcp3-appt-time-pm" type="checkbox" value="1pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp3-appt-time-pm">
+                              1pm
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp3-appt-time-pm2" name="hcp3-appt-time-pm" type="checkbox" value="2pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp3-appt-time-pm2">
+                               2pm
+                              </label>
+                            </div>
+                           
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+
+
                     </td>
     
 
@@ -283,8 +364,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                       <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation03" type="radio" value="birmingham"   >
-                          <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
+                          <input class="govuk-radios__input" id="agent-worklocation03" name="agent-worklocation03" type="radio" value="birmingham"   >
+                          <label class="govuk-label govuk-radios__label" for="agent-worklocation03">
                             Birmingham, Handsworth
                           </label>
                         </div>
@@ -350,29 +431,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                         <td class="govuk-table__cell">
                   
-                          <div class="time-wrapper"> 
-                            <div class="time-start">
-                           
-                          <label class="govuk-label">
-                            Start time
-                          </label>
-              
-                          <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                          
-                        </div>
-                        </div>
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                             
+                              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="hcp4-appt-time-am" name="hcp4-appt-time-am" type="checkbox" value="9am">
+                                  <label class="govuk-label govuk-checkboxes__label" for="hcp4-appt-time-am">
+                                    9am
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="hcp4-appt-time-am2" name="hcp4-appt-time-am" type="checkbox" value="10am">
+                                  <label class="govuk-label govuk-checkboxes__label" for="hcp4-appt-time-am2">
+                                    10am
+                                  </label>
+                                </div>
+                               
+                               
+                              </div>
+                            </fieldset>
+                          </div>
       
                       </td>
       
                       <td class="govuk-table__cell">
-                        <div class="time-wrapper"> 
-                      <div class="time-end2"> 
-                        <label class="govuk-label">
-                          Stop time
-                        </label>
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                       </div>
-                      </div>
+                        
+
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp4-appt-time-pm" name="hcp4-appt-time-pm" type="checkbox" value="1pm">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp4-appt-time-pm">
+                                1pm
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp4-appt-time-pm2" name="hcp4-appt-time-pm" type="checkbox" value="2pm">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp4-appt-time-pm2">
+                                 2pm
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
+
+
                       </td>
       
                       <td class="govuk-table__cell"> 
@@ -450,29 +558,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                  
                       <td class="govuk-table__cell">
                   
-                        <div class="time-wrapper"> 
-                          <div class="time-start">
-                         
-                        <label class="govuk-label">
-                          Start time
-                        </label>
-            
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                        
-                      </div>
-                      </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp5-appt-time-am" name="hcp5-appt-time-am" type="checkbox" value="9am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp5-appt-time-am">
+                                  9am
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp5-appt-time-am2" name="hcp5-appt-time-am" type="checkbox" value="10am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp5-appt-time-am2">
+                                  10am
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
     
                     </td>
     
                     <td class="govuk-table__cell">
-                      <div class="time-wrapper"> 
-                    <div class="time-end2"> 
-                      <label class="govuk-label">
-                        Stop time
-                      </label>
-                      <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                     </div>
-                    </div>
+                      
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                         
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp5-appt-time-pm" name="hcp5-appt-time-pm" type="checkbox" value="1pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp5-appt-time-pm">
+                              1pm
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp5-appt-time-pm2" name="hcp5-appt-time-pm" type="checkbox" value="2pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp5-appt-time-pm2">
+                               2pm
+                              </label>
+                            </div>
+                           
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+
+
                   </td>
 
                     
@@ -482,7 +617,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="agent-worklocation05" name="agent-worklocation05" type="radio" value="birmingham"  >
-                        <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
+                        <label class="govuk-label govuk-radios__label" for="agent-worklocation05">
                           Birmingham, Handsworth
                         </label>
                       </div>
@@ -551,29 +686,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                       <td class="govuk-table__cell">
                   
-                        <div class="time-wrapper"> 
-                          <div class="time-start">
-                         
-                        <label class="govuk-label">
-                          Start time
-                        </label>
-            
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                        
-                      </div>
-                      </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp6-appt-time-am" name="hcp6-appt-time-am" type="checkbox" value="9am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp6-appt-time-am">
+                                  9am
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp6-appt-time-am2" name="hcp6-appt-time-am" type="checkbox" value="10am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp6-appt-time-am2">
+                                  10am
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
     
                     </td>
     
                     <td class="govuk-table__cell">
-                      <div class="time-wrapper"> 
-                    <div class="time-end2"> 
-                      <label class="govuk-label">
-                        Stop time
-                      </label>
-                      <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                     </div>
-                    </div>
+                      
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                         
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp6-appt-time-pm" name="hcp6-appt-time-pm" type="checkbox" value="1pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp6-appt-time-pm">
+                              1pm
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp6-appt-time-pm2" name="hcp6-appt-time-pm" type="checkbox" value="2pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp6-appt-time-pm2">
+                               2pm
+                              </label>
+                            </div>
+                           
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+
+
                     </td>
     
                     <td class="govuk-table__cell"> 
@@ -625,29 +787,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                         <td class="govuk-table__cell">
                   
-                          <div class="time-wrapper"> 
-                            <div class="time-start">
-                           
-                          <label class="govuk-label">
-                            Start time
-                          </label>
-              
-                          <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                          
-                        </div>
-                        </div>
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                             
+                              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="hcp7-appt-time-am" name="hcp7-appt-time-am" type="checkbox" value="9am">
+                                  <label class="govuk-label govuk-checkboxes__label" for="hcp7-appt-time-am">
+                                    9am
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="hcp7-appt-time-am2" name="hcp7-appt-time-am" type="checkbox" value="10am">
+                                  <label class="govuk-label govuk-checkboxes__label" for="hcp7-appt-time-am2">
+                                    10am
+                                  </label>
+                                </div>
+                               
+                               
+                              </div>
+                            </fieldset>
+                          </div>
       
                       </td>
       
                       <td class="govuk-table__cell">
-                        <div class="time-wrapper"> 
-                      <div class="time-end2"> 
-                        <label class="govuk-label">
-                          Stop time
-                        </label>
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                       </div>
-                      </div>
+                        
+
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp7-appt-time-pm" name="hcp7-appt-time-pm" type="checkbox" value="1pm">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp7-appt-time-pm">
+                                1pm
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp7-appt-time-pm2" name="hcp7-appt-time-pm" type="checkbox" value="2pm">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp7-appt-time-pm2">
+                                 2pm
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
+
+
                       </td>
 
                       <td class="govuk-table__cell"> 
@@ -712,29 +901,55 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                    
                         <td class="govuk-table__cell">
                   
-                          <div class="time-wrapper"> 
-                            <div class="time-start">
-                           
-                          <label class="govuk-label">
-                            Start time
-                          </label>
-              
-                          <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                          
-                        </div>
-                        </div>
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                             
+                              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="hcp8-appt-time-am" name="hcp8-appt-time-am" type="checkbox" value="9am">
+                                  <label class="govuk-label govuk-checkboxes__label" for="hcp8-appt-time-am">
+                                    9am
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="hcp8-appt-time-am2" name="hcp8-appt-time-am" type="checkbox" value="10am">
+                                  <label class="govuk-label govuk-checkboxes__label" for="hcp8-appt-time-am2">
+                                    10am
+                                  </label>
+                                </div>
+                               
+                               
+                              </div>
+                            </fieldset>
+                          </div>
       
                       </td>
       
                       <td class="govuk-table__cell">
-                        <div class="time-wrapper"> 
-                      <div class="time-end2"> 
-                        <label class="govuk-label">
-                          Stop time
-                        </label>
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                       </div>
-                      </div>
+                      
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp8-appt-time-pm" name="hcp8-appt-time-pm" type="checkbox" value="1pm">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp1-appt-time-pm">
+                                1pm
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp8-appt-time-pm2" name="hcp8-appt-time-pm" type="checkbox" value="2pm">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp8-appt-time-pm2">
+                                 2pm
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
+
+
                       </td>
 
                       <td class="govuk-table__cell"> 
@@ -796,29 +1011,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                       <td class="govuk-table__cell">
                   
-                        <div class="time-wrapper"> 
-                          <div class="time-start">
-                         
-                        <label class="govuk-label">
-                          Start time
-                        </label>
-            
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                        
-                      </div>
-                      </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp9-appt-time-am" name="hcp9-appt-time-am" type="checkbox" value="9am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp9-appt-time-am">
+                                  9am
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp9-appt-time-am2" name="hcp9-appt-time-am" type="checkbox" value="10am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp9-appt-time-am2">
+                                  10am
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
     
                     </td>
     
                     <td class="govuk-table__cell">
-                      <div class="time-wrapper"> 
-                    <div class="time-end2"> 
-                      <label class="govuk-label">
-                        Stop time
-                      </label>
-                      <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                     </div>
-                    </div>
+                      
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                         
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp9-appt-time-pm" name="hcp9-appt-time-pm" type="checkbox" value="1pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp9-appt-time-pm">
+                              1pm
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp9-appt-time-pm2" name="hcp9-appt-time-pm" type="checkbox" value="2pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp9-appt-time-pm2">
+                               2pm
+                              </label>
+                            </div>
+                           
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+
+
                     </td>
 
 
@@ -828,7 +1070,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                       <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="agent-worklocation09" name="agent-worklocation09" type="radio" value="birmingham"  >
-                          <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
+                          <label class="govuk-label govuk-radios__label" for="agent-worklocation09">
                             Birmingham, Handsworth
                           </label>
                         </div>
@@ -887,29 +1129,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                       <td class="govuk-table__cell">
                   
-                        <div class="time-wrapper"> 
-                          <div class="time-start">
-                         
-                        <label class="govuk-label">
-                          Start time
-                        </label>
-            
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                        
-                      </div>
-                      </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp10-appt-time-am" name="hcp10-appt-time-am" type="checkbox" value="9am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp10-appt-time-am">
+                                  9am
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp10-appt-time-am2" name="hcp10-appt-time-am" type="checkbox" value="10am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp10-appt-time-am2">
+                                  10am
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
     
                     </td>
     
                     <td class="govuk-table__cell">
-                      <div class="time-wrapper"> 
-                    <div class="time-end2"> 
-                      <label class="govuk-label">
-                        Stop time
-                      </label>
-                      <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                     </div>
-                    </div>
+                      
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                         
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp10-appt-time-pm" name="hcp10-appt-time-pm" type="checkbox" value="1pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp10-appt-time-pm">
+                              1pm
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp10-appt-time-pm2" name="hcp10-appt-time-pm" type="checkbox" value="2pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp10-appt-time-pm2">
+                               2pm
+                              </label>
+                            </div>
+                           
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+
+
                     </td>
 
 
@@ -925,7 +1194,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="agent-worklocation10" name="agent-worklocation10" type="radio" value="remote"  >
-                          <label class="govuk-label govuk-radios__label" for="agent-worklocation010">
+                          <label class="govuk-label govuk-radios__label" for="agent-worklocation10">
                             Working from home
                           </label>
                         </div>
@@ -963,29 +1232,54 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                       <td class="govuk-table__cell">
                   
-                        <div class="time-wrapper"> 
-                          <div class="time-start">
-                         
-                        <label class="govuk-label">
-                          Start time
-                        </label>
-            
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                        
-                      </div>
-                      </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp11-appt-time-am" name="hcp11-appt-time-am" type="checkbox" value="9am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp11-appt-time-am">
+                                  9am
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp11-appt-time-am2" name="hcp11-appt-time-am" type="checkbox" value="10am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp11-appt-time-am2">
+                                  10am
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
     
                     </td>
     
                     <td class="govuk-table__cell">
-                      <div class="time-wrapper"> 
-                    <div class="time-end2"> 
-                      <label class="govuk-label">
-                        Stop time
-                      </label>
-                      <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                     </div>
-                    </div>
+                      
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                         
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp11-appt-time-pm" name="hcp11-appt-time-pm" type="checkbox" value="1pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp11-appt-time-pm">
+                              1pm
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp11-appt-time-pm2" name="hcp11-appt-time-pm" type="checkbox" value="2pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp11-appt-time-pm2">
+                               2pm
+                              </label>
+                            </div>
+                           
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+
                     </td>
 
                     <td class="govuk-table__cell"> 
@@ -1044,29 +1338,56 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
                       <td class="govuk-table__cell">
                   
-                        <div class="time-wrapper"> 
-                          <div class="time-start">
-                         
-                        <label class="govuk-label">
-                          Start time
-                        </label>
-            
-                        <input class="govuk-input govuk-input--width-5" id="width-5" name="time-start" type="text"  aria-describedby="time-hint" autocomplete="off" value="09:00">   
-                        
-                      </div>
-                      </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                           
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp12-appt-time-am" name="hcp12-appt-time-am" type="checkbox" value="9am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp12-appt-time-am">
+                                  9am
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hcp12-appt-time-am2" name="hcp12-appt-time-am" type="checkbox" value="10am">
+                                <label class="govuk-label govuk-checkboxes__label" for="hcp12-appt-time-am2">
+                                  10am
+                                </label>
+                              </div>
+                             
+                             
+                            </div>
+                          </fieldset>
+                        </div>
     
                     </td>
     
                     <td class="govuk-table__cell">
-                      <div class="time-wrapper"> 
-                    <div class="time-end2"> 
-                      <label class="govuk-label">
-                        Stop time
-                      </label>
-                      <input class="govuk-input govuk-input--width-5" id="width-5" name="time-end" type="text"  aria-describedby="time-hint"  autocomplete="off" value="12:00">
-                     </div>
-                    </div>
+                      
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                         
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp12-appt-time-pm" name="hcp12-appt-time-pm" type="checkbox" value="1pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp12-appt-time-pm">
+                              1pm
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="hcp12-appt-time-pm2" name="hcp12-appt-time-pm" type="checkbox" value="2pm">
+                              <label class="govuk-label govuk-checkboxes__label" for="hcp12-appt-time-pm2">
+                               2pm
+                              </label>
+                            </div>
+                           
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+
+
                     </td>
 
                     <td class="govuk-table__cell"> 
