@@ -9,15 +9,36 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row" style="margin-top: -40px;">
   <div class="govuk-grid-column-full">
-    <a href="../manage-select" class="govuk-back-link">Back</a>
+    <a href="../" class="govuk-back-link">Back</a>
 
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success     
+    
+      </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+     
+      
+       
+        <h3 class="govuk-notification-banner__heading" >
+        Appointment availability added
+      </h3>
+      <p class="govuk-body" style="max-width: 655px !important;">Appointments can now be booked on <span style="white-space:nowrap">Monday 11 March 2025.</span></p>
+       
+        
+    
+      </div>
+      </div>
+
+
   
     <h1 class="govuk-heading-l">
       Appointment availability in Birmingham, Handsworth
     </h1>
 
-   
 
     <nav class="govuk-pagination" role="navigation" aria-label="results">
       <div class="govuk-pagination__prev">
@@ -36,8 +57,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     </nav>
 
 
-  
-
+      
     <form class="form" action="check-answers" method="post">
     <div class="govuk-tabs " data-module="govuk-tabs">
       <ul class="govuk-tabs__list " role="tablist">
@@ -98,39 +118,369 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       <!-- Day one-->
         <div class="govuk-tabs__panel" id="monday" role="tabpanel" aria-labelledby="tab_monday">
           <div class="govuk-grid-row">
-  
 
-  <div class="govuk-grid-column-full">
-  <div class="govuk-form-group" style="margin-bottom:-10px;">
-  <fieldset class="govuk-fieldset">
-    <dl class="govuk-summary-list">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h1 class="govuk-fieldset__heading">
-        Monday 
-      </h1>
-    </legend>
+            <!-- mon -->
+            <div class="govuk-grid-column-full">
+
+
+    <div class="govuk-form-group" style="margin-bottom:-10px;">
+      <fieldset class="govuk-fieldset">
+        <dl class="govuk-summary-list">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h1 class="govuk-fieldset__heading">
+            Monday 
+          </h1>
+        </legend>
+        
     
-
-    </dd>
-
-        <dd class="govuk-summary-list__value" style="width:5%;"> 
-          <li class="govuk-summary-list__actions-list-item">
-            <a class="govuk-link" href="day/mon">
-            Add
-              </a>
-          </li>
         </dd>
-      </div>
-    
-           
-      <p> No availability added  </p>
+
+
+
+    <!-- Change / add link -->
+    <dd class="govuk-summary-list__value" style="width:5%;"> 
+      <li class="govuk-summary-list__actions-list-item">
+        <a class="govuk-link" href="day/mon">
+          {% if data['agent-mon-am-name']  %} Change 
+          {% else %}Add   {% endif %}
+          </a>
+      </li>
+    </dd>
+  </div>
+
+          
+      <!-- Monday morning -->
+          {% if data['agent-mon-am-name']  %}
+          
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" style="width: 30%;"> <span style="color: #005ea5;"> Name ▼ </span>  </th>
+                <th scope="col" class="govuk-table__header" style="width: 40%;">Time</th>
+          
+              <th scope="col" class="govuk-table__header" style="width: 30%;"> Work location </th> 
+               <!--  <th scope="col" class="govuk-table__header" style="width: 20%;"> Available for  </th> -->
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+
+              {% if  data['agent-mon-am-name'].includes('Amy Gill') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Amy Gill    </td>
+
+
+                <td class="govuk-table__cell">    
+                 
+                09:00 to 12:00<br> 14:00 to 17:00
+                </td>  
+
+              <td class="govuk-table__cell"> Birmingham, Handsworth </td>   
+
+               <!--  <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                 
+                 <li>   WCA CN</li> 
+                 <li>    WCA F2F</li> 
+                   <li> WCA TA</li> 
+                  
+                </ul></td>   -->
+               
+               
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Benjamin Marshall') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Benjamin Marshall   </td>
+
+
+                <td class="govuk-table__cell">  
+                  
+                  09:00 to 16:00
+                   </td>  
+                
+                <td class="govuk-table__cell"> Working from home</td>  
+
+
+             <!--    <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                  
+                   <li> WCA TA</li> 
+
+                 
+                  
+                </ul>
+               
+                   
+              </tr> -->
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Bernhard Fischer') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Bernhard Fischer  </td>
+
+
+                <td class="govuk-table__cell">  
+                  09:00 to 17:00
+                     </td>  
+                
+                <td class="govuk-table__cell"> Birmingham, Handsworth </td> 
+          <!--   <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                 
+                 <li>    WCA F2F</li> 
+                   <li> WCA TA</li> 
+                  
+                </ul>
+               </td>-->
+                   
+              </tr> 
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Danny Zuko') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Danny Zuko </td>
+
+
+                <td class="govuk-table__cell">   
+        12:00 to 17:00
+                </td>  
+                
+              <td class="govuk-table__cell"> Birmingham, Handsworth </td>  
+               
+              <!--   <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                  <li>PIP F2F </li>
+                  <li>  PIP TA</li> 
+                 
+                  
+                </ul></td> -->
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Emma Bradley') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  	Emma Bradley</td>
+
+
+                <td class="govuk-table__cell">   
+                  09:00 to 14:00
+                    </td>  
+
+           <td class="govuk-table__cell"> Birmingham, Handsworth </td>  
+
+              <!--  <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                  <li>PIP F2F </li>
+                  <li>  PIP TA</li> 
+                
+                  
+                </ul>
+               
+                   </td>-->
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Frieda Döring') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Frieda Döring</td>
+
+
+                <td class="govuk-table__cell">   
+                  09:00 to 17:00
+                </td>  
+                
+              <td class="govuk-table__cell"> Working from home</td>   
+               
+              <!--   <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                
+                 <li>    WCA F2F</li> 
+                   <li> WCA TA</li> 
+                  
+                </ul></td>-->
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Gabriel Mello') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Gabriel Mello</td>
+
+
+                <td class="govuk-table__cell">  
+                  09:00 to 12:00<br> 13:00 to 16:00
+                     </td>  
+                
+              <td class="govuk-table__cell"> Birmingham, Handsworth</td>   
+               
+               <!-- <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                 
+                   <li> WCA TA</li> 
+                  
+                </ul></td> -->
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Jane Smith') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Jane Smith</td>
+
+
+                <td class="govuk-table__cell">  
+                  09:00 to 12:00<br> 13:00 to 16:00
+                </td>  
+
+           <td class="govuk-table__cell"> Working from home</td>  
+               
+              <!--   <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+              
+                  <li>  PIP TA</li> 
+                
+                  
+                </ul></td>-->
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Joe Bloggs') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Joe Bloggs</td>
+
+                <td class="govuk-table__cell">   
+                  09:00 to 12:00<br> 13:00 to 16:00
+                </td>   
+                
+               <td class="govuk-table__cell">Birmingham, Handsworth </td>  
+               
+               <!-- <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                  <li>PIP F2F </li>
+                  <li>  PIP TA</li> 
+             
+                  
+                </ul></td> -->
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Julie Smails') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Julie Smails</td>
+
+
+                <td class="govuk-table__cell">  
+                  09:00 to 12:00<br> 13:00 to 16:00
+                     </td>  
+                
+                <td class="govuk-table__cell"> Working from home</td>   
+               
+               <!--  <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                 
+                  <li>  PIP TA</li> 
+               
+                  
+                </ul></td> -->
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Monica Anyanwu') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Monica Anyanwu</td>
+
+                <td class="govuk-table__cell">  
+                  09:00 to 16:00
+                </td>  
+                
+               <td class="govuk-table__cell"> Working from home</td>   
+               
+                <!-- <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                 
+                   <li> WCA TA</li> 
+                  
+                </ul></td> -->
+                   
+              </tr>
+
+              {% endif %}
+
+              {% if  data['agent-mon-am-name'].includes('Raka Banerjee') %} 
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Raka Banerjee</td>
+
+
+                <td class="govuk-table__cell">  
+                  09:00 to 16:00
+                </td>  
+
+                <td class="govuk-table__cell"> Working from home</td>    
+               <!--  <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
+                
+                  <li>  PIP TA</li> 
+               
+                  
+                </ul>
+              </td> -->
+                   
+              </tr>
+
+              {% endif %}
+
+
+
+             
+              
+          
+
+
+        
+        </table>
+
+        {% else %}
+        <p> No availability added  </p>
+
+
+        {% endif %}
+        
+        
+       
+      </tbody> 
+
+
+      
+
+      </dd>
+
+       
     
     
     </dl>
 
 
+  </fieldset>
+  
+            </div>
 
-  </div>
+         
   </div>
 
         </div>
@@ -183,7 +533,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
             </div>
           
-        
+           
             </div>
           
         </div>
@@ -255,7 +605,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                   <dl class="govuk-summary-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h1 class="govuk-fieldset__heading">
-                    Thursday
+                    Thursday 
                     </h1>
                   </legend>
                   
@@ -286,7 +636,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
             </div>
           
-           
+            
             </div>
 
             
@@ -415,7 +765,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
           <h1 class="govuk-fieldset__heading">
-            Sunday
+            Sunday 
           </h1>
         </legend>
         
@@ -486,6 +836,44 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   </main>
 </div>
 
+<script>
+  
 
+
+  function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+                .localeCompare(b.cells[col].textContent.trim())
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+
+
+</script>
 
 {% endblock %}
