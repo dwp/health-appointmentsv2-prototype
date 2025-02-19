@@ -26,7 +26,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         <h3 class="govuk-notification-banner__heading" >
         Appointment availability added
       </h3>
-      <p class="govuk-body" style="max-width: 655px !important;">Appointments can now be booked in the morning on <span style="white-space:nowrap">Monday 11 March 2025.</span></p>
+      <p class="govuk-body" style="max-width: 655px !important;">Appointments can now be booked on <span style="white-space:nowrap">Monday 11 March 2025.</span></p>
        
         
     
@@ -119,8 +119,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         <div class="govuk-tabs__panel" id="monday" role="tabpanel" aria-labelledby="tab_monday">
           <div class="govuk-grid-row">
 
-            <!-- mon morning-->
-          <div class="govuk-grid-column-one-half">
+            <!-- mon -->
+            <div class="govuk-grid-column-full">
 
 
     <div class="govuk-form-group" style="margin-bottom:-10px;">
@@ -128,7 +128,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
           <h1 class="govuk-fieldset__heading">
-            Monday morning
+            Monday 11 March 2025
           </h1>
         </legend>
         
@@ -138,22 +138,15 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
     <!-- Change / add link -->
-            <dd class="govuk-summary-list__value" style="width:38%; text-align: right;"> 
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link" href="copy/copy-mon-am">
-                Copy 
-                  </a>
-              </li>
-
-
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link" href="day/mon-am">
-                  {% if data['agent-mon-am-name']  %} Change 
-                  {% else %}Add   {% endif %}
-                  </a>
-              </li>
-            </dd>
-          </div>
+    <dd class="govuk-summary-list__value" style="width:5%;"> 
+      <li class="govuk-summary-list__actions-list-item">
+        <a class="govuk-link" href="day/mon">
+          {% if data['agent-mon-am-name']  %} Change 
+          {% else %}Add   {% endif %}
+          </a>
+      </li>
+    </dd>
+  </div>
 
           
       <!-- Monday morning -->
@@ -162,9 +155,10 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           <table class="govuk-table">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header" style="width: 10%;"> <span style="color: #005ea5;"> Name ▼ </span>  </th>
-                <th scope="col" class="govuk-table__header" style="width: 15%;"> <span style="color: #005ea5;">Times ▼  </span></th>
-              <th scope="col" class="govuk-table__header" style="width: 10%;"> Work location </th> 
+                <th scope="col" class="govuk-table__header" style="width: 30%;"> <span style="color: #005ea5;"> Name ▼ </span>  </th>
+                <th scope="col" class="govuk-table__header" style="width: 20%;">Morning</th>
+                <th scope="col" class="govuk-table__header" style="width: 20%;">Afternoon</th>
+              <th scope="col" class="govuk-table__header" style="width: 30%;"> Work location </th> 
                <!--  <th scope="col" class="govuk-table__header" style="width: 20%;"> Available for  </th> -->
               </tr>
             </thead>
@@ -176,7 +170,23 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Amy Gill    </td>
 
 
-                <td class="govuk-table__cell"> 09:00 to  13:00</td>   
+                <td class="govuk-table__cell">    
+                  <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp1-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                  <li>None</li>
+                  {% endfor %}
+                </ul>
+                
+               </td>   
+                <td class="govuk-table__cell">   <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp1-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>     </td>  
 
               <td class="govuk-table__cell"> Birmingham, Handsworth </td>   
 
@@ -200,7 +210,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Benjamin Marshall   </td>
 
 
-                <td class="govuk-table__cell"> 08:30 to  11:30</td> 
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp2-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp2-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
                 
                 <td class="govuk-table__cell"> Working from home</td>  
 
@@ -224,7 +247,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Bernhard Fischer  </td>
 
 
-                <td class="govuk-table__cell"> 10:00 to  11:30</td>  
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp3-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp3-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
                 
                 <td class="govuk-table__cell"> Birmingham, Handsworth </td> 
           <!--   <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
@@ -245,7 +281,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Danny Zuko </td>
 
 
-                <td class="govuk-table__cell"> 08:45 to  12:00</td>  
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp4-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp4-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
                 
               <td class="govuk-table__cell"> Birmingham, Handsworth </td>  
                
@@ -266,7 +315,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  	Emma Bradley</td>
 
 
-                <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp5-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp5-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
 
            <td class="govuk-table__cell"> Birmingham, Handsworth </td>  
 
@@ -288,7 +350,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Frieda Döring</td>
 
 
-                <td class="govuk-table__cell"> 09:00 to  12:00</td> 
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp6-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp6-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
                 
               <td class="govuk-table__cell"> Working from home</td>   
                
@@ -309,7 +384,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Gabriel Mello</td>
 
 
-                <td class="govuk-table__cell"> 09:30 to  11:45</td>  
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp7-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp7-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
                 
               <td class="govuk-table__cell"> Birmingham, Handsworth</td>   
                
@@ -329,7 +417,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Jane Smith</td>
 
 
-                <td class="govuk-table__cell"> 08:00 to  12:00</td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp8-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp8-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
 
            <td class="govuk-table__cell"> Working from home</td>  
                
@@ -349,8 +450,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">  Joe Bloggs</td>
 
-
-                <td class="govuk-table__cell"> 09:00 to  12:00</td>  
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp9-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp9-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>   
                 
                <td class="govuk-table__cell">Birmingham, Handsworth </td>  
                
@@ -371,7 +484,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Julie Smails</td>
 
 
-                <td class="govuk-table__cell"> 09:00 to  12:00</td>  
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp10-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp10-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
                 
                 <td class="govuk-table__cell"> Working from home</td>   
                
@@ -391,8 +517,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">  Monica Anyanwu</td>
 
-
-                <td class="govuk-table__cell"> 09:00 to  12:00</td>
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp11-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp11-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
                 
                <td class="govuk-table__cell"> Working from home</td>   
                
@@ -411,8 +549,20 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">  Raka Banerjee</td>
 
-
-                <td class="govuk-table__cell"> 09:00 to  12:00</td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp12-appt-time-am'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                   <li>None</li>
+                  {% endfor %}
+                </ul>  </td>   
+                <td class="govuk-table__cell">    <ul class="govuk-list govuk-list--bullet">
+                  {% for feature in data['hcp12-appt-time-pm'] %}
+                    <li>{{ feature }}</li>
+                  {% else %}
+                     <li>None</li>
+                  {% endfor %}
+                </ul>    </td>  
 
                 <td class="govuk-table__cell"> Working from home</td>    
                <!--  <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
@@ -438,7 +588,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         </table>
 
         {% else %}
-        <p> No availability added  </p>
+        <p>No availability added  </p>
 
 
         {% endif %}
@@ -462,63 +612,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   
             </div>
 
-             <!-- mon afternoon-->
-            <div class="govuk-grid-column-one-half">
-
-
-              <div class="govuk-form-group" style="margin-bottom:-10px;">
-                <fieldset class="govuk-fieldset">
-                  <dl class="govuk-summary-list">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    <h1 class="govuk-fieldset__heading">
-                      Monday afternoon 
-                    </h1>
-                  </legend>
-                  
-              
-                  </dd>
-          
-          
-          
-              <!-- Change / add link -->
-                      <dd class="govuk-summary-list__value" style="width:10%;"> 
-                        <li class="govuk-summary-list__actions-list-item">
-                          <a class="govuk-link" href="day/mon-pm">
-                            {% if data['agent-mon-pm-name']  %} Change 
-                            {% else %}Add   {% endif %}
-                            </a>
-                        </li>
-                      </dd>
-                    </div>
-          
-                    
-       
-                    
-          
-                
-                  <p> No availability added  </p>
-          
-          
-                 
-                  
-                  
-                 
-                </tbody> 
-          
-          
-                
-          
-                </dd>
-          
-                 
-              
-              
-              </dl>
-          
-          
-            </fieldset>
-            
-                      </div>
+         
   </div>
 
         </div>
@@ -530,7 +624,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         <div class="govuk-tabs__panel" id="tuesday" role="tabpanel" aria-labelledby="tab_tuesday">
           
           <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
+            <div class="govuk-grid-column-full">
           
           
             
@@ -540,14 +634,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                   <dl class="govuk-summary-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h1 class="govuk-fieldset__heading">
-                     Tuesday morning
+                     Tuesday 12 March 2025
                     </h1>
                   </legend>
                   
               
                   </dd>
               
-                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                      <dd class="govuk-summary-list__value" style="width:5%;"> 
                         <li class="govuk-summary-list__actions-list-item">
                           <a class="govuk-link" href=" ">
                             Add 
@@ -558,7 +652,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
                     
                 
-                <p> No availability added  </p>
+                <p>No availability added  </p>
                 </dd>
           
                  
@@ -571,37 +665,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
             </div>
           
-            <div class="govuk-grid-column-one-half">
-            <div class="govuk-form-group" style="margin-bottom:-10px;">
-            <fieldset class="govuk-fieldset">
-              <dl class="govuk-summary-list">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                <h1 class="govuk-fieldset__heading">
-                 Tuesday afternoon 
-                </h1>
-              </legend>
-              
-          
-              </dd>
-          
-                  <dd class="govuk-summary-list__value" style="width:10%;"> 
-                    <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href=" ">
-                      Add
-                        </a>
-                    </li>
-                  </dd>
-                </div>
-              
-                     
-                <p> No availability added  </p>
-              
-              
-              </dl>
-          
-          
-          
-            </div>
+           
             </div>
           
         </div>
@@ -610,7 +674,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
         <div class="govuk-tabs__panel" id="wednesday" role="tabpanel" aria-labelledby="tab_wednesday">
            <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
+            <div class="govuk-grid-column-full">
           
           
             
@@ -620,14 +684,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                   <dl class="govuk-summary-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h1 class="govuk-fieldset__heading">
-                     Wednesday morning
+                     Wednesday 13 March 2025
                     </h1>
                   </legend>
                   
               
                   </dd>
               
-                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                      <dd class="govuk-summary-list__value" style="width:5%;"> 
                         <li class="govuk-summary-list__actions-list-item">
                           <a class="govuk-link" href=" ">
                             Add 
@@ -638,7 +702,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
                     
                 
-                <p> No availability added  </p>
+                <p>No availability added  </p>
                 </dd>
           
                  
@@ -651,37 +715,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
             </div>
           
-            <div class="govuk-grid-column-one-half">
-            <div class="govuk-form-group" style="margin-bottom:-10px;">
-            <fieldset class="govuk-fieldset">
-              <dl class="govuk-summary-list">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                <h1 class="govuk-fieldset__heading">
-                 Wednesday afternoon 
-                </h1>
-              </legend>
-              
-          
-              </dd>
-          
-                  <dd class="govuk-summary-list__value" style="width:10%;"> 
-                    <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href=" ">
-                      Add
-                        </a>
-                    </li>
-                  </dd>
-                </div>
-              
-                     
-                <p> No availability added  </p>
-              
-              
-              </dl>
-          
-          
-          
-            </div>
+           
             </div>
 
             
@@ -693,7 +727,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
 
           <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
+            <div class="govuk-grid-column-full">
           
           
             
@@ -703,14 +737,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                   <dl class="govuk-summary-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h1 class="govuk-fieldset__heading">
-                    Thursday morning
+                    Thursday 14 March 2025
                     </h1>
                   </legend>
                   
               
                   </dd>
               
-                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                      <dd class="govuk-summary-list__value" style="width:5%;"> 
                         <li class="govuk-summary-list__actions-list-item">
                           <a class="govuk-link" href=" ">
                             Add 
@@ -721,7 +755,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
                     
                 
-                <p> No availability added  </p>
+                <p>No availability added  </p>
                 </dd>
           
                  
@@ -734,37 +768,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
             </div>
           
-            <div class="govuk-grid-column-one-half">
-            <div class="govuk-form-group" style="margin-bottom:-10px;">
-            <fieldset class="govuk-fieldset">
-              <dl class="govuk-summary-list">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                <h1 class="govuk-fieldset__heading">
-             Thursday afternoon 
-                </h1>
-              </legend>
-              
-          
-              </dd>
-          
-                  <dd class="govuk-summary-list__value" style="width:10%;"> 
-                    <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href=" ">
-                      Add
-                        </a>
-                    </li>
-                  </dd>
-                </div>
-              
-                     
-                <p> No availability added  </p>
-              
-              
-              </dl>
-          
-          
-          
-            </div>
+            
             </div>
 
             
@@ -776,7 +780,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         <div class="govuk-tabs__panel" id="friday" role="tabpanel" aria-labelledby="tab_friday">
           
           <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
+            <div class="govuk-grid-column-full">
           
           
             
@@ -786,14 +790,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                   <dl class="govuk-summary-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h1 class="govuk-fieldset__heading">
-                    Friday morning
+                    Friday 15 March 2025
                     </h1>
                   </legend>
                   
               
                   </dd>
               
-                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                      <dd class="govuk-summary-list__value" style="width:5%;"> 
                         <li class="govuk-summary-list__actions-list-item">
                           <a class="govuk-link" href=" ">
                             Add 
@@ -804,7 +808,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
           
                     
                 
-                <p> No availability added  </p>
+                <p>No availability added  </p>
                 </dd>
           
                  
@@ -817,37 +821,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
             </div>
           
-            <div class="govuk-grid-column-one-half">
-            <div class="govuk-form-group" style="margin-bottom:-10px;">
-            <fieldset class="govuk-fieldset">
-              <dl class="govuk-summary-list">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                <h1 class="govuk-fieldset__heading">
-                  Friday afternoon 
-                </h1>
-              </legend>
-              
-          
-              </dd>
-          
-                  <dd class="govuk-summary-list__value" style="width:10%;"> 
-                    <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href=" ">
-                      Add
-                        </a>
-                    </li>
-                  </dd>
-                </div>
-              
-                     
-                <p> No availability added  </p>
-              
-              
-              </dl>
-          
-          
-          
-            </div>
+           
             </div>
 
             
@@ -860,7 +834,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
          
 
           <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
+            <div class="govuk-grid-column-full">
           
           
             
@@ -870,14 +844,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                   <dl class="govuk-summary-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h1 class="govuk-fieldset__heading">
-                     Saturday morning
+                     Saturday 16 March 2025
                     </h1>
                   </legend>
                   
               
                   </dd>
               
-                      <dd class="govuk-summary-list__value" style="width:10%;"> 
+                      <dd class="govuk-summary-list__value" style="width:5%;"> 
                         <li class="govuk-summary-list__actions-list-item">
                           <a class="govuk-link" href=" ">
                             Add 
@@ -901,37 +875,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             
             </div>
           
-            <div class="govuk-grid-column-one-half">
-            <div class="govuk-form-group" style="margin-bottom:-10px;">
-            <fieldset class="govuk-fieldset">
-              <dl class="govuk-summary-list">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                <h1 class="govuk-fieldset__heading">
-                 Saturday afternoon 
-                </h1>
-              </legend>
-              
-          
-              </dd>
-          
-                  <dd class="govuk-summary-list__value" style="width:10%;"> 
-                    <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href=" ">
-                      Add
-                        </a>
-                    </li>
-                  </dd>
-                </div>
-              
-                     
-                <p> No availability added  </p>
-              
-              
-              </dl>
-          
-          
-          
-            </div>
+           
             </div>
           
 
@@ -943,7 +887,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
         <div class="govuk-tabs__panel" id="sunday" role="tabpanel" aria-labelledby="tab_sunday">
           <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
+  <div class="govuk-grid-column-full">
 
 
   
@@ -953,14 +897,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
           <h1 class="govuk-fieldset__heading">
-            Sunday morning
+            Sunday 17 March 2025
           </h1>
         </legend>
         
     
         </dd>
     
-            <dd class="govuk-summary-list__value" style="width:10%;"> 
+            <dd class="govuk-summary-list__value" style="width:5%;"> 
               <li class="govuk-summary-list__actions-list-item">
                 <a class="govuk-link" href=" ">
                   Add 
@@ -984,37 +928,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   
   </div>
 
-  <div class="govuk-grid-column-one-half">
-  <div class="govuk-form-group" style="margin-bottom:-10px;">
-  <fieldset class="govuk-fieldset">
-    <dl class="govuk-summary-list">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h1 class="govuk-fieldset__heading">
-        Sunday afternoon 
-      </h1>
-    </legend>
-    
-
-    </dd>
-
-        <dd class="govuk-summary-list__value" style="width:10%;"> 
-          <li class="govuk-summary-list__actions-list-item">
-            <a class="govuk-link" href=" ">
-            Add
-              </a>
-          </li>
-        </dd>
-      </div>
-    
-           
-      <p> No availability added  </p>
-    
-    
-    </dl>
-
-
-
-  </div>
+  
   </div>
 
   

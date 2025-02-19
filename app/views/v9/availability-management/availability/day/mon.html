@@ -13,7 +13,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-one-quarter" style="margin-top: 0px;">
 
  
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <a href="../availability-view" class="govuk-back-link">Back</a>
 
 
     <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5" style="padding-top:20px;">
@@ -81,7 +81,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
   ]
   }) }} 
-<!-- 
+
+
+  <!-- 
   {{ govukCheckboxes({
   idPrefix: "assessmentCentre",
   name: "assessment-centre",
@@ -100,14 +102,13 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   text: "Birmingham, Handsworth"
   },
 
-  
   {
     id: "online",
     value: "online",
     text: "Working from home"
     }
   ]
-  }) }}
+  }) }} -->
 
 
  
@@ -115,7 +116,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
      
-    -->
+   
 
   </div>
   
@@ -149,13 +150,13 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
   
 
-      <form action="../time/times-mon-pm" method="post" class="form" >  
+      <form action="../time/times-mon" method="post" class="form" >  
        
         
         <span class="govuk-caption-l">Monday 11 March 2024</span>
 
             <h1 class="govuk-heading-l" style="padding-top:10px;">
-              Who should work on appointments this afternoon? 
+             Who should work on appointments? 
             
            
             </h1>
@@ -199,8 +200,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <tr class="govuk-table__row pipf2f pipta wcacn wcaf2f wcata handsworth">
                   <td class="govuk-table__cell">
                     <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                      <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-1" name="agent-mon-pm-name" type="checkbox" value="Amy Gill"  {{ checked("agent-mon-pm-name", "Amy Gill") }}>
-                      <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-1">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-1" name="agent-mon-am-name" type="checkbox" value="Amy Gill"  {{ checked("agent-mon-am-name", "Amy Gill") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-1">
                
                       </label>
                     </div>
@@ -225,11 +226,11 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
 
-                <tr class="govuk-table__row wcata online">
+             <tr class="govuk-table__row wcata online">
                   <td class="govuk-table__cell">
                     <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                      <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-2" name="agent-mon-pm-name" type="checkbox" value="Benjamin Marshall" {{ checked("agent-mon-pm-name", "Benjamin Marshall") }}>
-                      <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-2">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-2" name="agent-mon-am-name" type="checkbox" value="Benjamin Marshall" {{ checked("agent-mon-am-name", "Benjamin Marshall") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-2">
                
                       </label>
                     </div>
@@ -252,16 +253,16 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row pipf2f pipta wcaf2f wcata tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-3"  name="agent-mon-pm-name" type="checkbox" value="Bernhard Fischer" {{ checked("agent-mon-pm-name", "Bernhard Fischer") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-3">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-3"  name="agent-mon-am-name" type="checkbox" value="Bernhard Fischer" {{ checked("agent-mon-am-name", "Bernhard Fischer") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-3">
                    
                           </label>
                         </div>
                       </td>
                       <td class="govuk-table__cell">Bernhard Fischer</td>
                    
-                      <!-- <td class="govuk-table__cell"> Birmingham, Handsworth </td>
-                      -->
+                      <!-- <td class="govuk-table__cell"> Birmingham, Handsworth </td> -->
+                     
                        <td class="govuk-table__cell">
           
                         <ul class="govuk-list govuk-list--bullet">
@@ -279,8 +280,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row pipf2f pipta wcacn wcaf2f wcata wca tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-4" name="agent-mon-pm-name" type="checkbox" value="Danny Zuko" {{ checked("agent-mon-pm-name", "Danny Zuko") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-4">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-4" name="agent-mon-am-name" type="checkbox" value="Danny Zuko" {{ checked("agent-mon-am-name", "Danny Zuko") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-4">
                    
                           </label>
                         </div>
@@ -305,8 +306,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row pipf2f pipta wcaf2f wcata handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-5" name="agent-mon-pm-name" type="checkbox" value="Emma Bradley" {{ checked("agent-mon-pm-name", "Emma Bradley") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-5">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-5" name="agent-mon-am-name" type="checkbox" value="Emma Bradley" {{ checked("agent-mon-am-name", "Emma Bradley") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-5">
                    
                           </label>
                         </div>
@@ -332,8 +333,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-6" name="agent-mon-pm-name" type="checkbox" value="Frieda Döring" {{ checked("agent-mon-pm-name", "Frieda Döring") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-6">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-6" name="agent-mon-am-name" type="checkbox" value="Frieda Döring" {{ checked("agent-mon-am-name", "Frieda Döring") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-6">
                    
                           </label>
                         </div>
@@ -356,8 +357,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row wcata wcaf2f tresco">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-7" name="agent-mon-pm-name" type="checkbox" value="Gabriel Mello" {{ checked("agent-mon-pm-name", "Gabriel Mello") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-7">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-7" name="agent-mon-am-name" type="checkbox" value="Gabriel Mello" {{ checked("agent-mon-am-name", "Gabriel Mello") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-7">
                    
                           </label>
                         </div>
@@ -381,16 +382,16 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row pipta wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-8" name="agent-mon-pm-name" type="checkbox" value="Jane Smith" {{ checked("agent-mon-pm-name", "Jane Smith") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-8">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-8" name="agent-mon-am-name" type="checkbox" value="Jane Smith" {{ checked("agent-mon-am-name", "Jane Smith") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-8">
                    
                           </label>
                         </div>
                       </td>
                       <td class="govuk-table__cell">Jane Smith</td>
                
-                      <!-- <td class="govuk-table__cell"> Working from home </td>
-                      -->
+                      <!-- <td class="govuk-table__cell"> Working from home </td> -->
+                     
                        <td class="govuk-table__cell">
                         
                         <ul class="govuk-list govuk-list--bullet">
@@ -406,8 +407,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row wcacn wcaf2f wcata handsworth">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-9" name="agent-mon-pm-name" type="checkbox" value="Joe Bloggs" {{ checked("agent-mon-pm-name", "Joe Bloggs") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-9">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-9" name="agent-mon-am-name" type="checkbox" value="Joe Bloggs" {{ checked("agent-mon-am-name", "Joe Bloggs") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-9">
                    
                           </label>
                         </div>
@@ -432,8 +433,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row pipta online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-10" name="agent-mon-pm-name" type="checkbox" value="Julie Smails" {{ checked("agent-mon-pm-name", "Julie Smails") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-10">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-10" name="agent-mon-am-name" type="checkbox" value="Julie Smails" {{ checked("agent-mon-am-name", "Julie Smails") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-10">
                    
                           </label>
                         </div>
@@ -460,8 +461,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-11" name="agent-mon-pm-name" type="checkbox" value="Monica Anyanwu" {{ checked("agent-mon-pm-name", "Monica Anyanwu") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-11">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-11" name="agent-mon-am-name" type="checkbox" value="Monica Anyanwu" {{ checked("agent-mon-am-name", "Monica Anyanwu") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-11">
                    
                           </label>
                         </div>
@@ -486,8 +487,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                     <tr class="govuk-table__row pipta wcata online">
                       <td class="govuk-table__cell">
                         <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-pm-12" name="agent-mon-pm-name" type="checkbox" value="Raka Banerjee" {{ checked("agent-mon-pm-name", "Raka Banerjee") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-pm-12">
+                          <input type="checkbox" class="govuk-checkboxes__input" id="agent-mon-am-12" name="agent-mon-am-name" type="checkbox" value="Raka Banerjee" {{ checked("agent-mon-am-name", "Raka Banerjee") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="agent-mon-am-12">
                    
                           </label>
                         </div>
