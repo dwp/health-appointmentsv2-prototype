@@ -113,7 +113,11 @@ Check appointment details - GOV.UK prototype
                 Appointment type
               </dt>
               <dd class="govuk-summary-list__value">
+                {% if  data['assessment-channel'] %}
                 {{ data['assessment-channel'] }}
+               {% else %}
+                Telephone
+               {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="assessment-channel">
@@ -129,7 +133,7 @@ Check appointment details - GOV.UK prototype
                 Date and time
               </dt>
               <dd class="govuk-summary-list__value">
-               Wed 7 Mar 2025, 11am
+               Wed 7 Mar 2025, 9am
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="app-date-time">
