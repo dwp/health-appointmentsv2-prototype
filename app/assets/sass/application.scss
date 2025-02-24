@@ -396,10 +396,12 @@ max-width:1160px !important;}
       font-family: Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      font-weight: 400;
+      font-weight: 700;
       font-size: 19px;
       line-height: 1.25;
       display: inline-block;
+      text-decoration: underline;
+      color: #1d70b8;
   }
 
 
@@ -416,6 +418,7 @@ max-width:1160px !important;}
       text-align: center;
       text-decoration: none;
       min-width: 25px;
+      color: #1d70b8;
   }
 
   .moj-pagination__item--prev .moj-pagination__link:before {
