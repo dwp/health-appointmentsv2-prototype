@@ -63,7 +63,14 @@ Date and time - GOV.UK prototype
                   Appointment type
                 </dt>
                 <dd class="govuk-summary-list__value val-chooseDateTime-channel">
+                
+
+
+                  {% if  data['assessment-channel'] %}
                   {{ data['assessment-channel'] }}
+                 {% else %}
+                  Telephone
+                 {% endif %}
                 </dd>
                 
               </div>
@@ -105,348 +112,512 @@ Date and time - GOV.UK prototype
                 <div class="govuk-grid-column-full">
                   
       
-        <table id="booking-calendar" class="dwp-cal-table">
-          <thead>
-            <tr>
-              
-                <th scope="col">Mon 5 Mar</th>
-              
-                <th scope="col">Tue 6 Mar</th>
-              
-                <th scope="col">Wed 7 Mar</th>
-              
-                <th scope="col">Thu 8 Mar</th>
-              
-                <th scope="col">Fri 9 Mar</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            
-              
-              
-                
-                <tr>
-                  
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1685952000000">
-          <input id="time-grain-1685952000000" name="timeGrain" type="radio" value="2024-06-05T08:00:00.000Z">
-          <label id="time-grain-1685952000000-label" for="time-grain-1685952000000">
-            <time id="time-1685952000000" datetime="2024-06-05T08:00:00.000Z" aria-label="Monday 5 Mar 2024 at">
-              9am
-            </time>
-          </label>
-        </div>
-
-       
-                        
-                      </td>
-
-
-                      
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-    
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686124800000">
-          <input id="time-grain-1686124800000" name="timeGrain" type="radio" value="2024-06-07T08:00:00.000Z">
-          <label id="time-grain-1686124800000-label" for="time-grain-1686124800000">
-            <time id="time-1686124800000" datetime="2024-06-07T08:00:00.000Z" aria-label="Wednesday 7 Mar 2024 at">
-              9am
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-       
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686297600000">
-          <input id="time-grain-1686297600000" name="timeGrain" type="radio" value="2024-06-09T08:00:00.000Z">
-          <label id="time-grain-1686297600000-label" for="time-grain-1686297600000">
-            <time id="time-1686297600000" datetime="2024-06-09T08:00:00.000Z" aria-label="Friday 9 Mar 2024 at">
-              9am
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                </tr>
-              
-                
-                <tr>
-                  
-                  
-                    
-                     
-                   
-                    
-                  
-                    
-                     
-                  
-                    
-                   
-                    
-                  
-                    
-                    
-                </tr>
-              
-                
-                <tr>
-                  
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        
-                      </td>
-                    
-
-
-                                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686052800000">
-          <input id="time-grain-1686052800000" name="timeGrain" type="radio" value="2024-06-06T12:00:00.000Z">
-          <label id="time-grain-1686052800000-label" for="time-grain-1686052800000">
-            <time id="time-1686052800000" datetime="2024-06-06T12:00:00.000Z" aria-label="Tuesday 6 Mar 2024 at">
-              1pm
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686139200000">
-          <input id="time-grain-1686139200000" name="timeGrain" type="radio" value="2024-06-07T12:00:00.000Z">
-          <label id="time-grain-1686139200000-label" for="time-grain-1686139200000">
-            <time id="time-1686139200000" datetime="2024-06-07T12:00:00.000Z" aria-label="Wednesday 7 Mar 2024 at">
-              1pm
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-        <div id="cell-1686225600000">
-          <input id="time-grain-1686225600000" name="timeGrain" type="radio" value="2024-06-08T12:00:00.000Z">
-          <label id="time-grain-1686225600000-label" for="time-grain-1686225600000">
-            <time id="time-1686225600000" datetime="2024-06-08T12:00:00.000Z" aria-label="Thursday 8 Mar 2024 at">
-              1pm
-            </time>
-          </label>
-        </div>
-      
-                        
-                      </td>
-                    
-                  
-                    
-                      <td>
-                        
-                        
-                          
-        
-      
-       
-                        
-                      </td>
-                    
-                  
-                </tr>
-
-                <tr>
-                  
-                  
-                    
-                  <td>
-                    
-                    
-                      
-    
-  
-    <div id="cell-1685973600000">
-      <input id="time-grain-1685973600000" name="timeGrain" type="radio" value="2024-06-05T14:00:00.000Z">
-      <label id="time-grain-1685973600000-label" for="time-grain-1685973600000">
-        <time id="time-1685973600000" datetime="2024-06-05T14:00:00.000Z" aria-label="Monday 5 Mar 2024 at">
-          2pm
-        </time>
-      </label>
-    </div>
-  
-                    
-                  </td>
-                
-              
-                
-                  <td>
-                    
-                    
-                      
-    
-  
-    <div id="cell-1686060000000">
-      <input id="time-grain-1686060000000" name="timeGrain" type="radio" value="2024-06-06T14:00:00.000Z">
-      <label id="time-grain-1686060000000-label" for="time-grain-1686060000000">
-        <time id="time-1686060000000" datetime="2024-06-06T14:00:00.000Z" aria-label="Tuesday 6 Mar 2024 at">
-          2pm
-        </time>
-      </label>
-    </div>
-  
-                    
-                  </td>
-                
-              
-                
-                  <td>
-                    
-                    
-                      
-    
-  
-    <div id="cell-1686146400000">
-      <input id="time-grain-1686146400000" name="timeGrain" type="radio" value="2024-06-07T14:00:00.000Z">
-      <label id="time-grain-1686146400000-label" for="time-grain-1686146400000">
-        <time id="time-1686146400000" datetime="2024-06-07T14:00:00.000Z" aria-label="Wednesday 7 Mar 2024 at">
-          2pm
-        </time>
-      </label>
-    </div>
-  
-                    
-                  </td>
-                
-              
-                
-                  <td>
-                    
-                    
-                      
-    
-  
-    <div id="cell-1686232800000">
-      <input id="time-grain-1686232800000" name="timeGrain" type="radio" value="2024-06-08T14:00:00.000Z">
-      <label id="time-grain-1686232800000-label" for="time-grain-1686232800000">
-        <time id="time-1686232800000" datetime="2024-06-08T14:00:00.000Z" aria-label="Thursday 8 Mar 2024 at">
-          2pm
-        </time>
-      </label>
-    </div>
-  
-                    
-                  </td>
-                
-              
-                
-                  
-                  <td>
-                    
-                    
-                      
-    
-  
    
-  
-                    
-                  </td>
-                
 
-
-              
-                
-              
-                        
-                        
-                          
+                  
+      
         
-      
-       
-      
-                </tr>
+    
+
+
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">  
+              <a class="govuk-tabs__tab" href="#monday" style="text-align: left; font-size: 14px; margin-left: -5px;">
+                <div class="govuk-!-font-weight-bold">Monday</div>
+                <div>5 Mar 2025</div>
+                <div>4 slots available</div>
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#tuesday" style="text-align: left; font-size: 14px; margin-left: -5px;">
+                <div class="govuk-!-font-weight-bold">Tuesday</div>
+                <div>6 Mar 2025</div>
+                <div>4 slots available</div>
               
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#wednesday" style="text-align: left; font-size: 14px; margin-left: -5px;">
+                <div class="govuk-!-font-weight-bold">Wednesday</div>
+                <div>7 Mar 2025</div>
+                <div>4 slots available</div>
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#thursday" style="text-align: left; font-size: 14px; margin-left: -5px;">
+                <div class="govuk-!-font-weight-bold">Thursday</div>
+                <div>8 Mar 2025</div>
+                <div>4 slots available</div>
+              </a>
+            </li>
+
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#friday" style="text-align: left; font-size: 14px; margin-left: -5px;">
+                <div class="govuk-!-font-weight-bold">Friday</div>
+                <div>9 Mar 2025</div>
+                <div>3 slots available</div>
+              </a>
+            </li>
+
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#saturday" style="text-align: left; font-size: 14px; margin-left: -5px;">
+                <div class="govuk-!-font-weight-bold">Saturday</div>
+                <div>10 Mar 2025</div>
+                <div>0 slots available</div>
+              </a>
+            </li>
+
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#sunday" style="text-align: left; font-size: 14px; margin-left: -5px;">
+                <div class="govuk-!-font-weight-bold">Sunday</div>
+                <div>11 Mar 2025</div>
+                <div>0 slots available</div>
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-tabs__panel" id="monday">
+           
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Monday morning
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
             
-          </tbody>
-        </table>
-      
-        
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-18" name="app-time" type="radio" value="9:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-18">
+                          9:00am
+                        </label>
+                      </div>
+                  
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-20" name="app-time" type="radio" value="10:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-20">
+                          10:00am
+                        </label>
+                      </div>
+                   
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Monday afternoon
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-24" name="app-time" type="radio" value="1:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-24">
+                          1:00pm
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-25" name="app-time" type="radio" value="2:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-25">
+                          2:00pm
+                        </label>
+                      </div>
+            
+                     
+            
+            
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="tuesday">
+            
+            
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Tuesday morning
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-18" name="app-time" type="radio" value="9:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-18">
+                          9:00am
+                        </label>
+                      </div>
+                  
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-20" name="app-time" type="radio" value="10:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-20">
+                          10:00am
+                        </label>
+                      </div>
+                   
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Tuesday afternoon
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-24" name="app-time" type="radio" value="1:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-24">
+                          1:00pm
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-25" name="app-time" type="radio" value="2:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-25">
+                          2:00pm
+                        </label>
+                      </div>
+            
+                     
+            
+            
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+
+              </div>
+
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="wednesday">
+   
+            
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Wednesday morning
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-18" name="app-time" type="radio" value="9:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-18">
+                          9:00am
+                        </label>
+                      </div>
+                  
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-20" name="app-time" type="radio" value="10:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-20">
+                          10:00am
+                        </label>
+                      </div>
+                   
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Wednesday afternoon
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-24" name="app-time" type="radio" value="1:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-24">
+                          1:00pm
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-25" name="app-time" type="radio" value="2:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-25">
+                          2:00pm
+                        </label>
+                      </div>
+            
+                     
+            
+            
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+              </div>
+
+
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="thursday">
+          
+           
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Thursday morning
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-18" name="app-time" type="radio" value="9:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-18">
+                          9:00am
+                        </label>
+                      </div>
+                  
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-20" name="app-time" type="radio" value="10:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-20">
+                          10:00am
+                        </label>
+                      </div>
+                   
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Thursday afternoon
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-24" name="app-time" type="radio" value="1:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-24">
+                          1:00pm
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-25" name="app-time" type="radio" value="2:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-25">
+                          2:00pm
+                        </label>
+                      </div>
+            
+                     
+            
+            
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+              </div>
+
+
+          </div>
+
+
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="friday">
+          
+           
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Friday morning
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-18" name="app-time" type="radio" value="9:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-18">
+                          9:00am
+                        </label>
+                      </div>
+                  
+            
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-20" name="app-time" type="radio" value="10:00am">
+                        <label class="govuk-label govuk-radios__label" for="app-time-20">
+                          10:00am
+                        </label>
+                      </div>
+                   
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Friday afternoon
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="app-time-24" name="app-time" type="radio" value="1:00pm">
+                        <label class="govuk-label govuk-radios__label" for="app-time-24">
+                          1:00pm
+                        </label>
+                      </div>
+                    
+            
+                     
+            
+            
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+              </div>
+
+
+          </div>
+
+
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="saturday">
+          
+           
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Saturday morning
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+            
+                      <p>No slots available</p>
+                   
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Saturday afternoon
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+                      <p>No slots available</p>
+                     
+            
+            
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+              </div>
+
+
+          </div>
+
+
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="sunday">
+          
+           
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Sunday morning
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+            
+                      <p>No slots available</p>
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                       Sunday afternoon
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline flex-container longhand" data-module="govuk-radios">
+                      <p>No slots available</p>
+                     
+            
+            
+                    </div>
+            
+                  </fieldset>
+                </div>
+              </div>
+              </div>
+
+
+          </div>
+        </div>
+
+
+
         <nav id="pagination-bottom">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full dwp-flex dwp-flex--space-between">
