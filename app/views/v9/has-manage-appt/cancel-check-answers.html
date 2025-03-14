@@ -24,7 +24,7 @@ Cancel appointment - GOV.UK prototype
 
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-    <form class="form" action="current-assessments-cancelled" method="post">
+    <form class="form" action="appointments-cancelled" method="post">
 
       <h1 class="govuk-heading-l">Are you sure you want to cancel Jane Doe's appointment?</h1>
 
@@ -78,7 +78,17 @@ Cancel appointment - GOV.UK prototype
       </dl>
 
      
+      <div class="hidden-radio-post"> 
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="agent-appt-booked" name="agent-appt" type="radio" value="agent-cancelled" {{ checked('agent-appt', 'agent-cancelled') }} checked>
 
+            <label class="govuk-label govuk-radios__label" for="agent-appt-booked">
+              Hidden radio = Appointment cancelled
+            </label>
+          </div>
+        </div>
+ </div> 
 
 
       <div class="govuk-button-group">
@@ -89,7 +99,7 @@ Cancel appointment - GOV.UK prototype
        
 
 
-        <a class="govuk-link" href="view-appt02">Return to appointment details</a>
+        <a class="govuk-link" href="appt-details">Return to appointment details</a>
       </div>
 
       <br>
