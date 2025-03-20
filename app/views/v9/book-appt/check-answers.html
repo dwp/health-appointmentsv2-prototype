@@ -176,13 +176,17 @@ Check appointment details - GOV.UK prototype
                 {% if  data['more-detail'] %}
                 {{ data['more-detail'] }}
                {% else %}
-               None
+               
                {% endif %}
 
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="more-info">
-                  Change<span class="govuk-visually-hidden"> any additional information</span>
+                  {% if  data['more-detail'] %}
+                 Change
+               {% else %}
+               Add
+               {% endif %} <span class="govuk-visually-hidden"> any additional information</span>
                 </a>
               </dd>
             </div>
