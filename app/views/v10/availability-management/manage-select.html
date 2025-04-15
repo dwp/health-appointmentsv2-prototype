@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="location" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+  
+ 
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+
+        <form class="form" action="/manage-what10" method="post">
+
+      
+    
+
+
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Manage availability 
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="manage" name="manage" type="radio" value="agents">
+            <label class="govuk-label govuk-radios__label" for="manage">
+            HCP profiles
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="manage-2" name="manage" type="radio" value="availability">
+            <label class="govuk-label govuk-radios__label" for="manage-2">
+              Appointment availability 
+            </label>
+          </div>
+<!-- hack so amy gill shows today assesment in appointment profile schedule -->
+<div class="hidden-radio-post">  
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="hcp" name="hcp" type="radio" value="Amy Gill" checked>
+            <label class="govuk-label govuk-radios__label" for="hcp">
+              Amy Gill
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="hcp2" name="hcp2" type="radio" value="Amy Gill" checked>
+            <label class="govuk-label govuk-radios__label" for="hcp2">
+              Amy Gill
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="hcp3" name="hcp3" type="radio" value="Amy Gill" checked>
+            <label class="govuk-label govuk-radios__label" for="hcp3">
+              Amy Gill
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="hcp4" name="hcp4" type="radio" value="Amy Gill" checked>
+            <label class="govuk-label govuk-radios__label" for="hcp4">
+              Amy Gill
+            </label>
+          </div>
+        
+        
+        </div>
+         
+         
+      
+        </div>
+      </fieldset>
+    </div>
+
+  
+
+
+
+
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+
+  </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}
