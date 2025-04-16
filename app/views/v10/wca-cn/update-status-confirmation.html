@@ -1,0 +1,77 @@
+
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/internal-header.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+          <div class="govuk-width-container">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                      Status updated for {% if  data['appt'] %}
+      
+                      {{ data['appt'] }}
+                      {% else %}
+                     
+                       Jane Doe
+                     
+                      {% endif %}
+                    </h1>
+                    
+                  </div>
+                  <br>  <br>
+
+                  <h2 class="govuk-heading-m">What you can do next </h2>
+
+                  <p class="govuk-body">
+                    Continue to:
+                  </p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="claimant-detail"> View this claimant's details</a></li>
+                    <li><a href="https://interaction-log:log-interaction@interaction-log.herokuapp.com/version-1-0-1/referral">Add a timeline entry</a></li>
+            
+                  </ul>
+
+
+                  <p class="govuk-body">
+                    Or start a new case from:
+                  </p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="../"> Your assigned list of work</a></li>
+                    <li><a href="../"> Viewing other cases by caseload or status</a></li>
+            
+                  </ul>
+
+                </div>
+              </div>
+            </main>
+          </div>
+
+
+    </div>
+
+</div>
+
+        </main>
+      </div>
+
+
+
+      {% endblock %}

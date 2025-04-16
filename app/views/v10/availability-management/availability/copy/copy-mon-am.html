@@ -1,0 +1,188 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+
+
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+   
+
+
+
+      <form action="availability-copied-am" method="post" class="form" >  
+       
+        
+        <span class="govuk-caption-l">Monday 11 March 2025</span>
+
+            <h1 class="govuk-heading-l" style="padding-top:10px;">
+             Copy appointment availability on this day
+            
+           
+            </h1>
+            <div class="govuk-hint">
+              Copy the same HCPs, times and locations to the selected mornings. Select all that apply.
+            </div>
+
+            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes" data-module="govuk-checkboxes">
+                      
+                  <!-- <div id="waste-hint" class="govuk-hint">
+                    Apply to
+                  </div> -->
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day" name="day" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="day">
+                        Tuesday 12 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-2" name="day" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-2">
+                        Wednesday 13 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-3" name="day" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-3">
+                        Thursday 14 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-4" name="day" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-4">
+                        Friday 15 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-5" name="day" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-5">
+                        Saturday 16 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-6" name="day" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-6">
+                        Sunday 17 March 2025
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="day-7" name="day" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="day-7">
+                        Monday 18 March 2025
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="day" name="day" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="day">
+                          Tuesday 19 March 2025
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="day-2" name="day" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="day-2">
+                          Wednesday 20 March 2025
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="day-3" name="day" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="day-3">
+                          Thursday 21 March 2025
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="day-4" name="day" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="day-4">
+                          Friday 22 March 2025
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="day-5" name="day" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="day-5">
+                          Saturday 23 March 2025
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="day-6" name="day" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="day-6">
+                          Sunday 24 March 2025
+                        </label>
+                      </div>
+
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="day-6" name="day" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="day-6">
+                         Monday 25 March 2025
+                        </label>
+                      </div>
+
+    
+                  </div>
+               
+                </div>
+              </fieldset>
+            </div>
+
+
+           
+
+          <!--  <nav class="govuk-pagination" role="navigation" aria-label="results">
+              <div class="govuk-pagination__prev">
+                <a class="govuk-link govuk-pagination__link" href="#8" rel="prev">
+                  <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="govuk-pagination__link-title">Previous week</span></a>
+              </div>
+        
+              <div class="govuk-pagination__next">
+                <a class="govuk-link govuk-pagination__link" href="#8" rel="next"> <span class="govuk-pagination__link-title">Next week</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg></a>
+              </div>
+            </nav>
+          -->
+
+
+        <button class="govuk-button" data-module="govuk-button">Copy</button>
+    </form>
+
+
+  
+
+    
+    
+    </div>
+
+    
+
+
+</div>
+
+
+    </div>
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}
