@@ -30,7 +30,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
            
             </h1>
             <div class="govuk-hint">
-              Add as many blocks of time as you need to plan out the HCP's day.  </div>
+              Add as many blocks of time as you need to plan out the HCP's day.   </div>
 
             
             <table class="govuk-table">
@@ -64,43 +64,69 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                   
 
                     <td class="govuk-table__cell">
-                      
-      
+                      <div class="row-wrapper" >
                       <div class="time-wrapper" style="margin-right: 20px; float: left;">
                         <div class="time-start">
                           <label class="govuk-label"> Start time </label>
-                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text" aria-describedby="time-hint" autocomplete="off">
+                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text" aria-describedby="time-hint" autocomplete="off" value="9:00">
                         </div>
                       </div>
       
-                      <div class="time-wrapper">
+                      <div class="time-wrapper" >
                         <div class="time-end2">
                           <label class="govuk-label"> End time </label>
-                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text" aria-describedby="time-hint" autocomplete="off">
+                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text" aria-describedby="time-hint" autocomplete="off" value="11:00">
                         </div>
                       </div>
-      
+                   
+      </div>
+
+      <table class="govuk-table" style="margin-bottom: 10px;">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"> </th>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+                      <div class="time-wrapper" style="padding-top:-30px;margin-right: 20px; float: left;" >
+                        <div class="time-start">
+                          <label class="govuk-label"> Start time </label>
+                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text" aria-describedby="time-hint" autocomplete="off" value="14:00">
+                        </div>
+                     
+
+                      
+                        <div class="time-end2" style="margin-left: 20px; float: left;">
+                          <label class="govuk-label"> End time </label>
+                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text" aria-describedby="time-hint" autocomplete="off" value="17:00">
+                        </div>
+                      </div>
+
+
                       <div class="time-wrapper" style="margin-bottom: 20px;">
                         <div class="time-end2" style="padding-top: 30px">
                           <label class="govuk-label"></label>
-                          <a href="times-mon2">Add another time block</a>
+                          <a href="">Add another time block</a>
                         </div>
                       </div>
                     </td>
 
                
 
-                <td class="govuk-table__cell"> 
+                <td class="govuk-table__cell" > 
 
 
-                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
+                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" >
+                    <div class="govuk-radios__item" >
                       <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation01" type="radio" value="birmingham"  >
                       <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
                         Birmingham, Handsworth
                       </label>
                     </div>
-                    <div class="govuk-radios__item">
+                    <div class="govuk-radios__item" style="border-bottom: 1pt solid #b1b4b6; width:360px;">
                       <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation01" type="radio" value="remote">
                       <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
                         Working from home
@@ -109,6 +135,25 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                  
             
                 </div>
+
+              
+
+                <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" >
+                  <div class="govuk-radios__item" style="margin-top: 12px;" >
+                    <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation01" type="radio" value="birmingham"  >
+                    <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
+                      Birmingham, Handsworth
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation01" type="radio" value="remote">
+                    <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
+                      Working from home
+                    </label>
+                  </div>
+               
+          
+              </div>
 
 
                 </td> 
@@ -474,7 +519,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
   
-                   
+                  
 
                     
                   <td class="govuk-table__cell"> 
@@ -577,7 +622,6 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   
     
                     
-  
     
                     <td class="govuk-table__cell"> 
 
@@ -626,7 +670,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 
                      
 
-                      
+                       
+      
                       <td class="govuk-table__cell">
                       
       
@@ -713,7 +758,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                       <td class="govuk-table__cell">Jane Smith</td>
               
                    
-                       
+                      
+      
                       <td class="govuk-table__cell">
                       
       
@@ -797,7 +843,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                
                  
 
-                     
+                   
+    
                     <td class="govuk-table__cell">
                       
       
@@ -913,7 +960,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                         </div>
                       </td>
   
-                  
+                   
+
 
                     <td class="govuk-table__cell"> 
 
