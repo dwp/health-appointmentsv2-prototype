@@ -51,11 +51,17 @@ Appointment details - GOV.UK prototype
                Reason for cancellation
               </dt>
               <dd class="govuk-summary-list__value">
+<!--
+                   {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }} {%else%} {{ data['cancelReason'] }}    {% endif %}
+--> 
+                
                     {% if  data['cancelReason-other'] %}
                     {{ data['cancelReason-other'] }} 
                     {% else %} 
                     {{ data['cancelReason'] }}  
                     {% endif %}
+
+                
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
