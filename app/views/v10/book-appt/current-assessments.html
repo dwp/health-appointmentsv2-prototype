@@ -34,7 +34,7 @@ Claimant appointments - GOV.UK prototype
             Jane Doe's appointments
             </h1>
 
-            {% if  data['apptbooked']   == 'cancelled' %}
+           <!-- --> {% if  data['apptbooked']   == 'cancelled' %}
          
          <p>There are no current appointments.</p>
 
@@ -85,7 +85,7 @@ Claimant appointments - GOV.UK prototype
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-table__cell">Wed 7 March 2025, 11am</td>
+                <td class="govuk-table__cell govuk-table__cell">Wed 7 May 2025, 11am</td>
                   <td class="govuk-table__cell govuk-table__cell">Birmingham, Handsworth</td>
                 <td class="govuk-table__cell govuk-table__cell">PIP</td>
                 <td class="govuk-table__cell govuk-table__cell">Telephone</td>
@@ -110,7 +110,7 @@ Claimant appointments - GOV.UK prototype
           </table>
 
 
-          {% if  data['apptbooked']   == 'yes' %}
+         
          
          
 
@@ -120,7 +120,7 @@ Claimant appointments - GOV.UK prototype
             </button>
           </a>
 
-          {% endif %} 
+        
 
           {% if  data['apptbooked']   == 'yes' %}
           <p>There are no previous appointments</p>

@@ -77,14 +77,14 @@ Success
           <table class="govuk-table">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header" style="width:25%;">   Date and time</th>
+                <th scope="col" class="govuk-table__header" style="width:22%;">   Date and time</th>
                 <th scope="col" class="govuk-table__header govuk-table__header" style="width:10%;">Location</th>
                 <th scope="col" class="govuk-table__header govuk-table__header">Benefit</th>
 
                 <th scope="col" class="govuk-table__header govuk-table__header">Type</th>
 
-                <th scope="col" class="govuk-table__header govuk-table__header">HCP</th>
-                <th scope="col" class="govuk-table__header govuk-table__header">Last update</th>
+                <th scope="col" class="govuk-table__header govuk-table__header" >HCP</th>
+                <th scope="col" class="govuk-table__header govuk-table__header" style="width:20%;">Last update</th>
        
 
                 <th scope="col" class="govuk-table__header govuk-table__header"></th>
@@ -92,11 +92,11 @@ Success
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-table__cell">	Wed 7 May 2024, 11am</td>
+                <td class="govuk-table__cell govuk-table__cell">	Wed 7 May 2025, 11am</td>
                   <td class="govuk-table__cell govuk-table__cell">	Birmingham, Handsworth</td>
-                <td class="govuk-table__cell govuk-table__cell">PIP</td>
+                <td class="govuk-table__cell govuk-table__cell">PIP</td> 
                 <td class="govuk-table__cell govuk-table__cell">Telephone</td>
-                <td class="govuk-table__cell govuk-table__cell">  {{ data['hcp'] }}</td>
+                <td class="govuk-table__cell govuk-table__cell"> {% if  data['hcp'] %}{{data['hcp'] }}  {% else %} Amy Gill  {% endif %}</td>
          
                 <td class="govuk-table__cell govuk-table__cell"> {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }}  {% else %} {{ data['cancelReason'] }}  {% endif %}</th>
               
