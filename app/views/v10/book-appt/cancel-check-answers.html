@@ -26,12 +26,12 @@ Cancel appointment - GOV.UK prototype
 
     <form class="form" action="current-assessments-cancelled" method="post">
 
-      <h1 class="govuk-heading-l">Are you sure you want to cancel Jane Doe's appointment?</h1>
+      <h1 class="govuk-heading-l">Are you sure you want to report Jane Doe's appointment?</h1>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-           Reason for cancellation
+           Reason for report outcome 
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['cancelReason'] }}   {% if  data['cancelReason-other'] %}{{': ' + data['cancelReason-other'] }}  {% endif %}
@@ -83,7 +83,7 @@ Cancel appointment - GOV.UK prototype
 
       <div class="govuk-button-group">
         <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-          Yes, cancel appointment
+          Yes, report
         </button>
 
        
