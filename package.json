@@ -7,12 +7,12 @@
   "name": "govuk-prototype-kit",
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
-    "@govuk-prototype-kit/step-by-step": "2.1.0",
-    "@govuk-prototype-kit/task-list": "1.0.0",
-    "govuk-frontend": "4.6.0",
-    "govuk-prototype-kit": "13.16.2",
-    "hmrc-frontend": "5.63.0",
+    "@govuk-prototype-kit/step-by-step": "2.2.3",
+    "@govuk-prototype-kit/task-list": "1.1.2",
+    "govuk-frontend": "4.10.1",
+    "govuk-prototype-kit": "13.17.0",
+    "hmrc-frontend": "5.67.1",
     "jquery": "3.7.1",
-    "notifications-node-client": "8.0.0"
+    "notifications-node-client": "8.2.1"
   }
 }
