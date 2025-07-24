@@ -23,17 +23,6 @@ repos:
         stages:
           - manual
 
-  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v9.22.0
-    hooks:
-      - id: commitlint
-        args:
-          - --extends="@dwp/commitlint-config-base"
-        stages:
-          - commit-msg
-        additional_dependencies:
-          - "@dwp/commitlint-config-base@4.0.11"
-
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v9.0.1
     hooks:
@@ -45,7 +34,7 @@ repos:
           - --no-progress
           - --no-summary
         additional_dependencies:
-          - "@cspell/dict-en-gb@5.0.11"
+          - "@cspell/dict-en-gb@5.0.5"
         stages:
           - pre-commit
           - commit-msg
@@ -82,15 +71,15 @@ repos:
       - id: markdownlint-cli2
         additional_dependencies:
           - markdownlint-rule-titlecase@0.1.0
-          - markdownlint-cli2-formatter-codequality@0.0.6
+          - markdownlint-cli2-formatter-codequality@0.0.5
 
   - repo: https://github.com/rbubley/mirrors-prettier
     rev: v3.5.3
     hooks:
       - id: prettier
         additional_dependencies:
-          - prettier@3.6.2
-          - prettier-plugin-sh@0.18.0
+          - prettier@3.5.3
+          - prettier-plugin-sh@0.17.4
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.31.2
