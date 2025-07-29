@@ -1,7 +1,16 @@
 {% extends "layouts/main.html" %}
 
+
+
 {% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
 {% endblock %}
 
 {% block content %}
@@ -156,7 +165,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header" style="width: 25%;"> <span style="color: #005ea5;"> Name ▼ </span>  </th>
-                <th scope="col" class="govuk-table__header" style="width: 20%;">Times</th>
+                <th scope="col" class="govuk-table__header" style="width: 20%;">  <span style="color: #005ea5;"> Times ▼ </span></th>
           
               <th scope="col" class="govuk-table__header" style="width: 50%;"> Work location </th> 
                <!--  <th scope="col" class="govuk-table__header" style="width: 20%;"> Available for  </th> -->
@@ -164,33 +173,60 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
             </thead>
             <tbody class="govuk-table__body">
 
-              {% if  data['agent-mon-am-name'].includes('Amy Gill') %} 
+  
 
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">  Amy Gill    </td>
+                <td class="govuk-table__cell">  Amy Gill (Time block 1)   </td>
 
 
                 <td class="govuk-table__cell">    
                  
-                09:00 to 12:00<br> 14:00 to 17:00
+                09:00 to 12:00
                 </td>  
 
-              <td class="govuk-table__cell"> Birmingham, Handsworth <br>  Working from home </td>   
+              <td class="govuk-table__cell"> Birmingham, Handsworth </td>   
             
 
-               <!--  <td class="govuk-table__cell"> <ul class="govuk-list govuk-list--bullet">
-                 
-                 <li>   WCA CN</li> 
-                 <li>    WCA F2F</li> 
-                   <li> WCA TA</li> 
-                  
-                </ul></td>   -->
-               
+             
                
                    
               </tr>
 
-              {% endif %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Amy Gill (Time block 2)   </td>
+
+
+                <td class="govuk-table__cell">    
+                 
+      13:00 to 15:45
+                </td>  
+
+              <td class="govuk-table__cell"> Birmingham, Handsworth  </td>   
+            
+
+             
+               
+                   
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">  Amy Gill (Time block 3)   </td>
+
+
+                <td class="govuk-table__cell">    
+                 
+              17:00 to 19:00
+                </td>  
+
+              <td class="govuk-table__cell">  Working from home </td>   
+            
+
+             
+               
+                   
+              </tr>
+
+             
 
               {% if  data['agent-mon-am-name'].includes('Benjamin Marshall') %} 
 
@@ -319,7 +355,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
                 <td class="govuk-table__cell">  
-                  09:00 to 12:00<br> 13:00 to 16:00
+                  09:00 to 12:00
                      </td>  
                 
               <td class="govuk-table__cell"> Birmingham, Handsworth</td>   
@@ -341,7 +377,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
                 <td class="govuk-table__cell">  
-                  09:00 to 12:00<br> 13:00 to 16:00
+                  09:00 to 12:00
                 </td>  
 
            <td class="govuk-table__cell"> Working from home</td>  
@@ -363,7 +399,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                 <td class="govuk-table__cell">  Joe Bloggs</td>
 
                 <td class="govuk-table__cell">   
-                  09:00 to 12:00<br> 13:00 to 16:00
+            13:00 to 16:00
                 </td>   
                 
                <td class="govuk-table__cell">Birmingham, Handsworth </td>  
@@ -386,7 +422,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
                 <td class="govuk-table__cell">  
-                  09:00 to 12:00<br> 13:00 to 16:00
+                 13:00 to 16:00
                      </td>  
                 
                 <td class="govuk-table__cell"> Working from home</td>   

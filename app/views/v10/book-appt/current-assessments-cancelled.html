@@ -33,9 +33,9 @@ Success
 </div>
 <div class="govuk-notification-banner__content">
 <h3 class="govuk-notification-banner__heading">
-  Jane Doe's appointment has been cancelled
+  Jane Doe's appointment outcome has been recorded
 </h3>
-<p class="govuk-body"> <a class="govuk-notification-banner__link" href="update-status">Update the status</a> for this claimant or book a new appointment.</p>
+<p class="govuk-body"> <a class="govuk-notification-banner__link" href="update-status">Update the status</a> for this claimant.</p>
 </div>
 </div>
 
@@ -98,7 +98,7 @@ Success
                 <td class="govuk-table__cell govuk-table__cell">Telephone</td>
                 <td class="govuk-table__cell govuk-table__cell"> {% if  data['hcp'] %}{{data['hcp'] }}  {% else %} Amy Gill  {% endif %}</td>
          
-                <td class="govuk-table__cell govuk-table__cell"> {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }}  {% else %} {{ data['cancelReason'] }}  {% endif %}</th>
+                <td class="govuk-table__cell govuk-table__cell"> Not attended <!-- {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }}  {% else %} {{ data['cancelReason'] }}  {% endif %} --></th>
               
 
                 

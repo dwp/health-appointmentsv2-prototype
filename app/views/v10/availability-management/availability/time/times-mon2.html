@@ -1,7 +1,16 @@
 {% extends "layouts/main.html" %}
 
+
+
 {% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
 {% endblock %}
 
 {% block content %}
@@ -54,12 +63,12 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
               
 
-                {% if  data['agent-mon-am-name'].includes('Amy Gill') %} 
+              
 
 
                 <tr class="govuk-table__row handsworth">
                  
-                    <td class="govuk-table__cell">Amy Gill</td>  
+                    <td class="govuk-table__cell">Amy Gill (Time block 1) </td>  
                   
                   
 
@@ -67,107 +76,121 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
                       <div class="row-wrapper" >
                       <div class="time-wrapper" style="margin-right: 20px; float: left;">
                         <div class="time-start">
-                          <label class="govuk-label"> Start time </label>
+                          <label class="govuk-label"> Start time 1</label>
                           <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text" aria-describedby="time-hint" autocomplete="off" value="9:00">
                         </div>
                       </div>
       
                       <div class="time-wrapper" >
                         <div class="time-end2">
-                          <label class="govuk-label"> End time </label>
+                          <label class="govuk-label"> End time 1</label>
                           <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text" aria-describedby="time-hint" autocomplete="off" value="11:00">
                         </div>
                       </div>
                    
       </div>
 
-      <table class="govuk-table" style="margin-bottom: 10px;" >
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="padding-top: 10px"> </th>
-          </tr>
-        </tbody>
-      </table>
+      <td class="govuk-table__cell"> 
 
 
+        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="agent-worklocation02" name="agent-worklocation01" type="radio" value="birmingham" checked="true">
+            <label class="govuk-label govuk-radios__label" for="agent-worklocation02">
+              Birmingham, Handsworth
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="agent-worklocation02" name="agent-worklocation01" type="radio" value="remote"  >
+            <label class="govuk-label govuk-radios__label" for="agent-worklocation02">
+              Working from home
+            </label>
+          </div>
+       
+  
+      </div>
+
+
+      </td> 
 
    
-                      <div class="time-wrapper" style="padding-top:-30px;margin-right: 20px; float: left;" >
-                        <div class="time-start">
-                          <label class="govuk-label"> Start time </label>
-                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text" aria-describedby="time-hint" autocomplete="off" value=" ">
-                        </div>
-                     
-
-                      
-                        <div class="time-end2" style="margin-left: 20px; float: left;">
-                          <label class="govuk-label"> End time </label>
-                          <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text" aria-describedby="time-hint" autocomplete="off" value=" ">
-                        </div>
 
 
-                        <div class="time-wrapper" style="margin-bottom: 0px;">
-                          <div class="time-end2" style="padding-top: 10px">
-                            <a href="times-mon">Remove</a>
-                          </div>
-                        </div>
+      </tr>
+
+     
+
+      <tr class="govuk-table__row tresco">
+                  
+        <td class="govuk-table__cell">Amy Gill (Time block 2)</td>
+       
+     
+
+        <td class="govuk-table__cell">
+          <div class="time-end2" style="margin-left: 0px; float: left; width: 100%;">
+            <div class="time-start">
+              <label class="govuk-label"> Start time 2 </label>
+              <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-start" type="text" aria-describedby="time-hint" autocomplete="off" value=" ">
+            </div>
+         
+
+          
+            <div class="time-end2" style="margin-left: 20px; float: left;">
+              <label class="govuk-label"> End time 2</label>
+              <input class="govuk-input govuk-input--width-5" id="width-5" name="amy-time-end" type="text" aria-describedby="time-hint" autocomplete="off" value=" ">
+            </div>
+           
+
+</div>
+            <div class="time-wrapper">
+              <div class="time-end2">
+              <p style="padding-top: 15px;">   <a href="times-mon">Remove</a></p>
+    
+              <a href="times-mon3" >Add another time block</a>
+            </div>
+          </div>
+        </td>
+
+     
+
+      <td class="govuk-table__cell"> 
 
 
-                      </div>
+        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="agent-worklocation02" name="agent-worklocation02" type="radio" value="birmingham">
+            <label class="govuk-label govuk-radios__label" for="agent-worklocation02">
+              Birmingham, Handsworth
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="agent-worklocation02" name="agent-worklocation02" type="radio" value="remote"  >
+            <label class="govuk-label govuk-radios__label" for="agent-worklocation02">
+              Working from home
+            </label>
+          </div>
+       
+  
+      </div>
 
 
-                      <div class="time-wrapper" style="margin-bottom: 20px;">
-                        <div class="time-end2" style="padding-top: 30px">
-                         
-                          <a href="times-mon3">Add another time block</a>
-                        </div>
-                      </div>
-                    </td>
+      </td> 
+
+   
+
+
+      </tr>
+
+   
+                    
+
 
                
 
-                <td class="govuk-table__cell" > 
-
-
-                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" >
-                    <div class="govuk-radios__item" >
-                      <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation01" type="radio" value="birmingham"  >
-                      <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
-                        Birmingham, Handsworth
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item" style="border-bottom: 1pt solid #b1b4b6; width:450px;">
-                      <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation01" type="radio" value="remote">
-                      <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
-                        Working from home
-                      </label>
-                    </div>
-                 
-            
-                </div>
 
               
                 
 
-                <div class="govuk-radios govuk-radios--small" data-module="govuk-radios" >
-                  <div class="govuk-radios__item" style="margin-top: 12px;" >
-                    <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation02" type="radio" value="birmingham"  >
-                    <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
-                      Birmingham, Handsworth
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="agent-worklocation01" name="agent-worklocation02" type="radio" value="remote">
-                    <label class="govuk-label govuk-radios__label" for="agent-worklocation01">
-                      Working from home
-                    </label>
-                  </div>
-               
-          
-              </div>
-
-
-                </td> 
               <!--  <td class="govuk-table__cell">
 
                   <div class="govuk-form-group">
@@ -212,7 +235,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
                   </tr>
-                  {% endif %}
+               
 
 
 

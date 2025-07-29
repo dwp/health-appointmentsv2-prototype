@@ -244,19 +244,19 @@ Prototype page title
       <li class="govuk-!-margin-bottom-2"><a href=" ">   Update status </a></li> 
 
 
-      <li class="govuk-!-margin-bottom-2"><a href="current-assessments">Book or view appointments </a></li> 
+   <!--   <li class="govuk-!-margin-bottom-2"><a href="current-assessments">Book or view appointments </a></li>  -->
 
-<!-- 
-      {% if  (data['apptbooked']   == 'yes') or (data['apptbooked']   == 'cancelled') %}
 
-      <li class="govuk-!-margin-bottom-2"><a href="current-assessments">Book or view appointments </a></li> 
+      {% if  (data['cancelReason']) %}
+
+      <li class="govuk-!-margin-bottom-2"><a href="current-assessments-cancelled">Book or view appointments </a></li> 
 
       {% else %} 
-      <li class="govuk-!-margin-bottom-2"><a href="assessment-channel">Book or view appointments </a></li> 
+      <li class="govuk-!-margin-bottom-2"><a href="current-assessments">Book or view appointments </a></li> 
 
       {% endif %} 
 
--->
+
    
      
       <li class="govuk-!-margin-bottom-2"><a href="#">View timeline </a></li> 

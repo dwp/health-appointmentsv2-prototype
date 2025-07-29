@@ -1,7 +1,16 @@
 {% extends "layouts/main.html" %}
 
+
+
 {% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
+Prototype page title
+{% endblock %}
+
+{% block header %}
+
+
+{% include "includes/internal-header.html" %}
+
 {% endblock %}
 
 {% block content %}
@@ -54,7 +63,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
               
 
-                {% if  data['agent-mon-am-name'].includes('Amy Gill') %} 
+               
 
 
                 <tr class="govuk-table__row handsworth">
@@ -156,8 +165,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 
                   </tr>
-                  {% endif %}
-
+            
 
 
 
