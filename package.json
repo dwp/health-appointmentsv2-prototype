@@ -8,10 +8,10 @@
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
     "@govuk-prototype-kit/step-by-step": "2.2.3",
-    "@govuk-prototype-kit/task-list": "1.1.2",
-    "govuk-frontend": "4.10.1",
+    "@govuk-prototype-kit/task-list": "2.0.0",
+    "govuk-frontend": "5.11.1",
     "govuk-prototype-kit": "13.18.0",
-    "hmrc-frontend": "5.67.1",
+    "hmrc-frontend": "6.78.0",
     "jquery": "3.7.1",
     "notifications-node-client": "8.2.1"
   }
