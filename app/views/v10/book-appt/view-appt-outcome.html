@@ -33,16 +33,82 @@ Appointment details - GOV.UK prototype
             </h1>
           </legend>
 
-          
-          {% if  data['apptbooked']   == 'cancelled' %}
+
+      
 
           <div class="govuk-inset-text">
             You cannot change this appointment as it is a previous appointment</div>
 
           
           <br>
+          <h2 class="govuk-heading-m">
+           Recorded outcome
+          </h2>
+  
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Appointment outcome
+              </dt>
+              <dd class="govuk-summary-list__value">
+                 {{ data['appOutcome'] }}   
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              More detail
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if  data['outcome-additional-details'] %}
+                {{ data['outcome-additional-details'] }}
+               {% else %}
+               None
+               {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+      Recorded
+              </dt>
+              <dd class="govuk-summary-list__value">
+              Wednesday 17 May 2025, 11:15am by David Young
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+    
+    
+    
+          
+      
+    
+          
+      
+          
+            
+            
+          </dl>
+    
 
-          {% endif %} 
+
+          
+          <h2 class="govuk-heading-m">
+           Details
+           </h2>
     
       
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -74,8 +140,6 @@ Appointment details - GOV.UK prototype
                   </a>
                 </dd>
               </div>
-
-           
   
   
   
@@ -85,12 +149,7 @@ Appointment details - GOV.UK prototype
                 </dt>
                 <dd class="govuk-summary-list__value">
                 
-                
-                  {% if  data['assessment-channel'] %}
-                  {{ data['assessment-channel'] }}
-                 {% else %}
-              Face to face
-                 {% endif %}
+                Telephone
                  
                  
 
@@ -111,12 +170,7 @@ Appointment details - GOV.UK prototype
                 <dd class="govuk-summary-list__value">
                  Wed 7 May 2025, 11am
                 </dd>
-               <!--  <dd class="govuk-summary-list__actions">
-                  {% if  data['apptbooked']   == 'yes' %}  <a class="govuk-link" href="app-date-time">
-                    Change<span class="govuk-visually-hidden">appointment date and time</span>
-                  </a>
-                  {% endif %}
-                </dd> -->
+             
               </div>
         
   
@@ -132,12 +186,7 @@ Appointment details - GOV.UK prototype
                  
                 
                 
-                
-                  {% if  data['hcp'] %}
-                  {{ data['hcp'] }}
-                 {% else %}
-                 Amy Gill
-                 {% endif %}
+              Amy Gill
                  
                 
                   
@@ -145,10 +194,8 @@ Appointment details - GOV.UK prototype
               
   
              <dd class="govuk-summary-list__actions">
-                  {% if  data['apptbooked']   == 'yes' %} <a class="govuk-link" href="edit-hcp-post-booking">
-                    Change<span class="govuk-visually-hidden"> any additional information</span>
-                  </a>
-                  {% endif %}
+        
+                  
                 </dd> 
               </div>
   
@@ -159,13 +206,7 @@ Appointment details - GOV.UK prototype
                 </dt>
                 <dd class="govuk-summary-list__value">
                   
-  
-                  {% if  data['more-detail'] %}
-                  {{ data['more-detail'] }}
-                 {% else %}
-                 None
-                 {% endif %}
-  
+  None
                 </dd>
             <dd class="govuk-summary-list__actions">
                 </dd>
@@ -176,16 +217,9 @@ Appointment details - GOV.UK prototype
       
           <div>
 
-            <h3 class="govuk-heading-m">What you can do next</h3>
-
-           <p>  <a class="govuk-link" href="outcome-appointment">Record appointment outcome</a> </p>
-
-           <p>  <a class="govuk-link" href="cancel-appointment">Cancel appointment</a> </p>
-
-          
-           <p>  <a class="govuk-link" href="claimant-detail">Return to claimant details</a> </p> 
-      
- 
+          <p>  <a class="govuk-link" href="claimant-detail">Return to claimant details</a></p>
+        
+            
           </div>
       
         </fieldset>

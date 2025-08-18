@@ -24,17 +24,17 @@ Cancel appointment - GOV.UK prototype
 
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-    <form class="form" action="current-assessments-cancelled" method="post">
+    <form class="form" action="current-assessments-outcome" method="post">
 
-      <h1 class="govuk-heading-l">Are you sure you want to cancel Jane Doe's appointment?</h1>
+      <h1 class="govuk-heading-l">Check appointment outcome</h1>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-           Reason for cancellation
+           Appointment outcome
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['cancelReason'] }}   {% if  data['cancelReason-other'] %}{{': ' + data['cancelReason-other'] }}  {% endif %}
+            {{ data['appOutcome'] }}   
           </dd>
           <dd class="govuk-summary-list__actions">
             <ul class="govuk-summary-list__actions-list">
@@ -82,8 +82,8 @@ Cancel appointment - GOV.UK prototype
 
 
       <div class="govuk-button-group">
-        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-         Yes, cancel appointment
+        <button class="govuk-button govuk-button" data-module="govuk-button">
+         Record outcome
         </button>
 
        

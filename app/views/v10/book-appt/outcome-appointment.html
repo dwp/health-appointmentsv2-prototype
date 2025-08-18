@@ -24,11 +24,11 @@ Cancel appointment - GOV.UK prototype
 
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-    <form class="form" action="cancel-check-answers" method="post">
+    <form class="form" action="outcome-check-answers" method="post">
       <span class="govuk-caption-l">Wednesday 7 May 2025</span>
 
       <h1 class="govuk-heading-l" style="padding-top:10px;">
-    Report outcome of Jane Doe's appointment
+    Record outcome of Jane Doe's appointment
       
      
       </h1>
@@ -40,14 +40,14 @@ Cancel appointment - GOV.UK prototype
           
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Claimant attended">
-              <label class="govuk-label govuk-radios__label" for="cancelReason-1">
+              <input class="govuk-radios__input" id="appOutcome-1" name="appOutcome" type="radio" value="Claimant attended">
+              <label class="govuk-label govuk-radios__label" for="appOutcome-1">
            Claimant attended
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="Claimant did not attend">
-              <label class="govuk-label govuk-radios__label" for="cancelReason-2">
+              <input class="govuk-radios__input" id="appOutcome-2" name="appOutcome" type="radio" value="Claimant did not attend">
+              <label class="govuk-label govuk-radios__label" for="appOutcome-2">
                 Claimant did not attend
               </label>
             </div>
@@ -56,8 +56,8 @@ Cancel appointment - GOV.UK prototype
 
 
         <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-3" name="cancelReason" type="radio" value="Claimant attended but appointment could not be completed">
-              <label class="govuk-label govuk-radios__label" for="cancelReason-3">
+              <input class="govuk-radios__input" id="appOutcome-3" name="appOutcome" type="radio" value="Claimant attended but appointment could not be completed">
+              <label class="govuk-label govuk-radios__label" for="appOutcome-3">
               Claimant attended but appointment could not be completed
               </label>
             </div> 
@@ -65,8 +65,8 @@ Cancel appointment - GOV.UK prototype
 
            
          <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-4" name="cancelReason" type="radio" value="Appointment could not be completed for another reason">
-                <label class="govuk-label govuk-radios__label" for="cancelReason-4">
+                <input class="govuk-radios__input" id="appOutcome-4" name="appOutcome" type="radio" value="Appointment could not be completed for another reason">
+                <label class="govuk-label govuk-radios__label" for="appOutcome-4">
                   Appointment could not be completed for another reason
                 </label>
               </div>
@@ -75,20 +75,20 @@ Cancel appointment - GOV.UK prototype
 
      <!--   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-10" name="cancelReason" type="radio" aria-controls="conditional-cancelReason" aria-expanded="true" value="Appointment could not be completed for another reason">
+                <input class="govuk-radios__input" id="appOutcome-10" name="appOutcome" type="radio" aria-controls="conditional-appOutcome" aria-expanded="true" value="Appointment could not be completed for another reason">
                 
-                <label class="govuk-label govuk-radios__label" for="cancelReason">
+                <label class="govuk-label govuk-radios__label" for="appOutcome">
                   Appointment could not be completed for another reason
                 </label>
               </div>
 
-              <div class="govuk-radios__conditional" id="conditional-cancelReason">
+              <div class="govuk-radios__conditional" id="conditional-appOutcome">
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="cancelReason-10">
+                  <label class="govuk-label" for="appOutcome-10">
                     Reason for cancellation
                   </label>
 
-                  <input class="govuk-input govuk-!-width-one-half" id="cancelReason-other" name="cancelReason-other" type="text" value="" autocomplete="off">
+                  <input class="govuk-input govuk-!-width-one-half" id="appOutcome-other" name="appOutcome-other" type="text" value="" autocomplete="off">
                 </div>
               </div>
             </div> -->
@@ -106,7 +106,7 @@ Cancel appointment - GOV.UK prototype
             Can you provide more detail?
           </label>
     
-          <textarea class="govuk-textarea govuk-js-character-count" id="action" name="cancel-additional-details" rows="3" aria-describedby="action-info"></textarea><div id="action-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 150 characters remaining</div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="action" name="outcome-additional-details" rows="3" aria-describedby="action-info"></textarea><div id="action-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 150 characters remaining</div>
           
           
         </div>

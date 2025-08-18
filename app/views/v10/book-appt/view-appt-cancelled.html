@@ -37,18 +37,18 @@ Appointment details - GOV.UK prototype
       
 
           <div class="govuk-inset-text">
-            You cannot change this appointment as it is a previous appointment</div>
+            You cannot change this appointment as it is a cancelled appointment</div>
 
           
           <br>
           <h2 class="govuk-heading-m">
-           Recorded outcome
+          Appointment cancelled
           </h2>
   
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-               Appointment outcome
+               Reason for cancellation
               </dt>
               <dd class="govuk-summary-list__value">
                 {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }} {%else%} {{ data['cancelReason'] }}    {% endif %}
@@ -79,10 +79,10 @@ Appointment details - GOV.UK prototype
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-      Recorded by
+      Recorded
               </dt>
               <dd class="govuk-summary-list__value">
-              Wed 17 May 2025, 11:15am by David Young
+              Wednesday 17 May 2025, 11:15am by David Young
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -107,7 +107,7 @@ Appointment details - GOV.UK prototype
 
           
           <h2 class="govuk-heading-m">
-            Original appointment
+           Details
            </h2>
     
       
